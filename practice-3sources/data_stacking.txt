@@ -1,0 +1,84 @@
+TS: Null hyp.    88615.721803
+Alt. hyp.    88613.277999
+TS               4.887609
+Name: Likelihood_NGC1275, dtype: float64
+Time elapsed: 94.33814912755042
+
+TS: Null hyp.    90060.105226
+Alt. hyp.    90058.550717
+TS               3.109018
+Name: Likelihood_ThreeC111, dtype: float64
+Time elapsed: 69.7833800399676
+
+TS: Null hyp.    90477.780138
+Alt. hyp.    90476.650157
+TS               2.259963
+Name: Likelihood_NGC4151, dtype: float64
+Time elapsed: 65.88401078991592
+
+TS: Null hyp.    88615.721803
+Alt. hyp.    88613.277999
+TS               4.887609
+Name: Likelihood_NGC1275, dtype: float64
+Time elapsed: 66.7049048319459
+
+TS: Null hyp.    90060.105226
+Alt. hyp.    90058.550717
+TS               3.109018
+Name: Likelihood_ThreeC111, dtype: float64
+Time elapsed: 50.178587483242154
+
+TS: Null hyp.    90477.780138
+Alt. hyp.    90476.650157
+TS               2.259963
+Name: Likelihood_NGC4151, dtype: float64
+Time elapsed: 47.665265491232276
+
+
+Total time elapsed: -1756506754.8377953
+Total TS: 4.350687917787582
+
+TS: Null hyp.    88615.721803
+Alt. hyp.    88613.278026
+TS               4.887555
+Name: Likelihood_NGC1275, dtype: float64
+Time elapsed: 46.73440592829138
+
+TS: Null hyp.    90060.105226
+Alt. hyp.    90058.551488
+TS               3.107476
+Name: Likelihood_ThreeC111, dtype: float64
+Time elapsed: 46.878889362327754
+
+TS: Null hyp.    90477.780138
+Alt. hyp.    90477.430145
+TS               0.699987
+Name: Likelihood_NGC4151, dtype: float64
+Time elapsed: 46.298703639768064
+
+
+Total time elapsed: -1756506755.1171465
+Total TS: -456.57121781026945
+
+TS: Null hyp.    88615.721803
+Alt. hyp.    88613.282920
+TS               4.877766
+Name: Likelihood_NGC1275, dtype: float64
+Time elapsed: 46.59627277031541
+
+TS: Null hyp.    90060.105226
+Alt. hyp.    90060.503737
+TS              -0.797022
+Name: Likelihood_ThreeC111, dtype: float64
+Time elapsed: 45.509578802622855
+
+TS: Null hyp.    90477.780138
+Alt. hyp.    90558.177721
+TS            -160.795165
+Name: Likelihood_NGC4151, dtype: float64
+Time elapsed: 46.02829327993095
+
+
+Total time elapsed: -1756506755.01491
+Total TS: 4.3490189800504595
+

@@ -1,0 +1,1390 @@
+18:20:20 WARNING   The naima package is not available. Models    functions.py:47
+                  that depend on it will not be available                       
+         WARNING   The GSL library or the pygsl wrapper cannot   functions.py:68
+                  be loaded. Models that depend on it will not                  
+                  be available.                                                 
+18:20:21 WARNING   The ebltable package is not available.       absorption.py:33
+                  Models that depend on it will not be                          
+                  available                                                     
+18:20:22 INFO      Starting 3ML!                                  __init__.py:35
+         WARNING   WARNINGs here are NOT errors                   __init__.py:36
+         WARNING   but are inform you about optional packages     __init__.py:37
+                  that can be installed                                         
+         WARNING    to disable these messages, turn off           __init__.py:40
+                  start_warning in your config file                             
+         WARNING   no display variable set. using backend for     __init__.py:46
+                  graphics without display (agg)                                
+18:20:25 WARNING   Multinest minimizer not available        minimization.py:1357
+         WARNING   PyGMO is not available                   minimization.py:1369
+18:20:25 WARNING   The cthreeML package is not installed. You     __init__.py:94
+                  will not be able to use plugins which require                 
+                  the C/C++ interface (currently HAWC)                          
+         WARNING   Could not import plugin HAWCLike.py. Do you   __init__.py:144
+                  have the relative instrument software                         
+                  installed and configured?                                     
+         WARNING   Could not import plugin FermiLATLike.py. Do   __init__.py:144
+                  you have the relative instrument software                     
+                  installed and configured?                                     
+18:20:26 WARNING   No fermitools installed           lat_transient_builder.py:44
+18:20:26 WARNING   Env. variable OMP_NUM_THREADS is not set.     __init__.py:387
+                  Please set it to 1 for optimal performances in                
+                  3ML                                                           
+         WARNING   Env. variable MKL_NUM_THREADS is not set.     __init__.py:387
+                  Please set it to 1 for optimal performances in                
+                  3ML                                                           
+         WARNING   Env. variable NUMEXPR_NUM_THREADS is not set. __init__.py:387
+                  Please set it to 1 for optimal performances in                
+                  3ML                                                           
+/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/maptree-fhit2pct-pass5f-mlp-chunk1-1510.root
+/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/detRes-fhit2pct-pass5f-mlp-refit.root
+[ 56.23413252 100.         177.827941  ]
+The total weights are [1.89 4.13 18.09 4.05 4.93 159.0 1.86 4.16 2.2 1.75 4.94 1.87 2.37 17.08
+ 2.7 2.24 3.45 4.03 10.79 2.15 2.7 4.32 1.95 2.02 3.87 1.7 12.89 1.76 1.77
+ 1.67 16.11 1.99 7.73 2.62 1.61 2.36 3.65 2.69 2.64 7.72 83.69 2.12 2.75
+ 13.6 8.81 3.37 2.34 1.73 4.21 1.82 3.33]
+####################
+Energy: 74.98942093324558 TeV
+NGC1275 49.9507 41.5117
+18:20:29 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+18:21:13 INFO      Creating singleton for                         response.py:49
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/seyf               
+                  ert/detRes-fhit2pct-pass5f-mlp-refit.root                     
+['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1', 'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1', 'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']
+********************
+Datalist made for pulsar NGC1275
+18:21:25 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+Fitting time!!
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1062
+18:21:30 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+Time to make fit:  5.221428155899048 sec
+***************
+Parameter Results: 
+                                            value  negative_error  \
+NGC1275.spectrum.main.composite.K_1  4.701377e-28   -1.603493e-28   
+
+                                     positive_error         error  \
+NGC1275.spectrum.main.composite.K_1    2.469074e-28  2.036284e-28   
+
+                                                unit  
+NGC1275.spectrum.main.composite.K_1  1 / (keV s cm2)  
+***************
+Likelihood Results: 
+                    -log(likelihood)
+Likelihood_NGC1275      88613.277999
+total                   88613.277999
+Getting Likelihood profile around minimum Norm
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+18:21:35 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC1275_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+18:21:35 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC1275_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+TS: 4.88760878573521
+********************
+
+Individual logProfile
+Time elapsed is 66.7049048319459
+ThreeC111 64.59 38.03
+         INFO      Using transits contained in maptree                 HAL.py:77
+18:21:36 INFO      Reading Maptree!                        from_root_file.py:218
+['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1', 'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1', 'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']
+********************
+Datalist made for pulsar ThreeC111
+18:22:16 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+Fitting time!!
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1062
+18:22:21 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+Time to make fit:  4.198925971984863 sec
+***************
+Parameter Results: 
+                                              value  negative_error  \
+ThreeC111.spectrum.main.composite.K_1  1.470419e-28   -6.032377e-29   
+
+                                       positive_error         error  \
+ThreeC111.spectrum.main.composite.K_1    1.075551e-28  8.393943e-29   
+
+                                                  unit  
+ThreeC111.spectrum.main.composite.K_1  1 / (keV s cm2)  
+***************
+Likelihood Results: 
+                      -log(likelihood)
+Likelihood_ThreeC111      90058.550717
+total                     90058.550717
+Getting Likelihood profile around minimum Norm
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+18:22:25 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter                               model.py:620
+                  Likelihood_ThreeC111_bkg_renorm already exist in              
+                  the model. Overwriting it...                                  
+18:22:25 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter                               model.py:620
+                  Likelihood_ThreeC111_bkg_renorm already exist in              
+                  the model. Overwriting it...                                  
+TS: 3.109018356917659
+********************
+
+Individual logProfile
+Time elapsed is 50.178587483242154
+NGC4151 182.64 39.41
+         INFO      Using transits contained in maptree                 HAL.py:77
+18:22:26 INFO      Reading Maptree!                        from_root_file.py:218
+['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1', 'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1', 'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']
+********************
+Datalist made for pulsar NGC4151
+18:23:04 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+Fitting time!!
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1062
+18:23:08 WARNING   2.76 percent of samples have been    analysis_results.py:1740
+                  thrown away because they failed the                           
+                  constraints on the parameters. This                           
+                  results might not be suitable for                             
+                  error propagation. Enlarge the                                
+                  boundaries until you loose less than                          
+                  1 percent of the samples.                                     
+18:23:08 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+Time to make fit:  4.147850275039673 sec
+***************
+Parameter Results: 
+                                            value  negative_error  \
+NGC4151.spectrum.main.composite.K_1  3.147268e-29   -1.345674e-29   
+
+                                     positive_error         error  \
+NGC4151.spectrum.main.composite.K_1    2.606905e-29  1.976290e-29   
+
+                                                unit  
+NGC4151.spectrum.main.composite.K_1  1 / (keV s cm2)  
+***************
+Likelihood Results: 
+                    -log(likelihood)
+Likelihood_NGC4151      90476.650157
+total                   90476.650157
+Getting Likelihood profile around minimum Norm
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+18:23:13 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC4151_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+18:23:13 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC4151_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+TS: 2.259962810232537
+********************
+
+Individual logProfile
+Time elapsed is 47.665265491232276
+Stacking Likelihoods
+Total factor A: 24.11
+Total nullLLH: 269153.6071675881
+Model summary:
+==============
+
+                  N
+Point sources     1
+Extended sources  0
+Particle sources  0
+
+Free parameters (1):
+--------------------
+
+                                   value min_value max_value            unit
+finalNorm.spectrum.main.Powerlaw.K   0.0       0.0     0.001  keV-1 s-1 cm-2
+
+Fixed parameters (4):
+(abridged. Use complete=True to see all fixed parameters)
+
+
+Properties (0):
+--------------------
+
+(none)
+
+
+Linked parameters (0):
+----------------------
+
+(none)
+
+Independent variables:
+----------------------
+
+(none)
+
+Linked functions (0):
+----------------------
+
+(none)
+
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+Fitting time!!
+         INFO      trial values: -21 -> logL =          joint_likelihood.py:1013
+                  -3659998665.968                                               
+         INFO      trial values: -20.581 -> logL =      joint_likelihood.py:1013
+                  -4348536789.269                                               
+         INFO      trial values: -21.421 -> logL =      joint_likelihood.py:1013
+                  -2967121122.357                                               
+         INFO      trial values: -20.958 -> logL =      joint_likelihood.py:1013
+                  -3729050615.980                                               
+         INFO      trial values: -21.042 -> logL =      joint_likelihood.py:1013
+                  -3590903320.853                                               
+         INFO      trial values: -21.042 -> logL =      joint_likelihood.py:1013
+                  -3590903320.853                                               
+         INFO      trial values: -21.21 -> logL =       joint_likelihood.py:1013
+                  -3314091463.905                                               
+         INFO      trial values: -21.633 -> logL =      joint_likelihood.py:1013
+                  -2619109440.751                                               
+         INFO      trial values: -22.915 -> logL =      joint_likelihood.py:1013
+                  -679965258.895                                                
+         INFO      trial values: -26.867 -> logL =      joint_likelihood.py:1013
+                  -270613.008                                                   
+         INFO      trial values: -25.223 -> logL =      joint_likelihood.py:1013
+                  -1194439.083                                                  
+         INFO      trial values: -26.047 -> logL =      joint_likelihood.py:1013
+                  -310598.526                                                   
+         INFO      trial values: -26.496 -> logL =      joint_likelihood.py:1013
+                  -276051.411                                                   
+         INFO      trial values: -26.862 -> logL =      joint_likelihood.py:1013
+                  -270643.300                                                   
+         INFO      trial values: -26.871 -> logL =      joint_likelihood.py:1013
+                  -270585.381                                                   
+         INFO      trial values: -26.866 -> logL =      joint_likelihood.py:1013
+                  -270619.676                                                   
+         INFO      trial values: -26.868 -> logL =      joint_likelihood.py:1013
+                  -270606.341                                                   
+         INFO      trial values: -26.868 -> logL =      joint_likelihood.py:1013
+                  -270606.341                                                   
+         INFO      trial values: -26.872 -> logL =      joint_likelihood.py:1013
+                  -270582.863                                                   
+         INFO      trial values: -26.881 -> logL =      joint_likelihood.py:1013
+                  -270527.734                                                   
+         INFO      trial values: -26.911 -> logL =      joint_likelihood.py:1013
+                  -270363.113                                                   
+         INFO      trial values: -26.999 -> logL =      joint_likelihood.py:1013
+                  -269979.211                                                   
+         INFO      trial values: -27.161 -> logL =      joint_likelihood.py:1013
+                  -269554.958                                                   
+         INFO      trial values: -27.271 -> logL =      joint_likelihood.py:1013
+                  -269394.072                                                   
+         INFO      trial values: -27.386 -> logL =      joint_likelihood.py:1013
+                  -269293.573                                                   
+         INFO      trial values: -27.5 -> logL =        joint_likelihood.py:1013
+                  -269232.787                                                   
+         INFO      trial values: -27.619 -> logL =      joint_likelihood.py:1013
+                  -269195.268                                                   
+         INFO      trial values: -27.729 -> logL =      joint_likelihood.py:1013
+                  -269175.498                                                   
+         INFO      trial values: -27.719 -> logL =      joint_likelihood.py:1013
+                  -269176.867                                                   
+         INFO      trial values: -27.739 -> logL =      joint_likelihood.py:1013
+                  -269174.272                                                   
+         INFO      trial values: -27.818 -> logL =      joint_likelihood.py:1013
+                  -269165.651                                                   
+         INFO      trial values: -28.002 -> logL =      joint_likelihood.py:1013
+                  -269155.559                                                   
+         INFO      trial values: -28.047 -> logL =      joint_likelihood.py:1013
+                  -269154.326                                                   
+         INFO      trial values: -28.14 -> logL =       joint_likelihood.py:1013
+                  -269152.649                                                   
+         INFO      trial values: -28.221 -> logL =      joint_likelihood.py:1013
+                  -269151.883                                                   
+         INFO      trial values: -28.278 -> logL =      joint_likelihood.py:1013
+                  -269151.600                                                   
+         INFO      trial values: -28.325 -> logL =      joint_likelihood.py:1013
+                  -269151.480                                                   
+         INFO      trial values: -28.358 -> logL =      joint_likelihood.py:1013
+                  -269151.451                                                   
+         INFO      trial values: -28.348 -> logL =      joint_likelihood.py:1013
+                  -269151.459                                                   
+         INFO      trial values: -28.367 -> logL =      joint_likelihood.py:1013
+                  -269151.442                                                   
+         INFO      trial values: -28.273 -> logL =      joint_likelihood.py:1013
+                  -269151.620                                                   
+         INFO      trial values: -28.442 -> logL =      joint_likelihood.py:1013
+                  -269151.466                                                   
+         INFO      trial values: -28.362 -> logL =      joint_likelihood.py:1013
+                  -269151.447                                                   
+         INFO      trial values: -28.38 -> logL =       joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.414 -> logL =      joint_likelihood.py:1013
+                  -269151.444                                                   
+         INFO      trial values: -28.389 -> logL =      joint_likelihood.py:1013
+                  -269151.436                                                   
+         INFO      trial values: -28.336 -> logL =      joint_likelihood.py:1013
+                  -269151.469                                                   
+         INFO      trial values: -28.358 -> logL =      joint_likelihood.py:1013
+                  -269151.451                                                   
+         INFO      trial values: -28.369 -> logL =      joint_likelihood.py:1013
+                  -269151.440                                                   
+         INFO      trial values: -28.309 -> logL =      joint_likelihood.py:1013
+                  -269151.523                                                   
+         INFO      trial values: -28.45 -> logL =       joint_likelihood.py:1013
+                  -269151.475                                                   
+         INFO      trial values: -28.393 -> logL =      joint_likelihood.py:1013
+                  -269151.438                                                   
+         INFO      trial values: -28.383 -> logL =      joint_likelihood.py:1013
+                  -269151.434                                                   
+         INFO      trial values: -28.38 -> logL =       joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.38 -> logL =       joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.38 -> logL =       joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.38 -> logL =       joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.38 -> logL =       joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.38 -> logL =       joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.38 -> logL =       joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.309 -> logL =      joint_likelihood.py:1013
+                  -269151.523                                                   
+         INFO      trial values: -28.45 -> logL =       joint_likelihood.py:1013
+                  -269151.475                                                   
+         INFO      trial values: -28.366 -> logL =      joint_likelihood.py:1013
+                  -269151.443                                                   
+         INFO      trial values: -28.394 -> logL =      joint_likelihood.py:1013
+                  -269151.438                                                   
+         INFO      trial values: -28.377 -> logL =      joint_likelihood.py:1013
+                  -269151.432                                                   
+         INFO      trial values: -28.383 -> logL =      joint_likelihood.py:1013
+                  -269151.434                                                   
+         INFO      trial values: -28.38 -> logL =       joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.186 -> logL =      joint_likelihood.py:1013
+                  -269152.156                                                   
+         INFO      trial values: -28.574 -> logL =      joint_likelihood.py:1013
+                  -269151.691                                                   
+         INFO      trial values: -28.477 -> logL =      joint_likelihood.py:1013
+                  -269151.504                                                   
+         INFO      trial values: -28.283 -> logL =      joint_likelihood.py:1013
+                  -269151.589                                                   
+         INFO      trial values: -28.428 -> logL =      joint_likelihood.py:1013
+                  -269151.449                                                   
+         INFO      trial values: -28.331 -> logL =      joint_likelihood.py:1013
+                  -269151.473                                                   
+         INFO      trial values: -28.404 -> logL =      joint_likelihood.py:1013
+                  -269151.442                                                   
+         INFO      trial values: -28.38 -> logL =       joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.38 -> logL =       joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.314 -> logL =      joint_likelihood.py:1013
+                  -269151.510                                                   
+         INFO      trial values: -28.445 -> logL =      joint_likelihood.py:1013
+                  -269151.469                                                   
+         INFO      trial values: -28.38 -> logL =       joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.314 -> logL =      joint_likelihood.py:1013
+                  -269151.510                                                   
+         INFO      trial values: -28.445 -> logL =      joint_likelihood.py:1013
+                  -269151.469                                                   
+         INFO      trial values: -28.367 -> logL =      joint_likelihood.py:1013
+                  -269151.442                                                   
+         INFO      trial values: -28.393 -> logL =      joint_likelihood.py:1013
+                  -269151.438                                                   
+         INFO      trial values: -28.377 -> logL =      joint_likelihood.py:1013
+                  -269151.432                                                   
+         INFO      trial values: -28.382 -> logL =      joint_likelihood.py:1013
+                  -269151.434                                                   
+         INFO      trial values: -28.379 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.38 -> logL =       joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.366 -> logL =      joint_likelihood.py:1013
+                  -269151.443                                                   
+         INFO      trial values: -28.377 -> logL =      joint_likelihood.py:1013
+                  -269151.432                                                   
+         INFO      trial values: -28.377 -> logL =      joint_likelihood.py:1013
+                  -269151.432                                                   
+         INFO      trial values: -28.308 -> logL =      joint_likelihood.py:1013
+                  -269151.527                                                   
+         INFO      trial values: -28.342 -> logL =      joint_likelihood.py:1013
+                  -269151.464                                                   
+         INFO      trial values: -28.359 -> logL =      joint_likelihood.py:1013
+                  -269151.449                                                   
+         INFO      trial values: -28.368 -> logL =      joint_likelihood.py:1013
+                  -269151.441                                                   
+         INFO      trial values: -28.372 -> logL =      joint_likelihood.py:1013
+                  -269151.436                                                   
+         INFO      trial values: -28.374 -> logL =      joint_likelihood.py:1013
+                  -269151.434                                                   
+         INFO      trial values: -28.376 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.371 -> logL =      joint_likelihood.py:1013
+                  -269151.437                                                   
+         INFO      trial values: -28.382 -> logL =      joint_likelihood.py:1013
+                  -269151.434                                                   
+         INFO      trial values: -28.354 -> logL =      joint_likelihood.py:1013
+                  -269151.454                                                   
+         INFO      trial values: -28.399 -> logL =      joint_likelihood.py:1013
+                  -269151.440                                                   
+         INFO      trial values: -28.378 -> logL =      joint_likelihood.py:1013
+                  -269151.432                                                   
+         INFO      trial values: -28.377 -> logL =      joint_likelihood.py:1013
+                  -269151.432                                                   
+         INFO      trial values: -28.377 -> logL =      joint_likelihood.py:1013
+                  -269151.432                                                   
+         INFO      trial values: -28.377 -> logL =      joint_likelihood.py:1013
+                  -269151.432                                                   
+         INFO      trial values: -28.377 -> logL =      joint_likelihood.py:1013
+                  -269151.432                                                   
+         INFO      trial values: -28.377 -> logL =      joint_likelihood.py:1013
+                  -269151.432                                                   
+         INFO      trial values: -28.377 -> logL =      joint_likelihood.py:1013
+                  -269151.432                                                   
+         INFO      trial values: -28.377 -> logL =      joint_likelihood.py:1013
+                  -269151.432                                                   
+         INFO      trial values: -28.354 -> logL =      joint_likelihood.py:1013
+                  -269151.454                                                   
+         INFO      trial values: -28.399 -> logL =      joint_likelihood.py:1013
+                  -269151.440                                                   
+         INFO      trial values: -28.372 -> logL =      joint_likelihood.py:1013
+                  -269151.436                                                   
+         INFO      trial values: -28.381 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.377 -> logL =      joint_likelihood.py:1013
+                  -269151.432                                                   
+         INFO      trial values: -28.372 -> logL =      joint_likelihood.py:1013
+                  -269151.436                                                   
+         INFO      trial values: -28.381 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -28.332 -> logL =      joint_likelihood.py:1013
+                  -269151.472                                                   
+         INFO      trial values: -28.421 -> logL =      joint_likelihood.py:1013
+                  -269151.446                                                   
+         INFO      trial values: -27.931 -> logL =      joint_likelihood.py:1013
+                  -269158.296                                                   
+         INFO      trial values: -28.823 -> logL =      joint_likelihood.py:1013
+                  -269152.291                                                   
+         INFO      trial values: -26.544 -> logL =      joint_likelihood.py:1013
+                  -274813.768                                                   
+         INFO      trial values: -30.223 -> logL =      joint_likelihood.py:1013
+                  -269153.543                                                   
+         INFO      trial values: -28.096 -> logL =      joint_likelihood.py:1013
+                  -269153.305                                                   
+         INFO      trial values: -28.657 -> logL =      joint_likelihood.py:1013
+                  -269151.889                                                   
+         INFO      trial values: -28.33 -> logL =       joint_likelihood.py:1013
+                  -269151.474                                                   
+         INFO      trial values: -28.423 -> logL =      joint_likelihood.py:1013
+                  -269151.446                                                   
+         INFO      trial values: -28.367 -> logL =      joint_likelihood.py:1013
+                  -269151.441                                                   
+         INFO      trial values: -28.386 -> logL =      joint_likelihood.py:1013
+                  -269151.435                                                   
+         WARNING   get_number_of_data_points not         plugin_prototype.py:130
+                  implemented, values for statistical                           
+                  measurements such as AIC or BIC are                           
+                  unreliable                                                    
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Best fit values:
+
+                                                      result             unit
+parameter                                                                    
+finalNorm.spectrum.main.Powerlaw.K  (4.2 -1.4 +2.2) x 10^-29  1 / (keV s cm2)
+
+Correlation matrix:
+
+col0
+----
+1.00
+
+Values of -log(likelihood) at the minimum:
+
+         -log(likelihood)
+stacked     269151.431824
+total       269151.431824
+
+Values of statistical measures:
+
+     statistical measures
+AIC         538300.863647
+BIC         538302.863647
+Time to make fit:  0.3102574348449707 sec
+***************
+Parameter Results: 
+                                           value  negative_error  \
+finalNorm.spectrum.main.Powerlaw.K  4.201388e-29   -1.451744e-29   
+
+                                    positive_error         error  \
+finalNorm.spectrum.main.Powerlaw.K    2.249001e-29  1.850373e-29   
+
+                                               unit  
+finalNorm.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+***************
+Likelihood Results: 
+         -log(likelihood)
+stacked     269151.431824
+total       269151.431824
+Total TS: 4.350687917787582
+
+[4.350687917787582]
+####################
+Energy: 133.3521432163324 TeV
+NGC1275 49.9507 41.5117
+18:23:14 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1', 'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1', 'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']
+********************
+Datalist made for pulsar NGC1275
+18:23:52 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+Fitting time!!
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1062
+18:23:56 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+Time to make fit:  4.033990383148193 sec
+***************
+Parameter Results: 
+                                            value  negative_error  \
+NGC1275.spectrum.main.composite.K_1  8.374944e-29   -2.964198e-29   
+
+                                     positive_error         error  \
+NGC1275.spectrum.main.composite.K_1    4.548675e-29  3.756437e-29   
+
+                                                unit  
+NGC1275.spectrum.main.composite.K_1  1 / (keV s cm2)  
+***************
+Likelihood Results: 
+                    -log(likelihood)
+Likelihood_NGC1275      88613.278026
+total                   88613.278026
+Getting Likelihood profile around minimum Norm
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+18:24:00 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC1275_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+18:24:00 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC1275_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+TS: 4.887555072637042
+********************
+
+Individual logProfile
+Time elapsed is 46.73440592829138
+ThreeC111 64.59 38.03
+18:24:01 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1', 'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1', 'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']
+********************
+Datalist made for pulsar ThreeC111
+18:24:38 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+Fitting time!!
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1062
+18:24:42 WARNING   2.9000000000000004 percent of        analysis_results.py:1740
+                  samples have been thrown away because                         
+                  they failed the constraints on the                            
+                  parameters. This results might not be                         
+                  suitable for error propagation.                               
+                  Enlarge the boundaries until you                              
+                  loose less than 1 percent of the                              
+                  samples.                                                      
+18:24:42 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+Time to make fit:  4.116910696029663 sec
+***************
+Parameter Results: 
+                                              value  negative_error  \
+ThreeC111.spectrum.main.composite.K_1  2.661734e-29   -9.983021e-30   
+
+                                       positive_error         error  \
+ThreeC111.spectrum.main.composite.K_1    1.779934e-29  1.389118e-29   
+
+                                                  unit  
+ThreeC111.spectrum.main.composite.K_1  1 / (keV s cm2)  
+***************
+Likelihood Results: 
+                      -log(likelihood)
+Likelihood_ThreeC111      90058.551488
+total                     90058.551488
+Getting Likelihood profile around minimum Norm
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+18:24:47 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter                               model.py:620
+                  Likelihood_ThreeC111_bkg_renorm already exist in              
+                  the model. Overwriting it...                                  
+18:24:47 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter                               model.py:620
+                  Likelihood_ThreeC111_bkg_renorm already exist in              
+                  the model. Overwriting it...                                  
+TS: 3.107476325472817
+********************
+
+Individual logProfile
+Time elapsed is 46.878889362327754
+NGC4151 182.64 39.41
+         INFO      Using transits contained in maptree                 HAL.py:77
+18:24:48 INFO      Reading Maptree!                        from_root_file.py:218
+['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1', 'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1', 'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']
+********************
+Datalist made for pulsar NGC4151
+18:25:25 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+Fitting time!!
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1062
+18:25:28 WARNING   48.0 percent of samples have been    analysis_results.py:1740
+                  thrown away because they failed the                           
+                  constraints on the parameters. This                           
+                  results might not be suitable for                             
+                  error propagation. Enlarge the                                
+                  boundaries until you loose less than                          
+                  1 percent of the samples.                                     
+18:25:28 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+Time to make fit:  3.8907570838928223 sec
+***************
+Parameter Results: 
+                                            value  negative_error  \
+NGC4151.spectrum.main.composite.K_1  1.000817e-29    3.344486e-32   
+
+                                     positive_error         error  \
+NGC4151.spectrum.main.composite.K_1    3.151551e-31  1.743000e-31   
+
+                                                unit  
+NGC4151.spectrum.main.composite.K_1  1 / (keV s cm2)  
+***************
+Likelihood Results: 
+                    -log(likelihood)
+Likelihood_NGC4151      90477.430145
+total                   90477.430145
+Getting Likelihood profile around minimum Norm
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+18:25:33 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC4151_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+18:25:33 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC4151_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+TS: 0.6999872224696446
+********************
+
+Individual logProfile
+Time elapsed is 46.298703639768064
+Stacking Likelihoods
+Total factor A: 24.11
+Total nullLLH: 269153.6071675881
+Model summary:
+==============
+
+                  N
+Point sources     1
+Extended sources  0
+Particle sources  0
+
+Free parameters (1):
+--------------------
+
+                                   value min_value max_value            unit
+finalNorm.spectrum.main.Powerlaw.K   0.0       0.0     0.001  keV-1 s-1 cm-2
+
+Fixed parameters (4):
+(abridged. Use complete=True to see all fixed parameters)
+
+
+Properties (0):
+--------------------
+
+(none)
+
+
+Linked parameters (0):
+----------------------
+
+(none)
+
+Independent variables:
+----------------------
+
+(none)
+
+Linked functions (0):
+----------------------
+
+(none)
+
+18:25:34 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+Fitting time!!
+         INFO      trial values: -21 -> logL =          joint_likelihood.py:1013
+                  -6190620681.511                                               
+         INFO      trial values: -20.581 -> logL =      joint_likelihood.py:1013
+                  -7053125401.723                                               
+         INFO      trial values: -21.421 -> logL =      joint_likelihood.py:1013
+                  -5322680139.559                                               
+         INFO      trial values: -20.958 -> logL =      joint_likelihood.py:1013
+                  -6277119352.840                                               
+         INFO      trial values: -21.042 -> logL =      joint_likelihood.py:1013
+                  -6104067650.838                                               
+         INFO      trial values: -21.042 -> logL =      joint_likelihood.py:1013
+                  -6104067650.838                                               
+         INFO      trial values: -21.21 -> logL =       joint_likelihood.py:1013
+                  -5757316287.117                                               
+         INFO      trial values: -21.633 -> logL =      joint_likelihood.py:1013
+                  -4886739546.125                                               
+         INFO      trial values: -22.915 -> logL =      joint_likelihood.py:1013
+                  -2245241939.435                                               
+         INFO      trial values: -26.867 -> logL =      joint_likelihood.py:1013
+                  -300538.341                                                   
+         INFO      trial values: -25.921 -> logL =      joint_likelihood.py:1013
+                  -1388302.719                                                  
+         INFO      trial values: -26.396 -> logL =      joint_likelihood.py:1013
+                  -462606.614                                                   
+         INFO      trial values: -26.862 -> logL =      joint_likelihood.py:1013
+                  -301085.920                                                   
+         INFO      trial values: -26.871 -> logL =      joint_likelihood.py:1013
+                  -300028.110                                                   
+         INFO      trial values: -26.866 -> logL =      joint_likelihood.py:1013
+                  -300589.363                                                   
+         INFO      trial values: -26.867 -> logL =      joint_likelihood.py:1013
+                  -300487.318                                                   
+         INFO      trial values: -26.867 -> logL =      joint_likelihood.py:1013
+                  -300487.318                                                   
+         INFO      trial values: -26.869 -> logL =      joint_likelihood.py:1013
+                  -300283.227                                                   
+         INFO      trial values: -26.873 -> logL =      joint_likelihood.py:1013
+                  -299772.990                                                   
+         INFO      trial values: -26.887 -> logL =      joint_likelihood.py:1013
+                  -298242.197                                                   
+         INFO      trial values: -26.927 -> logL =      joint_likelihood.py:1013
+                  -293954.271                                                   
+         INFO      trial values: -27.047 -> logL =      joint_likelihood.py:1013
+                  -284516.641                                                   
+         INFO      trial values: -27.208 -> logL =      joint_likelihood.py:1013
+                  -277161.762                                                   
+         INFO      trial values: -27.313 -> logL =      joint_likelihood.py:1013
+                  -274367.740                                                   
+         INFO      trial values: -27.309 -> logL =      joint_likelihood.py:1013
+                  -274471.358                                                   
+         INFO      trial values: -27.318 -> logL =      joint_likelihood.py:1013
+                  -274269.177                                                   
+         INFO      trial values: -27.312 -> logL =      joint_likelihood.py:1013
+                  -274384.411                                                   
+         INFO      trial values: -27.314 -> logL =      joint_likelihood.py:1013
+                  -274351.070                                                   
+         INFO      trial values: -27.314 -> logL =      joint_likelihood.py:1013
+                  -274351.070                                                   
+         INFO      trial values: -27.317 -> logL =      joint_likelihood.py:1013
+                  -274286.060                                                   
+         INFO      trial values: -27.324 -> logL =      joint_likelihood.py:1013
+                  -274147.178                                                   
+         INFO      trial values: -27.345 -> logL =      joint_likelihood.py:1013
+                  -273731.027                                                   
+         INFO      trial values: -27.41 -> logL =       joint_likelihood.py:1013
+                  -272646.769                                                   
+         INFO      trial values: -27.604 -> logL =      joint_likelihood.py:1013
+                  -270696.067                                                   
+         INFO      trial values: -27.701 -> logL =      joint_likelihood.py:1013
+                  -270169.941                                                   
+         INFO      trial values: -27.825 -> logL =      joint_likelihood.py:1013
+                  -269743.878                                                   
+         INFO      trial values: -27.957 -> logL =      joint_likelihood.py:1013
+                  -269478.557                                                   
+         INFO      trial values: -28.033 -> logL =      joint_likelihood.py:1013
+                  -269381.893                                                   
+         INFO      trial values: -28.026 -> logL =      joint_likelihood.py:1013
+                  -269389.280                                                   
+         INFO      trial values: -28.041 -> logL =      joint_likelihood.py:1013
+                  -269374.506                                                   
+         INFO      trial values: -27.961 -> logL =      joint_likelihood.py:1013
+                  -269472.373                                                   
+         INFO      trial values: -28.106 -> logL =      joint_likelihood.py:1013
+                  -269315.682                                                   
+         INFO      trial values: -28.026 -> logL =      joint_likelihood.py:1013
+                  -269389.280                                                   
+         INFO      trial values: -28.041 -> logL =      joint_likelihood.py:1013
+                  -269374.506                                                   
+E VariableMetricBuilder Initial matrix not pos.def.
+         INFO      trial values: -28.033 -> logL =      joint_likelihood.py:1013
+                  -269381.893                                                   
+         INFO      trial values: -28.026 -> logL =      joint_likelihood.py:1013
+                  -269389.280                                                   
+         INFO      trial values: -28.041 -> logL =      joint_likelihood.py:1013
+                  -269374.506                                                   
+         INFO      trial values: -28.032 -> logL =      joint_likelihood.py:1013
+                  -269383.370                                                   
+         INFO      trial values: -28.035 -> logL =      joint_likelihood.py:1013
+                  -269380.415                                                   
+         WARNING   get_number_of_data_points not         plugin_prototype.py:130
+                  implemented, values for statistical                           
+                  measurements such as AIC or BIC are                           
+                  unreliable                                                    
+         WARNING   30.5 percent of samples have been    analysis_results.py:1740
+                  thrown away because they failed the                           
+                  constraints on the parameters. This                           
+                  results might not be suitable for                             
+                  error propagation. Enlarge the                                
+                  boundaries until you loose less than                          
+                  1 percent of the samples.                                     
+18:25:34 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Best fit values:
+
+                                         result             unit
+parameter                                                       
+finalNorm.spectrum.main.Powerlaw.K  0.0 -9 +1.8  1 / (keV s cm2)
+
+Correlation matrix:
+
+col0
+----
+1.00
+
+Values of -log(likelihood) at the minimum:
+
+         -log(likelihood)
+stacked     269381.892776
+total       269381.892776
+
+Values of statistical measures:
+
+     statistical measures
+AIC         538761.785553
+BIC         538763.785553
+Time to make fit:  0.15979814529418945 sec
+***************
+Parameter Results: 
+                                           value  negative_error  \
+finalNorm.spectrum.main.Powerlaw.K  9.260811e-29   -9.260811e-29   
+
+                                    positive_error         error  \
+finalNorm.spectrum.main.Powerlaw.K    2.715151e-14  1.357575e-14   
+
+                                               unit  
+finalNorm.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+***************
+Likelihood Results: 
+         -log(likelihood)
+stacked     269381.892776
+total       269381.892776
+Total TS: -456.57121781026945
+
+[4.350687917787582, -456.57121781026945]
+####################
+Energy: 237.13737056616552 TeV
+NGC1275 49.9507 41.5117
+         INFO      Using transits contained in maptree                 HAL.py:77
+18:25:35 INFO      Reading Maptree!                        from_root_file.py:218
+['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1', 'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1', 'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']
+********************
+Datalist made for pulsar NGC1275
+18:26:12 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+Fitting time!!
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1062
+18:26:16 WARNING   12.82 percent of samples have been   analysis_results.py:1740
+                  thrown away because they failed the                           
+                  constraints on the parameters. This                           
+                  results might not be suitable for                             
+                  error propagation. Enlarge the                                
+                  boundaries until you loose less than                          
+                  1 percent of the samples.                                     
+18:26:16 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+Time to make fit:  4.196808815002441 sec
+***************
+Parameter Results: 
+                                            value  negative_error  \
+NGC1275.spectrum.main.composite.K_1  1.551037e-29   -3.323166e-30   
+
+                                     positive_error         error  \
+NGC1275.spectrum.main.composite.K_1    8.951953e-30  6.137559e-30   
+
+                                                unit  
+NGC1275.spectrum.main.composite.K_1  1 / (keV s cm2)  
+***************
+Likelihood Results: 
+                    -log(likelihood)
+Likelihood_NGC1275       88613.28292
+total                    88613.28292
+Getting Likelihood profile around minimum Norm
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+18:26:21 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC1275_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+18:26:21 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC1275_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+TS: 4.8777664023509715
+********************
+
+Individual logProfile
+Time elapsed is 46.59627277031541
+ThreeC111 64.59 38.03
+         INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1', 'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1', 'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']
+********************
+Datalist made for pulsar ThreeC111
+18:26:58 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+Fitting time!!
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1062
+18:27:02 WARNING   49.1 percent of samples have been    analysis_results.py:1740
+                  thrown away because they failed the                           
+                  constraints on the parameters. This                           
+                  results might not be suitable for                             
+                  error propagation. Enlarge the                                
+                  boundaries until you loose less than                          
+                  1 percent of the samples.                                     
+18:27:02 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+Time to make fit:  3.9202070236206055 sec
+***************
+Parameter Results: 
+                                              value  negative_error  \
+ThreeC111.spectrum.main.composite.K_1  1.000000e-29    4.251136e-34   
+
+                                       positive_error         error  \
+ThreeC111.spectrum.main.composite.K_1    3.395070e-33  1.910092e-33   
+
+                                                  unit  
+ThreeC111.spectrum.main.composite.K_1  1 / (keV s cm2)  
+***************
+Likelihood Results: 
+                      -log(likelihood)
+Likelihood_ThreeC111      90060.503737
+total                     90060.503737
+Getting Likelihood profile around minimum Norm
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+18:27:06 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter                               model.py:620
+                  Likelihood_ThreeC111_bkg_renorm already exist in              
+                  the model. Overwriting it...                                  
+18:27:06 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter                               model.py:620
+                  Likelihood_ThreeC111_bkg_renorm already exist in              
+                  the model. Overwriting it...                                  
+TS: -0.7970218237896916
+********************
+
+Individual logProfile
+Time elapsed is 45.509578802622855
+NGC4151 182.64 39.41
+         INFO      Using transits contained in maptree                 HAL.py:77
+18:27:07 INFO      Reading Maptree!                        from_root_file.py:218
+['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1', 'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1', 'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']
+********************
+Datalist made for pulsar NGC4151
+18:27:44 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+Fitting time!!
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1062
+18:27:48 WARNING   50.519999999999996 percent of        analysis_results.py:1740
+                  samples have been thrown away because                         
+                  they failed the constraints on the                            
+                  parameters. This results might not be                         
+                  suitable for error propagation.                               
+                  Enlarge the boundaries until you                              
+                  loose less than 1 percent of the                              
+                  samples.                                                      
+18:27:48 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+Time to make fit:  3.949219226837158 sec
+***************
+Parameter Results: 
+                                            value  negative_error  \
+NGC4151.spectrum.main.composite.K_1  1.000000e-29    7.147519e-37   
+
+                                     positive_error         error  \
+NGC4151.spectrum.main.composite.K_1    5.240781e-36  2.977766e-36   
+
+                                                unit  
+NGC4151.spectrum.main.composite.K_1  1 / (keV s cm2)  
+***************
+Likelihood Results: 
+                    -log(likelihood)
+Likelihood_NGC4151      90558.177721
+total                   90558.177721
+Getting Likelihood profile around minimum Norm
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+18:27:52 WARNING   The current value of the parameter K_1 (1.0) parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC4151_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+18:27:52 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to ROOT            joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC4151_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+TS: -160.79516496876022
+********************
+
+Individual logProfile
+Time elapsed is 46.02829327993095
+Stacking Likelihoods
+Total factor A: 24.11
+Total nullLLH: 269153.6071675881
+Model summary:
+==============
+
+                  N
+Point sources     1
+Extended sources  0
+Particle sources  0
+
+Free parameters (1):
+--------------------
+
+                                   value min_value max_value            unit
+finalNorm.spectrum.main.Powerlaw.K   0.0       0.0     0.001  keV-1 s-1 cm-2
+
+Fixed parameters (4):
+(abridged. Use complete=True to see all fixed parameters)
+
+
+Properties (0):
+--------------------
+
+(none)
+
+
+Linked parameters (0):
+----------------------
+
+(none)
+
+Independent variables:
+----------------------
+
+(none)
+
+Linked functions (0):
+----------------------
+
+(none)
+
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+Fitting time!!
+         INFO      trial values: -21 -> logL =          joint_likelihood.py:1013
+                  -24360487683.657                                              
+         INFO      trial values: -20.581 -> logL =      joint_likelihood.py:1013
+                  -27347620265.781                                              
+         INFO      trial values: -21.421 -> logL =      joint_likelihood.py:1013
+                  -21354529094.148                                              
+         INFO      trial values: -20.958 -> logL =      joint_likelihood.py:1013
+                  -24660060536.283                                              
+         INFO      trial values: -21.042 -> logL =      joint_likelihood.py:1013
+                  -24060726567.053                                              
+         INFO      trial values: -21.042 -> logL =      joint_likelihood.py:1013
+                  -24060726567.053                                              
+         INFO      trial values: -21.21 -> logL =       joint_likelihood.py:1013
+                  -22859814534.697                                              
+         INFO      trial values: -21.633 -> logL =      joint_likelihood.py:1013
+                  -19844725935.974                                              
+         INFO      trial values: -22.915 -> logL =      joint_likelihood.py:1013
+                  -10696366070.060                                              
+         INFO      trial values: -26.867 -> logL =      joint_likelihood.py:1013
+                  -816220.419                                                   
+         INFO      trial values: -26.569 -> logL =      joint_likelihood.py:1013
+                  -1878329.713                                                  
+         INFO      trial values: -26.862 -> logL =      joint_likelihood.py:1013
+                  -825264.850                                                   
+         INFO      trial values: -26.871 -> logL =      joint_likelihood.py:1013
+                  -807917.287                                                   
+         INFO      trial values: -26.866 -> logL =      joint_likelihood.py:1013
+                  -817050.720                                                   
+         INFO      trial values: -26.867 -> logL =      joint_likelihood.py:1013
+                  -815390.115                                                   
+         INFO      trial values: -26.867 -> logL =      joint_likelihood.py:1013
+                  -815390.115                                                   
+         INFO      trial values: -26.869 -> logL =      joint_likelihood.py:1013
+                  -812068.880                                                   
+         INFO      trial values: -26.873 -> logL =      joint_likelihood.py:1013
+                  -803765.639                                                   
+         INFO      trial values: -26.887 -> logL =      joint_likelihood.py:1013
+                  -778943.407                                                   
+         INFO      trial values: -26.927 -> logL =      joint_likelihood.py:1013
+                  -708211.314                                                   
+         INFO      trial values: -27.047 -> logL =      joint_likelihood.py:1013
+                  -549804.326                                                   
+         INFO      trial values: -27.224 -> logL =      joint_likelihood.py:1013
+                  -413044.638                                                   
+         INFO      trial values: -27.313 -> logL =      joint_likelihood.py:1013
+                  -371337.522                                                   
+         INFO      trial values: -27.309 -> logL =      joint_likelihood.py:1013
+                  -373053.356                                                   
+         INFO      trial values: -27.317 -> logL =      joint_likelihood.py:1013
+                  -369659.010                                                   
+         INFO      trial values: -27.313 -> logL =      joint_likelihood.py:1013
+                  -371509.107                                                   
+         INFO      trial values: -27.313 -> logL =      joint_likelihood.py:1013
+                  -371165.937                                                   
+         INFO      trial values: -27.313 -> logL =      joint_likelihood.py:1013
+                  -371165.937                                                   
+         INFO      trial values: -27.315 -> logL =      joint_likelihood.py:1013
+                  -370479.591                                                   
+         INFO      trial values: -27.319 -> logL =      joint_likelihood.py:1013
+                  -368945.896                                                   
+         INFO      trial values: -27.331 -> logL =      joint_likelihood.py:1013
+                  -364672.440                                                   
+         INFO      trial values: -27.368 -> logL =      joint_likelihood.py:1013
+                  -351925.104                                                   
+         INFO      trial values: -27.477 -> logL =      joint_likelihood.py:1013
+                  -323528.680                                                   
+         INFO      trial values: -27.632 -> logL =      joint_likelihood.py:1013
+                  -298772.603                                                   
+         INFO      trial values: -27.717 -> logL =      joint_likelihood.py:1013
+                  -290217.852                                                   
+         INFO      trial values: -27.713 -> logL =      joint_likelihood.py:1013
+                  -290589.537                                                   
+         INFO      trial values: -27.721 -> logL =      joint_likelihood.py:1013
+                  -289890.261                                                   
+         INFO      trial values: -27.717 -> logL =      joint_likelihood.py:1013
+                  -290255.021                                                   
+         INFO      trial values: -27.718 -> logL =      joint_likelihood.py:1013
+                  -290180.683                                                   
+         INFO      trial values: -27.713 -> logL =      joint_likelihood.py:1013
+                  -290589.537                                                   
+         INFO      trial values: -27.721 -> logL =      joint_likelihood.py:1013
+                  -289890.261                                                   
+         INFO      trial values: -27.749 -> logL =      joint_likelihood.py:1013
+                  -287769.324                                                   
+         INFO      trial values: -27.855 -> logL =      joint_likelihood.py:1013
+                  -281358.418                                                   
+         INFO      trial values: -28.074 -> logL =      joint_likelihood.py:1013
+                  -274138.216                                                   
+18:27:53 INFO      trial values: -28.156 -> logL =      joint_likelihood.py:1013
+                  -272717.383                                                   
+         INFO      trial values: -28.283 -> logL =      joint_likelihood.py:1013
+                  -271242.198                                                   
+         INFO      trial values: -28.43 -> logL =       joint_likelihood.py:1013
+                  -270265.923                                                   
+         INFO      trial values: -28.54 -> logL =       joint_likelihood.py:1013
+                  -269842.226                                                   
+         INFO      trial values: -28.663 -> logL =      joint_likelihood.py:1013
+                  -269551.513                                                   
+         INFO      trial values: -28.79 -> logL =       joint_likelihood.py:1013
+                  -269374.564                                                   
+         INFO      trial values: -28.902 -> logL =      joint_likelihood.py:1013
+                  -269283.116                                                   
+         INFO      trial values: -29.02 -> logL =       joint_likelihood.py:1013
+                  -269224.866                                                   
+         INFO      trial values: -29.019 -> logL =      joint_likelihood.py:1013
+                  -269225.031                                                   
+         INFO      trial values: -29.02 -> logL =       joint_likelihood.py:1013
+                  -269224.701                                                   
+         INFO      trial values: -29.015 -> logL =      joint_likelihood.py:1013
+                  -269226.515                                                   
+         INFO      trial values: -29.024 -> logL =      joint_likelihood.py:1013
+                  -269223.217                                                   
+         INFO      trial values: -29.026 -> logL =      joint_likelihood.py:1013
+                  -269222.410                                                   
+         INFO      trial values: -29.05 -> logL =       joint_likelihood.py:1013
+                  -269214.456                                                   
+         INFO      trial values: -29.104 -> logL =      joint_likelihood.py:1013
+                  -269199.195                                                   
+         INFO      trial values: -29.273 -> logL =      joint_likelihood.py:1013
+                  -269170.073                                                   
+         INFO      trial values: -29.358 -> logL =      joint_likelihood.py:1013
+                  -269162.577                                                   
+         INFO      trial values: -29.447 -> logL =      joint_likelihood.py:1013
+                  -269157.592                                                   
+         INFO      trial values: -29.558 -> logL =      joint_likelihood.py:1013
+                  -269154.072                                                   
+         INFO      trial values: -29.634 -> logL =      joint_likelihood.py:1013
+                  -269152.715                                                   
+         INFO      trial values: -29.713 -> logL =      joint_likelihood.py:1013
+                  -269151.948                                                   
+         INFO      trial values: -29.768 -> logL =      joint_likelihood.py:1013
+                  -269151.649                                                   
+         INFO      trial values: -29.827 -> logL =      joint_likelihood.py:1013
+                  -269151.480                                                   
+         INFO      trial values: -29.786 -> logL =      joint_likelihood.py:1013
+                  -269151.580                                                   
+         INFO      trial values: -29.867 -> logL =      joint_likelihood.py:1013
+                  -269151.442                                                   
+         INFO      trial values: -29.768 -> logL =      joint_likelihood.py:1013
+                  -269151.645                                                   
+         INFO      trial values: -29.885 -> logL =      joint_likelihood.py:1013
+                  -269151.434                                                   
+         INFO      trial values: -29.827 -> logL =      joint_likelihood.py:1013
+                  -269151.480                                                   
+         INFO      trial values: -29.768 -> logL =      joint_likelihood.py:1013
+                  -269151.645                                                   
+         INFO      trial values: -29.885 -> logL =      joint_likelihood.py:1013
+                  -269151.434                                                   
+         INFO      trial values: -29.815 -> logL =      joint_likelihood.py:1013
+                  -269151.508                                                   
+         INFO      trial values: -29.838 -> logL =      joint_likelihood.py:1013
+                  -269151.466                                                   
+         INFO      trial values: -29.877 -> logL =      joint_likelihood.py:1013
+                  -269151.434                                                   
+         INFO      trial values: -29.817 -> logL =      joint_likelihood.py:1013
+                  -269151.503                                                   
+         INFO      trial values: -29.937 -> logL =      joint_likelihood.py:1013
+                  -269151.459                                                   
+         INFO      trial values: -29.89 -> logL =       joint_likelihood.py:1013
+                  -269151.436                                                   
+         INFO      trial values: -29.881 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -29.811 -> logL =      joint_likelihood.py:1013
+                  -269151.517                                                   
+         INFO      trial values: -29.951 -> logL =      joint_likelihood.py:1013
+                  -269151.476                                                   
+         INFO      trial values: -29.899 -> logL =      joint_likelihood.py:1013
+                  -269151.439                                                   
+         INFO      trial values: -29.885 -> logL =      joint_likelihood.py:1013
+                  -269151.434                                                   
+         INFO      trial values: -29.882 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -29.881 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -29.881 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -29.881 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -29.881 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -29.881 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -29.881 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -29.811 -> logL =      joint_likelihood.py:1013
+                  -269151.517                                                   
+         INFO      trial values: -29.951 -> logL =      joint_likelihood.py:1013
+                  -269151.476                                                   
+         INFO      trial values: -29.867 -> logL =      joint_likelihood.py:1013
+                  -269151.442                                                   
+         INFO      trial values: -29.895 -> logL =      joint_likelihood.py:1013
+                  -269151.438                                                   
+         INFO      trial values: -29.878 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -29.884 -> logL =      joint_likelihood.py:1013
+                  -269151.434                                                   
+         INFO      trial values: -29.881 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -29.878 -> logL =      joint_likelihood.py:1013
+                  -269151.433                                                   
+         INFO      trial values: -29.884 -> logL =      joint_likelihood.py:1013
+                  -269151.434                                                   
+         INFO      trial values: -29.853 -> logL =      joint_likelihood.py:1013
+                  -269151.454                                                   
+         INFO      trial values: -29.909 -> logL =      joint_likelihood.py:1013
+                  -269151.443                                                   
+         INFO      trial values: -29.602 -> logL =      joint_likelihood.py:1013
+                  -269153.216                                                   
+         INFO      trial values: -30.161 -> logL =      joint_likelihood.py:1013
+                  -269151.898                                                   
+         INFO      trial values: -27.75 -> logL =       joint_likelihood.py:1013
+                  -287738.798                                                   
+         INFO      trial values: -32.022 -> logL =      joint_likelihood.py:1013
+                  -269153.575                                                   
+         INFO      trial values: -29.668 -> logL =      joint_likelihood.py:1013
+                  -269152.333                                                   
+         INFO      trial values: -30.095 -> logL =      joint_likelihood.py:1013
+                  -269151.740                                                   
+         INFO      trial values: -29.839 -> logL =      joint_likelihood.py:1013
+                  -269151.466                                                   
+         INFO      trial values: -29.924 -> logL =      joint_likelihood.py:1013
+                  -269151.448                                                   
+         INFO      trial values: -29.873 -> logL =      joint_likelihood.py:1013
+                  -269151.437                                                   
+         INFO      trial values: -29.89 -> logL =       joint_likelihood.py:1013
+                  -269151.436                                                   
+         WARNING   get_number_of_data_points not         plugin_prototype.py:130
+                  implemented, values for statistical                           
+                  measurements such as AIC or BIC are                           
+                  unreliable                                                    
+18:27:53 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Best fit values:
+
+                                                      result             unit
+parameter                                                                    
+finalNorm.spectrum.main.Powerlaw.K  (1.3 -0.5 +0.7) x 10^-30  1 / (keV s cm2)
+
+Correlation matrix:
+
+col0
+----
+1.00
+
+Values of -log(likelihood) at the minimum:
+
+         -log(likelihood)
+stacked     269151.432658
+total       269151.432658
+
+Values of statistical measures:
+
+     statistical measures
+AIC         538300.865316
+BIC         538302.865316
+Time to make fit:  0.2700951099395752 sec
+***************
+Parameter Results: 
+                                           value  negative_error  \
+finalNorm.spectrum.main.Powerlaw.K  1.314389e-30   -4.769297e-31   
+
+                                    positive_error         error  \
+finalNorm.spectrum.main.Powerlaw.K    7.748794e-31  6.259046e-31   
+
+                                               unit  
+finalNorm.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+***************
+Likelihood Results: 
+         -log(likelihood)
+stacked     269151.432658
+total       269151.432658
+Total TS: 4.3490189800504595
+
+[4.350687917787582, -456.57121781026945, 4.3490189800504595]

@@ -1,0 +1,351 @@
+#import matplotlib as mpl
+#mpl.use("Agg")
+from astropy import units as u
+import matplotlib.pyplot as plt
+import os, sys, time
+from scipy.interpolate import interp1d, InterpolatedUnivariateSpline
+import scipy.optimize
+import pickle
+from astromodels import clone_model
+import math
+import warnings
+import yaml
+import pandas as pd
+
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore")
+    from threeML import *
+    from threeML.plugins.experimental.CastroLike import *
+    from hawc_hal import HAL, HealpixConeROI, HealpixMapROI
+
+def plot_logProfile(IntC,param_df,like_df,minlogN=-23.,maxlogN=-9.,show=False,save=None):
+    finalnorm = np.linspace(minlogN,maxlogN,200)
+    finalnorm = np.power(10,finalnorm)
+    totalllh = np.zeros(200)
+    #llh1 = np.zeros(200)
+    #llh2 = np.zeros(200)
+    for i,fn in enumerate(finalnorm):
+        for j,cont in enumerate(IntC):
+            totalllh[i] += cont(fn)
+    llhinterp = InterpolatedUnivariateSpline(np.log10(finalnorm),totalllh,k=1,ext=0)
+    minNorm = param_df['value'][0]#np.power(10,res.x)
+    minLLH = like_df.iloc[1]['-log(likelihood)']
+    fig,sbu = plt.subplots()
+    plt.plot(finalnorm,-totalllh-minLLH,'b',markersize=2) #totallh needs a min, to make it positive
+    plt.vlines(minNorm,0.,3.0,linestyles='--')
+    plt.xscale('log')
+    plt.ylim(0,2.71)
+    plt.xlim(np.power(10,minlogN),np.power(10,maxlogN))
+    plt.xlabel("Normalization [kev-1 s-1 cm-2]")
+    plt.ylabel("LLH-LLHmin")
+    plt.grid()
+    if show:
+        plt.show()
+    if save is not None:
+        fig.savefig("{}".format(save))
+    fig.clear()
+    plt.close(fig)
+
+
+#assert is_plugin_available("HAWCLike"),"HAWCLike is not available. Check your configuration"
+#print("HAWC plugin is available")
+start = time.perf_counter()
+
+DATADIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/'
+DIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-noMask/'
+MAP = os.path.join(DATADIR,'maptree-fhit2pct-pass5f-mlp-chunk1-1510.root')
+DR = os.path.join(DATADIR, 'detRes-fhit2pct-pass5f-mlp-refit.root')
+
+print(MAP)
+print(DR)
+
+lowerE = np.logspace(1.75,2.5,4)[0:3]
+print(lowerE)
+
+df = pd.read_csv("data.csv",sep='\\s+').to_numpy()
+
+sourceName = df[:3,0]
+RA = df[:,1]
+Dec = df[:,2]
+A = df[:,3]
+
+print("The total weights are", A)
+
+Atotal = 0
+for c in range(len(sourceName)):
+    Atotal += A[c]
+IntC = []
+nullLLH = [] 
+bestGuess = 1e-26
+
+results = []
+resultsLow = [] 
+resultsHigh = [] 
+TSArray = []
+
+sourceStart = np.zeros(len(sourceName))
+sourceEnd = np.zeros(len(sourceName))
+
+for e in lowerE:
+    IntC[:] = []
+    nullLLH[:] = []
+    lowe = e    # lowerE[0]
+    uppe = np.power(10,np.log10(lowe)+0.25)
+    mide = np.power(10,np.log10(lowe)+0.125)
+    print('{}'.format("#####"*4))
+    print('Energy: {} TeV'.format(mide))
+    
+    for i,c in enumerate(sourceName):
+        sourceStart[i] = time.perf_counter()
+
+        ra = RA[i]
+        dec = Dec[i]
+        data_radius = 5.
+        model_radius = 8.
+        print(c, ra, dec)
+
+        # this is the shape from the model map
+        # for extended source just want a Gaussian
+        # for point source, specify ra and dec instead of gaussian shape 
+        shape = Gaussian_on_sphere()
+        shape.sigma.value = 0.34 
+        shape.sigma.fix = True
+        shape.lon0.value = ra 
+        shape.lon0.fix = True
+        shape.lat0.value = dec
+        shape.lat0.fix = True 
+ 
+        spectrum = Powerlaw()*Constant()  #*StepFunction() for dec-dependednt bins
+        spectrum.index_1 = -3
+        spectrum.index_1.fix=True
+        spectrum.K_1.unit = (u.keV * u.s * u.cm**2 )**(-1)
+        spectrum.K_1 = 1e-21 
+        spectrum.K_1.min_value = 1e-29
+        spectrum.K_1.max_value = 1e-3
+        spectrum.K_1.fix = False
+        spectrum.piv_1 = mide
+        spectrum.piv_1.fix = True
+        spectrum.piv_1.unit = u.TeV
+        #spectrum.lower_bound_2= lowe
+        #spectrum.lower_bound_2.fix=True
+        #spectrum.lower_bound_2.unit = u.TeV
+        #spectrum.upper_bound_2 = uppe
+        #spectrum.upper_bound_2.fix=True
+        #spectrum.upper_bound_2.unit = u.TeV
+        #spectrum.value_2.fix = True
+        spectrum.k_2 = A[i]
+        spectrum.k_2.fix = True
+
+        source = PointSource(c,ra,dec,spectrum)
+
+        lm = Model(source)
+        #print(lm)
+        #link=True # link normalization
+        #if link:
+            #for i, p in enumerate(lm.free_parameters):
+                #if i==0:
+                    #temp=p
+                #else:
+                    #lm.link(lm[p], lm[temp])
+
+        roi = HealpixConeROI(data_radius=data_radius,
+                         model_radius=model_radius,
+                         ra=ra,
+                         dec=dec)
+        llh  = HAL("Likelihood_{}".format(c),MAP,DR,roi)
+       
+        # this needs to be set to the energy bins. There can be HE events in lower energy bins (hence step function) 
+        decDependentBins = False
+        if decDependentBins is True:
+           decRounded=int(round(dec/5))*5
+           data_file='hawc_bins.yml'
+           bin_dictionary = yaml.load(open(data_file,'r'))
+           style="GP_2D"
+           bins = bin_dictionary[decRounded]
+           #print bins
+           bins = bins.split()
+           print(bins)
+        else:
+           bins = ['B2C0','B2C1','B3C0','B3C1','B4C0','B4C1','B5C0','B5C1','B6C0','B6C1','B7C0','B7C1','B8C0','B8C1','B9C0','B9C1','B10C0','B10C1']
+           #if lowe > 50 and lowe < 60:
+           #  bins = ['8j', '9j']
+           #elif lowe > 90 and lowe < 110:
+           #  bins = ['9k']
+           #else:
+           #  bins = ['9l']
+           print(bins)
+        llh.set_active_measurements(bin_list=bins)
+        datalist = DataList(llh)
+
+        poissonFluctuate = False
+        if poissonFluctuate is True:
+            print("Fluctuating bkg and using as data")
+            ejl = JointLikelihood(Model(),datalist,verbose=False)
+            poiss_data = []
+            for data in ejl.data_list.values():
+                new_data = data.get_simulated_dataset("%s_sim" % data.name)
+                poiss_data.append(new_data)
+            datalist = DataList(*poiss_data)
+
+        print("{}".format("*"*20))
+        print("Datalist made for pulsar {}".format(c))
+        jl = JointLikelihood(lm,datalist,verbose=False)
+        print("Fitting time!!")
+        start=time.time()
+        jl.set_minimizer("ROOT")
+        param_df, like_df = jl.fit(quiet=True)
+        stop =time.time()
+        print("Time to make fit: ",stop-start, "sec")
+
+        print("{}".format("*"*15))
+        print("Parameter Results: ")
+        print(param_df)
+        print("{}".format("*"*15))
+        print("Likelihood Results: ")
+        print(like_df)
+
+        indminNorm = param_df['value'][0] # in kev-1 s-1 cm-2
+        if indminNorm < bestGuess:
+            bestGuess = indminNorm
+        print("Getting Likelihood profile around minimum Norm")
+        norms = np.linspace(np.log10(indminNorm)-5,np.log10(indminNorm)+5,200)
+        log_val = np.zeros(200)
+        for j in range(200):
+            jl.verbose=False
+            log_val[j] = jl.minus_log_like_profile(norms[j]) # need logllh, not -logllh
+        norms = np.power(10,norms)
+        #np.savez("ROI_{}.npz".format(i+1),norms,log_val)
+        IntC.append(IntervalContainer(i+1,i+2,norms,-log_val,101))
+        a = jl.compute_TS(c,like_df)
+        nullLLH.append(a.iloc[0]['Null hyp.'])
+        print("TS: {}".format(a.iloc[0]['TS']))
+        print("{}\n".format("*"*20))
+        print("Individual logProfile")
+        
+        figname = os.path.join(DIR,"plots/E{:0.2f}/{}_E{:0.2f}_pllh.png".format(mide,c,mide))
+        plot_logProfile([IntC[-1]],param_df,like_df,minlogN=np.log10(indminNorm)-3,maxlogN=np.log10(indminNorm)+1.5,show=False,save=figname)
+        
+        sourceEnd[i] = time.perf_counter()
+        print("Time elapsed is",sourceEnd[i]-sourceStart[i])
+
+        outfileName = os.path.join(DIR,"data_stacking.txt")
+        with open(outfileName,'a') as datafile:
+            datafile.write("TS: ")
+            datafile.write(str(a.iloc[0])+'\n')
+            datafile.write("Time elapsed: ")
+            datafile.write(str(sourceEnd[i]-sourceStart[i])+'\n'+'\n')
+
+    totalnull = np.sum(np.asarray(nullLLH))
+    print("Stacking Likelihoods")
+    print("Total factor A: {}".format(Atotal))
+    print("Total nullLLH: {}".format(totalnull))
+    cl = CastroLike("stacked",IntC)
+    newdata = DataList(cl)
+    
+    normalization = Powerlaw()
+    normalization.K = 1e-21
+    normalization.K.min_value = 1e-60
+    normalization.K.max_value = 1e-3
+    #normalization.K = bestGuess
+    normalization.K.unit = (u.keV * u.s * u.cm**2 )**(-1)
+    normalization.K.free = True
+    normalization.index = 0.0
+    normalization.index.free = False
+    fsource = PointSource("finalNorm",ra=0,dec=0,spectral_shape=normalization)
+    clm = Model(fsource)
+
+    print(clm)
+
+    fjl = JointLikelihood(clm,newdata,verbose=True)
+
+    print("Fitting time!!")
+    start=time.time()
+    #fjl.set_minimizer("ROOT")
+    param_df, like_df = fjl.fit(quiet=False)
+    stop =time.time()
+    print("Time to make fit: ",stop-start, "sec")
+
+    print("{}".format("*"*15))
+    print("Parameter Results: ")
+    print(param_df)
+    print("{}".format("*"*15))
+    print("Likelihood Results: ")
+    print(like_df)
+
+
+    TS =  2 * (totalnull - like_df.iloc[1]['-log(likelihood)'])
+    TSArray.append(TS)
+    print("Total TS: {}\n".format(TS))
+ 
+    print(TSArray)
+
+    ####### Check final loglikelihood profile
+    indminNorm = param_df['value'][0]
+    if indminNorm<normalization.K.min_value:
+        normalization.k.min_value = 1e-40    
+    
+    figname = os.path.join(DIR,"plots/Stacked_E{:0.2f}_pllh.png".format(mide))
+    plot_logProfile(IntC,param_df,like_df,show=False,minlogN=np.log10(indminNorm)-3,maxlogN=np.log10(indminNorm)+1.5,save=figname)
+    end = time.perf_counter()
+    with open(outfileName,'a') as datafile:
+        datafile.write("\nTotal time elapsed: ")
+        datafile.write(str(end-start)+'\n')
+        datafile.write("Total TS: ")
+        datafile.write(str(TS)+'\n'+'\n')
+
+    #print("{}".format("="*20))
+    #print("Bayesian Analysis")
+    #fsource.spectrum.main.Powerlaw.K.prior = Uniform_prior(lower_bound=0.,upper_bound=1e-15)
+    #print "printing prior", fsource.spectrum.main.Powerlaw.K.prior 
+
+    #ba = BayesianAnalysis(clm,newdata)
+
+    #nW = 10
+    #nB = 120
+    #nS = 2000
+
+
+    #print('Running the MCMC')
+    #samples = ba.sample(nW,nB,nS)
+    #print(samples)
+    #samples_file = os.path.join(DIR,'bayes_res','{}_bayes_{}TeV.csv'.format(sourceName,mide))
+    #with open(samples_file,'wb') as f:
+    #    pickle.dump(samples,f)
+
+    #print('\n*****Bayesian results*****')
+    #if poissonFluctuate is False:
+    #  if TSArray[x] < 4.0:
+    #    credInt = np.quantile(samples['finalNorm.spectrum.main.Powerlaw.K'],0.95)
+    #    #print('95% CI K: {} [keV-1 s-1 cm-2]'.format(credInt/1.25e19))
+    #    print('95% CI Norm: {} [TeV-1 s-1 cm-2]'.format(credInt*1e9*Atotal))
+    #    #print('95% CI Norm: {} [TeV s-1 cm-2]'.format(credInt*1e9*Atotal*mide**2))
+    #    print('*****Bayesian results*****\n')
+    #    print('{}'.format("#####"*4))
+    #    resultsHigh.append(credInt*1e9*Atotal)
+    #    resultsLow.append(0)
+    #    results.append(0)
+    #  else:
+    #    credInt1 = np.quantile(samples['finalNorm.spectrum.main.Powerlaw.K'], 0.159)
+    #    credInt2 = np.quantile(samples['finalNorm.spectrum.main.Powerlaw.K'], 0.5)
+    #    credInt3 = np.quantile(samples['finalNorm.spectrum.main.Powerlaw.K'], 0.841)
+    #    print('15.9% CI Norm: {} [TeV-1 s-1 cm-2]'.format(credInt1*1e9*Atotal))
+    #    print('50% CI Norm: {} [TeV-1 s-1 cm-2]'.format(credInt2*1e9*Atotal))
+    #    print('84.1% CI Norm: {} [TeV-1 s-1 cm-2]'.format(credInt3*1e9*Atotal))
+    #    results.append(credInt2*1e9*Atotal)
+    #    resultsLow.append(credInt1*1e9*Atotal)
+    #    resultsHigh.append(credInt3*1e9*Atotal)
+    #else:
+    #  credInt = np.quantile(samples['finalNorm.spectrum.main.Powerlaw.K'], 0.95)
+    #  credInt1 = np.quantile(samples['finalNorm.spectrum.main.Powerlaw.K'], 0.5)
+    #  resultsLow.append(credInt1*1e9*Atotal)
+    #  results.append(credInt*1e9*Atotal)
+
+##write the results to a file 
+#f = open("/data/scratch/userspace/kmalone/pulsar-paper/stacked-highedot-pulsars/code/results-for-plotting-everythingStacked.txt", "a+")
+#for x in range(0, len(lowerE)):
+#  mide = np.power(10,np.log10(lowerE[x])+0.125)
+#  if poissonFluctuate is False:
+#    f.write(str(mide) + ' ' + str(resultsLow[x]) + ' ' + str(results[x]) + ' ' + str(resultsHigh[x]) + '\n')
+#  else:
+#    f.write(str(mide) + ' ' + str(resultsLow[x]) + ' ' + str(results[x]) + '\n')
+#f.close() 

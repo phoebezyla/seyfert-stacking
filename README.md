@@ -1,0 +1,1 @@
+A repository for P. Zyla's seyfert-stacking analysis. Each sub-directory is named according to the conditions it and its contents were made under, and contain resultant plots, outputs, and the `stacking-seyferts.py` scripts that was ran. 
