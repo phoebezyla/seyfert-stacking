@@ -1,0 +1,930 @@
+TS: Null hyp.    88615.721803
+Alt. hyp.    88613.277999
+TS               4.887609
+Name: Likelihood_NGC1275, dtype: float64
+Time elapsed: 50.94305457547307
+
+TS: Null hyp.    90060.105226
+Alt. hyp.    90058.550717
+TS               3.109018
+Name: Likelihood_ThreeC111, dtype: float64
+Time elapsed: 38.541676135733724
+
+TS: Null hyp.    90477.780138
+Alt. hyp.    90476.650157
+TS               2.259963
+Name: Likelihood_NGC4151, dtype: float64
+Time elapsed: 35.9525011992082
+
+TS: Null hyp.    91348.309888
+Alt. hyp.    91346.579383
+TS               3.461010
+Name: Likelihood_NGC1142, dtype: float64
+Time elapsed: 34.54184040427208
+
+TS: Null hyp.    94011.784484
+Alt. hyp.    94010.928163
+TS               1.712643
+Name: Likelihood_CygA, dtype: float64
+Time elapsed: 35.698657339438796
+
+TS: Null hyp.    91697.921804
+Alt. hyp.    91706.653015
+TS             -17.462423
+Name: Likelihood_Mrk348, dtype: float64
+Time elapsed: 35.97232288401574
+
+TS: Null hyp.    84032.217598
+Alt. hyp.    84031.617741
+TS               1.199713
+Name: Likelihood_Mrk1498, dtype: float64
+Time elapsed: 34.45947926584631
+
+TS: Null hyp.    91947.000544
+Alt. hyp.    91946.680700
+TS               0.639687
+Name: Likelihood_NGC3227, dtype: float64
+Time elapsed: 36.34028430003673
+
+TS: Null hyp.    91562.416929
+Alt. hyp.    91561.991812
+TS               0.850233
+Name: Likelihood_UGC11910, dtype: float64
+Time elapsed: 35.108049899339676
+
+TS: Null hyp.    88982.724897
+Alt. hyp.    88982.420973
+TS               0.607848
+Name: Likelihood_NGC4051, dtype: float64
+Time elapsed: 35.1983331926167
+
+TS: Null hyp.    87158.884923
+Alt. hyp.    87158.478714
+TS               0.812416
+Name: Likelihood_UGC3374, dtype: float64
+Time elapsed: 35.356812849640846
+
+TS: Null hyp.    91654.173201
+Alt. hyp.    91653.790728
+TS               0.764947
+Name: Likelihood_NGC7603, dtype: float64
+Time elapsed: 35.52427541837096
+
+TS: Null hyp.    91727.790184
+Alt. hyp.    91727.750874
+TS               0.078619
+Name: Likelihood_Mrk1040, dtype: float64
+Time elapsed: 34.47468589898199
+
+TS: Null hyp.    74798.471736
+Alt. hyp.    74798.400512
+TS               0.142448
+Name: Likelihood_ESO565G019, dtype: float64
+Time elapsed: 34.852874915115535
+
+TS: Null hyp.    94279.264231
+Alt. hyp.    94279.252808
+TS               0.022846
+Name: Likelihood_TwoMASXJ2014592, dtype: float64
+Time elapsed: 35.95725842937827
+
+TS: Null hyp.    83233.715328
+Alt. hyp.    83233.645235
+TS               0.140186
+Name: Likelihood_NGC4102, dtype: float64
+Time elapsed: 36.14185594394803
+
+TS: Null hyp.    73535.774393
+Alt. hyp.    73535.776089
+TS              -0.003393
+Name: Likelihood_Q0241622, dtype: float64
+Time elapsed: 35.62947450019419
+
+TS: Null hyp.    66087.036684
+Alt. hyp.    66087.039908
+TS              -0.006450
+Name: Likelihood_AXJ173742907, dtype: float64
+Time elapsed: 35.67093734163791
+
+TS: Null hyp.    92000.977013
+Alt. hyp.    92001.039215
+TS              -0.124404
+Name: Likelihood_NGC4388, dtype: float64
+Time elapsed: 35.68481700308621
+
+TS: Null hyp.    85632.778574
+Alt. hyp.    85632.785432
+TS              -0.013716
+Name: Likelihood_LEDA168563, dtype: float64
+Time elapsed: 35.272549715824425
+
+TS: Null hyp.    92201.562723
+Alt. hyp.    92201.566979
+TS              -0.008512
+Name: Likelihood_NGC5548, dtype: float64
+Time elapsed: 35.95069282967597
+
+TS: Null hyp.    92130.787358
+Alt. hyp.    92130.746822
+TS               0.081072
+Name: Likelihood_MCG4482, dtype: float64
+Time elapsed: 35.05118849966675
+
+TS: Null hyp.    83587.455574
+Alt. hyp.    83587.456828
+TS              -0.002509
+Name: Likelihood_LEDA138501, dtype: float64
+Time elapsed: 36.473100871779025
+
+TS: Null hyp.    90665.577649
+Alt. hyp.    90665.592480
+TS              -0.029662
+Name: Likelihood_ThreeC445, dtype: float64
+Time elapsed: 35.22784480638802
+
+TS: Null hyp.    91432.710713
+Alt. hyp.    91432.620943
+TS               0.179541
+Name: Likelihood_NGC1194, dtype: float64
+Time elapsed: 35.16917400062084
+
+TS: Null hyp.    90540.986081
+Alt. hyp.    90541.009948
+TS              -0.047733
+Name: Likelihood_NGC7319, dtype: float64
+Time elapsed: 35.6633293684572
+
+TS: Null hyp.    90948.548557
+Alt. hyp.    90948.558586
+TS              -0.020058
+Name: Likelihood_NGC6240, dtype: float64
+Time elapsed: 35.40593713987619
+
+TS: Null hyp.    91605.254653
+Alt. hyp.    91605.286810
+TS              -0.064313
+Name: Likelihood_LEDA86269, dtype: float64
+Time elapsed: 34.97884100023657
+
+TS: Null hyp.    90706.673185
+Alt. hyp.    90706.671546
+TS               0.003279
+Name: Likelihood_CGCG420015, dtype: float64
+Time elapsed: 34.75401993561536
+
+TS: Null hyp.    79615.224636
+Alt. hyp.    79615.230332
+TS              -0.011393
+Name: Likelihood_IGRJ212775656, dtype: float64
+Time elapsed: 35.75101091340184
+
+TS: Null hyp.    92210.917191
+Alt. hyp.    92210.996868
+TS              -0.159354
+Name: Likelihood_NGC7679, dtype: float64
+Time elapsed: 35.78600948583335
+
+TS: Null hyp.    92231.933084
+Alt. hyp.    92231.934145
+TS              -0.002121
+Name: Likelihood_NGC7682, dtype: float64
+Time elapsed: 36.31203768681735
+
+TS: Null hyp.    85810.769983
+Alt. hyp.    85810.806437
+TS              -0.072908
+Name: Likelihood_FourC5055, dtype: float64
+Time elapsed: 37.27711378503591
+
+TS: Null hyp.    90689.612702
+Alt. hyp.    90689.683073
+TS              -0.140743
+Name: Likelihood_ThreeC382, dtype: float64
+Time elapsed: 35.07107590138912
+
+TS: Null hyp.    81742.595787
+Alt. hyp.    81742.607803
+TS              -0.024031
+Name: Likelihood_LEDA166445, dtype: float64
+Time elapsed: 36.501778688281775
+
+TS: Null hyp.    90919.503311
+Alt. hyp.    90919.522344
+TS              -0.038065
+Name: Likelihood_Mrk1210, dtype: float64
+Time elapsed: 37.52362205367535
+
+TS: Null hyp.    91485.111278
+Alt. hyp.    91485.172938
+TS              -0.123321
+Name: Likelihood_NGC5252, dtype: float64
+Time elapsed: 37.154225481674075
+
+TS: Null hyp.    92285.047388
+Alt. hyp.    92285.132031
+TS              -0.169286
+Name: Likelihood_NGC7469, dtype: float64
+Time elapsed: 36.7633585492149
+
+TS: Null hyp.    92432.955269
+Alt. hyp.    92432.987109
+TS              -0.063680
+Name: Likelihood_IRAS055892828, dtype: float64
+Time elapsed: 35.45043367985636
+
+TS: Null hyp.    90965.954396
+Alt. hyp.    90966.137882
+TS              -0.366972
+Name: Likelihood_NGC1068, dtype: float64
+Time elapsed: 34.929472498595715
+
+TS: Null hyp.    67147.608361
+Alt. hyp.    67147.807155
+TS              -0.397587
+Name: Likelihood_ESO506G027, dtype: float64
+Time elapsed: 34.1136111645028
+
+TS: Null hyp.    84809.890981
+Alt. hyp.    84809.911382
+TS              -0.040801
+Name: Likelihood_Mrk110, dtype: float64
+Time elapsed: 34.54827340133488
+
+TS: Null hyp.    89391.032069
+Alt. hyp.    89391.149582
+TS              -0.235026
+Name: Likelihood_Ark120, dtype: float64
+Time elapsed: 33.748253216035664
+
+TS: Null hyp.    84988.813583
+Alt. hyp.    84989.264137
+TS              -0.901109
+Name: Likelihood_MCG0803018, dtype: float64
+Time elapsed: 34.13058643229306
+
+TS: Null hyp.    92587.081649
+Alt. hyp.    92587.634758
+TS              -1.106220
+Name: Likelihood_Z16419, dtype: float64
+Time elapsed: 34.34564808383584
+
+TS: Null hyp.    90775.306497
+Alt. hyp.    90775.576114
+TS              -0.539235
+Name: Likelihood_IRAS050781626, dtype: float64
+Time elapsed: 33.99159205984324
+
+TS: Null hyp.    92241.585240
+Alt. hyp.    92241.753936
+TS              -0.337393
+Name: Likelihood_NGC4992, dtype: float64
+Time elapsed: 34.846759689971805
+
+TS: Null hyp.    91868.701048
+Alt. hyp.    91868.806064
+TS              -0.210034
+Name: Likelihood_Mrk417, dtype: float64
+Time elapsed: 35.26670960243791
+
+TS: Null hyp.    89578.417803
+Alt. hyp.    89578.583209
+TS              -0.330812
+Name: Likelihood_NGC5506, dtype: float64
+Time elapsed: 35.429617673158646
+
+TS: Null hyp.    86324.247260
+Alt. hyp.    86324.311178
+TS              -0.127835
+Name: Likelihood_Mrk79, dtype: float64
+Time elapsed: 34.97352761402726
+
+TS: Null hyp.    80924.378853
+Alt. hyp.    80924.466014
+TS              -0.174324
+Name: Likelihood_NGC3079, dtype: float64
+Time elapsed: 34.99696933571249
+
+
+Total time elapsed: -1756506800.6659882
+Total TS: 0.6523825526237488
+
+TS: Null hyp.    88615.721803
+Alt. hyp.    88613.278026
+TS               4.887555
+Name: Likelihood_NGC1275, dtype: float64
+Time elapsed: 34.38429236225784
+
+TS: Null hyp.    90060.105226
+Alt. hyp.    90058.551488
+TS               3.107476
+Name: Likelihood_ThreeC111, dtype: float64
+Time elapsed: 34.53658176306635
+
+TS: Null hyp.    90477.780138
+Alt. hyp.    90477.430145
+TS               0.699987
+Name: Likelihood_NGC4151, dtype: float64
+Time elapsed: 35.52764653228223
+
+TS: Null hyp.    91348.309888
+Alt. hyp.    91346.580105
+TS               3.459566
+Name: Likelihood_NGC1142, dtype: float64
+Time elapsed: 35.273564339615405
+
+TS: Null hyp.    94011.784484
+Alt. hyp.    94010.929802
+TS               1.709365
+Name: Likelihood_CygA, dtype: float64
+Time elapsed: 34.77607912570238
+
+TS: Null hyp.    91697.921804
+Alt. hyp.    92034.210238
+TS            -672.576868
+Name: Likelihood_Mrk348, dtype: float64
+Time elapsed: 35.521123060025275
+
+TS: Null hyp.    84032.217598
+Alt. hyp.    84031.616446
+TS               1.202305
+Name: Likelihood_Mrk1498, dtype: float64
+Time elapsed: 35.462897659279406
+
+TS: Null hyp.    91947.000544
+Alt. hyp.    91946.686071
+TS               0.628946
+Name: Likelihood_NGC3227, dtype: float64
+Time elapsed: 35.42240943480283
+
+TS: Null hyp.    91562.416929
+Alt. hyp.    91561.993519
+TS               0.846820
+Name: Likelihood_UGC11910, dtype: float64
+Time elapsed: 35.410488243214786
+
+TS: Null hyp.    88982.724897
+Alt. hyp.    88982.416696
+TS               0.616401
+Name: Likelihood_NGC4051, dtype: float64
+Time elapsed: 35.167902135290205
+
+TS: Null hyp.    87158.884923
+Alt. hyp.    87158.479137
+TS               0.811571
+Name: Likelihood_UGC3374, dtype: float64
+Time elapsed: 35.67529560159892
+
+TS: Null hyp.    91654.173201
+Alt. hyp.    91653.791175
+TS               0.764052
+Name: Likelihood_NGC7603, dtype: float64
+Time elapsed: 36.354280644096434
+
+TS: Null hyp.    91727.790184
+Alt. hyp.    91727.768768
+TS               0.042830
+Name: Likelihood_Mrk1040, dtype: float64
+Time elapsed: 35.378000028431416
+
+TS: Null hyp.    74798.471736
+Alt. hyp.    74798.429960
+TS               0.083552
+Name: Likelihood_ESO565G019, dtype: float64
+Time elapsed: 35.32701750844717
+
+TS: Null hyp.    94279.264231
+Alt. hyp.    94279.341969
+TS              -0.155477
+Name: Likelihood_TwoMASXJ2014592, dtype: float64
+Time elapsed: 34.65709496103227
+
+TS: Null hyp.    83233.715328
+Alt. hyp.    83233.645415
+TS               0.139825
+Name: Likelihood_NGC4102, dtype: float64
+Time elapsed: 35.24053834658116
+
+TS: Null hyp.    73535.774393
+Alt. hyp.    73535.774789
+TS              -0.000793
+Name: Likelihood_Q0241622, dtype: float64
+Time elapsed: 35.59402695391327
+
+TS: Null hyp.    66087.036684
+Alt. hyp.    66087.042150
+TS              -0.010933
+Name: Likelihood_AXJ173742907, dtype: float64
+Time elapsed: 35.5949083995074
+
+TS: Null hyp.    92000.977013
+Alt. hyp.    92003.202990
+TS              -4.451954
+Name: Likelihood_NGC4388, dtype: float64
+Time elapsed: 35.000468499958515
+
+TS: Null hyp.    85632.778574
+Alt. hyp.    85632.834828
+TS              -0.112507
+Name: Likelihood_LEDA168563, dtype: float64
+Time elapsed: 34.993725943379104
+
+TS: Null hyp.    92201.562723
+Alt. hyp.    92201.713567
+TS              -0.301688
+Name: Likelihood_NGC5548, dtype: float64
+Time elapsed: 34.8811828577891
+
+TS: Null hyp.    92130.787358
+Alt. hyp.    92130.938048
+TS              -0.301379
+Name: Likelihood_MCG4482, dtype: float64
+Time elapsed: 34.351644988171756
+
+TS: Null hyp.    83587.455574
+Alt. hyp.    83587.472291
+TS              -0.033433
+Name: Likelihood_LEDA138501, dtype: float64
+Time elapsed: 35.33765936642885
+
+TS: Null hyp.    90665.577649
+Alt. hyp.    90665.689682
+TS              -0.224067
+Name: Likelihood_ThreeC445, dtype: float64
+Time elapsed: 34.64582159277052
+
+TS: Null hyp.    91432.710713
+Alt. hyp.    91432.624497
+TS               0.172432
+Name: Likelihood_NGC1194, dtype: float64
+Time elapsed: 35.59267570823431
+
+TS: Null hyp.    90540.986081
+Alt. hyp.    90541.162636
+TS              -0.353111
+Name: Likelihood_NGC7319, dtype: float64
+Time elapsed: 35.51613667048514
+
+TS: Null hyp.    90948.548557
+Alt. hyp.    90950.185464
+TS              -3.273814
+Name: Likelihood_NGC6240, dtype: float64
+Time elapsed: 34.94214857928455
+
+TS: Null hyp.    91605.254653
+Alt. hyp.    91605.496006
+TS              -0.482707
+Name: Likelihood_LEDA86269, dtype: float64
+Time elapsed: 33.93416020274162
+
+TS: Null hyp.    90706.673185
+Alt. hyp.    90706.698048
+TS              -0.049726
+Name: Likelihood_CGCG420015, dtype: float64
+Time elapsed: 34.75454617291689
+
+TS: Null hyp.    79615.224636
+Alt. hyp.    79615.259582
+TS              -0.069893
+Name: Likelihood_IGRJ212775656, dtype: float64
+Time elapsed: 35.30526617076248
+
+TS: Null hyp.    92210.917191
+Alt. hyp.    92213.953029
+TS              -6.071677
+Name: Likelihood_NGC7679, dtype: float64
+Time elapsed: 34.59007455967367
+
+TS: Null hyp.    92231.933084
+Alt. hyp.    92231.975941
+TS              -0.085713
+Name: Likelihood_NGC7682, dtype: float64
+Time elapsed: 35.26546012517065
+
+TS: Null hyp.    85810.769983
+Alt. hyp.    85811.153240
+TS              -0.766514
+Name: Likelihood_FourC5055, dtype: float64
+Time elapsed: 34.60182596836239
+
+TS: Null hyp.    90689.612702
+Alt. hyp.    90690.111883
+TS              -0.998362
+Name: Likelihood_ThreeC382, dtype: float64
+Time elapsed: 34.86679125763476
+
+TS: Null hyp.    81742.595787
+Alt. hyp.    81742.666698
+TS              -0.141822
+Name: Likelihood_LEDA166445, dtype: float64
+Time elapsed: 35.45948406495154
+
+TS: Null hyp.    90919.503311
+Alt. hyp.    90919.677629
+TS              -0.348635
+Name: Likelihood_Mrk1210, dtype: float64
+Time elapsed: 35.9534221207723
+
+TS: Null hyp.    91485.111278
+Alt. hyp.    91485.616014
+TS              -1.009472
+Name: Likelihood_NGC5252, dtype: float64
+Time elapsed: 35.780530139803886
+
+TS: Null hyp.    92285.047388
+Alt. hyp.    92285.624198
+TS              -1.153620
+Name: Likelihood_NGC7469, dtype: float64
+Time elapsed: 35.46602481417358
+
+TS: Null hyp.    92432.955269
+Alt. hyp.    92433.248009
+TS              -0.585481
+Name: Likelihood_IRAS055892828, dtype: float64
+Time elapsed: 35.44752727076411
+
+TS: Null hyp.    90965.954396
+Alt. hyp.    90967.444016
+TS              -2.979240
+Name: Likelihood_NGC1068, dtype: float64
+Time elapsed: 35.08350499160588
+
+TS: Null hyp.    67147.608361
+Alt. hyp.    67149.091646
+TS              -2.966570
+Name: Likelihood_ESO506G027, dtype: float64
+Time elapsed: 34.65660652797669
+
+TS: Null hyp.    84809.890981
+Alt. hyp.    84810.017853
+TS              -0.253744
+Name: Likelihood_Mrk110, dtype: float64
+Time elapsed: 36.008482940495014
+
+TS: Null hyp.    89391.032069
+Alt. hyp.    89391.756932
+TS              -1.449725
+Name: Likelihood_Ark120, dtype: float64
+Time elapsed: 34.63872261252254
+
+TS: Null hyp.    84988.813583
+Alt. hyp.    84991.897831
+TS              -6.168497
+Name: Likelihood_MCG0803018, dtype: float64
+Time elapsed: 34.62899330072105
+
+TS: Null hyp.    92587.081649
+Alt. hyp.    92591.506728
+TS              -8.850158
+Name: Likelihood_Z16419, dtype: float64
+Time elapsed: 35.987839033827186
+
+TS: Null hyp.    90775.306497
+Alt. hyp.    90777.036553
+TS              -3.460112
+Name: Likelihood_IRAS050781626, dtype: float64
+Time elapsed: 34.662965091876686
+
+TS: Null hyp.    92241.585240
+Alt. hyp.    92242.623327
+TS              -2.076175
+Name: Likelihood_NGC4992, dtype: float64
+Time elapsed: 35.441587997600436
+
+TS: Null hyp.    91868.701048
+Alt. hyp.    91869.346759
+TS              -1.291423
+Name: Likelihood_Mrk417, dtype: float64
+Time elapsed: 34.44154777470976
+
+TS: Null hyp.    89578.417803
+Alt. hyp.    89579.462299
+TS              -2.088991
+Name: Likelihood_NGC5506, dtype: float64
+Time elapsed: 35.24008525814861
+
+TS: Null hyp.    86324.247260
+Alt. hyp.    86324.616526
+TS              -0.738533
+Name: Likelihood_Mrk79, dtype: float64
+Time elapsed: 35.340226913802326
+
+TS: Null hyp.    80924.378853
+Alt. hyp.    80924.879164
+TS              -1.000622
+Name: Likelihood_NGC3079, dtype: float64
+Time elapsed: 34.46566855721176
+
+
+Total time elapsed: -1756506801.221919
+Total TS: -0.05568492226302624
+
+TS: Null hyp.    88615.721803
+Alt. hyp.    88613.282920
+TS               4.877766
+Name: Likelihood_NGC1275, dtype: float64
+Time elapsed: 35.28455897979438
+
+TS: Null hyp.    90060.105226
+Alt. hyp.    90060.503737
+TS              -0.797022
+Name: Likelihood_ThreeC111, dtype: float64
+Time elapsed: 34.16843836661428
+
+TS: Null hyp.    90477.780138
+Alt. hyp.    90558.177721
+TS            -160.795165
+Name: Likelihood_NGC4151, dtype: float64
+Time elapsed: 34.81274077575654
+
+TS: Null hyp.    91348.309888
+Alt. hyp.    91347.360192
+TS               1.899391
+Name: Likelihood_NGC1142, dtype: float64
+Time elapsed: 35.44040460605174
+
+TS: Null hyp.    94011.784484
+Alt. hyp.    94014.115918
+TS              -4.662867
+Name: Likelihood_CygA, dtype: float64
+Time elapsed: 34.76169252675027
+
+TS: Null hyp.    91697.921804
+Alt. hyp.    99778.424689
+TS          -16161.005770
+Name: Likelihood_Mrk348, dtype: float64
+Time elapsed: 34.380271539092064
+
+TS: Null hyp.    84032.217598
+Alt. hyp.    84031.617245
+TS               1.200705
+Name: Likelihood_Mrk1498, dtype: float64
+Time elapsed: 34.311380786821246
+
+TS: Null hyp.    91947.000544
+Alt. hyp.    91955.333834
+TS             -16.666582
+Name: Likelihood_NGC3227, dtype: float64
+Time elapsed: 34.46945925243199
+
+TS: Null hyp.    91562.416929
+Alt. hyp.    91562.990268
+TS              -1.146677
+Name: Likelihood_UGC11910, dtype: float64
+Time elapsed: 35.120033979415894
+
+TS: Null hyp.    88982.724897
+Alt. hyp.    88982.518011
+TS               0.413772
+Name: Likelihood_NGC4051, dtype: float64
+Time elapsed: 35.27808067668229
+
+TS: Null hyp.    87158.884923
+Alt. hyp.    87160.821642
+TS              -3.873439
+Name: Likelihood_UGC3374, dtype: float64
+Time elapsed: 34.67064753733575
+
+TS: Null hyp.    91654.173201
+Alt. hyp.    91653.975718
+TS               0.394966
+Name: Likelihood_NGC7603, dtype: float64
+Time elapsed: 34.884399304166436
+
+TS: Null hyp.    91727.790184
+Alt. hyp.    91730.431132
+TS              -5.281896
+Name: Likelihood_Mrk1040, dtype: float64
+Time elapsed: 34.871976694092155
+
+TS: Null hyp.    74798.471736
+Alt. hyp.    74802.128725
+TS              -7.313978
+Name: Likelihood_ESO565G019, dtype: float64
+Time elapsed: 34.06240234989673
+
+TS: Null hyp.    94279.264231
+Alt. hyp.    94283.805890
+TS              -9.083319
+Name: Likelihood_TwoMASXJ2014592, dtype: float64
+Time elapsed: 34.33170618209988
+
+TS: Null hyp.    83233.715328
+Alt. hyp.    83233.777956
+TS              -0.125257
+Name: Likelihood_NGC4102, dtype: float64
+Time elapsed: 34.944002450443804
+
+TS: Null hyp.    73535.774393
+Alt. hyp.    73535.899093
+TS              -0.249399
+Name: Likelihood_Q0241622, dtype: float64
+Time elapsed: 34.21699932217598
+
+TS: Null hyp.    66087.036684
+Alt. hyp.    66087.080734
+TS              -0.088101
+Name: Likelihood_AXJ173742907, dtype: float64
+Time elapsed: 34.79401129577309
+
+TS: Null hyp.    92000.977013
+Alt. hyp.    92066.885110
+TS            -131.816195
+Name: Likelihood_NGC4388, dtype: float64
+Time elapsed: 33.83603899925947
+
+TS: Null hyp.    85632.778574
+Alt. hyp.    85633.622920
+TS              -1.688691
+Name: Likelihood_LEDA168563, dtype: float64
+Time elapsed: 34.905331052839756
+
+TS: Null hyp.    92201.562723
+Alt. hyp.    92206.521246
+TS              -9.917046
+Name: Likelihood_NGC5548, dtype: float64
+Time elapsed: 34.99600871745497
+
+TS: Null hyp.    92130.787358
+Alt. hyp.    92141.666917
+TS             -21.759117
+Name: Likelihood_MCG4482, dtype: float64
+Time elapsed: 34.68566170427948
+
+TS: Null hyp.    83587.455574
+Alt. hyp.    83587.854849
+TS              -0.798549
+Name: Likelihood_LEDA138501, dtype: float64
+Time elapsed: 35.2738941879943
+
+TS: Null hyp.    90665.577649
+Alt. hyp.    90667.106516
+TS              -3.057735
+Name: Likelihood_ThreeC445, dtype: float64
+Time elapsed: 35.164713888429105
+
+TS: Null hyp.    91432.710713
+Alt. hyp.    91435.476204
+TS              -5.530983
+Name: Likelihood_NGC1194, dtype: float64
+Time elapsed: 36.71144337579608
+
+TS: Null hyp.    90540.986081
+Alt. hyp.    90543.291412
+TS              -4.610662
+Name: Likelihood_NGC7319, dtype: float64
+Time elapsed: 36.2264311844483
+
+TS: Null hyp.    90948.548557
+Alt. hyp.    91002.461511
+TS            -107.825909
+Name: Likelihood_NGC6240, dtype: float64
+Time elapsed: 34.98947915714234
+
+TS: Null hyp.    91605.254653
+Alt. hyp.    91608.347951
+TS              -6.186596
+Name: Likelihood_LEDA86269, dtype: float64
+Time elapsed: 35.89761346299201
+
+TS: Null hyp.    90706.673185
+Alt. hyp.    90707.873342
+TS              -2.400313
+Name: Likelihood_CGCG420015, dtype: float64
+Time elapsed: 34.87671147286892
+
+TS: Null hyp.    79615.224636
+Alt. hyp.    79615.505828
+TS              -0.562386
+Name: Likelihood_IGRJ212775656, dtype: float64
+Time elapsed: 35.29537636786699
+
+TS: Null hyp.    92210.917191
+Alt. hyp.    92299.924824
+TS            -178.015268
+Name: Likelihood_NGC7679, dtype: float64
+Time elapsed: 35.99734165985137
+
+TS: Null hyp.    92231.933084
+Alt. hyp.    92233.426558
+TS              -2.986948
+Name: Likelihood_NGC7682, dtype: float64
+Time elapsed: 35.214570013806224
+
+TS: Null hyp.    85810.769983
+Alt. hyp.    85817.893035
+TS             -14.246104
+Name: Likelihood_FourC5055, dtype: float64
+Time elapsed: 35.02408015727997
+
+TS: Null hyp.    90689.612702
+Alt. hyp.    90695.556980
+TS             -11.888556
+Name: Likelihood_ThreeC382, dtype: float64
+Time elapsed: 34.9470704710111
+
+TS: Null hyp.    81742.595787
+Alt. hyp.    81743.100064
+TS              -1.008554
+Name: Likelihood_LEDA166445, dtype: float64
+Time elapsed: 35.61868653353304
+
+TS: Null hyp.    90919.503311
+Alt. hyp.    90922.559372
+TS              -6.112122
+Name: Likelihood_Mrk1210, dtype: float64
+Time elapsed: 34.90524674206972
+
+TS: Null hyp.    91485.111278
+Alt. hyp.    91492.639134
+TS             -15.055712
+Name: Likelihood_NGC5252, dtype: float64
+Time elapsed: 35.66302184946835
+
+TS: Null hyp.    92285.047388
+Alt. hyp.    92291.389983
+TS             -12.685189
+Name: Likelihood_NGC7469, dtype: float64
+Time elapsed: 34.861030301079154
+
+TS: Null hyp.    92432.955269
+Alt. hyp.    92438.087461
+TS             -10.264385
+Name: Likelihood_IRAS055892828, dtype: float64
+Time elapsed: 33.76963975466788
+
+TS: Null hyp.    90965.954396
+Alt. hyp.    90987.620766
+TS             -43.332740
+Name: Likelihood_NGC1068, dtype: float64
+Time elapsed: 34.99445736501366
+
+TS: Null hyp.    67147.608361
+Alt. hyp.    67165.988029
+TS             -36.759336
+Name: Likelihood_ESO506G027, dtype: float64
+Time elapsed: 35.456090765073895
+
+TS: Null hyp.    84809.890981
+Alt. hyp.    84810.971690
+TS              -2.161418
+Name: Likelihood_Mrk110, dtype: float64
+Time elapsed: 35.069106944836676
+
+TS: Null hyp.    89391.032069
+Alt. hyp.    89397.034047
+TS             -12.003956
+Name: Likelihood_Ark120, dtype: float64
+Time elapsed: 35.3568205088377
+
+TS: Null hyp.    84988.813583
+Alt. hyp.    85020.512474
+TS             -63.397782
+Name: Likelihood_MCG0803018, dtype: float64
+Time elapsed: 34.995343297719955
+
+TS: Null hyp.    92587.081649
+Alt. hyp.    92649.864599
+TS            -125.565900
+Name: Likelihood_Z16419, dtype: float64
+Time elapsed: 34.80513617768884
+
+TS: Null hyp.    90775.306497
+Alt. hyp.    90791.402965
+TS             -32.192937
+Name: Likelihood_IRAS050781626, dtype: float64
+Time elapsed: 34.55758207850158
+
+TS: Null hyp.    92241.585240
+Alt. hyp.    92250.134682
+TS             -17.098884
+Name: Likelihood_NGC4992, dtype: float64
+Time elapsed: 33.60561564285308
+
+TS: Null hyp.    91868.701048
+Alt. hyp.    91873.997479
+TS             -10.592864
+Name: Likelihood_Mrk417, dtype: float64
+Time elapsed: 33.96686997730285
+
+TS: Null hyp.    89578.417803
+Alt. hyp.    89587.651309
+TS             -18.467011
+Name: Likelihood_NGC5506, dtype: float64
+Time elapsed: 33.6769480695948
+
+TS: Null hyp.    86324.24726
+Alt. hyp.    86326.63262
+TS              -4.77072
+Name: Likelihood_Mrk79, dtype: float64
+Time elapsed: 33.36341586988419
+
+TS: Null hyp.    80924.378853
+Alt. hyp.    80927.512711
+TS              -6.267717
+Name: Likelihood_NGC3079, dtype: float64
+Time elapsed: 33.50469032395631
+
+
+Total time elapsed: -1756506801.0060422
+Total TS: 0.007976911962032318
+
