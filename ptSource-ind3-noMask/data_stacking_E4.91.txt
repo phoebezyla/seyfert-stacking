@@ -1,0 +1,861 @@
+NGC1275 TS: Null hyp.    88615.721803
+Alt. hyp.    88613.280918
+TS               4.881770
+Name: Likelihood_NGC1275, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC1275.spectrum.main.Powerlaw.K  3.263518e-24   -1.168235e-24   
+
+                                  positive_error         error  \
+NGC1275.spectrum.main.Powerlaw.K    1.799164e-24  1.483700e-24   
+
+                                             unit  
+NGC1275.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC1275      88613.280918
+total                   88613.280918
+Time elapsed: 59.96086120977998
+
+ThreeC111 TS: Null hyp.    90060.105226
+Alt. hyp.    90058.550696
+TS               3.109061
+Name: Likelihood_ThreeC111, dtype: float64
+Parameter Results:                                            value  negative_error  \
+ThreeC111.spectrum.main.Powerlaw.K  2.157353e-24   -8.860094e-25   
+
+                                    positive_error         error  \
+ThreeC111.spectrum.main.Powerlaw.K    1.526808e-24  1.206409e-24   
+
+                                               unit  
+ThreeC111.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                       -log(likelihood)
+Likelihood_ThreeC111      90058.550696
+total                     90058.550696
+Time elapsed: 61.165054673328996
+
+NGC4151 TS: Null hyp.    90477.780138
+Alt. hyp.    90476.649211
+TS               2.261855
+Name: Likelihood_NGC4151, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC4151.spectrum.main.Powerlaw.K  1.996981e-24   -9.010540e-25   
+
+                                  positive_error         error  \
+NGC4151.spectrum.main.Powerlaw.K    1.755715e-24  1.328385e-24   
+
+                                             unit  
+NGC4151.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC4151      90476.649211
+total                   90476.649211
+Time elapsed: 59.94489755667746
+
+NGC1142 TS: Null hyp.    91348.309888
+Alt. hyp.    91346.579386
+TS               3.461003
+Name: Likelihood_NGC1142, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC1142.spectrum.main.Powerlaw.K  2.702859e-24   -1.044360e-24   
+
+                                  positive_error         error  \
+NGC1142.spectrum.main.Powerlaw.K    1.712254e-24  1.378307e-24   
+
+                                             unit  
+NGC1142.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC1142      91346.579386
+total                   91346.579386
+Time elapsed: 60.06229003984481
+
+CygA TS: Null hyp.    94011.784484
+Alt. hyp.    94010.928112
+TS               1.712745
+Name: Likelihood_CygA, dtype: float64
+Parameter Results:                                       value  negative_error  positive_error  \
+CygA.spectrum.main.Powerlaw.K  1.865179e-24   -9.482197e-25    1.956691e-24   
+
+                                      error             unit  
+CygA.spectrum.main.Powerlaw.K  1.452455e-24  1 / (keV s cm2)  
+Likelihood Results:                  -log(likelihood)
+Likelihood_CygA      94010.928112
+total                94010.928112
+Time elapsed: 59.99004274047911
+
+Mrk348 TS: Null hyp.    91697.921804
+Alt. hyp.    91697.498359
+TS               0.846890
+Name: Likelihood_Mrk348, dtype: float64
+Parameter Results:                                         value  negative_error  positive_error  \
+Mrk348.spectrum.main.Powerlaw.K  9.887563e-25   -6.094260e-25    1.648477e-24   
+
+                                        error             unit  
+Mrk348.spectrum.main.Powerlaw.K  1.128952e-24  1 / (keV s cm2)  
+Likelihood Results:                    -log(likelihood)
+Likelihood_Mrk348      91697.498359
+total                  91697.498359
+Time elapsed: 60.53803194221109
+
+Mrk1498 TS: Null hyp.    84032.217598
+Alt. hyp.    84031.617988
+TS               1.199220
+Name: Likelihood_Mrk1498, dtype: float64
+Parameter Results:                                          value  negative_error  \
+Mrk1498.spectrum.main.Powerlaw.K  2.874140e-24   -1.666939e-24   
+
+                                  positive_error         error  \
+Mrk1498.spectrum.main.Powerlaw.K    3.954956e-24  2.810948e-24   
+
+                                             unit  
+Mrk1498.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_Mrk1498      84031.617988
+total                   84031.617988
+Time elapsed: 59.006570109166205
+
+NGC3227 TS: Null hyp.    91947.000544
+Alt. hyp.    91946.680761
+TS               0.639565
+Name: Likelihood_NGC3227, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC3227.spectrum.main.Powerlaw.K  7.536262e-25   -5.194732e-25   
+
+                                  positive_error         error  \
+NGC3227.spectrum.main.Powerlaw.K    1.529655e-24  1.024564e-24   
+
+                                             unit  
+NGC3227.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC3227      91946.680761
+total                   91946.680761
+Time elapsed: 60.1248895265162
+
+UGC11910 TS: Null hyp.    91562.416929
+Alt. hyp.    91561.991825
+TS               0.850208
+Name: Likelihood_UGC11910, dtype: float64
+Parameter Results:                                           value  negative_error  \
+UGC11910.spectrum.main.Powerlaw.K  9.713065e-25   -5.929007e-25   
+
+                                   positive_error         error  \
+UGC11910.spectrum.main.Powerlaw.K    1.602246e-24  1.097573e-24   
+
+                                              unit  
+UGC11910.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                      -log(likelihood)
+Likelihood_UGC11910      91561.991825
+total                    91561.991825
+Time elapsed: 60.461275042034686
+
+NGC4051 TS: Null hyp.    88982.724897
+Alt. hyp.    88982.420825
+TS               0.608143
+Name: Likelihood_NGC4051, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC4051.spectrum.main.Powerlaw.K  1.390976e-24   -9.083154e-25   
+
+                                  positive_error         error  \
+NGC4051.spectrum.main.Powerlaw.K    2.643552e-24  1.775934e-24   
+
+                                             unit  
+NGC4051.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC4051      88982.420825
+total                   88982.420825
+Time elapsed: 59.2359919603914
+
+UGC3374 TS: Null hyp.    87158.884923
+Alt. hyp.    87158.478712
+TS               0.812421
+Name: Likelihood_UGC3374, dtype: float64
+Parameter Results:                                          value  negative_error  \
+UGC3374.spectrum.main.Powerlaw.K  1.591999e-24   -1.076205e-24   
+
+                                  positive_error         error  \
+UGC3374.spectrum.main.Powerlaw.K    3.221625e-24  2.148915e-24   
+
+                                             unit  
+UGC3374.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_UGC3374      87158.478712
+total                   87158.478712
+Time elapsed: 60.584822898730636
+
+NGC7603 TS: Null hyp.    91654.173201
+Alt. hyp.    91653.793641
+TS               0.759121
+Name: Likelihood_NGC7603, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC7603.spectrum.main.Powerlaw.K  1.342006e-24   -8.240030e-25   
+
+                                  positive_error         error  \
+NGC7603.spectrum.main.Powerlaw.K    2.054038e-24  1.439020e-24   
+
+                                             unit  
+NGC7603.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC7603      91653.793641
+total                   91653.793641
+Time elapsed: 60.82878976222128
+
+Mrk1040 TS: Null hyp.    91727.790184
+Alt. hyp.    91727.750762
+TS               0.078844
+Name: Likelihood_Mrk1040, dtype: float64
+Parameter Results:                                          value  negative_error  \
+Mrk1040.spectrum.main.Powerlaw.K  2.775115e-25   -2.657793e-25   
+
+                                  positive_error         error  \
+Mrk1040.spectrum.main.Powerlaw.K    5.569700e-24  2.917740e-24   
+
+                                             unit  
+Mrk1040.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_Mrk1040      91727.750762
+total                   91727.750762
+Time elapsed: 60.19087562896311
+
+ESO565G019 TS: Null hyp.    74798.471736
+Alt. hyp.    74798.400476
+TS               0.142521
+Name: Likelihood_ESO565G019, dtype: float64
+Parameter Results:                                             value  negative_error  \
+ESO565G019.spectrum.main.Powerlaw.K  2.066403e-24   -1.927180e-24   
+
+                                     positive_error         error  \
+ESO565G019.spectrum.main.Powerlaw.K    2.608329e-23  1.400523e-23   
+
+                                                unit  
+ESO565G019.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                        -log(likelihood)
+Likelihood_ESO565G019      74798.400476
+total                      74798.400476
+Time elapsed: 60.179606636986136
+
+TwoMASXJ2014592 TS: Null hyp.    94279.264231
+Alt. hyp.    94279.252715
+TS               0.023032
+Name: Likelihood_TwoMASXJ2014592, dtype: float64
+Parameter Results:                                                  value  negative_error  \
+TwoMASXJ2014592.spectrum.main.Powerlaw.K  1.554084e-25   -1.533318e-25   
+
+                                          positive_error         error  \
+TwoMASXJ2014592.spectrum.main.Powerlaw.K    1.729211e-23  8.722719e-24   
+
+                                                     unit  
+TwoMASXJ2014592.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                             -log(likelihood)
+Likelihood_TwoMASXJ2014592      94279.252715
+total                           94279.252715
+Time elapsed: 60.09161582030356
+
+NGC4102 TS: Null hyp.    83233.715328
+Alt. hyp.    83233.647296
+TS               0.136063
+Name: Likelihood_NGC4102, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC4102.spectrum.main.Powerlaw.K  1.235168e-24   -1.093901e-24   
+
+                                  positive_error         error  \
+NGC4102.spectrum.main.Powerlaw.K    8.599946e-24  4.846923e-24   
+
+                                             unit  
+NGC4102.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC4102      83233.647296
+total                   83233.647296
+Time elapsed: 59.34669613558799
+
+Q0241622 TS: Null hyp.    73535.774393
+Alt. hyp.    73535.773866
+TS               0.001054
+Name: Likelihood_Q0241622, dtype: float64
+Parameter Results:                                           value  negative_error  \
+Q0241622.spectrum.main.Powerlaw.K  5.495307e-25   -2.956689e-25   
+
+                                   positive_error         error  \
+Q0241622.spectrum.main.Powerlaw.K    6.251560e-25  4.604125e-25   
+
+                                              unit  
+Q0241622.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                      -log(likelihood)
+Likelihood_Q0241622      73535.773866
+total                    73535.773866
+Time elapsed: 59.6183511801064
+
+AXJ173742907 TS: Null hyp.    66087.036684
+Alt. hyp.    66087.037596
+TS              -0.001824
+Name: Likelihood_AXJ173742907, dtype: float64
+Parameter Results:                                               value  negative_error  \
+AXJ173742907.spectrum.main.Powerlaw.K  1.460821e-25   -3.102646e-27   
+
+                                       positive_error         error  \
+AXJ173742907.spectrum.main.Powerlaw.K    3.253213e-27  3.177930e-27   
+
+                                                  unit  
+AXJ173742907.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                          -log(likelihood)
+Likelihood_AXJ173742907      66087.037596
+total                        66087.037596
+Time elapsed: 60.7702025687322
+
+NGC4388 TS: Null hyp.    92000.977013
+Alt. hyp.    92000.987378
+TS              -0.020730
+Name: Likelihood_NGC4388, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC4388.spectrum.main.Powerlaw.K  1.775736e-25   -1.724960e-25   
+
+                                  positive_error         error  \
+NGC4388.spectrum.main.Powerlaw.K    6.522257e-24  3.347377e-24   
+
+                                             unit  
+NGC4388.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC4388      92000.987378
+total                   92000.987378
+Time elapsed: 59.714788526296616
+
+LEDA168563 TS: Null hyp.    85632.778574
+Alt. hyp.    85632.778818
+TS              -0.000487
+Name: Likelihood_LEDA168563, dtype: float64
+Parameter Results:                                             value  negative_error  \
+LEDA168563.spectrum.main.Powerlaw.K  3.032145e-27   -2.515354e-27   
+
+                                     positive_error         error  \
+LEDA168563.spectrum.main.Powerlaw.K    1.575995e-26  9.137651e-27   
+
+                                                unit  
+LEDA168563.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                        -log(likelihood)
+Likelihood_LEDA168563      85632.778818
+total                      85632.778818
+Time elapsed: 60.20559751987457
+
+NGC5548 TS: Null hyp.    92201.562723
+Alt. hyp.    92201.562731
+TS              -0.000016
+Name: Likelihood_NGC5548, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC5548.spectrum.main.Powerlaw.K  4.369648e-26   -1.286796e-27   
+
+                                  positive_error         error  \
+NGC5548.spectrum.main.Powerlaw.K    1.378070e-27  1.332433e-27   
+
+                                             unit  
+NGC5548.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC5548      92201.562731
+total                   92201.562731
+Time elapsed: 60.102195128798485
+
+MCG4482 TS: Null hyp.    92130.787358
+Alt. hyp.    92130.746836
+TS               0.081045
+Name: Likelihood_MCG4482, dtype: float64
+Parameter Results:                                          value  negative_error  \
+MCG4482.spectrum.main.Powerlaw.K  2.915709e-25   -2.767652e-25   
+
+                                  positive_error         error  \
+MCG4482.spectrum.main.Powerlaw.K    4.474197e-24  2.375481e-24   
+
+                                             unit  
+MCG4482.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_MCG4482      92130.746836
+total                   92130.746836
+Time elapsed: 60.94166609738022
+
+LEDA138501 TS: Null hyp.    83587.455574
+Alt. hyp.    83587.462275
+TS              -0.013401
+Name: Likelihood_LEDA138501, dtype: float64
+Parameter Results:                                             value  negative_error  \
+LEDA138501.spectrum.main.Powerlaw.K  2.268389e-25   -2.254684e-25   
+
+                                     positive_error         error  \
+LEDA138501.spectrum.main.Powerlaw.K    7.253617e-23  3.638082e-23   
+
+                                                unit  
+LEDA138501.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                        -log(likelihood)
+Likelihood_LEDA138501      83587.462275
+total                      83587.462275
+Time elapsed: 59.027513882145286
+
+ThreeC445 TS: Null hyp.    90665.577649
+Alt. hyp.    90665.578209
+TS              -0.001120
+Name: Likelihood_ThreeC445, dtype: float64
+Parameter Results:                                            value  negative_error  \
+ThreeC445.spectrum.main.Powerlaw.K  2.976912e-27    1.540396e-26   
+
+                                    positive_error         error  \
+ThreeC445.spectrum.main.Powerlaw.K    2.883548e-10  1.441774e-10   
+
+                                               unit  
+ThreeC445.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                       -log(likelihood)
+Likelihood_ThreeC445      90665.578209
+total                     90665.578209
+Time elapsed: 60.20062720775604
+
+NGC1194 TS: Null hyp.    91432.710713
+Alt. hyp.    91432.620748
+TS               0.179930
+Name: Likelihood_NGC1194, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC1194.spectrum.main.Powerlaw.K  6.509306e-25   -5.836688e-25   
+
+                                  positive_error         error  \
+NGC1194.spectrum.main.Powerlaw.K    5.334203e-24  2.958936e-24   
+
+                                             unit  
+NGC1194.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC1194      91432.620748
+total                   91432.620748
+Time elapsed: 59.53895816300064
+
+NGC7319 TS: Null hyp.    90540.986081
+Alt. hyp.    90540.986876
+TS              -0.001590
+Name: Likelihood_NGC7319, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC7319.spectrum.main.Powerlaw.K  2.157356e-27   -2.262546e-28   
+
+                                  positive_error         error  \
+NGC7319.spectrum.main.Powerlaw.K    2.533779e-28  2.398162e-28   
+
+                                             unit  
+NGC7319.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC7319      90540.986876
+total                   90540.986876
+Time elapsed: 59.396235941909254
+
+NGC6240 TS: Null hyp.    90948.548557
+Alt. hyp.    90948.537493
+TS               0.022127
+Name: Likelihood_NGC6240, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC6240.spectrum.main.Powerlaw.K  2.386220e-25   -2.364888e-25   
+
+                                  positive_error         error  \
+NGC6240.spectrum.main.Powerlaw.K    2.437425e-23  1.230537e-23   
+
+                                             unit  
+NGC6240.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC6240      90948.537493
+total                   90948.537493
+Time elapsed: 59.26508838124573
+
+LEDA86269 TS: Null hyp.    91605.254653
+Alt. hyp.    91605.255733
+TS              -0.002160
+Name: Likelihood_LEDA86269, dtype: float64
+Parameter Results:                                            value  negative_error  \
+LEDA86269.spectrum.main.Powerlaw.K  2.261343e-27   -1.989738e-28   
+
+                                    positive_error         error  \
+LEDA86269.spectrum.main.Powerlaw.K    2.167707e-28  2.078723e-28   
+
+                                               unit  
+LEDA86269.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                       -log(likelihood)
+Likelihood_LEDA86269      91605.255733
+total                     91605.255733
+Time elapsed: 60.7263292837888
+
+CGCG420015 TS: Null hyp.    90706.673185
+Alt. hyp.    90706.671252
+TS               0.003867
+Name: Likelihood_CGCG420015, dtype: float64
+Parameter Results:                                             value  negative_error  \
+CGCG420015.spectrum.main.Powerlaw.K  7.530731e-26   -3.729929e-26   
+
+                                     positive_error         error  \
+CGCG420015.spectrum.main.Powerlaw.K    7.383079e-26  5.556504e-26   
+
+                                                unit  
+CGCG420015.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                        -log(likelihood)
+Likelihood_CGCG420015      90706.671252
+total                      90706.671252
+Time elapsed: 60.18944508302957
+
+IGRJ212775656 TS: Null hyp.    79615.224636
+Alt. hyp.    79615.229854
+TS              -0.010436
+Name: Likelihood_IGRJ212775656, dtype: float64
+Parameter Results:                                                value  negative_error  \
+IGRJ212775656.spectrum.main.Powerlaw.K  5.449281e-26   -5.390749e-26   
+
+                                        positive_error         error  \
+IGRJ212775656.spectrum.main.Powerlaw.K    5.887794e-20  2.943900e-20   
+
+                                                   unit  
+IGRJ212775656.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                           -log(likelihood)
+Likelihood_IGRJ212775656      79615.229854
+total                         79615.229854
+Time elapsed: 66.09543847013265
+
+NGC7679 TS: Null hyp.    92210.917191
+Alt. hyp.    92210.926211
+TS              -0.018040
+Name: Likelihood_NGC7679, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC7679.spectrum.main.Powerlaw.K  2.454266e-25   -2.380028e-25   
+
+                                  positive_error         error  \
+NGC7679.spectrum.main.Powerlaw.K    1.083385e-23  5.535926e-24   
+
+                                             unit  
+NGC7679.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC7679      92210.926211
+total                   92210.926211
+Time elapsed: 61.913482861593366
+
+NGC7682 TS: Null hyp.    92231.933084
+Alt. hyp.    92231.932904
+TS               0.000361
+Name: Likelihood_NGC7682, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC7682.spectrum.main.Powerlaw.K  4.350117e-26   -4.002676e-26   
+
+                                  positive_error         error  \
+NGC7682.spectrum.main.Powerlaw.K    1.535745e-15  7.678725e-16   
+
+                                             unit  
+NGC7682.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC7682      92231.932904
+total                   92231.932904
+Time elapsed: 59.77514671348035
+
+FourC5055 TS: Null hyp.    85810.769983
+Alt. hyp.    85810.771173
+TS              -0.002380
+Name: Likelihood_FourC5055, dtype: float64
+Parameter Results:                                            value  negative_error  \
+FourC5055.spectrum.main.Powerlaw.K  1.116771e-26   -4.083326e-28   
+
+                                    positive_error         error  \
+FourC5055.spectrum.main.Powerlaw.K    4.152552e-28  4.117939e-28   
+
+                                               unit  
+FourC5055.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                       -log(likelihood)
+Likelihood_FourC5055      85810.771173
+total                     85810.771173
+Time elapsed: 58.14793332014233
+
+ThreeC382 TS: Null hyp.    90689.612702
+Alt. hyp.    90689.614349
+TS              -0.003295
+Name: Likelihood_ThreeC382, dtype: float64
+Parameter Results:                                            value  negative_error  \
+ThreeC382.spectrum.main.Powerlaw.K  2.325328e-27   -2.159941e-28   
+
+                                    positive_error         error  \
+ThreeC382.spectrum.main.Powerlaw.K    2.345044e-28  2.252493e-28   
+
+                                               unit  
+ThreeC382.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                       -log(likelihood)
+Likelihood_ThreeC382      90689.614349
+total                     90689.614349
+Time elapsed: 57.50728458818048
+
+LEDA166445 TS: Null hyp.    81742.595787
+Alt. hyp.    81742.603161
+TS              -0.014748
+Name: Likelihood_LEDA166445, dtype: float64
+Parameter Results:                                             value  negative_error  \
+LEDA166445.spectrum.main.Powerlaw.K  3.531562e-26   -3.478153e-26   
+
+                                     positive_error         error  \
+LEDA166445.spectrum.main.Powerlaw.K    1.565237e-20  7.826201e-21   
+
+                                                unit  
+LEDA166445.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                        -log(likelihood)
+Likelihood_LEDA166445      81742.603161
+total                      81742.603161
+Time elapsed: 58.01538387965411
+
+Mrk1210 TS: Null hyp.    90919.503311
+Alt. hyp.    90919.504437
+TS              -0.002252
+Name: Likelihood_Mrk1210, dtype: float64
+Parameter Results:                                          value  negative_error  \
+Mrk1210.spectrum.main.Powerlaw.K  5.776476e-27   -1.722329e-27   
+
+                                  positive_error         error  \
+Mrk1210.spectrum.main.Powerlaw.K    1.679914e-13  8.399572e-14   
+
+                                             unit  
+Mrk1210.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_Mrk1210      90919.504437
+total                   90919.504437
+Time elapsed: 76.4029635656625
+
+NGC5252 TS: Null hyp.    91485.111278
+Alt. hyp.    91485.113412
+TS              -0.004268
+Name: Likelihood_NGC5252, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC5252.spectrum.main.Powerlaw.K  4.961569e-27   -1.964185e-28   
+
+                                  positive_error         error  \
+NGC5252.spectrum.main.Powerlaw.K    2.115431e-28  2.039808e-28   
+
+                                             unit  
+NGC5252.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC5252      91485.113412
+total                   91485.113412
+Time elapsed: 66.17953343037516
+
+NGC7469 TS: Null hyp.    92285.047388
+Alt. hyp.    92285.049275
+TS              -0.003773
+Name: Likelihood_NGC7469, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC7469.spectrum.main.Powerlaw.K  2.237544e-27   -2.036576e-28   
+
+                                  positive_error         error  \
+NGC7469.spectrum.main.Powerlaw.K    2.303535e-28  2.170055e-28   
+
+                                             unit  
+NGC7469.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC7469      92285.049275
+total                   92285.049275
+Time elapsed: 63.90518235228956
+
+IRAS055892828 TS: Null hyp.    92432.955269
+Alt. hyp.    92432.957014
+TS              -0.003489
+Name: Likelihood_IRAS055892828, dtype: float64
+Parameter Results:                                                value  negative_error  \
+IRAS055892828.spectrum.main.Powerlaw.K  5.993639e-27   -1.574259e-28   
+
+                                        positive_error         error  \
+IRAS055892828.spectrum.main.Powerlaw.K    1.630579e-28  1.602419e-28   
+
+                                                   unit  
+IRAS055892828.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                           -log(likelihood)
+Likelihood_IRAS055892828      92432.957014
+total                         92432.957014
+Time elapsed: 60.80467108543962
+
+NGC1068 TS: Null hyp.    90965.954396
+Alt. hyp.    90965.958813
+TS              -0.008834
+Name: Likelihood_NGC1068, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC1068.spectrum.main.Powerlaw.K  7.286322e-27   -6.715711e-27   
+
+                                  positive_error         error  \
+NGC1068.spectrum.main.Powerlaw.K    1.015634e-19  5.078169e-20   
+
+                                             unit  
+NGC1068.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC1068      90965.958813
+total                   90965.958813
+Time elapsed: 58.706757380627096
+
+ESO506G027 TS: Null hyp.    67147.608361
+Alt. hyp.    67147.609448
+TS              -0.002174
+Name: Likelihood_ESO506G027, dtype: float64
+Parameter Results:                                             value  negative_error  \
+ESO506G027.spectrum.main.Powerlaw.K  1.760904e-26   -2.052395e-27   
+
+                                     positive_error         error  \
+ESO506G027.spectrum.main.Powerlaw.K    2.150906e-27  2.101651e-27   
+
+                                                unit  
+ESO506G027.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                        -log(likelihood)
+Likelihood_ESO506G027      67147.609448
+total                      67147.609448
+Time elapsed: 58.11205250956118
+
+Mrk110 TS: Null hyp.    84809.890981
+Alt. hyp.    84809.891067
+TS              -0.000173
+Name: Likelihood_Mrk110, dtype: float64
+Parameter Results:                                         value  negative_error  positive_error  \
+Mrk110.spectrum.main.Powerlaw.K  3.191536e-28   -2.703336e-28    4.907110e-26   
+
+                                        error             unit  
+Mrk110.spectrum.main.Powerlaw.K  2.467072e-26  1 / (keV s cm2)  
+Likelihood Results:                    -log(likelihood)
+Likelihood_Mrk110      84809.891067
+total                  84809.891067
+Time elapsed: 59.047658803872764
+
+Ark120 TS: Null hyp.    89391.032069
+Alt. hyp.    89391.033270
+TS              -0.002402
+Name: Likelihood_Ark120, dtype: float64
+Parameter Results:                                         value  negative_error  positive_error  \
+Ark120.spectrum.main.Powerlaw.K  1.021757e-27   -3.028060e-28    4.503043e-28   
+
+                                        error             unit  
+Ark120.spectrum.main.Powerlaw.K  3.765551e-28  1 / (keV s cm2)  
+Likelihood Results:                    -log(likelihood)
+Likelihood_Ark120       89391.03327
+total                   89391.03327
+Time elapsed: 58.04728828649968
+
+MCG0803018 TS: Null hyp.    84988.813583
+Alt. hyp.    84988.816941
+TS              -0.006717
+Name: Likelihood_MCG0803018, dtype: float64
+Parameter Results:                                             value  negative_error  \
+MCG0803018.spectrum.main.Powerlaw.K  3.809334e-27   -4.300630e-28   
+
+                                     positive_error         error  \
+MCG0803018.spectrum.main.Powerlaw.K    4.675252e-28  4.487941e-28   
+
+                                                unit  
+MCG0803018.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                        -log(likelihood)
+Likelihood_MCG0803018      84988.816941
+total                      84988.816941
+Time elapsed: 58.069748762995005
+
+Z16419 TS: Null hyp.    92587.081649
+Alt. hyp.    92587.081832
+TS              -0.000367
+Name: Likelihood_Z16419, dtype: float64
+Parameter Results:                                         value  negative_error  positive_error  \
+Z16419.spectrum.main.Powerlaw.K  1.163454e-28    2.461466e-26    1.369233e-09   
+
+                                        error             unit  
+Z16419.spectrum.main.Powerlaw.K  6.846167e-10  1 / (keV s cm2)  
+Likelihood Results:                    -log(likelihood)
+Likelihood_Z16419      92587.081832
+total                  92587.081832
+Time elapsed: 61.042560561560094
+
+IRAS050781626 TS: Null hyp.    90775.306497
+Alt. hyp.    90775.309923
+TS              -0.006853
+Name: Likelihood_IRAS050781626, dtype: float64
+Parameter Results:                                                value  negative_error  \
+IRAS050781626.spectrum.main.Powerlaw.K  1.577067e-27   -1.981738e-28   
+
+                                        positive_error         error  \
+IRAS050781626.spectrum.main.Powerlaw.K    2.357245e-28  2.169491e-28   
+
+                                                   unit  
+IRAS050781626.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                           -log(likelihood)
+Likelihood_IRAS050781626      90775.309923
+total                         90775.309923
+Time elapsed: 70.4039146322757
+
+NGC4992 TS: Null hyp.    92241.585240
+Alt. hyp.    92241.587131
+TS              -0.003783
+Name: Likelihood_NGC4992, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC4992.spectrum.main.Powerlaw.K  9.528951e-28   -2.352467e-28   
+
+                                  positive_error         error  \
+NGC4992.spectrum.main.Powerlaw.K    3.032775e-28  2.692621e-28   
+
+                                             unit  
+NGC4992.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC4992      92241.587131
+total                   92241.587131
+Time elapsed: 58.27718578930944
+
+Mrk417 TS: Null hyp.    91868.701048
+Alt. hyp.    91868.702378
+TS              -0.002661
+Name: Likelihood_Mrk417, dtype: float64
+Parameter Results:                                         value  negative_error  positive_error  \
+Mrk417.spectrum.main.Powerlaw.K  8.019360e-28   -2.362703e-28    3.251849e-28   
+
+                                        error             unit  
+Mrk417.spectrum.main.Powerlaw.K  2.807276e-28  1 / (keV s cm2)  
+Likelihood Results:                    -log(likelihood)
+Likelihood_Mrk417      91868.702378
+total                  91868.702378
+Time elapsed: 58.41427439823747
+
+NGC5506 TS: Null hyp.    89578.417803
+Alt. hyp.    89578.419519
+TS              -0.003432
+Name: Likelihood_NGC5506, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC5506.spectrum.main.Powerlaw.K  1.600675e-27   -3.229335e-28   
+
+                                  positive_error         error  \
+NGC5506.spectrum.main.Powerlaw.K    3.852985e-28  3.541160e-28   
+
+                                             unit  
+NGC5506.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC5506      89578.419519
+total                   89578.419519
+Time elapsed: 60.34638828597963
+
+Mrk79 TS: Null hyp.    86324.247260
+Alt. hyp.    86324.247524
+TS              -0.000528
+Name: Likelihood_Mrk79, dtype: float64
+Parameter Results:                                        value  negative_error  positive_error  \
+Mrk79.spectrum.main.Powerlaw.K  2.687904e-28   -2.218769e-28    9.660576e-27   
+
+                                       error             unit  
+Mrk79.spectrum.main.Powerlaw.K  4.941226e-27  1 / (keV s cm2)  
+Likelihood Results:                   -log(likelihood)
+Likelihood_Mrk79      86324.247524
+total                 86324.247524
+Time elapsed: 60.71624634321779
+
+NGC3079 TS: Null hyp.    80924.378853
+Alt. hyp.    80924.379101
+TS              -0.000497
+Name: Likelihood_NGC3079, dtype: float64
+Parameter Results:                                          value  negative_error  \
+NGC3079.spectrum.main.Powerlaw.K  3.387914e-28   -2.870349e-28   
+
+                                  positive_error         error  \
+NGC3079.spectrum.main.Powerlaw.K    1.114727e-26  5.717150e-27   
+
+                                             unit  
+NGC3079.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood Results:                     -log(likelihood)
+Likelihood_NGC3079      80924.379101
+total                   80924.379101
+Time elapsed: 59.980925601907074
+
+
+Total time elapsed: -1756506597.829664
+Total param results:                                            value  negative_error  \
+finalNorm.spectrum.main.Powerlaw.K  1.034069e-23   -2.938007e-24   
+
+                                    positive_error         error  \
+finalNorm.spectrum.main.Powerlaw.K    3.935227e-24  3.436617e-24   
+
+                                               unit  
+finalNorm.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Total Likelihood results:          -log(likelihood)
+stacked      4.487687e+06
+total        4.487687e+06
+Total TS: 7.521089605987072
+

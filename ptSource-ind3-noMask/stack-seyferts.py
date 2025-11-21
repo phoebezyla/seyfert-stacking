@@ -47,19 +47,17 @@ def plot_logProfile(IntC,param_df,like_df,minlogN=-23.,maxlogN=-9.,show=False,sa
     plt.close(fig)
 
 
-#assert is_plugin_available("HAWCLike"),"HAWCLike is not available. Check your configuration"
-#print("HAWC plugin is available")
 start = time.perf_counter()
 
 DATADIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/'
-DIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-noMask/'
+DIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-noMask-root/'
 MAP = os.path.join(DATADIR,'maptree-fhit2pct-pass5f-mlp-chunk1-1510.root')
 DR = os.path.join(DATADIR, 'detRes-fhit2pct-pass5f-mlp-refit.root')
 
 print(MAP)
 print(DR)
 
-lowerE = np.logspace(1.75,2.5,4)[0:3]
+lowerE = np.logspace(np.log10(0.5),np.log10(10),4)[0:3]  # three vals 500 GeV to 10 TeV
 print(lowerE)
 
 df = pd.read_csv("data.csv",sep='\\s+').to_numpy()
@@ -95,6 +93,9 @@ for e in lowerE:
     print('{}'.format("#####"*4))
     print('Energy: {} TeV'.format(mide))
     
+    outfileName = os.path.join(DIR,"data_stacking_E%.2f.txt"%(mide))
+    print("Datafile is ",outfileName)
+
     for i,c in enumerate(sourceName):
         sourceStart[i] = time.perf_counter()
 
@@ -104,37 +105,17 @@ for e in lowerE:
         model_radius = 8.
         print(c, ra, dec)
 
-        # this is the shape from the model map
-        # for extended source just want a Gaussian
-        # for point source, specify ra and dec instead of gaussian shape 
-        shape = Gaussian_on_sphere()
-        shape.sigma.value = 0.34 
-        shape.sigma.fix = True
-        shape.lon0.value = ra 
-        shape.lon0.fix = True
-        shape.lat0.value = dec
-        shape.lat0.fix = True 
- 
-        spectrum = Powerlaw()*Constant()  #*StepFunction() for dec-dependednt bins
-        spectrum.index_1 = -3
-        spectrum.index_1.fix=True
-        spectrum.K_1.unit = (u.keV * u.s * u.cm**2 )**(-1)
-        spectrum.K_1 = 1e-21 
-        spectrum.K_1.min_value = 1e-29
-        spectrum.K_1.max_value = 1e-3
-        spectrum.K_1.fix = False
-        spectrum.piv_1 = mide
-        spectrum.piv_1.fix = True
-        spectrum.piv_1.unit = u.TeV
-        #spectrum.lower_bound_2= lowe
-        #spectrum.lower_bound_2.fix=True
-        #spectrum.lower_bound_2.unit = u.TeV
-        #spectrum.upper_bound_2 = uppe
-        #spectrum.upper_bound_2.fix=True
-        #spectrum.upper_bound_2.unit = u.TeV
-        #spectrum.value_2.fix = True
-        spectrum.k_2 = A[i]
-        spectrum.k_2.fix = True
+        spectrum = Powerlaw() #*Constant()  #*StepFunction() for dec-dependednt bins
+        spectrum.index = -3.0
+        spectrum.index.fix=True
+        spectrum.K.unit = (u.keV * u.s * u.cm**2 )**(-1)
+        spectrum.K = 1e-21 * A[i]
+        spectrum.K.min_value = 1e-29
+        spectrum.K.max_value = 1e-3
+        spectrum.K.fix = False
+        spectrum.piv = mide
+        spectrum.piv.fix = True
+        spectrum.piv.unit = u.TeV
 
         source = PointSource(c,ra,dec,spectrum)
 
@@ -154,26 +135,8 @@ for e in lowerE:
                          dec=dec)
         llh  = HAL("Likelihood_{}".format(c),MAP,DR,roi)
        
-        # this needs to be set to the energy bins. There can be HE events in lower energy bins (hence step function) 
-        decDependentBins = False
-        if decDependentBins is True:
-           decRounded=int(round(dec/5))*5
-           data_file='hawc_bins.yml'
-           bin_dictionary = yaml.load(open(data_file,'r'))
-           style="GP_2D"
-           bins = bin_dictionary[decRounded]
-           #print bins
-           bins = bins.split()
-           print(bins)
-        else:
-           bins = ['B2C0','B2C1','B3C0','B3C1','B4C0','B4C1','B5C0','B5C1','B6C0','B6C1','B7C0','B7C1','B8C0','B8C1','B9C0','B9C1','B10C0','B10C1']
-           #if lowe > 50 and lowe < 60:
-           #  bins = ['8j', '9j']
-           #elif lowe > 90 and lowe < 110:
-           #  bins = ['9k']
-           #else:
-           #  bins = ['9l']
-           print(bins)
+        bins = ['B2C0','B2C1','B3C0','B3C1','B4C0','B4C1','B5C0','B5C1','B6C0','B6C1','B7C0','B7C1','B8C0','B8C1','B9C0','B9C1','B10C0','B10C1']
+        print(bins)
         llh.set_active_measurements(bin_list=bins)
         datalist = DataList(llh)
 
@@ -228,10 +191,11 @@ for e in lowerE:
         sourceEnd[i] = time.perf_counter()
         print("Time elapsed is",sourceEnd[i]-sourceStart[i])
 
-        outfileName = os.path.join(DIR,"data_stacking.txt")
         with open(outfileName,'a') as datafile:
-            datafile.write("TS: ")
+            datafile.write(str(c)+" TS: ")
             datafile.write(str(a.iloc[0])+'\n')
+            datafile.write("Parameter Results: "+str(param_df)+'\n')
+            datafile.write("Likelihood Results: "+str(like_df)+'\n')
             datafile.write("Time elapsed: ")
             datafile.write(str(sourceEnd[i]-sourceStart[i])+'\n'+'\n')
 
@@ -244,12 +208,11 @@ for e in lowerE:
     
     normalization = Powerlaw()
     normalization.K = 1e-21
-    normalization.K.min_value = 1e-60
+    normalization.K.min_value = 1e-30
     normalization.K.max_value = 1e-3
-    #normalization.K = bestGuess
     normalization.K.unit = (u.keV * u.s * u.cm**2 )**(-1)
     normalization.K.free = True
-    normalization.index = 0.0
+    normalization.index = -3.0
     normalization.index.free = False
     fsource = PointSource("finalNorm",ra=0,dec=0,spectral_shape=normalization)
     clm = Model(fsource)
@@ -290,6 +253,8 @@ for e in lowerE:
     with open(outfileName,'a') as datafile:
         datafile.write("\nTotal time elapsed: ")
         datafile.write(str(end-start)+'\n')
+        datafile.write("Total param results: "+str(param_df)+'\n')
+        datafile.write("Total Likelihood results: "+str(like_df)+'\n')
         datafile.write("Total TS: ")
         datafile.write(str(TS)+'\n'+'\n')
 
