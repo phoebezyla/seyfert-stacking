@@ -1,0 +1,21 @@
+Total nullLLH: 178675.82702942932
+Parameter results: 
+                                            value  negative_error  \
+finalNorm.spectrum.main.Powerlaw.K  4.351858e+280  -1.289758e+271   
+
+                                    positive_error          error  \
+finalNorm.spectrum.main.Powerlaw.K   1.281966e+271  1.285862e+271   
+
+                                               unit  
+finalNorm.spectrum.main.Powerlaw.K  1 / (keV s cm2)  
+Likelihood results: 
+         -log(likelihood)
+stacked     -3.831858e+11
+total       -3.831858e+11
+total Alt LLH: -383185784833.77075
+total Null LLH:  178675.82702942932
+Total TS: 766371927019.1956
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
