@@ -1,0 +1,26 @@
+This directory model_files/ contains the following: 
+
+scripts/ has all scripts to create the files w/in model_files/
+
+yml_initial/ contians the output from make-yml-model.py. These 
+YML files take the default normalization (normalization.free = 
+True) and has position, energy, and index information for each 
+source
+
+hd5_files/ contains the output from ../make-hd5-hal.py. These 
+are the hd5 files corresponsing to the initial (pre-fit) HAL 
+models for all sources
+
+fits_files/ contains the output from BOTH hdf5_to_fits.sh & 
+fits_to_combfits.sh. The first bash script calls hal_hdf5_to_fits.py, 
+and the second calls aerie-apps-combine-maps. 
+
+AFTER RUNNING ind-llh-profiles.py, and calling the function 
+stacking_functions.saveResults(llh,jl,name)
+
+jl_fits/ contains the output from jl.results.wrtie_to("name_jl.fits) 
+
+yml_optimized/ contains the output from 
+jl.results.optimized_model.save(name_fit.yml) These are the models
+ with the normalization changed due to the HAL fitting 
+They also have the additional parameter Likelihood_%s_bkg_renorm

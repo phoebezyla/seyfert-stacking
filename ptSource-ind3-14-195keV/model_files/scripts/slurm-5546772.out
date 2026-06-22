@@ -1,0 +1,12 @@
+########################## start user prologue 24853 ###########################
+Created QTMPDIR
+QTMPDIR=/local/5546772
+##########################  end user prologue  24853 ###########################
+/data/disk01/home/zylaphoe/hawc_software/init_aerie.sh: line 1: conda: command not found
+/data/disk01/home/zylaphoe/hawc_software/init_aerie.sh: line 2: conda: command not found
+>>> Configuration file found, will be ignored in favour of command line
+JL FITS file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV//model_files/jl_fits/NGC1275_jl.fits
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV//png_files/jl_fits/NGC1275_jl.png
+Traceback (most recent call last):
+  File "<stdin>", line 35, in <module>
+NameError: name 'combo' is not defined

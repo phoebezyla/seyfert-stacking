@@ -1,0 +1,21 @@
+All files within this directory should be PNGs
+
+initial_models/ contains the output from combfits_to_png.sh. These
+are the human-readable visualizations of the HAL models for each
+seyfert.
+
+The four below are all outputs from 
+stacking_functions.saveResults(llh,jl,name)
+
+residuals/ contains the model in counts space + the residual. 
+This is the output from llh.display_spectrum().savefig(name_res.png)
+
+spectra/ contains the fitted spectrum. This is the output from 
+plot_spectra(jl.resutls).savefig(name_fit_spectrum.png)
+
+energyplanes/ contains the energy planes (three columns: model, 
+data, and residual). This is the output from 
+llh.display_fit.savefig(name_fit_planes.png)
+
+stacked/ contains the stacked image (?). Output from 
+llh.display_stacked_image.savefig(name_stackedim.png)

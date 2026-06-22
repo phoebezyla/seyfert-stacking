@@ -1,0 +1,11 @@
+########################## start user prologue 20636 ###########################
+Created QTMPDIR
+QTMPDIR=/local/5546771
+##########################  end user prologue  20636 ###########################
+/data/disk01/home/zylaphoe/hawc_software/init_aerie.sh: line 1: conda: command not found
+/data/disk01/home/zylaphoe/hawc_software/init_aerie.sh: line 2: conda: command not found
+>>> Configuration file found, will be ignored in favour of command line
+  File "<stdin>", line 5
+    DIR = f'{DATADIR}/ptSource-ind3-14-195keV/model_files'
+                                                         ^
+SyntaxError: invalid syntax

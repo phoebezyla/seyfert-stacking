@@ -1,0 +1,1538 @@
+########################## start user prologue 13914 ###########################
+Created QTMPDIR
+QTMPDIR=/local/5547515
+##########################  end user prologue  13914 ###########################
+/data/disk01/home/zylaphoe/hawc_software/init_aerie.sh: line 1: conda: command not found
+/data/disk01/home/zylaphoe/hawc_software/init_aerie.sh: line 2: conda: command not found
+>>> Configuration file found, will be ignored in favour of command line
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 11550.48 ( 52.45, 44.05)
+Max:                 15644.97 ( 47.50, 38.97)
+Map value at origin: 15141.64
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC1275.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 14308.54 ( 67.06, 40.57)
+Max:                 19220.68 ( 64.56, 38.02)
+Map value at origin: 19182.12
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/ThreeC111.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 13235.03 (184.98, 41.96)
+Max:                 27414.26 (182.64, 39.40)
+Map value at origin: 27414.26
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC4151.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 12959.66 ( 45.62, -2.72)
+Max:                 17646.01 ( 43.81, -0.15)
+Map value at origin: 17637.26
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC1142.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 12243.68 (299.47, 43.31)
+Max:                 17146.19 (299.84, 40.72)
+Map value at origin: 17146.19
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/CygA.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 19128.51 ( 14.63, 34.50)
+Max:                 26473.05 ( 12.22, 31.96)
+Map value at origin: 26473.05
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk348.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 4712.69 (245.21, 54.34)
+Max:                 7807.05 (248.09, 49.26)
+Map value at origin: 6445.48
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk1498.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 24190.10 (153.41, 17.35)
+Max:                 29253.22 (155.87, 19.87)
+Map value at origin: 29253.22
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC3227.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 20998.06 (329.28,  7.71)
+Max:                 24755.54 (331.79, 10.24)
+Map value at origin: 24755.54
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/UGC11910.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 9326.39 (181.72, 47.06)
+Max:                 13199.24 (180.93, 42.01)
+Map value at origin: 11856.76
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC4051.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 7933.28 ( 86.98, 48.97)
+Max:                 11642.24 ( 90.69, 43.90)
+Map value at origin: 11368.82
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/UGC3374.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 13469.16 (347.26, -2.28)
+Max:                 17481.43 (349.76,  2.76)
+Map value at origin: 16604.39
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC7603.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 19488.31 ( 38.98, 33.87)
+Max:                 23399.55 ( 37.05, 31.30)
+Map value at origin: 23399.55
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk1040.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 1022.78 (146.03, -24.46)
+Max:                 2465.80 (141.20, -19.39)
+Map value at origin: 1652.54
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/ESO565_G019.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 23096.34 (301.29, 27.91)
+Max:                 27137.94 (303.75, 25.41)
+Map value at origin: 27137.94
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/TwoMASXJ20145928_2523010.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 4248.66 (184.03, 55.25)
+Max:                 7181.84 (181.21, 50.19)
+Map value at origin: 6022.86
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC4102.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 853.31 ( 43.67, 64.99)
+Max:                 2187.68 ( 42.16, 59.96)
+Map value at origin: 1499.89
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Q0241_622.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 192.63 (262.71, -31.69)
+Max:                 661.70 (266.88, -26.61)
+Map value at origin: 386.84
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/AXJ1737_4_2907.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 21859.71 (188.92, 10.12)
+Max:                 35932.75 (186.42, 12.67)
+Map value at origin: 35932.75
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC4388.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 5915.46 ( 72.59, 52.13)
+Max:                 9305.23 ( 71.25, 47.01)
+Map value at origin: 8031.05
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/LEDA168563.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 22909.47 (213.00, 27.70)
+Max:                 27023.07 (214.50, 25.12)
+Map value at origin: 27023.07
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC5548.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 22934.01 (305.73, 28.29)
+Max:                 26601.73 (307.18, 25.74)
+Map value at origin: 26601.73
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/MCG_4_48_2.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 4330.99 ( 33.36, 55.01)
+Max:                 7344.57 ( 30.09, 49.90)
+Map value at origin: 6048.60
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/LEDA138501.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 11546.26 (333.50, -4.63)
+Max:                 15606.91 (338.47,  0.41)
+Map value at origin: 14671.23
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/ThreeC445.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 12225.64 ( 48.43, -3.62)
+Max:                 16587.32 ( 45.97, -1.08)
+Map value at origin: 16587.32
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC1194.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 17663.23 (336.49, 36.52)
+Max:                 21238.68 (339.30, 31.48)
+Map value at origin: 20550.96
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC7319.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 14894.94 (250.75, -0.11)
+Max:                 25978.73 (253.26,  2.39)
+Map value at origin: 25978.73
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC6240.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 21367.76 ( 72.82, 30.78)
+Max:                 24366.32 ( 71.06, 28.21)
+Map value at origin: 24366.32
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/LEDA86269.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 16193.44 ( 75.85,  1.53)
+Max:                 19940.36 ( 70.88,  6.58)
+Map value at origin: 18948.86
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/CGCG420_015.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 2369.42 (323.11, 59.49)
+Max:                 4651.22 (322.11, 54.44)
+Map value at origin: 3519.30
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/IGRJ21277_5656.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 16093.10 (354.73,  1.01)
+Max:                 19927.25 (351.34,  6.05)
+Map value at origin: 18542.32
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC7679.png'
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC1275_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC1275.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/ThreeC111_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/ThreeC111.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC4151_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC4151.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC1142_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC1142.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/CygA_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/CygA.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/Mrk348_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk348.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/Mrk1498_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk1498.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC3227_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC3227.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/UGC11910_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/UGC11910.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC4051_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC4051.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/UGC3374_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/UGC3374.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC7603_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC7603.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/Mrk1040_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk1040.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/ESO565_G019_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/ESO565_G019.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/TwoMASXJ20145928_2523010_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/TwoMASXJ20145928_2523010.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC4102_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC4102.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/Q0241_622_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Q0241_622.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/AXJ1737_4_2907_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/AXJ1737_4_2907.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC4388_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC4388.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/LEDA168563_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/LEDA168563.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC5548_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC5548.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/MCG_4_48_2_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/MCG_4_48_2.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/LEDA138501_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/LEDA138501.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/ThreeC445_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/ThreeC445.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC1194_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC1194.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC7319_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC7319.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC6240_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC6240.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/LEDA86269_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/LEDA86269.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/CGCG420_015_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/CGCG420_015.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/IGRJ21277_5656_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/IGRJ21277_5656.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC7679_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC7679.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC7682_comb.fits.gz
+Output file: /lu/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 16093.25 (354.73,  1.01)
+Max:                 19928.40 (351.96,  6.05)
+Map value at origin: 19647.96
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC7682.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 5147.51 (323.48, 53.52)
+Max:                 8385.33 (323.24, 48.43)
+Map value at origin: 8191.73
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/FourC50_55.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 18533.60 (278.17, 35.27)
+Max:                 22877.71 (278.75, 32.71)
+Map value at origin: 22877.71
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/ThreeC382.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 3258.85 ( 43.85, 57.26)
+Max:                 5903.24 ( 40.13, 52.17)
+Map value at origin: 4560.91
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/LEDA166445.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 16855.38 (123.49,  2.57)
+Max:                 20647.32 (121.03,  5.12)
+Map value at origin: 20647.32
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk1210.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 16396.99 (202.10,  2.01)
+Max:                 21472.96 (204.57,  4.56)
+Map value at origin: 21472.96
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC5252.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 20129.93 (343.34,  6.35)
+Max:                 24036.85 (345.85,  8.88)
+Map value at origin: 24036.85
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC7469.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 21178.21 ( 91.27, 31.04)
+Max:                 24981.92 ( 90.57, 28.46)
+Map value at origin: 24981.92
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/IRAS05589_2828.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 13121.62 ( 43.11, -2.54)
+Max:                 19652.43 ( 40.65,  0.00)
+Map value at origin: 19652.43
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC1068.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 296.76 (188.35, -29.87)
+Max:                 952.08 (192.26, -24.79)
+Map value at origin: 566.66
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/ESO506_G027.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 4449.74 (138.74, 54.82)
+Max:                 7453.58 (143.13, 49.75)
+Map value at origin: 6194.81
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk110.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 12844.04 ( 81.52, -2.69)
+Max:                 16857.66 ( 76.60,  2.39)
+Map value at origin: 16368.36
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk120.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 5659.74 ( 22.89, 52.61)
+Max:                 9010.73 ( 18.17, 47.50)
+Map value at origin: 7364.66
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/MCG_08_03_018.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 22045.52 (218.89, 29.57)
+Max:                 33247.37 (221.44, 27.03)
+Map value at origin: 33247.37
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Z164_19.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 23583.49 ( 80.16, 13.98)
+Max:                 28145.01 ( 77.70, 16.53)
+Map value at origin: 28145.01
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/IRAS05078_1626.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 21304.26 (194.77,  9.10)
+Max:                 25259.68 (197.27, 11.64)
+Map value at origin: 25259.68
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC4992.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 23672.30 (164.88, 25.49)
+Max:                 26361.48 (162.38, 22.99)
+Map value at origin: 26361.48
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk417.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 10318.97 (211.95, -5.75)
+Max:                 16330.31 (213.31, -3.17)
+Map value at origin: 16330.31
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC5506.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 5789.47 (113.53, 52.37)
+Max:                 9140.85 (118.11, 47.26)
+Map value at origin: 7793.88
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk79.png'
+/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/healpy/pixelfunc.py:345: RuntimeWarning: invalid value encountered in less_equal
+  return np.absolute(m - badval) <= atol + rtol * np.absolute(badval)
+NSIDE = 1024
+ORDERING = RING in fits file
+INDXSCHM = IMPLICIT
+Currently EPOCH can be J2000 or current. Will not attempt to precess
+Min:                 2898.26 (148.62, 58.21)
+Max:                 5373.75 (152.93, 53.14)
+Map value at origin: 4400.24
+ncolors = 256
+Traceback (most recent call last):
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1114, in <module>
+    main()
+  File "/data/disk01/home/zylaphoe/hawc_software/hawc_aerie/aerie/install/bin/plotMercator.py", line 1106, in main
+    fig.savefig(args.output, dpi=args.dpi)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/figure.py", line 2062, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backend_bases.py", line 2263, in print_figure
+    **kwargs)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 530, in print_png
+    with cbook.open_file_cm(filename_or_obj, "wb") as fh:
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 631, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/data/disk01/home/zylaphoe/hawc_software/miniconda3/envs/aerie_env/lib/python2.7/site-packages/matplotlib/cbook/__init__.py", line 616, in to_filehandle
+    fh = io.open(fname, flag, encoding=encoding)
+IOError: [Errno 2] No such file or directory: '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC3079.png'
+stre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC7682.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/FourC50_55_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/FourC50_55.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/ThreeC382_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/ThreeC382.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/LEDA166445_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/LEDA166445.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/Mrk1210_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk1210.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC5252_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC5252.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC7469_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC7469.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/IRAS05589_2828_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/IRAS05589_2828.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC1068_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC1068.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/ESO506_G027_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/ESO506_G027.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/Mrk110_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk110.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/Mrk120_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk120.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/MCG_08_03_018_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/MCG_08_03_018.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/Z164_19_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Z164_19.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/IRAS05078_1626_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/IRAS05078_1626.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC4992_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC4992.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/Mrk417_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk417.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC5506_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC5506.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/Mrk79_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/Mrk79.png
+Combined file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/fits_files/NGC3079_comb.fits.gz
+Output file: /lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/model_files/png_files/NGC3079.png
+All PNGs created
