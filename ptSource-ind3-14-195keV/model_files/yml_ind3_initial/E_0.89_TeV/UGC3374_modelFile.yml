@@ -1,0 +1,104 @@
+UGC3374 (point source):
+
+  position:
+
+    ra:
+
+      value: 88.72
+
+      desc: Right Ascension
+
+      min_value: 0.0
+
+      max_value: 360.0
+
+      unit: deg
+
+      is_normalization: false
+
+      delta: 8.872
+
+      free: false
+
+    dec:
+
+      value: 46.44
+
+      desc: Declination
+
+      min_value: -90.0
+
+      max_value: 90.0
+
+      unit: deg
+
+      is_normalization: false
+
+      delta: 4.644
+
+      free: false
+
+    equinox: J2000
+
+  spectrum:
+
+    main:
+
+      Powerlaw:
+
+        K:
+
+          value: 1.3290000000000032e-19
+
+          desc: Normalization (differential flux at the pivot value)
+
+          min_value: 1.0e-35
+
+          max_value: 0.001
+
+          unit: keV-1 s-1 cm-2
+
+          is_normalization: true
+
+          delta: 0.1
+
+          free: true
+
+        piv:
+
+          value: 889139705.0194614
+
+          desc: Pivot value
+
+          min_value: null
+
+          max_value: null
+
+          unit: keV
+
+          is_normalization: false
+
+          delta: 0.1
+
+          free: false
+
+        index:
+
+          value: -3.0
+
+          desc: Photon index
+
+          min_value: -10.0
+
+          max_value: 10.0
+
+          unit: ''
+
+          is_normalization: false
+
+          delta: 0.20099999999999998
+
+          free: false
+
+      polarization: {}
+

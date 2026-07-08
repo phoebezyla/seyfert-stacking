@@ -22,13 +22,13 @@ MODELDIR = os.path.join(DATADIR, 'ptSource-ind3-14-195keV/model_files/')
 
 
 ## Define energy bins ##
-lowerE = np.logspace(np.log10(0.5),np.log10(10),6)[:5]  # three vals 500 GeV to 10 TeV
-midE = np.power(10,np.log10(lowerE)+0.25)
+midE = np.array([1.0,5.0,10.0])  #TeV
+lowerE = midE/np.power(10,0.25)
 upperE = np.power(10,np.log10(lowerE+0.5))
 
-## Only do one pivot energy value
-e = np.array(midE[0])
-
+## Index Arrays ##
+inds = np.array([-2.7])
+indnames = np.array(['27'])
 
 ## Load CSV and initialize arrays ##
 df = pd.read_csv("data14-195.csv",sep='\\s+').to_numpy()
@@ -38,24 +38,23 @@ RA = df[:,1]
 Dec = df[:,2]
 A = df[:,3]
 
-Atotal = 0
-for c in range(len(sourceName)):
-    Atotal += A[c]
-
 data_radius = 5.
 model_radius = 8.
 
+## Begin loop over indices ##
+for j,ind in enumerate(inds):
 
-## Begin loop over sources ##
-for i,c in enumerate(sourceName):
-    ra = RA[i]
-    dec = Dec[i]
-    a = A[i]
-
-    # Create source model #
-    source, model = StackingAnalysis.ptsource_model(c,ra,dec,a,e)
+    ## Begin loop over energies ##
+    for e in midE: 
+       
+        ## Begin loop over sources ##
+        for i,c in enumerate(sourceName):
+            ra = RA[i]
+            dec = Dec[i]
+            a = A[i]
+        
+            # Create source model #
+            source, model = StackingAnalysis.ptsource_model(c,ra,dec,a,e,ind=ind)
+            
+            model.save('%s/yml_ind%s_initial/E_%.1f_TeV/%s_modelFile.yml'%(MODELDIR,indnames[j],e,c),overwrite=True)  
     
-    model.save('%s/%s_modelFile.yml'%(MODELDIR,c),overwrite=True) 
-    
-
-

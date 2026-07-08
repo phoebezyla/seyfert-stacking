@@ -72,11 +72,12 @@ def plot_logProfile_alt(IntC,param_df,like_df,name,minlogN=-30.,maxlogN=-1.,show
         fig.savefig("{}".format(save))
     fig.clear()
 
-def saveResults(llh,jl,name):
+def saveResults(llh,jl,name,pivot,index):
     jointRes = jl.results
-    jointRes.write_to("model_files/jl_fits/%s_jl.fits"%(name),overwrite=True)
-    jointRes.optimized_model.save("model_files/yml_optimized/%s_fit.yml"%(name),overwrite=True)
+    jointRes.optimized_model.save("model_files/yml_ind%s_optimized/E_%.1f_TeV/%s_fit.yml"%(index,pivot,name),overwrite=True)
 
+
+def plotResults(llh,jl,name):
     ## Model in counts spacve and residuals
     fig1 = llh.display_spectrum()
     fig1.savefig("plots/residuals/%s_res.png"%(name))
@@ -91,10 +92,6 @@ def saveResults(llh,jl,name):
     ## Energy planes (model, datqa, residuals)
     fig3 = llh.display_fit(smoothing_kernel_sigma=0.3,display_colorbar=True)
     fig3.savefig("plots/energyplanes/%s_fit_planes.png"%(name))
-
-    ## Stacked image?
-    #fig = llh.display_stacked_image(smoothing_kernel_sigma=0.17)
-    #fig.savefig("plots/%s_stackedim.png"%(name))
 
 
 class StackingAnalysis():
@@ -135,7 +132,7 @@ class StackingAnalysis():
             a = lh.compute_TS(name,like_df)
             print(a)
         else: 
-            a = "TS not computed"
+            a = "TS not computed through lh.compute_TS()"
             print(a)
 
         return norms, log_val, a
@@ -156,6 +153,7 @@ class StackingAnalysis():
         spectrum.K.min_value = 1e-35
         spectrum.K.max_value = Kmax
         spectrum.K.free = True
+        spectrum.K.transformation = log10
         spectrum.piv = pivot
         spectrum.piv.free = False
         spectrum.piv.unit = u.TeV
@@ -188,29 +186,19 @@ class StackingAnalysis():
         model_source.spectrum.main.Powerlaw.K.prior = Uniform_prior(lower_bound=0.0,upper_bound=UB)
         ba = BayesianAnalysis(clm, data)
         ba.set_sampler("emcee")
-
-        samples = ba.sample(nW,nB,nS)
+        ba.sampler.setup(n_walkers=nW,n_burn_in=nB,n_iterations=nS)
+        ba.sample()
+        
+        samples = ba.samples
         samples_file = os.path.join(DIR,'bayes_res','{}_bayes_{}TeV.csv'.format(sourceName,mide))
         
         with open(samples_file,'wb') as f:
             pickle.dump(samples,f)
 
         print('\n*****Bayesian results*****')
-        if TSArray[x] < 4.0:
-            credInt = np.quantile(samples['finalNorm.spectrum.main.Powerlaw.K'],0.95)
-            print('95% CI Norm: {} [TeV-1 s-1 cm-2]'.format(credInt*1e9*Atotal))
-            #print('95% CI Norm: {} [TeV s-1 cm-2]'.format(credInt*1e9*Atotal*mide**2))
-            resultsHigh.append(credInt*1e9*Atotal)
-            resultsLow.append(0)
-            results.append(0)
-        else:
-            credInt1 = np.quantile(samples['finalNorm.spectrum.main.Powerlaw.K'], 0.159)
-            credInt2 = np.quantile(samples['finalNorm.spectrum.main.Powerlaw.K'], 0.5)
-            credInt3 = np.quantile(samples['finalNorm.spectrum.main.Powerlaw.K'], 0.841)
-            print('15.9% CI Norm: {} [TeV-1 s-1 cm-2]'.format(credInt1*1e9*Atotal))
-            print('50% CI Norm: {} [TeV-1 s-1 cm-2]'.format(credInt2*1e9*Atotal))
-            print('84.1% CI Norm: {} [TeV-1 s-1 cm-2]'.format(credInt3*1e9*Atotal))
-            results.append(credInt2*1e9*Atotal)
-            resultsLow.append(credInt1*1e9*Atotal)
-        return results, resultsHigh, resultsLow
+        credInt = np.quantile(samples['finalNorm.spectrum.main.Powerlaw.K'],0.95)
+        uplim.append(credInt*1e9*Atotal)
+        print('95% CI Norm: {} [TeV-1 s-1 cm-2]'.format(uplim[-1]))
+        
+        return credInt,uplim
 

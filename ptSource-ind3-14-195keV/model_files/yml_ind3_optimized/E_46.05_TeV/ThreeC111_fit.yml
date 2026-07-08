@@ -1,0 +1,122 @@
+ThreeC111 (point source):
+
+  position:
+
+    ra:
+
+      value: 64.59
+
+      desc: Right Ascension
+
+      min_value: 0.0
+
+      max_value: 360.0
+
+      unit: deg
+
+      is_normalization: false
+
+      delta: 6.4590000000000005
+
+      free: false
+
+    dec:
+
+      value: 38.03
+
+      desc: Declination
+
+      min_value: -90.0
+
+      max_value: 90.0
+
+      unit: deg
+
+      is_normalization: false
+
+      delta: 3.8030000000000004
+
+      free: false
+
+    equinox: J2000
+
+  spectrum:
+
+    main:
+
+      Powerlaw:
+
+        K:
+
+          value: 2.6480050962343976e-27
+
+          desc: Normalization (differential flux at the pivot value)
+
+          min_value: 1.0e-35
+
+          max_value: 0.001
+
+          unit: keV-1 s-1 cm-2
+
+          is_normalization: true
+
+          delta: 2.967499999999996e-20
+
+          free: true
+
+        piv:
+
+          value: 46052765884.47407
+
+          desc: Pivot value
+
+          min_value: null
+
+          max_value: null
+
+          unit: keV
+
+          is_normalization: false
+
+          delta: 0.1
+
+          free: false
+
+        index:
+
+          value: -3.0
+
+          desc: Photon index
+
+          min_value: -10.0
+
+          max_value: 10.0
+
+          unit: ''
+
+          is_normalization: false
+
+          delta: 0.20099999999999998
+
+          free: false
+
+      polarization: {}
+
+Likelihood_ThreeC111_bkg_renorm (Parameter):
+
+  value: 1.0
+
+  desc: Renormalization for background map
+
+  min_value: 0.5
+
+  max_value: 1.5
+
+  unit: ''
+
+  is_normalization: false
+
+  delta: 0.01
+
+  free: false
+

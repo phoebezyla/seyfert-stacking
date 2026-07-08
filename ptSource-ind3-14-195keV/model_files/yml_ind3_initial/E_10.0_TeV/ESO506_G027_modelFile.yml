@@ -1,0 +1,106 @@
+ESO506_G027 (point source):
+
+  position:
+
+    ra:
+
+      value: 189.7275
+
+      desc: Right Ascension
+
+      min_value: 0.0
+
+      max_value: 360.0
+
+      unit: deg
+
+      is_normalization: false
+
+      delta: 18.97275
+
+      free: false
+
+    dec:
+
+      value: -27.3078
+
+      desc: Declination
+
+      min_value: -90.0
+
+      max_value: 90.0
+
+      unit: deg
+
+      is_normalization: false
+
+      delta: 2.73078
+
+      free: false
+
+    equinox: J2000
+
+  spectrum:
+
+    main:
+
+      Powerlaw:
+
+        K:
+
+          value: 8.36899999999997e-20
+
+          desc: Normalization (differential flux at the pivot value)
+
+          min_value: 1.0e-35
+
+          max_value: 0.001
+
+          unit: keV-1 s-1 cm-2
+
+          is_normalization: true
+
+          transformation: log10
+
+          delta: 0.5
+
+          free: true
+
+        piv:
+
+          value: 10000000000.0
+
+          desc: Pivot value
+
+          min_value: null
+
+          max_value: null
+
+          unit: keV
+
+          is_normalization: false
+
+          delta: 0.1
+
+          free: false
+
+        index:
+
+          value: -3.0
+
+          desc: Photon index
+
+          min_value: -10.0
+
+          max_value: 10.0
+
+          unit: ''
+
+          is_normalization: false
+
+          delta: 0.20099999999999998
+
+          free: false
+
+      polarization: {}
+

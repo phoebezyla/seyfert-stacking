@@ -1,0 +1,122 @@
+Mrk1040 (point source):
+
+  position:
+
+    ra:
+
+      value: 37.06
+
+      desc: Right Ascension
+
+      min_value: 0.0
+
+      max_value: 360.0
+
+      unit: deg
+
+      is_normalization: false
+
+      delta: 3.7060000000000004
+
+      free: false
+
+    dec:
+
+      value: 31.31
+
+      desc: Declination
+
+      min_value: -90.0
+
+      max_value: 90.0
+
+      unit: deg
+
+      is_normalization: false
+
+      delta: 3.1310000000000002
+
+      free: false
+
+    equinox: J2000
+
+  spectrum:
+
+    main:
+
+      Powerlaw:
+
+        K:
+
+          value: 3.416933694762847e-23
+
+          desc: Normalization (differential flux at the pivot value)
+
+          min_value: 1.0e-35
+
+          max_value: 0.001
+
+          unit: keV-1 s-1 cm-2
+
+          is_normalization: true
+
+          delta: 1.527500000000002e-20
+
+          free: true
+
+        piv:
+
+          value: 1000000000.0
+
+          desc: Pivot value
+
+          min_value: null
+
+          max_value: null
+
+          unit: keV
+
+          is_normalization: false
+
+          delta: 0.1
+
+          free: false
+
+        index:
+
+          value: -2.7
+
+          desc: Photon index
+
+          min_value: -10.0
+
+          max_value: 10.0
+
+          unit: ''
+
+          is_normalization: false
+
+          delta: 0.20099999999999998
+
+          free: false
+
+      polarization: {}
+
+Likelihood_Mrk1040_bkg_renorm (Parameter):
+
+  value: 1.0
+
+  desc: Renormalization for background map
+
+  min_value: 0.5
+
+  max_value: 1.5
+
+  unit: ''
+
+  is_normalization: false
+
+  delta: 0.01
+
+  free: false
+
