@@ -94,8 +94,25 @@ def plotResults(llh,jl,name):
     fig3.savefig("plots/energyplanes/%s_fit_planes.png"%(name))
 
 
+def get_log_like_weighted(self):
+    log_l = 0.0
+    all_yy = np.split(
+        self._likelihood_model.get_total_flux(self._all_xx), self._splits
+    )
+    for i, interval_container in enumerate(self._active_containers):
+        xx = self._all_xx_split[i]
+        yy = all_yy[i]
+        length = interval_container.stop - interval_container.start
+        expected_flux = scipy.integrate.simps(yy, xx) / length
+        weight = getattr(interval_container, "weight", 1.0)   # use weights 
+        this_log_l = interval_container(weight * expected_flux)
+        log_l += this_log_l
+    return -log_l   # convert -logL back to logL for threeML's convention
+
+
+
 class StackingAnalysis():
-    def __init__(self,intervalContainers,cosmicrays=False):
+    def __init__(self,intervalContainers):
         self.IntC = intervalContainers
         self.cl = None
         self.clm = None
@@ -137,12 +154,13 @@ class StackingAnalysis():
 
         return norms, log_val, a
 
-    def stacked_likelihood(IntC,clm):
-        cl = CastroLike("stacked",IntC)
-        data = DataList(cl)
-        
-        fjl = JointLikelihood(clm,data,verbose=False)
-        return fjl, data
+#    def stacked_likelihood(IntC,clm):
+#        cl = CastroLike("stacked",IntC)
+#        cl.set_model(clm)
+#        data = DataList(cl)
+#        
+#        fjl = JointLikelihood(clm,data,verbose=False)
+#        return fjl, data
         
     def ptsource_model(name,ra,dec,A,pivot,ind=-3.0,Kmax=1e-3):
         spectrum = Powerlaw()
@@ -182,7 +200,7 @@ class StackingAnalysis():
 
         return credInt, results, resultsHigh, resultsLow
 
-    def perform_bayesian_ana_alt(model_source, clm, data, mide, DIR, sourceName, Atotal, UB=1e-12,nW=10,nB=150,nS=3000):
+    def bayesian_ana(model_source, clm, data, mide, DIR, sourceName, Atotal, UB=1e-12,nW=10,nB=150,nS=3000):
         model_source.spectrum.main.Powerlaw.K.prior = Uniform_prior(lower_bound=0.0,upper_bound=UB)
         ba = BayesianAnalysis(clm, data)
         ba.set_sampler("emcee")

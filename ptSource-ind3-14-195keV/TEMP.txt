@@ -1,0 +1,40 @@
+def saveResults(llh, jl, name):
+    jointRes = jl.results
+    out_path = "model_files/yml_optimized_log10/%s_fit.yml" % (name)
+    jointRes.optimized_model.save(out_path, overwrite=True)
+    _add_log10_transformation(out_path, new_delta=0.5)
+
+
+def _add_log10_transformation(filepath, new_delta=0.5):
+    """
+    Insert 'transformation: log10' after each 'is_normalization: true' line,
+    and overwrite the following 'delta:' value with a sane log10-space step.
+    """
+    with open(filepath, "r") as f:
+        lines = f.readlines()
+
+    new_lines = []
+    for line in lines:
+        new_lines.append(line)
+        stripped = line.strip()
+        if stripped.startswith("is_normalization:") and stripped.endswith("true"):
+            indent = line[: len(line) - len(line.lstrip())]
+            new_lines.append("%stransformation: log10\n" % indent)
+
+    final_lines = []
+    pending_delta_fix = False
+    for line in new_lines:
+        stripped = line.strip()
+        if stripped == "transformation: log10":
+            pending_delta_fix = True
+            final_lines.append(line)
+            continue
+        if pending_delta_fix and stripped.startswith("delta:"):
+            indent = line[: len(line) - len(line.lstrip())]
+            final_lines.append("%sdelta: %s\n" % (indent, new_delta))
+            pending_delta_fix = False
+            continue
+        final_lines.append(line)
+
+    with open(filepath, "w") as f:
+        f.writelines(final_lines)

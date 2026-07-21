@@ -1,0 +1,2594 @@
+11:55:24 WARNING   The naima package is not available. Models    functions.py:47
+                  that depend on it will not be available                       
+         WARNING   The GSL library or the pygsl wrapper cannot   functions.py:68
+                  be loaded. Models that depend on it will not                  
+                  be available.                                                 
+11:55:26 WARNING   The ebltable package is not available.       absorption.py:33
+                  Models that depend on it will not be                          
+                  available                                                     
+11:55:27 INFO      Starting 3ML!                                  __init__.py:35
+         WARNING   WARNINGs here are NOT errors                   __init__.py:36
+         WARNING   but are inform you about optional packages     __init__.py:37
+                  that can be installed                                         
+         WARNING    to disable these messages, turn off           __init__.py:40
+                  start_warning in your config file                             
+         WARNING   no display variable set. using backend for     __init__.py:46
+                  graphics without display (agg)                                
+11:55:32 WARNING   Multinest minimizer not available        minimization.py:1357
+         WARNING   PyGMO is not available                   minimization.py:1369
+11:55:32 WARNING   The cthreeML package is not installed. You     __init__.py:94
+                  will not be able to use plugins which require                 
+                  the C/C++ interface (currently HAWC)                          
+         WARNING   Could not import plugin HAWCLike.py. Do you   __init__.py:144
+                  have the relative instrument software                         
+                  installed and configured?                                     
+         WARNING   Could not import plugin FermiLATLike.py. Do   __init__.py:144
+                  you have the relative instrument software                     
+                  installed and configured?                                     
+11:55:34 WARNING   No fermitools installed           lat_transient_builder.py:44
+11:55:34 WARNING   Env. variable OMP_NUM_THREADS is not set.     __init__.py:387
+                  Please set it to 1 for optimal performances in                
+                  3ML                                                           
+         WARNING   Env. variable MKL_NUM_THREADS is not set.     __init__.py:387
+                  Please set it to 1 for optimal performances in                
+                  3ML                                                           
+         WARNING   Env. variable NUMEXPR_NUM_THREADS is not set. __init__.py:387
+                  Please set it to 1 for optimal performances in                
+                  3ML                                                           
+11:55:39 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: NGC1275
+Calculating likelihoods...
+11:55:39 INFO      Using transits contained in maptree                 HAL.py:77
+11:55:40 INFO      Reading Maptree!                        from_root_file.py:218
+11:56:55 INFO      Creating singleton for                         response.py:49
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/seyf               
+                  ert/detRes-fhit2pct-pass5f-mlp-refit.root                     
+11:57:20 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (49.951, 41.512), data radius = 5.000                         
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  1.566486e+09  1.566635e+09  0.999905          23942   
+1    B0C1   1024   RING  6.464403e+08  6.466050e+08  0.999745          23942   
+2    B1C0   1024   RING  6.627840e+08  6.628734e+08  0.999865          23942   
+3    B1C1   1024   RING  2.306774e+08  2.307136e+08  0.999843          23942   
+4    B2C0   1024   RING  1.792560e+08  1.792893e+08  0.999814          23942   
+5    B2C1   1024   RING  7.652938e+07  7.654744e+07  0.999764          23942   
+6    B3C0   1024   RING  3.655367e+07  3.656229e+07  0.999764          23942   
+7    B3C1   1024   RING  1.961730e+07  1.962675e+07  0.999518          23942   
+8    B4C0   1024   RING  7.627326e+06  7.628498e+06  0.999846          23942   
+9    B4C1   1024   RING  3.825689e+06  3.827021e+06  0.999652          23942   
+10   B5C0   1024   RING  1.411636e+06  1.413001e+06  0.999034          23942   
+11   B5C1   1024   RING  7.515200e+05  7.531187e+05  0.997877          23942   
+12   B6C0   1024   RING  3.008100e+05  3.005071e+05  1.001008          23942   
+13   B6C1   1024   RING  1.309460e+05  1.308698e+05  1.000582          23942   
+14   B7C0   1024   RING  7.727600e+04  7.752982e+04  0.996726          23942   
+15   B7C1   1024   RING  1.756400e+04  1.752669e+04  1.002129          23942   
+16   B8C0   1024   RING  2.405600e+04  2.414453e+04  0.996333          23942   
+17   B8C1   1024   RING  4.739000e+03  4.738425e+03  1.000121          23942   
+18   B9C0   1024   RING  8.539000e+03  8.372876e+03  1.019841          23942   
+19   B9C1   1024   RING  5.050000e+02  5.243367e+02  0.963122          23942   
+20  B10C0   1024   RING  5.020000e+03  5.132521e+03  0.978077          23942   
+21  B10C1   1024   RING  5.820000e+02  5.868691e+02  0.991703          23942   
+
+    Area (deg^2)  
+0      78.493627  
+1      78.493627  
+2      78.493627  
+3      78.493627  
+4      78.493627  
+5      78.493627  
+6      78.493627  
+7      78.493627  
+8      78.493627  
+9      78.493627  
+10     78.493627  
+11     78.493627  
+12     78.493627  
+13     78.493627  
+14     78.493627  
+15     78.493627  
+16     78.493627  
+17     78.493627  
+18     78.493627  
+19     78.493627  
+20     78.493627  
+21     78.493627  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+11:57:28 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+11:57:37 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC1275_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+11:57:37 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC1275_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+                       Null hyp.     Alt. hyp.        TS
+Likelihood_NGC1275  88615.721803  88614.440254  2.563098
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+11:57:38 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: ThreeC111
+Calculating likelihoods...
+11:57:38 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+11:58:52 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (64.590, 38.030), data radius = 5.000                         
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  1.875897e+09  1.875932e+09  0.999981          23950   
+1    B0C1   1024   RING  8.150747e+08  8.151848e+08  0.999865          23950   
+2    B1C0   1024   RING  7.882970e+08  7.883145e+08  0.999978          23950   
+3    B1C1   1024   RING  2.724026e+08  2.724236e+08  0.999923          23950   
+4    B2C0   1024   RING  2.153137e+08  2.153200e+08  0.999971          23950   
+5    B2C1   1024   RING  8.998831e+07  8.999954e+07  0.999875          23950   
+6    B3C0   1024   RING  4.448240e+07  4.449252e+07  0.999773          23950   
+7    B3C1   1024   RING  2.344584e+07  2.344870e+07  0.999878          23950   
+8    B4C0   1024   RING  9.412492e+06  9.413510e+06  0.999892          23950   
+9    B4C1   1024   RING  4.512184e+06  4.514622e+06  0.999460          23950   
+10   B5C0   1024   RING  1.745171e+06  1.744300e+06  1.000499          23950   
+11   B5C1   1024   RING  8.630920e+05  8.631410e+05  0.999943          23950   
+12   B6C0   1024   RING  3.663990e+05  3.673207e+05  0.997491          23950   
+13   B6C1   1024   RING  1.485440e+05  1.484425e+05  1.000684          23950   
+14   B7C0   1024   RING  9.331000e+04  9.288981e+04  1.004523          23950   
+15   B7C1   1024   RING  1.987300e+04  1.985922e+04  1.000694          23950   
+16   B8C0   1024   RING  2.992500e+04  3.015398e+04  0.992406          23950   
+17   B8C1   1024   RING  5.182000e+03  5.304962e+03  0.976821          23950   
+18   B9C0   1024   RING  1.057000e+04  1.067704e+04  0.989974          23950   
+19   B9C1   1024   RING  5.990000e+02  5.925927e+02  1.010812          23950   
+20  B10C0   1024   RING  6.234000e+03  6.313459e+03  0.987414          23950   
+21  B10C1   1024   RING  6.780000e+02  6.573473e+02  1.031418          23950   
+
+    Area (deg^2)  
+0      78.519855  
+1      78.519855  
+2      78.519855  
+3      78.519855  
+4      78.519855  
+5      78.519855  
+6      78.519855  
+7      78.519855  
+8      78.519855  
+9      78.519855  
+10     78.519855  
+11     78.519855  
+12     78.519855  
+13     78.519855  
+14     78.519855  
+15     78.519855  
+16     78.519855  
+17     78.519855  
+18     78.519855  
+19     78.519855  
+20     78.519855  
+21     78.519855  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+11:58:58 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+11:59:07 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter                               model.py:620
+                  Likelihood_ThreeC111_bkg_renorm already exist in              
+                  the model. Overwriting it...                                  
+11:59:07 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter                               model.py:620
+                  Likelihood_ThreeC111_bkg_renorm already exist in              
+                  the model. Overwriting it...                                  
+                         Null hyp.     Alt. hyp.        TS
+Likelihood_ThreeC111  90060.105226  90058.486074  3.238304
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+11:59:08 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: NGC4151
+Calculating likelihoods...
+11:59:08 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:00:16 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (182.640, 39.410), data radius = 5.000                        
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  1.750313e+09  1.750052e+09  1.000149          23947   
+1    B0C1   1024   RING  7.453079e+08  7.452965e+08  1.000015          23947   
+2    B1C0   1024   RING  7.394489e+08  7.393549e+08  1.000127          23947   
+3    B1C1   1024   RING  2.554366e+08  2.553982e+08  1.000150          23947   
+4    B2C0   1024   RING  2.013926e+08  2.013692e+08  1.000116          23947   
+5    B2C1   1024   RING  8.473936e+07  8.472246e+07  1.000200          23947   
+6    B3C0   1024   RING  4.148934e+07  4.147732e+07  1.000290          23947   
+7    B3C1   1024   RING  2.191844e+07  2.191921e+07  0.999965          23947   
+8    B4C0   1024   RING  8.730801e+06  8.731347e+06  0.999937          23947   
+9    B4C1   1024   RING  4.240264e+06  4.239031e+06  1.000291          23947   
+10   B5C0   1024   RING  1.614953e+06  1.612814e+06  1.001326          23947   
+11   B5C1   1024   RING  8.199340e+05  8.194375e+05  1.000606          23947   
+12   B6C0   1024   RING  3.388450e+05  3.394131e+05  0.998326          23947   
+13   B6C1   1024   RING  1.410820e+05  1.410726e+05  1.000067          23947   
+14   B7C0   1024   RING  8.577100e+04  8.601786e+04  0.997130          23947   
+15   B7C1   1024   RING  1.870200e+04  1.874201e+04  0.997865          23947   
+16   B8C0   1024   RING  2.777600e+04  2.755252e+04  1.008111          23947   
+17   B8C1   1024   RING  4.854000e+03  5.000631e+03  0.970678          23947   
+18   B9C0   1024   RING  9.537000e+03  9.633254e+03  0.990008          23947   
+19   B9C1   1024   RING  5.070000e+02  5.510680e+02  0.920032          23947   
+20  B10C0   1024   RING  5.749000e+03  5.753303e+03  0.999252          23947   
+21  B10C1   1024   RING  6.300000e+02  6.223979e+02  1.012214          23947   
+
+    Area (deg^2)  
+0      78.510019  
+1      78.510019  
+2      78.510019  
+3      78.510019  
+4      78.510019  
+5      78.510019  
+6      78.510019  
+7      78.510019  
+8      78.510019  
+9      78.510019  
+10     78.510019  
+11     78.510019  
+12     78.510019  
+13     78.510019  
+14     78.510019  
+15     78.510019  
+16     78.510019  
+17     78.510019  
+18     78.510019  
+19     78.510019  
+20     78.510019  
+21     78.510019  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:00:23 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:00:32 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC4151_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+12:00:32 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC4151_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+                       Null hyp.     Alt. hyp.        TS
+Likelihood_NGC4151  90477.780138  90477.065679  1.428919
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: NGC1142
+Calculating likelihoods...
+         INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:01:40 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (43.800, -0.180), data radius = 5.000                         
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  1.682726e+09  1.682439e+09  1.000171          23952   
+1    B0C1   1024   RING  7.302770e+08  7.301709e+08  1.000145          23952   
+2    B1C0   1024   RING  7.231931e+08  7.231001e+08  1.000129          23952   
+3    B1C1   1024   RING  2.420703e+08  2.420271e+08  1.000178          23952   
+4    B2C0   1024   RING  1.990303e+08  1.990004e+08  1.000150          23952   
+5    B2C1   1024   RING  8.066694e+07  8.064331e+07  1.000293          23952   
+6    B3C0   1024   RING  4.177809e+07  4.175751e+07  1.000493          23952   
+7    B3C1   1024   RING  2.111194e+07  2.110618e+07  1.000273          23952   
+8    B4C0   1024   RING  9.036101e+06  9.032811e+06  1.000364          23952   
+9    B4C1   1024   RING  4.094782e+06  4.093521e+06  1.000308          23952   
+10   B5C0   1024   RING  1.734576e+06  1.733650e+06  1.000534          23952   
+11   B5C1   1024   RING  7.951270e+05  7.937243e+05  1.001767          23952   
+12   B6C0   1024   RING  3.798680e+05  3.799721e+05  0.999726          23952   
+13   B6C1   1024   RING  1.397380e+05  1.399506e+05  0.998481          23952   
+14   B7C0   1024   RING  1.002740e+05  1.002844e+05  0.999896          23952   
+15   B7C1   1024   RING  1.947700e+04  1.958558e+04  0.994456          23952   
+16   B8C0   1024   RING  3.369200e+04  3.379087e+04  0.997074          23952   
+17   B8C1   1024   RING  5.229000e+03  5.259082e+03  0.994280          23952   
+18   B9C0   1024   RING  1.234600e+04  1.226589e+04  1.006531          23952   
+19   B9C1   1024   RING  6.070000e+02  6.220758e+02  0.975765          23952   
+20  B10C0   1024   RING  7.345000e+03  7.347808e+03  0.999618          23952   
+21  B10C1   1024   RING  6.240000e+02  6.454489e+02  0.966769          23952   
+
+    Area (deg^2)  
+0      78.526412  
+1      78.526412  
+2      78.526412  
+3      78.526412  
+4      78.526412  
+5      78.526412  
+6      78.526412  
+7      78.526412  
+8      78.526412  
+9      78.526412  
+10     78.526412  
+11     78.526412  
+12     78.526412  
+13     78.526412  
+14     78.526412  
+15     78.526412  
+16     78.526412  
+17     78.526412  
+18     78.526412  
+19     78.526412  
+20     78.526412  
+21     78.526412  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:01:49 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:01:59 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC1142_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+12:01:59 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC1142_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+                       Null hyp.     Alt. hyp.        TS
+Likelihood_NGC1142  91348.309888  91347.258056  2.103663
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+12:02:00 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: CygA
+Calculating likelihoods...
+12:02:00 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:03:07 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (299.870, 40.730), data radius = 5.000                        
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+12:03:08 INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  1.648119e+09  1.648278e+09  0.999903          23944   
+1    B0C1   1024   RING  6.873143e+08  6.874609e+08  0.999787          23944   
+2    B1C0   1024   RING  6.967834e+08  6.968391e+08  0.999920          23944   
+3    B1C1   1024   RING  2.417227e+08  2.417042e+08  1.000076          23944   
+4    B2C0   1024   RING  1.889040e+08  1.889142e+08  0.999946          23944   
+5    B2C1   1024   RING  8.030416e+07  8.028866e+07  1.000193          23944   
+6    B3C0   1024   RING  3.873468e+07  3.871722e+07  1.000451          23944   
+7    B3C1   1024   RING  2.065320e+07  2.063932e+07  1.000672          23944   
+8    B4C0   1024   RING  8.112268e+06  8.103724e+06  1.001054          23944   
+9    B4C1   1024   RING  4.022474e+06  4.014455e+06  1.001997          23944   
+10   B5C0   1024   RING  1.504607e+06  1.500614e+06  1.002661          23944   
+11   B5C1   1024   RING  7.885350e+05  7.852573e+05  1.004174          23944   
+12   B6C0   1024   RING  3.215160e+05  3.189970e+05  1.007897          23944   
+13   B6C1   1024   RING  1.382910e+05  1.366872e+05  1.011733          23944   
+14   B7C0   1024   RING  8.339700e+04  8.180817e+04  1.019421          23944   
+15   B7C1   1024   RING  1.906600e+04  1.827109e+04  1.043506          23944   
+16   B8C0   1024   RING  2.623600e+04  2.584394e+04  1.015170          23944   
+17   B8C1   1024   RING  5.203000e+03  4.954732e+03  1.050107          23944   
+18   B9C0   1024   RING  9.230000e+03  9.059790e+03  1.018787          23944   
+19   B9C1   1024   RING  6.100000e+02  5.867329e+02  1.039655          23944   
+20  B10C0   1024   RING  5.824000e+03  5.568972e+03  1.045794          23944   
+21  B10C1   1024   RING  6.940000e+02  6.447196e+02  1.076437          23944   
+
+    Area (deg^2)  
+0      78.500184  
+1      78.500184  
+2      78.500184  
+3      78.500184  
+4      78.500184  
+5      78.500184  
+6      78.500184  
+7      78.500184  
+8      78.500184  
+9      78.500184  
+10     78.500184  
+11     78.500184  
+12     78.500184  
+13     78.500184  
+14     78.500184  
+15     78.500184  
+16     78.500184  
+17     78.500184  
+18     78.500184  
+19     78.500184  
+20     78.500184  
+21     78.500184  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:03:16 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:03:26 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_CygA_bkg_renorm    model.py:620
+                  already exist in the model. Overwriting it...                 
+12:03:26 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_CygA_bkg_renorm    model.py:620
+                  already exist in the model. Overwriting it...                 
+                    Null hyp.    Alt. hyp.        TS
+Likelihood_CygA  94011.784484  94011.46825  0.632468
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: Mrk348
+Calculating likelihoods...
+         INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:04:34 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (12.196, 31.957), data radius = 5.000                         
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  2.369644e+09  2.369678e+09  0.999986          23933   
+1    B0C1   1024   RING  1.120553e+09  1.120598e+09  0.999960          23933   
+2    B1C0   1024   RING  9.896540e+08  9.896964e+08  0.999957          23933   
+3    B1C1   1024   RING  3.428370e+08  3.428470e+08  0.999971          23933   
+4    B2C0   1024   RING  2.761296e+08  2.761405e+08  0.999961          23933   
+5    B2C1   1024   RING  1.117547e+08  1.117521e+08  1.000024          23933   
+6    B3C0   1024   RING  5.743992e+07  5.743794e+07  1.000035          23933   
+7    B3C1   1024   RING  2.992854e+07  2.992443e+07  1.000137          23933   
+8    B4C0   1024   RING  1.238218e+07  1.237846e+07  1.000301          23933   
+9    B4C1   1024   RING  5.645841e+06  5.649295e+06  0.999389          23933   
+10   B5C0   1024   RING  2.311198e+06  2.311770e+06  0.999753          23933   
+11   B5C1   1024   RING  1.033105e+06  1.034503e+06  0.998648          23933   
+12   B6C0   1024   RING  4.794020e+05  4.791666e+05  1.000491          23933   
+13   B6C1   1024   RING  1.738990e+05  1.737358e+05  1.000940          23933   
+14   B7C0   1024   RING  1.189780e+05  1.183752e+05  1.005092          23933   
+15   B7C1   1024   RING  2.326700e+04  2.321203e+04  1.002368          23933   
+16   B8C0   1024   RING  4.039600e+04  4.014061e+04  1.006362          23933   
+17   B8C1   1024   RING  5.919000e+03  6.041071e+03  0.979793          23933   
+18   B9C0   1024   RING  1.400700e+04  1.414999e+04  0.989895          23933   
+19   B9C1   1024   RING  6.590000e+02  6.477662e+02  1.017342          23933   
+20  B10C0   1024   RING  7.936000e+03  8.084211e+03  0.981667          23933   
+21  B10C1   1024   RING  7.460000e+02  7.169881e+02  1.040464          23933   
+
+    Area (deg^2)  
+0       78.46412  
+1       78.46412  
+2       78.46412  
+3       78.46412  
+4       78.46412  
+5       78.46412  
+6       78.46412  
+7       78.46412  
+8       78.46412  
+9       78.46412  
+10      78.46412  
+11      78.46412  
+12      78.46412  
+13      78.46412  
+14      78.46412  
+15      78.46412  
+16      78.46412  
+17      78.46412  
+18      78.46412  
+19      78.46412  
+20      78.46412  
+21      78.46412  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.42 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:04:43 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:04:53 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_Mrk348_bkg_renorm  model.py:620
+                  already exist in the model. Overwriting it...                 
+12:04:53 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_Mrk348_bkg_renorm  model.py:620
+                  already exist in the model. Overwriting it...                 
+                      Null hyp.     Alt. hyp.        TS
+Likelihood_Mrk348  91697.921804  91697.841956  0.159696
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: Mrk1498
+Calculating likelihoods...
+         INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:06:00 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (247.020, 51.780), data radius = 5.000                        
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme   Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  685763176.0  6.858746e+08  0.999838          23940   
+1    B0C1   1024   RING  255083129.0  2.551758e+08  0.999637          23940   
+2    B1C0   1024   RING  299425753.0  2.994671e+08  0.999862          23940   
+3    B1C1   1024   RING  111886650.0  1.119101e+08  0.999790          23940   
+4    B2C0   1024   RING   84268085.0  8.428888e+07  0.999753          23940   
+5    B2C1   1024   RING   36091681.0  3.610729e+07  0.999568          23940   
+6    B3C0   1024   RING   15051642.0  1.505283e+07  0.999921          23940   
+7    B3C1   1024   RING    9539429.0  9.540900e+06  0.999846          23940   
+8    B4C0   1024   RING    2979676.0  2.981335e+06  0.999444          23940   
+9    B4C1   1024   RING    1930551.0  1.930626e+06  0.999961          23940   
+10   B5C0   1024   RING     574637.0  5.754592e+05  0.998571          23940   
+11   B5C1   1024   RING     385332.0  3.856188e+05  0.999256          23940   
+12   B6C0   1024   RING     126466.0  1.264869e+05  0.999834          23940   
+13   B6C1   1024   RING      67382.0  6.755485e+04  0.997441          23940   
+14   B7C0   1024   RING      34705.0  3.465526e+04  1.001435          23940   
+15   B7C1   1024   RING      10241.0  1.019666e+04  1.004348          23940   
+16   B8C0   1024   RING       9302.0  9.347861e+03  0.995094          23940   
+17   B8C1   1024   RING       2993.0  2.970938e+03  1.007426          23940   
+18   B9C0   1024   RING       2928.0  2.981786e+03  0.981962          23940   
+19   B9C1   1024   RING        287.0  2.923346e+02  0.981752          23940   
+20  B10C0   1024   RING       2061.0  2.125018e+03  0.969874          23940   
+21  B10C1   1024   RING        365.0  3.620961e+02  1.008020          23940   
+
+    Area (deg^2)  
+0       78.48707  
+1       78.48707  
+2       78.48707  
+3       78.48707  
+4       78.48707  
+5       78.48707  
+6       78.48707  
+7       78.48707  
+8       78.48707  
+9       78.48707  
+10      78.48707  
+11      78.48707  
+12      78.48707  
+13      78.48707  
+14      78.48707  
+15      78.48707  
+16      78.48707  
+17      78.48707  
+18      78.48707  
+19      78.48707  
+20      78.48707  
+21      78.48707  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:06:09 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:06:18 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_Mrk1498_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+12:06:18 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_Mrk1498_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+                       Null hyp.     Alt. hyp.        TS
+Likelihood_Mrk1498  84032.217598  84031.520197  1.394802
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+12:06:19 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: NGC3227
+Calculating likelihoods...
+12:06:19 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:07:29 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (155.880, 19.870), data radius = 5.000                        
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  2.790911e+09  2.790730e+09  1.000065          23942   
+1    B0C1   1024   RING  1.438987e+09  1.438815e+09  1.000120          23942   
+2    B1C0   1024   RING  1.144845e+09  1.144774e+09  1.000062          23942   
+3    B1C1   1024   RING  3.991425e+08  3.991377e+08  1.000012          23942   
+4    B2C0   1024   RING  3.231896e+08  3.231656e+08  1.000074          23942   
+5    B2C1   1024   RING  1.280087e+08  1.280161e+08  0.999942          23942   
+6    B3C0   1024   RING  6.788802e+07  6.787564e+07  1.000182          23942   
+7    B3C1   1024   RING  3.477380e+07  3.476987e+07  1.000113          23942   
+8    B4C0   1024   RING  1.483305e+07  1.483345e+07  0.999973          23942   
+9    B4C1   1024   RING  6.530636e+06  6.528990e+06  1.000252          23942   
+10   B5C0   1024   RING  2.794145e+06  2.792877e+06  1.000454          23942   
+11   B5C1   1024   RING  1.170616e+06  1.171650e+06  0.999117          23942   
+12   B6C0   1024   RING  5.768770e+05  5.766538e+05  1.000387          23942   
+13   B6C1   1024   RING  1.942750e+05  1.940548e+05  1.001135          23942   
+14   B7C0   1024   RING  1.422100e+05  1.418824e+05  1.002309          23942   
+15   B7C1   1024   RING  2.575900e+04  2.630516e+04  0.979238          23942   
+16   B8C0   1024   RING  4.866700e+04  4.964646e+04  0.980271          23942   
+17   B8C1   1024   RING  6.614000e+03  6.772899e+03  0.976539          23942   
+18   B9C0   1024   RING  1.723600e+04  1.747867e+04  0.986116          23942   
+19   B9C1   1024   RING  7.390000e+02  7.380342e+02  1.001309          23942   
+20  B10C0   1024   RING  9.873000e+03  9.976525e+03  0.989623          23942   
+21  B10C1   1024   RING  7.790000e+02  7.668120e+02  1.015894          23942   
+
+    Area (deg^2)  
+0      78.493627  
+1      78.493627  
+2      78.493627  
+3      78.493627  
+4      78.493627  
+5      78.493627  
+6      78.493627  
+7      78.493627  
+8      78.493627  
+9      78.493627  
+10     78.493627  
+11     78.493627  
+12     78.493627  
+13     78.493627  
+14     78.493627  
+15     78.493627  
+16     78.493627  
+17     78.493627  
+18     78.493627  
+19     78.493627  
+20     78.493627  
+21     78.493627  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:07:37 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:07:46 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC3227_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+12:07:46 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC3227_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+                       Null hyp.     Alt. hyp.        TS
+Likelihood_NGC3227  91947.000544  91947.000788 -0.000489
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+12:07:47 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: UGC11910
+Calculating likelihoods...
+12:07:47 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:08:56 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (331.760, 10.230), data radius = 5.000                        
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  2.522779e+09  2.522475e+09  1.000121          23943   
+1    B0C1   1024   RING  1.243334e+09  1.243127e+09  1.000166          23943   
+2    B1C0   1024   RING  1.054911e+09  1.054797e+09  1.000108          23943   
+3    B1C1   1024   RING  3.609332e+08  3.609151e+08  1.000050          23943   
+4    B2C0   1024   RING  2.976313e+08  2.975788e+08  1.000177          23943   
+5    B2C1   1024   RING  1.171299e+08  1.171143e+08  1.000133          23943   
+6    B3C0   1024   RING  6.270701e+07  6.269855e+07  1.000135          23943   
+7    B3C1   1024   RING  3.170039e+07  3.170782e+07  0.999766          23943   
+8    B4C0   1024   RING  1.374918e+07  1.375026e+07  0.999921          23943   
+9    B4C1   1024   RING  5.993481e+06  5.991032e+06  1.000409          23943   
+10   B5C0   1024   RING  2.616133e+06  2.617433e+06  0.999504          23943   
+11   B5C1   1024   RING  1.093605e+06  1.093527e+06  1.000072          23943   
+12   B6C0   1024   RING  5.523390e+05  5.517454e+05  1.001076          23943   
+13   B6C1   1024   RING  1.854090e+05  1.852980e+05  1.000599          23943   
+14   B7C0   1024   RING  1.387400e+05  1.395074e+05  0.994499          23943   
+15   B7C1   1024   RING  2.512300e+04  2.535404e+04  0.990887          23943   
+16   B8C0   1024   RING  4.870100e+04  4.894962e+04  0.994921          23943   
+17   B8C1   1024   RING  6.534000e+03  6.636940e+03  0.984490          23943   
+18   B9C0   1024   RING  1.728600e+04  1.744866e+04  0.990678          23943   
+19   B9C1   1024   RING  7.670000e+02  7.737648e+02  0.991257          23943   
+20  B10C0   1024   RING  9.865000e+03  1.010249e+04  0.976492          23943   
+21  B10C1   1024   RING  7.980000e+02  7.786778e+02  1.024814          23943   
+
+    Area (deg^2)  
+0      78.496905  
+1      78.496905  
+2      78.496905  
+3      78.496905  
+4      78.496905  
+5      78.496905  
+6      78.496905  
+7      78.496905  
+8      78.496905  
+9      78.496905  
+10     78.496905  
+11     78.496905  
+12     78.496905  
+13     78.496905  
+14     78.496905  
+15     78.496905  
+16     78.496905  
+17     78.496905  
+18     78.496905  
+19     78.496905  
+20     78.496905  
+21     78.496905  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:09:03 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:09:13 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter                               model.py:620
+                  Likelihood_UGC11910_bkg_renorm already exist in               
+                  the model. Overwriting it...                                  
+12:09:13 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter                               model.py:620
+                  Likelihood_UGC11910_bkg_renorm already exist in               
+                  the model. Overwriting it...                                  
+                        Null hyp.     Alt. hyp.        TS
+Likelihood_UGC11910  91562.416929  91562.357628  0.118602
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+12:09:14 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: NGC4051
+Calculating likelihoods...
+12:09:14 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:10:21 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (180.790, 44.530), data radius = 5.000                        
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  1.283050e+09  1.283048e+09  1.000001          23942   
+1    B0C1   1024   RING  5.117942e+08  5.118127e+08  0.999964          23942   
+2    B1C0   1024   RING  5.492004e+08  5.491473e+08  1.000097          23942   
+3    B1C1   1024   RING  1.943993e+08  1.943885e+08  1.000055          23942   
+4    B2C0   1024   RING  1.490753e+08  1.490542e+08  1.000142          23942   
+5    B2C1   1024   RING  6.407005e+07  6.406944e+07  1.000010          23942   
+6    B3C0   1024   RING  2.960749e+07  2.960413e+07  1.000114          23942   
+7    B3C1   1024   RING  1.637386e+07  1.637338e+07  1.000029          23942   
+8    B4C0   1024   RING  6.086618e+06  6.089372e+06  0.999548          23942   
+9    B4C1   1024   RING  3.226116e+06  3.225057e+06  1.000328          23942   
+10   B5C0   1024   RING  1.133891e+06  1.133685e+06  1.000182          23942   
+11   B5C1   1024   RING  6.455970e+05  6.441488e+05  1.002248          23942   
+12   B6C0   1024   RING  2.432170e+05  2.434799e+05  0.998920          23942   
+13   B6C1   1024   RING  1.124450e+05  1.124621e+05  0.999848          23942   
+14   B7C0   1024   RING  6.347800e+04  6.350612e+04  0.999557          23942   
+15   B7C1   1024   RING  1.522800e+04  1.515328e+04  1.004931          23942   
+16   B8C0   1024   RING  1.867300e+04  1.896098e+04  0.984812          23942   
+17   B8C1   1024   RING  4.122000e+03  4.154241e+03  0.992239          23942   
+18   B9C0   1024   RING  6.380000e+03  6.379899e+03  1.000016          23942   
+19   B9C1   1024   RING  4.550000e+02  4.506620e+02  1.009626          23942   
+20  B10C0   1024   RING  4.094000e+03  4.057571e+03  1.008978          23942   
+21  B10C1   1024   RING  5.240000e+02  5.150176e+02  1.017441          23942   
+
+    Area (deg^2)  
+0      78.493627  
+1      78.493627  
+2      78.493627  
+3      78.493627  
+4      78.493627  
+5      78.493627  
+6      78.493627  
+7      78.493627  
+8      78.493627  
+9      78.493627  
+10     78.493627  
+11     78.493627  
+12     78.493627  
+13     78.493627  
+14     78.493627  
+15     78.493627  
+16     78.493627  
+17     78.493627  
+18     78.493627  
+19     78.493627  
+20     78.493627  
+21     78.493627  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:10:26 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:10:35 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC4051_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+12:10:35 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC4051_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+                       Null hyp.     Alt. hyp.        TS
+Likelihood_NGC4051  88982.724897  88982.428211  0.593371
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+12:10:36 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: UGC3374
+Calculating likelihoods...
+12:10:36 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:11:43 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (88.720, 46.440), data radius = 5.000                         
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  1.108618e+09  1.108795e+09  0.999841          23939   
+1    B0C1   1024   RING  4.338332e+08  4.339571e+08  0.999714          23939   
+2    B1C0   1024   RING  4.759054e+08  4.759679e+08  0.999869          23939   
+3    B1C1   1024   RING  1.715385e+08  1.715483e+08  0.999943          23939   
+4    B2C0   1024   RING  1.298570e+08  1.298693e+08  0.999905          23939   
+5    B2C1   1024   RING  5.594519e+07  5.595049e+07  0.999905          23939   
+6    B3C0   1024   RING  2.512678e+07  2.513986e+07  0.999480          23939   
+7    B3C1   1024   RING  1.432618e+07  1.432987e+07  0.999742          23939   
+8    B4C0   1024   RING  5.107429e+06  5.114361e+06  0.998645          23939   
+9    B4C1   1024   RING  2.843913e+06  2.843744e+06  1.000059          23939   
+10   B5C0   1024   RING  9.622150e+05  9.612735e+05  1.000979          23939   
+11   B5C1   1024   RING  5.742200e+05  5.738904e+05  1.000574          23939   
+12   B6C0   1024   RING  2.083810e+05  2.084091e+05  0.999865          23939   
+13   B6C1   1024   RING  1.004250e+05  1.005511e+05  0.998746          23939   
+14   B7C0   1024   RING  5.538200e+04  5.533706e+04  1.000812          23939   
+15   B7C1   1024   RING  1.376100e+04  1.389656e+04  0.990245          23939   
+16   B8C0   1024   RING  1.627400e+04  1.606990e+04  1.012701          23939   
+17   B8C1   1024   RING  3.752000e+03  3.898106e+03  0.962519          23939   
+18   B9C0   1024   RING  5.206000e+03  5.364005e+03  0.970543          23939   
+19   B9C1   1024   RING  3.910000e+02  4.243705e+02  0.921365          23939   
+20  B10C0   1024   RING  3.480000e+03  3.522823e+03  0.987844          23939   
+21  B10C1   1024   RING  4.870000e+02  4.830377e+02  1.008203          23939   
+
+    Area (deg^2)  
+0      78.483791  
+1      78.483791  
+2      78.483791  
+3      78.483791  
+4      78.483791  
+5      78.483791  
+6      78.483791  
+7      78.483791  
+8      78.483791  
+9      78.483791  
+10     78.483791  
+11     78.483791  
+12     78.483791  
+13     78.483791  
+14     78.483791  
+15     78.483791  
+16     78.483791  
+17     78.483791  
+18     78.483791  
+19     78.483791  
+20     78.483791  
+21     78.483791  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:11:53 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:12:03 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_UGC3374_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+12:12:03 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_UGC3374_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+                       Null hyp.     Alt. hyp.        TS
+Likelihood_UGC3374  87158.884923  87158.750205  0.269436
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: NGC7603
+Calculating likelihoods...
+         INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:13:10 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (349.740, 0.240), data radius = 5.000                         
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  1.736132e+09  1.735852e+09  1.000162          23944   
+1    B0C1   1024   RING  7.585058e+08  7.584009e+08  1.000138          23944   
+2    B1C0   1024   RING  7.455524e+08  7.454737e+08  1.000106          23944   
+3    B1C1   1024   RING  2.495591e+08  2.495331e+08  1.000104          23944   
+4    B2C0   1024   RING  2.055516e+08  2.055426e+08  1.000044          23944   
+5    B2C1   1024   RING  8.303488e+07  8.302617e+07  1.000105          23944   
+6    B3C0   1024   RING  4.315202e+07  4.314598e+07  1.000140          23944   
+7    B3C1   1024   RING  2.177952e+07  2.177241e+07  1.000327          23944   
+8    B4C0   1024   RING  9.348705e+06  9.340609e+06  1.000867          23944   
+9    B4C1   1024   RING  4.218729e+06  4.216281e+06  1.000581          23944   
+10   B5C0   1024   RING  1.792755e+06  1.791312e+06  1.000805          23944   
+11   B5C1   1024   RING  8.133110e+05  8.145079e+05  0.998531          23944   
+12   B6C0   1024   RING  3.910960e+05  3.915724e+05  0.998783          23944   
+13   B6C1   1024   RING  1.430240e+05  1.428935e+05  1.000913          23944   
+14   B7C0   1024   RING  1.034540e+05  1.031044e+05  1.003391          23944   
+15   B7C1   1024   RING  1.972200e+04  1.996363e+04  0.987896          23944   
+16   B8C0   1024   RING  3.480400e+04  3.490539e+04  0.997095          23944   
+17   B8C1   1024   RING  5.410000e+03  5.331795e+03  1.014668          23944   
+18   B9C0   1024   RING  1.259200e+04  1.262190e+04  0.997631          23944   
+19   B9C1   1024   RING  6.260000e+02  6.361336e+02  0.984070          23944   
+20  B10C0   1024   RING  7.499000e+03  7.535911e+03  0.995102          23944   
+21  B10C1   1024   RING  6.290000e+02  6.613845e+02  0.951035          23944   
+
+    Area (deg^2)  
+0      78.500184  
+1      78.500184  
+2      78.500184  
+3      78.500184  
+4      78.500184  
+5      78.500184  
+6      78.500184  
+7      78.500184  
+8      78.500184  
+9      78.500184  
+10     78.500184  
+11     78.500184  
+12     78.500184  
+13     78.500184  
+14     78.500184  
+15     78.500184  
+16     78.500184  
+17     78.500184  
+18     78.500184  
+19     78.500184  
+20     78.500184  
+21     78.500184  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:13:17 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:13:26 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC7603_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+12:13:26 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC7603_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+                       Null hyp.     Alt. hyp.        TS
+Likelihood_NGC7603  91654.173201  91653.702028  0.942346
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: Mrk1040
+Calculating likelihoods...
+         INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:14:34 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (37.060, 31.310), data radius = 5.000                         
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  2.405445e+09  2.405449e+09  0.999998          23942   
+1    B0C1   1024   RING  1.145553e+09  1.145602e+09  0.999957          23942   
+2    B1C0   1024   RING  1.003099e+09  1.003076e+09  1.000023          23942   
+3    B1C1   1024   RING  3.475544e+08  3.475511e+08  1.000010          23942   
+4    B2C0   1024   RING  2.801969e+08  2.802139e+08  0.999940          23942   
+5    B2C1   1024   RING  1.131506e+08  1.131467e+08  1.000035          23942   
+6    B3C0   1024   RING  5.833901e+07  5.834085e+07  0.999968          23942   
+7    B3C1   1024   RING  3.034427e+07  3.034752e+07  0.999893          23942   
+8    B4C0   1024   RING  1.258619e+07  1.258643e+07  0.999981          23942   
+9    B4C1   1024   RING  5.726581e+06  5.726030e+06  1.000096          23942   
+10   B5C0   1024   RING  2.353742e+06  2.351570e+06  1.000924          23942   
+11   B5C1   1024   RING  1.047414e+06  1.046289e+06  1.001075          23942   
+12   B6C0   1024   RING  4.865930e+05  4.870318e+05  0.999099          23942   
+13   B6C1   1024   RING  1.759490e+05  1.759100e+05  1.000222          23942   
+14   B7C0   1024   RING  1.197540e+05  1.204260e+05  0.994420          23942   
+15   B7C1   1024   RING  2.348500e+04  2.350672e+04  0.999076          23942   
+16   B8C0   1024   RING  4.137200e+04  4.094540e+04  1.010419          23942   
+17   B8C1   1024   RING  6.129000e+03  6.122237e+03  1.001105          23942   
+18   B9C0   1024   RING  1.466600e+04  1.445620e+04  1.014513          23942   
+19   B9C1   1024   RING  6.280000e+02  6.547294e+02  0.959175          23942   
+20  B10C0   1024   RING  8.291000e+03  8.249283e+03  1.005057          23942   
+21  B10C1   1024   RING  7.250000e+02  7.205209e+02  1.006216          23942   
+
+    Area (deg^2)  
+0      78.493627  
+1      78.493627  
+2      78.493627  
+3      78.493627  
+4      78.493627  
+5      78.493627  
+6      78.493627  
+7      78.493627  
+8      78.493627  
+9      78.493627  
+10     78.493627  
+11     78.493627  
+12     78.493627  
+13     78.493627  
+14     78.493627  
+15     78.493627  
+16     78.493627  
+17     78.493627  
+18     78.493627  
+19     78.493627  
+20     78.493627  
+21     78.493627  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:14:43 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:14:53 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_Mrk1040_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+12:14:53 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_Mrk1040_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+                       Null hyp.     Alt. hyp.        TS
+Likelihood_Mrk1040  91727.790184  91727.657349  0.265669
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: ESO565_G019
+Calculating likelihoods...
+         INFO      Using transits contained in maptree                 HAL.py:77
+12:14:54 INFO      Reading Maptree!                        from_root_file.py:218
+12:16:01 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (143.681, -21.928), data radius = 5.000                       
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme   Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  176179489.0  1.763667e+08  0.998939          23943   
+1    B0C1   1024   RING   61915175.0  6.198149e+07  0.998930          23943   
+2    B1C0   1024   RING   77999105.0  7.808043e+07  0.998958          23943   
+3    B1C1   1024   RING   29912759.0  2.993854e+07  0.999139          23943   
+4    B2C0   1024   RING   22986673.0  2.301758e+07  0.998657          23943   
+5    B2C1   1024   RING   10230624.0  1.023525e+07  0.999548          23943   
+6    B3C0   1024   RING    3809071.0  3.815261e+06  0.998378          23943   
+7    B3C1   1024   RING    2942455.0  2.946945e+06  0.998476          23943   
+8    B4C0   1024   RING     826575.0  8.272168e+05  0.999224          23943   
+9    B4C1   1024   RING     589264.0  5.894438e+05  0.999695          23943   
+10   B5C0   1024   RING     165832.0  1.665272e+05  0.995825          23943   
+11   B5C1   1024   RING     116237.0  1.161500e+05  1.000749          23943   
+12   B6C0   1024   RING      40117.0  3.988029e+04  1.005935          23943   
+13   B6C1   1024   RING      22676.0  2.273011e+04  0.997619          23943   
+14   B7C0   1024   RING      11898.0  1.194994e+04  0.995654          23943   
+15   B7C1   1024   RING       4250.0  4.172392e+03  1.018600          23943   
+16   B8C0   1024   RING       3124.0  3.125815e+03  0.999420          23943   
+17   B8C1   1024   RING       1159.0  1.141147e+03  1.015644          23943   
+18   B9C0   1024   RING       1024.0  1.021512e+03  1.002436          23943   
+19   B9C1   1024   RING         77.0  8.954626e+01  0.859891          23943   
+20  B10C0   1024   RING        729.0  7.281055e+02  1.001228          23943   
+21  B10C1   1024   RING        128.0  1.268327e+02  1.009203          23943   
+
+    Area (deg^2)  
+0      78.496905  
+1      78.496905  
+2      78.496905  
+3      78.496905  
+4      78.496905  
+5      78.496905  
+6      78.496905  
+7      78.496905  
+8      78.496905  
+9      78.496905  
+10     78.496905  
+11     78.496905  
+12     78.496905  
+13     78.496905  
+14     78.496905  
+15     78.496905  
+16     78.496905  
+17     78.496905  
+18     78.496905  
+19     78.496905  
+20     78.496905  
+21     78.496905  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:16:07 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:16:17 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter                               model.py:620
+                  Likelihood_ESO565_G019_bkg_renorm already exist               
+                  in the model. Overwriting it...                               
+12:16:17 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter                               model.py:620
+                  Likelihood_ESO565_G019_bkg_renorm already exist               
+                  in the model. Overwriting it...                               
+                           Null hyp.    Alt. hyp.        TS
+Likelihood_ESO565_G019  74785.781723  74784.81141  1.940626
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: TwoMASXJ20145928_2523010
+Calculating likelihoods...
+         INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:17:25 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (303.750, 25.380), data radius = 5.000                        
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  2.738823e+09  2.738549e+09  1.000100          23941   
+1    B0C1   1024   RING  1.376196e+09  1.375997e+09  1.000145          23941   
+2    B1C0   1024   RING  1.128906e+09  1.128783e+09  1.000109          23941   
+3    B1C1   1024   RING  3.923817e+08  3.923288e+08  1.000135          23941   
+4    B2C0   1024   RING  3.180402e+08  3.179619e+08  1.000246          23941   
+5    B2C1   1024   RING  1.265605e+08  1.265334e+08  1.000214          23941   
+6    B3C0   1024   RING  6.666433e+07  6.663760e+07  1.000401          23941   
+7    B3C1   1024   RING  3.429142e+07  3.428563e+07  1.000169          23941   
+8    B4C0   1024   RING  1.451597e+07  1.450483e+07  1.000768          23941   
+9    B4C1   1024   RING  6.451493e+06  6.446291e+06  1.000807          23941   
+10   B5C0   1024   RING  2.724749e+06  2.722078e+06  1.000981          23941   
+11   B5C1   1024   RING  1.164220e+06  1.162179e+06  1.001757          23941   
+12   B6C0   1024   RING  5.638080e+05  5.621427e+05  1.002962          23941   
+13   B6C1   1024   RING  1.948530e+05  1.935597e+05  1.006682          23941   
+14   B7C0   1024   RING  1.391640e+05  1.386720e+05  1.003548          23941   
+15   B7C1   1024   RING  2.631600e+04  2.601767e+04  1.011466          23941   
+16   B8C0   1024   RING  4.805000e+04  4.806317e+04  0.999726          23941   
+17   B8C1   1024   RING  6.806000e+03  6.749511e+03  1.008369          23941   
+18   B9C0   1024   RING  1.708900e+04  1.700382e+04  1.005009          23941   
+19   B9C1   1024   RING  7.930000e+02  7.760591e+02  1.021829          23941   
+20  B10C0   1024   RING  9.851000e+03  9.777629e+03  1.007504          23941   
+21  B10C1   1024   RING  8.280000e+02  8.072081e+02  1.025758          23941   
+
+    Area (deg^2)  
+0      78.490348  
+1      78.490348  
+2      78.490348  
+3      78.490348  
+4      78.490348  
+5      78.490348  
+6      78.490348  
+7      78.490348  
+8      78.490348  
+9      78.490348  
+10     78.490348  
+11     78.490348  
+12     78.490348  
+13     78.490348  
+14     78.490348  
+15     78.490348  
+16     78.490348  
+17     78.490348  
+18     78.490348  
+19     78.490348  
+20     78.490348  
+21     78.490348  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:17:33 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:17:43 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter                               model.py:620
+                  Likelihood_TwoMASXJ20145928_2523010_bkg_renorm                
+                  already exist in the model. Overwriting it...                 
+12:17:43 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter                               model.py:620
+                  Likelihood_TwoMASXJ20145928_2523010_bkg_renorm                
+                  already exist in the model. Overwriting it...                 
+                                        Null hyp.    Alt. hyp.        TS
+Likelihood_TwoMASXJ20145928_2523010  94279.264231  94279.26434 -0.000219
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+12:17:44 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: NGC4102
+Calculating likelihoods...
+12:17:44 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:18:55 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (181.600, 52.710), data radius = 5.000                        
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme   Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  619854226.0  6.199182e+08  0.999897          23933   
+1    B0C1   1024   RING  229255833.0  2.293173e+08  0.999732          23933   
+2    B1C0   1024   RING  271493316.0  2.715107e+08  0.999936          23933   
+3    B1C1   1024   RING  102043131.0  1.020453e+08  0.999979          23933   
+4    B2C0   1024   RING   76901858.0  7.689854e+07  1.000043          23933   
+5    B2C1   1024   RING   33028473.0  3.302346e+07  1.000152          23933   
+6    B3C0   1024   RING   13540335.0  1.354012e+07  1.000016          23933   
+7    B3C1   1024   RING    8794013.0  8.797397e+06  0.999615          23933   
+8    B4C0   1024   RING    2678306.0  2.679702e+06  0.999479          23933   
+9    B4C1   1024   RING    1780802.0  1.781137e+06  0.999812          23933   
+10   B5C0   1024   RING     518023.0  5.187902e+05  0.998521          23933   
+11   B5C1   1024   RING     352644.0  3.529848e+05  0.999034          23933   
+12   B6C0   1024   RING     114114.0  1.142580e+05  0.998740          23933   
+13   B6C1   1024   RING      62519.0  6.244711e+04  1.001151          23933   
+14   B7C0   1024   RING      31649.0  3.158547e+04  1.002011          23933   
+15   B7C1   1024   RING       9436.0  9.487821e+03  0.994538          23933   
+16   B8C0   1024   RING       8146.0  8.369341e+03  0.973314          23933   
+17   B8C1   1024   RING       2766.0  2.762367e+03  1.001315          23933   
+18   B9C0   1024   RING       2600.0  2.647739e+03  0.981970          23933   
+19   B9C1   1024   RING        223.0  2.510865e+02  0.888140          23933   
+20  B10C0   1024   RING       1830.0  1.883132e+03  0.971786          23933   
+21  B10C1   1024   RING        306.0  3.209674e+02  0.953368          23933   
+
+    Area (deg^2)  
+0       78.46412  
+1       78.46412  
+2       78.46412  
+3       78.46412  
+4       78.46412  
+5       78.46412  
+6       78.46412  
+7       78.46412  
+8       78.46412  
+9       78.46412  
+10      78.46412  
+11      78.46412  
+12      78.46412  
+13      78.46412  
+14      78.46412  
+15      78.46412  
+16      78.46412  
+17      78.46412  
+18      78.46412  
+19      78.46412  
+20      78.46412  
+21      78.46412  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.42 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:19:01 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:19:11 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC4102_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+12:19:11 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC4102_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+                       Null hyp.     Alt. hyp.        TS
+Likelihood_NGC4102  83233.715328  83233.710132  0.010392
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+12:19:12 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: Q0241_622
+Calculating likelihoods...
+12:19:12 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:20:20 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (41.240, 62.470), data radius = 5.000                         
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme   Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  154998109.0  1.552215e+08  0.998561          23931   
+1    B0C1   1024   RING   54814737.0  5.489112e+07  0.998608          23931   
+2    B1C0   1024   RING   64905958.0  6.500960e+07  0.998406          23931   
+3    B1C1   1024   RING   28381120.0  2.841406e+07  0.998841          23931   
+4    B2C0   1024   RING   19459860.0  1.949039e+07  0.998433          23931   
+5    B2C1   1024   RING    9938215.0  9.948299e+06  0.998986          23931   
+6    B3C0   1024   RING    3199704.0  3.203959e+06  0.998672          23931   
+7    B3C1   1024   RING    2849019.0  2.852854e+06  0.998656          23931   
+8    B4C0   1024   RING     714076.0  7.145533e+05  0.999332          23931   
+9    B4C1   1024   RING     566935.0  5.669125e+05  1.000040          23931   
+10   B5C0   1024   RING     132806.0  1.330913e+05  0.997857          23931   
+11   B5C1   1024   RING     116261.0  1.162833e+05  0.999808          23931   
+12   B6C0   1024   RING      33367.0  3.323391e+04  1.004005          23931   
+13   B6C1   1024   RING      22812.0  2.295110e+04  0.993939          23931   
+14   B7C0   1024   RING       9771.0  9.800567e+03  0.996983          23931   
+15   B7C1   1024   RING       4217.0  4.304735e+03  0.979619          23931   
+16   B8C0   1024   RING       2707.0  2.755322e+03  0.982462          23931   
+17   B8C1   1024   RING       1120.0  1.114422e+03  1.005005          23931   
+18   B9C0   1024   RING        773.0  8.155892e+02  0.947781          23931   
+19   B9C1   1024   RING         78.0  7.352825e+01  1.060817          23931   
+20  B10C0   1024   RING        483.0  5.210648e+02  0.926948          23931   
+21  B10C1   1024   RING        136.0  1.288310e+02  1.055646          23931   
+
+    Area (deg^2)  
+0      78.457563  
+1      78.457563  
+2      78.457563  
+3      78.457563  
+4      78.457563  
+5      78.457563  
+6      78.457563  
+7      78.457563  
+8      78.457563  
+9      78.457563  
+10     78.457563  
+11     78.457563  
+12     78.457563  
+13     78.457563  
+14     78.457563  
+15     78.457563  
+16     78.457563  
+17     78.457563  
+18     78.457563  
+19     78.457563  
+20     78.457563  
+21     78.457563  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.42 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:20:28 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:20:38 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter                               model.py:620
+                  Likelihood_Q0241_622_bkg_renorm already exist in              
+                  the model. Overwriting it...                                  
+12:20:38 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter                               model.py:620
+                  Likelihood_Q0241_622_bkg_renorm already exist in              
+                  the model. Overwriting it...                                  
+                         Null hyp.     Alt. hyp.        TS
+Likelihood_Q0241_622  73535.774393  73535.775176 -0.001565
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: AXJ1737_4_2907
+Calculating likelihoods...
+         INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:21:47 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (264.368, -29.134), data radius = 5.000                       
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+12:21:48 INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme  Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  41654672.0  4.173118e+07  0.998167          23940   
+1    B0C1   1024   RING  15752518.0  1.577610e+07  0.998505          23940   
+2    B1C0   1024   RING  17100509.0  1.713293e+07  0.998108          23940   
+3    B1C1   1024   RING   8499191.0  8.504567e+06  0.999368          23940   
+4    B2C0   1024   RING   5107066.0  5.117168e+06  0.998026          23940   
+5    B2C1   1024   RING   2989582.0  2.987755e+06  1.000612          23940   
+6    B3C0   1024   RING    845937.0  8.468376e+05  0.998937          23940   
+7    B3C1   1024   RING    857119.0  8.552966e+05  1.002131          23940   
+8    B4C0   1024   RING    202881.0  2.027777e+05  1.000509          23940   
+9    B4C1   1024   RING    182053.0  1.808728e+05  1.006525          23940   
+10   B5C0   1024   RING     41450.0  4.107807e+04  1.009054          23940   
+11   B5C1   1024   RING     39103.0  3.868083e+04  1.010914          23940   
+12   B6C0   1024   RING     11484.0  1.137167e+04  1.009878          23940   
+13   B6C1   1024   RING      7928.0  7.751985e+03  1.022706          23940   
+14   B7C0   1024   RING      3497.0  3.376811e+03  1.035592          23940   
+15   B7C1   1024   RING      1507.0  1.488794e+03  1.012229          23940   
+16   B8C0   1024   RING      1013.0  9.061386e+02  1.117930          23940   
+17   B8C1   1024   RING       405.0  3.900645e+02  1.038290          23940   
+18   B9C0   1024   RING       323.0  2.821095e+02  1.144945          23940   
+19   B9C1   1024   RING        40.0  2.985415e+01  1.339847          23940   
+20  B10C0   1024   RING       248.0  1.884158e+02  1.316238          23940   
+21  B10C1   1024   RING        43.0  4.931570e+01  0.871933          23940   
+
+    Area (deg^2)  
+0       78.48707  
+1       78.48707  
+2       78.48707  
+3       78.48707  
+4       78.48707  
+5       78.48707  
+6       78.48707  
+7       78.48707  
+8       78.48707  
+9       78.48707  
+10      78.48707  
+11      78.48707  
+12      78.48707  
+13      78.48707  
+14      78.48707  
+15      78.48707  
+16      78.48707  
+17      78.48707  
+18      78.48707  
+19      78.48707  
+20      78.48707  
+21      78.48707  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:21:55 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:22:05 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter                               model.py:620
+                  Likelihood_AXJ1737_4_2907_bkg_renorm already                  
+                  exist in the model. Overwriting it...                         
+12:22:05 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter                               model.py:620
+                  Likelihood_AXJ1737_4_2907_bkg_renorm already                  
+                  exist in the model. Overwriting it...                         
+                              Null hyp.     Alt. hyp.        TS
+Likelihood_AXJ1737_4_2907  66094.579278  66094.579501 -0.000446
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+12:22:06 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: NGC4388
+Calculating likelihoods...
+12:22:06 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:23:14 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (186.440, 12.660), data radius = 5.000                        
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  2.589747e+09  2.589602e+09  1.000056          23943   
+1    B0C1   1024   RING  1.298157e+09  1.298046e+09  1.000086          23943   
+2    B1C0   1024   RING  1.078689e+09  1.078655e+09  1.000031          23943   
+3    B1C1   1024   RING  3.708362e+08  3.708239e+08  1.000033          23943   
+4    B2C0   1024   RING  3.048522e+08  3.048466e+08  1.000018          23943   
+5    B2C1   1024   RING  1.199179e+08  1.199098e+08  1.000068          23943   
+6    B3C0   1024   RING  6.420295e+07  6.420646e+07  0.999945          23943   
+7    B3C1   1024   RING  3.252892e+07  3.252862e+07  1.000009          23943   
+8    B4C0   1024   RING  1.407408e+07  1.407176e+07  1.000165          23943   
+9    B4C1   1024   RING  6.132882e+06  6.131204e+06  1.000274          23943   
+10   B5C0   1024   RING  2.667520e+06  2.666795e+06  1.000272          23943   
+11   B5C1   1024   RING  1.112462e+06  1.111724e+06  1.000664          23943   
+12   B6C0   1024   RING  5.591670e+05  5.589569e+05  1.000376          23943   
+13   B6C1   1024   RING  1.869080e+05  1.870162e+05  0.999422          23943   
+14   B7C0   1024   RING  1.397450e+05  1.396368e+05  1.000775          23943   
+15   B7C1   1024   RING  2.518000e+04  2.539606e+04  0.991492          23943   
+16   B8C0   1024   RING  4.836700e+04  4.882444e+04  0.990631          23943   
+17   B8C1   1024   RING  6.523000e+03  6.595450e+03  0.989015          23943   
+18   B9C0   1024   RING  1.717800e+04  1.728710e+04  0.993689          23943   
+19   B9C1   1024   RING  7.060000e+02  7.355800e+02  0.959787          23943   
+20  B10C0   1024   RING  9.951000e+03  9.927971e+03  1.002320          23943   
+21  B10C1   1024   RING  7.320000e+02  7.530303e+02  0.972072          23943   
+
+    Area (deg^2)  
+0      78.496905  
+1      78.496905  
+2      78.496905  
+3      78.496905  
+4      78.496905  
+5      78.496905  
+6      78.496905  
+7      78.496905  
+8      78.496905  
+9      78.496905  
+10     78.496905  
+11     78.496905  
+12     78.496905  
+13     78.496905  
+14     78.496905  
+15     78.496905  
+16     78.496905  
+17     78.496905  
+18     78.496905  
+19     78.496905  
+20     78.496905  
+21     78.496905  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:23:22 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:23:32 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC4388_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+12:23:32 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC4388_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+                       Null hyp.     Alt. hyp.        TS
+Likelihood_NGC4388  92000.977013  92000.980862 -0.007699
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: LEDA168563
+Calculating likelihoods...
+         INFO      Using transits contained in maptree                 HAL.py:77
+12:23:33 INFO      Reading Maptree!                        from_root_file.py:218
+12:24:40 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (73.020, 49.550), data radius = 5.000                         
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme   Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  849310941.0  8.495791e+08  0.999684          23949   
+1    B0C1   1024   RING  322142591.0  3.222612e+08  0.999632          23949   
+2    B1C0   1024   RING  367727748.0  3.678392e+08  0.999697          23949   
+3    B1C1   1024   RING  135686811.0  1.357209e+08  0.999749          23949   
+4    B2C0   1024   RING  101920973.0  1.019602e+08  0.999616          23949   
+5    B2C1   1024   RING   43745175.0  4.375414e+07  0.999795          23949   
+6    B3C0   1024   RING   18847530.0  1.884884e+07  0.999930          23949   
+7    B3C1   1024   RING   11349910.0  1.134995e+07  0.999997          23949   
+8    B4C0   1024   RING    3761586.0  3.763617e+06  0.999460          23949   
+9    B4C1   1024   RING    2284956.0  2.284929e+06  1.000012          23949   
+10   B5C0   1024   RING     718840.0  7.194192e+05  0.999195          23949   
+11   B5C1   1024   RING     462308.0  4.624989e+05  0.999587          23949   
+12   B6C0   1024   RING     157363.0  1.579744e+05  0.996130          23949   
+13   B6C1   1024   RING      80823.0  8.089934e+04  0.999056          23949   
+14   B7C0   1024   RING      42882.0  4.290677e+04  0.999423          23949   
+15   B7C1   1024   RING      11806.0  1.168908e+04  1.010003          23949   
+16   B8C0   1024   RING      11557.0  1.181759e+04  0.977949          23949   
+17   B8C1   1024   RING       3332.0  3.360616e+03  0.991485          23949   
+18   B9C0   1024   RING       3874.0  3.829928e+03  1.011507          23949   
+19   B9C1   1024   RING        369.0  3.448429e+02  1.070053          23949   
+20  B10C0   1024   RING       2567.0  2.639265e+03  0.972619          23949   
+21  B10C1   1024   RING        410.0  4.061465e+02  1.009488          23949   
+
+    Area (deg^2)  
+0      78.516576  
+1      78.516576  
+2      78.516576  
+3      78.516576  
+4      78.516576  
+5      78.516576  
+6      78.516576  
+7      78.516576  
+8      78.516576  
+9      78.516576  
+10     78.516576  
+11     78.516576  
+12     78.516576  
+13     78.516576  
+14     78.516576  
+15     78.516576  
+16     78.516576  
+17     78.516576  
+18     78.516576  
+19     78.516576  
+20     78.516576  
+21     78.516576  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:24:46 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:24:56 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter                               model.py:620
+                  Likelihood_LEDA168563_bkg_renorm already exist in             
+                  the model. Overwriting it...                                  
+12:24:56 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter                               model.py:620
+                  Likelihood_LEDA168563_bkg_renorm already exist in             
+                  the model. Overwriting it...                                  
+                          Null hyp.     Alt. hyp.        TS
+Likelihood_LEDA168563  85632.778574  85632.778395  0.000358
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: NGC5548
+Calculating likelihoods...
+         INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:26:01 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (214.500, 25.140), data radius = 5.000                        
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  2.704120e+09  2.703939e+09  1.000067          23948   
+1    B0C1   1024   RING  1.361300e+09  1.361072e+09  1.000168          23948   
+2    B1C0   1024   RING  1.116831e+09  1.116767e+09  1.000057          23948   
+3    B1C1   1024   RING  3.880501e+08  3.880683e+08  0.999953          23948   
+4    B2C0   1024   RING  3.148898e+08  3.148521e+08  1.000120          23948   
+5    B2C1   1024   RING  1.251517e+08  1.251557e+08  0.999968          23948   
+6    B3C0   1024   RING  6.599375e+07  6.598279e+07  1.000166          23948   
+7    B3C1   1024   RING  3.389161e+07  3.390737e+07  0.999535          23948   
+8    B4C0   1024   RING  1.435999e+07  1.435846e+07  1.000106          23948   
+9    B4C1   1024   RING  6.370395e+06  6.372220e+06  0.999714          23948   
+10   B5C0   1024   RING  2.689357e+06  2.690442e+06  0.999597          23948   
+11   B5C1   1024   RING  1.146765e+06  1.146600e+06  1.000144          23948   
+12   B6C0   1024   RING  5.569350e+05  5.547912e+05  1.003864          23948   
+13   B6C1   1024   RING  1.903730e+05  1.904906e+05  0.999383          23948   
+14   B7C0   1024   RING  1.365380e+05  1.359169e+05  1.004570          23948   
+15   B7C1   1024   RING  2.581700e+04  2.548831e+04  1.012896          23948   
+16   B8C0   1024   RING  4.683800e+04  4.695918e+04  0.997420          23948   
+17   B8C1   1024   RING  6.573000e+03  6.544465e+03  1.004360          23948   
+18   B9C0   1024   RING  1.652100e+04  1.647467e+04  1.002812          23948   
+19   B9C1   1024   RING  7.280000e+02  7.149761e+02  1.018216          23948   
+20  B10C0   1024   RING  9.334000e+03  9.380620e+03  0.995030          23948   
+21  B10C1   1024   RING  7.460000e+02  7.602580e+02  0.981246          23948   
+
+    Area (deg^2)  
+0      78.513298  
+1      78.513298  
+2      78.513298  
+3      78.513298  
+4      78.513298  
+5      78.513298  
+6      78.513298  
+7      78.513298  
+8      78.513298  
+9      78.513298  
+10     78.513298  
+11     78.513298  
+12     78.513298  
+13     78.513298  
+14     78.513298  
+15     78.513298  
+16     78.513298  
+17     78.513298  
+18     78.513298  
+19     78.513298  
+20     78.513298  
+21     78.513298  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:26:09 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:26:18 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter Likelihood_NGC5548_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+12:26:18 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter Likelihood_NGC5548_bkg_renorm model.py:620
+                  already exist in the model. Overwriting it...                 
+                       Null hyp.     Alt. hyp.        TS
+Likelihood_NGC5548  92201.562723  92201.562862 -0.000278
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: MCG_4_48_2
+Calculating likelihoods...
+         INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:27:24 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (307.150, 25.730), data radius = 5.000                        
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  2.726317e+09  2.726072e+09  1.000090          23938   
+1    B0C1   1024   RING  1.366318e+09  1.366156e+09  1.000118          23938   
+2    B1C0   1024   RING  1.124469e+09  1.124333e+09  1.000121          23938   
+3    B1C1   1024   RING  3.906927e+08  3.906403e+08  1.000134          23938   
+4    B2C0   1024   RING  3.166966e+08  3.166388e+08  1.000182          23938   
+5    B2C1   1024   RING  1.260606e+08  1.260571e+08  1.000028          23938   
+6    B3C0   1024   RING  6.635633e+07  6.634272e+07  1.000205          23938   
+7    B3C1   1024   RING  3.414785e+07  3.414467e+07  1.000093          23938   
+8    B4C0   1024   RING  1.444210e+07  1.443447e+07  1.000529          23938   
+9    B4C1   1024   RING  6.425456e+06  6.421531e+06  1.000611          23938   
+10   B5C0   1024   RING  2.707253e+06  2.708132e+06  0.999675          23938   
+11   B5C1   1024   RING  1.159604e+06  1.158071e+06  1.001324          23938   
+12   B6C0   1024   RING  5.601360e+05  5.593906e+05  1.001333          23938   
+13   B6C1   1024   RING  1.932230e+05  1.930861e+05  1.000709          23938   
+14   B7C0   1024   RING  1.378900e+05  1.379872e+05  0.999296          23938   
+15   B7C1   1024   RING  2.576300e+04  2.591057e+04  0.994305          23938   
+16   B8C0   1024   RING  4.737800e+04  4.777032e+04  0.991787          23938   
+17   B8C1   1024   RING  6.519000e+03  6.719180e+03  0.970208          23938   
+18   B9C0   1024   RING  1.672500e+04  1.688867e+04  0.990309          23938   
+19   B9C1   1024   RING  7.010000e+02  7.707118e+02  0.909549          23938   
+20  B10C0   1024   RING  9.647000e+03  9.701953e+03  0.994336          23938   
+21  B10C1   1024   RING  7.700000e+02  8.033258e+02  0.958515          23938   
+
+    Area (deg^2)  
+0      78.480513  
+1      78.480513  
+2      78.480513  
+3      78.480513  
+4      78.480513  
+5      78.480513  
+6      78.480513  
+7      78.480513  
+8      78.480513  
+9      78.480513  
+10     78.480513  
+11     78.480513  
+12     78.480513  
+13     78.480513  
+14     78.480513  
+15     78.480513  
+16     78.480513  
+17     78.480513  
+18     78.480513  
+19     78.480513  
+20     78.480513  
+21     78.480513  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:27:32 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:27:42 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter                               model.py:620
+                  Likelihood_MCG_4_48_2_bkg_renorm already exist in             
+                  the model. Overwriting it...                                  
+12:27:42 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter                               model.py:620
+                  Likelihood_MCG_4_48_2_bkg_renorm already exist in             
+                  the model. Overwriting it...                                  
+                          Null hyp.     Alt. hyp.        TS
+Likelihood_MCG_4_48_2  92130.787358  92130.756969  0.060779
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: LEDA138501
+Calculating likelihoods...
+         INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:28:47 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (32.410, 52.440), data radius = 5.000                         
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme   Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  636156100.0  6.365204e+08  0.999428          23947   
+1    B0C1   1024   RING  235609024.0  2.357739e+08  0.999301          23947   
+2    B1C0   1024   RING  277830736.0  2.780055e+08  0.999371          23947   
+3    B1C1   1024   RING  104490033.0  1.045375e+08  0.999546          23947   
+4    B2C0   1024   RING   78533319.0  7.856149e+07  0.999641          23947   
+5    B2C1   1024   RING   33729153.0  3.375151e+07  0.999338          23947   
+6    B3C0   1024   RING   13840646.0  1.384939e+07  0.999369          23947   
+7    B3C1   1024   RING    8980235.0  8.982849e+06  0.999709          23947   
+8    B4C0   1024   RING    2741856.0  2.742107e+06  0.999909          23947   
+9    B4C1   1024   RING    1819353.0  1.820079e+06  0.999601          23947   
+10   B5C0   1024   RING     531629.0  5.318404e+05  0.999603          23947   
+11   B5C1   1024   RING     360440.0  3.603837e+05  1.000156          23947   
+12   B6C0   1024   RING     117342.0  1.174704e+05  0.998907          23947   
+13   B6C1   1024   RING      63801.0  6.383183e+04  0.999517          23947   
+14   B7C0   1024   RING      32752.0  3.264482e+04  1.003283          23947   
+15   B7C1   1024   RING       9889.0  9.725753e+03  1.016785          23947   
+16   B8C0   1024   RING       8650.0  8.628859e+03  1.002450          23947   
+17   B8C1   1024   RING       2772.0  2.833163e+03  0.978412          23947   
+18   B9C0   1024   RING       2751.0  2.741252e+03  1.003556          23947   
+19   B9C1   1024   RING        265.0  2.581256e+02  1.026632          23947   
+20  B10C0   1024   RING       1951.0  1.950683e+03  1.000163          23947   
+21  B10C1   1024   RING        346.0  3.282702e+02  1.054010          23947   
+
+    Area (deg^2)  
+0      78.510019  
+1      78.510019  
+2      78.510019  
+3      78.510019  
+4      78.510019  
+5      78.510019  
+6      78.510019  
+7      78.510019  
+8      78.510019  
+9      78.510019  
+10     78.510019  
+11     78.510019  
+12     78.510019  
+13     78.510019  
+14     78.510019  
+15     78.510019  
+16     78.510019  
+17     78.510019  
+18     78.510019  
+19     78.510019  
+20     78.510019  
+21     78.510019  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.43 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:28:54 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:29:03 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter                               model.py:620
+                  Likelihood_LEDA138501_bkg_renorm already exist in             
+                  the model. Overwriting it...                                  
+12:29:03 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter                               model.py:620
+                  Likelihood_LEDA138501_bkg_renorm already exist in             
+                  the model. Overwriting it...                                  
+                          Null hyp.     Alt. hyp.       TS
+Likelihood_LEDA138501  83587.455574  83587.436649  0.03785
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+12:29:04 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: ThreeC445
+Calculating likelihoods...
+12:29:04 INFO      Using transits contained in maptree                 HAL.py:77
+         INFO      Reading Maptree!                        from_root_file.py:218
+12:30:12 INFO      Region of Interest:                                HAL.py:312
+         INFO      -------------------                                HAL.py:313
+         INFO      HealpixConeROI: Center (R.A., Dec) =   healpix_cone_roi.py:87
+                  (335.960, -2.100), data radius = 5.000                        
+                  deg, model radius: 8.000 deg                                  
+         INFO                                                         HAL.py:316
+         INFO      Flat sky projection:                               HAL.py:317
+         INFO      --------------------                               HAL.py:318
+         INFO      Width x height 96 x 96 px                          HAL.py:320
+         INFO      Pixel sizes: 0.17 deg                              HAL.py:325
+         INFO                                                         HAL.py:328
+         INFO      Response:                                          HAL.py:329
+         INFO      ---------                                          HAL.py:330
+         INFO      Response file:                                response.py:551
+                  /lustre/hawcz01/scratch/userspace/zylaphoe/sey                
+                  fert/detRes-fhit2pct-pass5f-mlp-refit.root                    
+         INFO      Number of dec bins: 23                        response.py:552
+         INFO      Number of energy/nHit planes per dec          response.py:556
+                  bin_name: 22                                                  
+         INFO                                                         HAL.py:334
+         INFO      Map Tree:                                          HAL.py:335
+         INFO      ----------                                         HAL.py:336
+      Bin  Nside Scheme    Obs counts    Bkg counts   obs/bkg  Pixels in ROI  \
+0    B0C0   1024   RING  1.524661e+09  1.524466e+09  1.000128          23927   
+1    B0C1   1024   RING  6.422343e+08  6.421911e+08  1.000067          23927   
+2    B1C0   1024   RING  6.584753e+08  6.583624e+08  1.000171          23927   
+3    B1C1   1024   RING  2.197998e+08  2.197716e+08  1.000128          23927   
+4    B2C0   1024   RING  1.801993e+08  1.801566e+08  1.000237          23927   
+5    B2C1   1024   RING  7.360295e+07  7.360671e+07  0.999949          23927   
+6    B3C0   1024   RING  3.768393e+07  3.768183e+07  1.000056          23927   
+7    B3C1   1024   RING  1.907578e+07  1.908033e+07  0.999761          23927   
+8    B4C0   1024   RING  8.099478e+06  8.102630e+06  0.999611          23927   
+9    B4C1   1024   RING  3.734170e+06  3.734108e+06  1.000016          23927   
+10   B5C0   1024   RING  1.559540e+06  1.558292e+06  1.000801          23927   
+11   B5C1   1024   RING  7.357840e+05  7.347792e+05  1.001367          23927   
+12   B6C0   1024   RING  3.447480e+05  3.440210e+05  1.002113          23927   
+13   B6C1   1024   RING  1.301310e+05  1.303914e+05  0.998003          23927   
+14   B7C0   1024   RING  9.205500e+04  9.192384e+04  1.001427          23927   
+15   B7C1   1024   RING  1.836300e+04  1.829240e+04  1.003860          23927   
+16   B8C0   1024   RING  3.045600e+04  3.054424e+04  0.997111          23927   
+17   B8C1   1024   RING  4.855000e+03  4.929282e+03  0.984930          23927   
+18   B9C0   1024   RING  1.100600e+04  1.103203e+04  0.997640          23927   
+19   B9C1   1024   RING  6.090000e+02  6.071932e+02  1.002976          23927   
+20  B10C0   1024   RING  6.619000e+03  6.736393e+03  0.982573          23927   
+21  B10C1   1024   RING  6.050000e+02  6.245749e+02  0.968659          23927   
+
+    Area (deg^2)  
+0      78.444449  
+1      78.444449  
+2      78.444449  
+3      78.444449  
+4      78.444449  
+5      78.444449  
+6      78.444449  
+7      78.444449  
+8      78.444449  
+9      78.444449  
+10     78.444449  
+11     78.444449  
+12     78.444449  
+13     78.444449  
+14     78.444449  
+15     78.444449  
+16     78.444449  
+17     78.444449  
+18     78.444449  
+19     78.444449  
+20     78.444449  
+21     78.444449  
+         INFO      This Map Tree contains 3089.783 transits in   map_tree.py:156
+                  the first bin                                                 
+         INFO      Total data size: 8.42 Mb                      map_tree.py:160
+         INFO                                                         HAL.py:340
+         INFO      Active energy/nHit planes (18):                    HAL.py:342
+         INFO      -------------------------------                    HAL.py:343
+         INFO      ['B2C0', 'B2C1', 'B3C0', 'B3C1', 'B4C0', 'B4C1',   HAL.py:344
+                  'B5C0', 'B5C1', 'B6C0', 'B6C1', 'B7C0', 'B7C1',               
+                  'B8C0', 'B8C1', 'B9C0', 'B9C1', 'B10C0', 'B10C1']             
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+12:30:20 WARNING   48.699999999999996 percent of        analysis_results.py:1740
+                  samples have been thrown away because                         
+                  they failed the constraints on the                            
+                  parameters. This results might not be                         
+                  suitable for error propagation.                               
+                  Enlarge the boundaries until you                              
+                  loose less than 1 percent of the                              
+                  samples.                                                      
+12:30:20 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+12:30:30 WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+         WARNING   External parameter                               model.py:620
+                  Likelihood_ThreeC445_bkg_renorm already exist in              
+                  the model. Overwriting it...                                  
+12:30:30 INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         INFO      set the minimizer to minuit          joint_likelihood.py:1045
+         WARNING   There is no free parameter in the     joint_likelihood.py:246
+                  current model                                                 
+         WARNING   External parameter                               model.py:620
+                  Likelihood_ThreeC445_bkg_renorm already exist in              
+                  the model. Overwriting it...                                  
+                         Null hyp.     Alt. hyp.            TS
+Likelihood_ThreeC445  90665.577649  90665.577649  4.881003e-07
+
+Optimization terminated successfully;
+The returned value satisfies the termination criteria
+(using xtol =  0.001 )
+         WARNING   The current value of the parameter K (1.0)   parameter.py:794
+                  was above the new maximum 0.001.                              
+Loaded YML File: NGC1194
+Calculating likelihoods...
+         INFO      Using transits contained in maptree                 HAL.py:77
+12:30:31 INFO      Reading Maptree!                        from_root_file.py:218

@@ -27,8 +27,8 @@ lowerE = midE/np.power(10,0.25)
 upperE = np.power(10,np.log10(lowerE+0.5))
 
 ## Set index ##
-ix = "27"      # index in model files = -ix
-index = -2.7
+ix = "3"      # index in model files = -ix
+index = -3.0
 
 ## Load CSV and initialize arrays ##
 df = pd.read_csv("data14-195.csv",sep='\\s+').to_numpy()

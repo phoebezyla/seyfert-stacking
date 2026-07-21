@@ -13,6 +13,8 @@ import numpy as np
 import pandas as pd
 from stacking_functions import *
 
+import threeML.plugins.experimental.CastroLike as cl_module
+print(cl_module.__file__)
 
 ## Set paths ##
 DATADIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/'
@@ -22,13 +24,16 @@ DR = os.path.join(DATADIR, 'detRes-fhit2pct-pass5f-mlp-refit.root')
 
 ## Define energy bins ##
 midE = np.array([1.0,5.0,10.0]) #TeV
-lowerE = midE/np.power(10,0.25)
-upperE = np.power(10,np.log10(lowerE+0.5))
+
+lowerE = 0.5 * 1e-9 # keV 
+upperE = 100 * 1e-9 # keV
 
 ## Load CSV and initialize arrays ##
 df = pd.read_csv("data14-195.csv",sep='\\s+').to_numpy()
 
-numsources = 51
+numsources = 3
+numsourcesstr = '3'
+
 sourceName = df[:numsources,0]
 RA = df[:,1]
 Dec = df[:,2]
@@ -42,31 +47,31 @@ data_radius = 5.
 model_radius = 8.
 
 results_df = {}
-
+results = {}
 IntC_arr = []
 TS_arr = []
 nullLLH_arr = []
 
+ix = '2'
 
 bins = ['B2C0','B2C1','B3C0','B3C1','B4C0','B4C1','B5C0','B5C1',
                  'B6C0','B6C1','B7C0','B7C1','B8C0',
                  'B8C1','B9C0','B9C1','B10C0','B10C1']
 
-
-with open("results-%six-%.1fTeV-individual.csv"%(ix,pivot), newline="") as f:
-    reader = csv.DictReader(f)
-    for row in reader:
-        source_name = row["sourceName"]
-        results_df[source_name] = {
-            "nullLLH": float(row["nullLLH"]),
-            "alt_hyp": float(row["alt_hyp"]),
-            "TS":      float(row["TS"]),
-            "log_val": [float(row[f"log_val_{k}"]) for k in range(200)],
-            "norms":   [float(row[f"norms_{k}"]) for k in range(200)],
-        }
-
 ## Begin loop over pivot energies ##
 for j, e in enumerate(midE):
+
+    with open("results-%six-%.1fTeV-individual.csv"%(ix,e), newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            source_name = row["sourceName"]
+            results_df[source_name] = {
+                "nullLLH": float(row["nullLLH"]),
+                "alt_hyp": float(row["alt_hyp"]),
+                "TS":      float(row["TS"]),
+                "log_val": [float(row[f"log_val_{k}"]) for k in range(200)],
+                "norms":   [float(row[f"norms_{k}"]) for k in range(200)],
+            }
 
     ## Begin loop over sources ##
     for i,c in enumerate(sourceName):
@@ -76,16 +81,20 @@ for j, e in enumerate(midE):
         
         # Load individual profiles 
         nullLLH = results_df[c]["nullLLH"]
-        print(f"{c} nullLLH: {nullLLH}") 
         TSind   = results_df[c]["TS"]
-        print(f"{c} TS: {TSind}")
         log_val = results_df[c]["log_val"]
-        print(f"{c} log_val: {log_val}")
         norms   = results_df[c]["norms"]
-        print(f"{c} norms: {norms}")        
+        
+#        print(f"{c} nullLLH: {nullLLH}") 
+#        print(f"{c} TS: {TSind}")
+#        print(f"{c} log_val: {log_val}")
+#        print(f"{c} norms: {norms}")        
 
         # Get likelihood profile around min Norm? #        
-        IntC_arr.append(IntervalContainer(lowerE[j],upperE[j],norms,log_val,101))
+        ic = IntervalContainer(lowerE,upperE,norms,log_val,101)
+        ic.weight = A[i]    # give interval container a new attribute (weights)
+        IntC_arr.append(ic)
+
         nullLLH_arr.append(nullLLH)
         TS_arr.append(TSind)
 
@@ -99,21 +108,24 @@ for j, e in enumerate(midE):
     print("\nTotal nullLLH: {}".format(totalnull))
     
     # Load source model #
-    clm_model_file = "%s/model_files/yml_clm/clm_ind%s_modelFile.yml"%(DIR)
+    clm_model_file = "%s/model_files/yml_clm/clm_E_%.1f_TeV_ind%s_modelFile.yml"%(DIR,e,ix)
     clm = threeML.load_model(clm_model_file)
-    print("Loaded clm YML File")   
 
-
-    fjl, datalist = StackingAnalysis.stacked_likelihood(IntC_arr, clm)
+    cl = CastroLike("stacked",IntC_arr)
+    cl.set_model(clm)
+    data = Datalist(cl)
+    fjl = JointLikelihood(clm,data,verbose=False)
     fjl.set_minimizer("ROOT")
 
     param_df, like_df = fjl.fit(quiet=True)
+
+    fig = cl.plot()
+    fig.savefig("castrolike-%d.png"%(e))
+    
     print("Parameter results: %s"%(param_df))
     print("Likelihood results: %s"%(like_df))
 
     # Built total TS array #
-    print("total Alt LLH:", like_df.iloc[1]['-log(likelihood)'])
-    print("total Null LLH: ", totalnull)
     TS_stacked =  2 * (totalnull - like_df.iloc[1]['-log(likelihood)'])
     print("Total TS: %s"%(TS_stacked))
     
@@ -125,7 +137,7 @@ for j, e in enumerate(midE):
    
     norms_Stack,log_val_Stack,a_Stack = StackingAnalysis.likelihood_profile(indminNorm,fjl,param_df,like_df,"Stacked",computeTS=False)
  
-    IntC = IntervalContainer(lowerE[j],upperE[j],norms_Stack,log_val_Stack,101)
+    IntC = IntervalContainer(lowerE,upperE,norms_Stack,log_val_Stack,101)
 
     # Plot stacked profile #    
     figname = os.path.join(DIR,"plots/stacked_%fsources_pllh.png"%(numsources))
@@ -136,7 +148,7 @@ for j, e in enumerate(midE):
     results[e] = {
         "indminNorm": param_df['value'][0],
         "TS"        : TS_stacked,
-        "loglike"   : loglike,
+#        "loglike"   : loglike,
 #        "credInt"   : credInt,
 #        "resHigh"   : resHigh,
         "norms"     : norms_Stack,
@@ -144,9 +156,10 @@ for j, e in enumerate(midE):
         }
 
 ## Save full results dictionary to one csv per index ##
-f = open("%s/stacked-ind%s-results.csv"%(DIR,indnames[k]),'w',newline='')
+f = open("%s/stacked-ind%s-%s-results.csv"%(DIR,ix,numsourcesstr),'w',newline='')
 writer = csv.writer(f)
-writer.writerow(['pivot','indminNorm','TS','loglike'] +\  
+writer.writerow(['pivot','indminNorm','TS'] +\
+#,'loglike'] +\
     [f"norms_{i}" for i in range(200)] +\
     [f"log_val_{i}" for i in range(200)])
 
