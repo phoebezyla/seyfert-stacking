@@ -23,10 +23,9 @@ MAP = os.path.join(DATADIR,'maptree-fhit2pct-pass5f-mlp-chunk1-1510.root')
 DR = os.path.join(DATADIR, 'detRes-fhit2pct-pass5f-mlp-refit.root')
 
 ## Define energy bins ##
-midE = np.array([1.0,5.0,10.0]) #TeV
-
-lowerE = 0.5 * 1e-9 # keV 
-upperE = 100 * 1e-9 # keV
+midE = np.array([1.0,5.0,10.0]) # TeV
+lowerE = 0.5 * 1e9              # keV 
+upperE = 100 * 1e9              # keV
 
 ## Load CSV and initialize arrays ##
 df = pd.read_csv("crab.csv",sep='\\s+').to_numpy()
@@ -132,41 +131,41 @@ for j, e in enumerate(midE):
     print("Total TS: %s"%(TS_stacked))
     
 
-#    ####### Check final loglikelihood profile
-#    indminNorm = param_df['value'][0]
-#    minlogN=np.log10(indminNorm) - 1.5
-#    maxlogN=np.log10(indminNorm) + 1.5
-#   
-#    norms_Stack,log_val_Stack,a_Stack = StackingAnalysis.likelihood_profile(indminNorm,fjl,param_df,like_df,"Stacked",computeTS=False)
-# 
-#    IntC = IntervalContainer(lowerE,upperE,norms_Stack,log_val_Stack,101)
-#
-#    # Plot stacked profile #    
-##    figname = os.path.join(DIR,"plots/stacked_%fsources_pllh.png"%(numsources))
-##    plot_logProfile_alt([IntC],param_df,like_df,"Stacked",show=False,minlogN=minlogN,maxlogN=maxlogN,save=figname)
-#
-#
-#    ## Build results dataframe ##
-#    results[e] = {
-#        "indminNorm": param_df['value'][0],
-#        "TS"        : TS_stacked,
-##        "loglike"   : loglike,
-##        "credInt"   : credInt,
-##        "resHigh"   : resHigh,
-#        "norms"     : norms_Stack,
-#        "log_val"   : log_val_Stack,
-#        }
-#
-### Save full results dictionary to one csv per index ##
-#f = open("%s/stacked-ind%s-%s-results.csv"%(DIR,ix,2),'w',newline='')
-#writer = csv.writer(f)
-#writer.writerow(['pivot','indminNorm','TS'] +\
-##,'loglike'] +\
-#    [f"norms_{i}" for i in range(200)] +\
-#    [f"log_val_{i}" for i in range(200)])
-#
-#for pivot,vals in results.items():
-#    writer.writerow([pivot, vals['indminNorm'], vals['TS']]\
-#        #vals['resBay'], vals['resLow'],vals['resHigh']] 
-#        + list(vals['norms']) + list(vals['log_val']))
-#f.close()
+    ####### Check final loglikelihood profile
+    indminNorm = param_df['value'][0]
+    minlogN=np.log10(indminNorm) - 1.5
+    maxlogN=np.log10(indminNorm) + 1.5
+   
+    norms_Stack,log_val_Stack,a_Stack = StackingAnalysis.likelihood_profile(indminNorm,fjl,param_df,like_df,"Stacked",computeTS=False)
+ 
+    IntC = IntervalContainer(lowerE,upperE,norms_Stack,log_val_Stack,101)
+
+    # Plot stacked profile #    
+#    figname = os.path.join(DIR,"plots/stacked_%fsources_pllh.png"%(numsources))
+#    plot_logProfile_alt([IntC],param_df,like_df,"Stacked",show=False,minlogN=minlogN,maxlogN=maxlogN,save=figname)
+
+
+    ## Build results dataframe ##
+    results[e] = {
+        "indminNorm": param_df['value'][0],
+        "TS"        : TS_stacked,
+#        "loglike"   : loglike,
+#        "credInt"   : credInt,
+#        "resHigh"   : resHigh,
+        "norms"     : norms_Stack,
+        "log_val"   : log_val_Stack,
+        }
+
+## Save full results dictionary to one csv per index ##
+f = open("%s/stacked-ind%s-%s-results.csv"%(DIR,ix,'onecrab'),'w',newline='')
+writer = csv.writer(f)
+writer.writerow(['pivot','indminNorm','TS'] +\
+#,'loglike'] +\
+    [f"norms_{i}" for i in range(200)] +\
+    [f"log_val_{i}" for i in range(200)])
+
+for pivot,vals in results.items():
+    writer.writerow([pivot, vals['indminNorm'], vals['TS']]\
+        #vals['resBay'], vals['resLow'],vals['resHigh']] 
+        + list(vals['norms']) + list(vals['log_val']))
+f.close()

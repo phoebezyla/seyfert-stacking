@@ -22,12 +22,12 @@ DR = os.path.join(DATADIR, 'detRes-fhit2pct-pass5f-mlp-refit.root')
 
 ## Define energy bins ##
 midE = np.array([1.0,5.0,10.0])  # TeV
-lowerE = midE/np.power(10,0.25)
-upperE = np.power(10,np.log10(lowerE+0.5))
+lowerE = 0.5 * 1e9               # keV
+upperE = 100 * 1e9               # keV
 
 ## Set index ##
-ix = "3"      # index in model files = -ix
-index = -3.0
+ix = "2"      # index in model files = -ix
+index = -2.0
 
 ## Load CSV and initialize arrays ##
 df = pd.read_csv("crab.csv",sep='\\s+').to_numpy()
