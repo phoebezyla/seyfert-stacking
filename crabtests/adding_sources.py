@@ -30,8 +30,9 @@ upperE = 100 * 1e9              # keV
 ## Load CSV and initialize arrays ##
 df = pd.read_csv("crab.csv",sep='\\s+').to_numpy()
 
-numsources = 1
-numsourcesstr = '1'
+numsources = 2
+numsourcesstr = '2'
+ix = '2'
 
 sourceName = df[:,0]
 RA = df[:,1]
@@ -47,11 +48,7 @@ model_radius = 8.
 
 results_df = {}
 results = {}
-IntC_arr = []
-TS_arr = []
-nullLLH_arr = []
 
-ix = '2'
 
 bins = ['B2C0','B2C1','B3C0','B3C1','B4C0','B4C1','B5C0','B5C1',
                  'B6C0','B6C1','B7C0','B7C1','B8C0',
@@ -59,6 +56,9 @@ bins = ['B2C0','B2C1','B3C0','B3C1','B4C0','B4C1','B5C0','B5C1',
 
 ## Begin loop over pivot energies ##
 for j, e in enumerate(midE):
+    IntC_arr = []
+    TS_arr = []
+    nullLLH_arr = []
 
     with open("results-%six-%.1fTeV-individual.csv"%(ix,e), newline="") as f:
         reader = csv.DictReader(f)
@@ -90,11 +90,11 @@ for j, e in enumerate(midE):
 #        print(f"{c} norms: {norms}")        
 
         # Get likelihood profile around min Norm? #        
-        ic = IntervalContainer(lowerE,upperE,norms,log_val,101)
-        ic.weight = A[i]    # give interval container a new attribute (weights)
+        ic = IntervalContainer(lowerE,upperE,norms,log_val,101,
+                               weight=A[i],pivot=e*1e9)
         IntC_arr.append(ic)
 
-        nullLLH_arr.append(nullLLH)
+        nullLLH_arr.append(A[i] * nullLLH)  # need to weight for TS calculations
         TS_arr.append(TSind)
 
         ## End Source loop ##
@@ -141,8 +141,8 @@ for j, e in enumerate(midE):
     IntC = IntervalContainer(lowerE,upperE,norms_Stack,log_val_Stack,101)
 
     # Plot stacked profile #    
-#    figname = os.path.join(DIR,"plots/stacked_%fsources_pllh.png"%(numsources))
-#    plot_logProfile_alt([IntC],param_df,like_df,"Stacked",show=False,minlogN=minlogN,maxlogN=maxlogN,save=figname)
+    figname = os.path.join(DIR,"plots/stacked_%.1fTeV_pllh.png"%(e))
+    plot_logProfile_alt([IntC],param_df,like_df,"Stacked",show=False,minlogN=minlogN,maxlogN=maxlogN,save=figname)
 
 
     ## Build results dataframe ##
@@ -157,7 +157,7 @@ for j, e in enumerate(midE):
         }
 
 ## Save full results dictionary to one csv per index ##
-f = open("%s/stacked-ind%s-%s-results.csv"%(DIR,ix,'onecrab'),'w',newline='')
+f = open("%s/mod-stacked-ind%s-%s-results.csv"%(DIR,ix,'twocrab'),'w',newline='')
 writer = csv.writer(f)
 writer.writerow(['pivot','indminNorm','TS'] +\
 #,'loglike'] +\
