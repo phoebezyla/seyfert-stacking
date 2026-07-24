@@ -1,0 +1,117 @@
+########################## start user prologue 31921 ###########################
+Created QTMPDIR
+QTMPDIR=/local/6650641
+##########################  end user prologue  31921 ###########################
+/data/disk01/home/zylaphoe/.local/share/mamba/envs/new_hal/lib/python3.10/site-packages/astromodels/utils/file_utils.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in log10
+
+
+WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+
+
+WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+
+
+WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in log10
+
+
+WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+
+
+WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+
+
+WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in log10
+
+
+WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+
+
+WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+
+
+WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+

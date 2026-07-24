@@ -48,7 +48,7 @@ Mrk1040 (point source):
 
         K:
 
-          value: 3.0469312184329102e-27
+          value: 2.5535463486461025e-27
 
           desc: Normalization (differential flux at the pivot value)
 

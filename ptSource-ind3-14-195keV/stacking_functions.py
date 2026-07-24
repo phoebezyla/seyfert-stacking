@@ -74,8 +74,8 @@ def plot_logProfile_alt(IntC,param_df,like_df,name,minlogN=-30.,maxlogN=-1.,show
 
 def saveResults(llh,jl,name,pivot,index):
     jointRes = jl.results
-    jointRes.optimized_model.save("model_files/yml_ind%s_optimized/E_%.1f_TeV/%s_fit.yml"%(index,pivot,name),overwrite=True)
-
+    #jointRes.optimized_model.save("model_files/yml_ind%s_optimized/E_%.1f_TeV/%s_fit.yml"%(index,pivot,name),overwrite=True)
+    jointRes.optimized_model.save("models/fitted_ix%s_%.1fTeV.yml"%(index,pivot),overwrite=True)
 
 def plotResults(llh,jl,name):
     ## Model in counts spacve and residuals
@@ -171,7 +171,7 @@ class StackingAnalysis():
         spectrum.K.min_value = 1e-35
         spectrum.K.max_value = Kmax
         spectrum.K.free = True
-        spectrum.K.transformation = log10
+        #spectrum.K.transformation = log10
         spectrum.piv = pivot
         spectrum.piv.free = False
         spectrum.piv.unit = u.TeV

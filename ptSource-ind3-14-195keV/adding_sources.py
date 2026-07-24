@@ -18,23 +18,23 @@ print(cl_module.__file__)
 
 ## Set paths ##
 DATADIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/'
-DIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/'
+DIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/seyfert-stacking-git/ptSource-ind3-14-195keV'
 MAP = os.path.join(DATADIR,'maptree-fhit2pct-pass5f-mlp-chunk1-1510.root')
 DR = os.path.join(DATADIR, 'detRes-fhit2pct-pass5f-mlp-refit.root')
 
 ## Define energy bins ##
-midE = np.array([1.0,5.0,10.0]) #TeV
-
-lowerE = 0.5 * 1e-9 # keV 
-upperE = 100 * 1e-9 # keV
+midE = np.array([1.0,5.0,10.0]) # TeV
+lowerE = 0.5 * 1e9              # keV 
+upperE = 100 * 1e9              # keV
 
 ## Load CSV and initialize arrays ##
 df = pd.read_csv("data14-195.csv",sep='\\s+').to_numpy()
 
-numsources = 3
-numsourcesstr = '3'
+numsources = 51
+numsourcesstr = '51'
+ix = '2'
 
-sourceName = df[:numsources,0]
+sourceName = df[:,0]
 RA = df[:,1]
 Dec = df[:,2]
 A = df[:,3]
@@ -48,11 +48,7 @@ model_radius = 8.
 
 results_df = {}
 results = {}
-IntC_arr = []
-TS_arr = []
-nullLLH_arr = []
 
-ix = '2'
 
 bins = ['B2C0','B2C1','B3C0','B3C1','B4C0','B4C1','B5C0','B5C1',
                  'B6C0','B6C1','B7C0','B7C1','B8C0',
@@ -60,6 +56,9 @@ bins = ['B2C0','B2C1','B3C0','B3C1','B4C0','B4C1','B5C0','B5C1',
 
 ## Begin loop over pivot energies ##
 for j, e in enumerate(midE):
+    IntC_arr = []
+    TS_arr = []
+    nullLLH_arr = []
 
     with open("results-%six-%.1fTeV-individual.csv"%(ix,e), newline="") as f:
         reader = csv.DictReader(f)
@@ -85,17 +84,13 @@ for j, e in enumerate(midE):
         log_val = results_df[c]["log_val"]
         norms   = results_df[c]["norms"]
         
-#        print(f"{c} nullLLH: {nullLLH}") 
-#        print(f"{c} TS: {TSind}")
-#        print(f"{c} log_val: {log_val}")
-#        print(f"{c} norms: {norms}")        
 
         # Get likelihood profile around min Norm? #        
-        ic = IntervalContainer(lowerE,upperE,norms,log_val,101)
-        ic.weight = A[i]    # give interval container a new attribute (weights)
+        ic = IntervalContainer(lowerE,upperE,norms,log_val,101,
+                               weight=A[i],pivot=e*1e9)
         IntC_arr.append(ic)
 
-        nullLLH_arr.append(nullLLH)
+        nullLLH_arr.append(A[i] * nullLLH)  # need to weight for TS calculations
         TS_arr.append(TSind)
 
         ## End Source loop ##
@@ -105,22 +100,23 @@ for j, e in enumerate(midE):
     ## Stack likelihood profiles ##
 
     totalnull = np.sum(np.asarray(nullLLH_arr))
-    print("\nTotal nullLLH: {}".format(totalnull))
     
     # Load source model #
     clm_model_file = "%s/model_files/yml_clm/clm_E_%.1f_TeV_ind%s_modelFile.yml"%(DIR,e,ix)
     clm = threeML.load_model(clm_model_file)
 
+    print(clm.finalNorm.spectrum.main.Powerlaw.K.value)
+
     cl = CastroLike("stacked",IntC_arr)
     cl.set_model(clm)
-    data = Datalist(cl)
+    data = DataList(cl)
     fjl = JointLikelihood(clm,data,verbose=False)
     fjl.set_minimizer("ROOT")
 
     param_df, like_df = fjl.fit(quiet=True)
 
     fig = cl.plot()
-    fig.savefig("castrolike-%d.png"%(e))
+    fig.savefig("%s/plots/castrolike-%d.png"%(DIR,e))
     
     print("Parameter results: %s"%(param_df))
     print("Likelihood results: %s"%(like_df))
@@ -140,7 +136,7 @@ for j, e in enumerate(midE):
     IntC = IntervalContainer(lowerE,upperE,norms_Stack,log_val_Stack,101)
 
     # Plot stacked profile #    
-    figname = os.path.join(DIR,"plots/stacked_%fsources_pllh.png"%(numsources))
+    figname = os.path.join(DIR,"plots/stacked_%.1fTeV_pllh.png"%(e))
     plot_logProfile_alt([IntC],param_df,like_df,"Stacked",show=False,minlogN=minlogN,maxlogN=maxlogN,save=figname)
 
 
@@ -156,7 +152,7 @@ for j, e in enumerate(midE):
         }
 
 ## Save full results dictionary to one csv per index ##
-f = open("%s/stacked-ind%s-%s-results.csv"%(DIR,ix,numsourcesstr),'w',newline='')
+f = open("%s/results-stacked-ind%s.csv"%(DIR,ix),'w',newline='')
 writer = csv.writer(f)
 writer.writerow(['pivot','indminNorm','TS'] +\
 #,'loglike'] +\
@@ -164,7 +160,7 @@ writer.writerow(['pivot','indminNorm','TS'] +\
     [f"log_val_{i}" for i in range(200)])
 
 for pivot,vals in results.items():
-    writer.writerow([pivot, vals['indminNorm'], vals['TS'],vals['loglike']]\
+    writer.writerow([pivot, vals['indminNorm'], vals['TS']]\
         #vals['resBay'], vals['resLow'],vals['resHigh']] 
         + list(vals['norms']) + list(vals['log_val']))
 f.close()

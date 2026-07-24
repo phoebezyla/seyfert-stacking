@@ -16,22 +16,21 @@ from stacking_functions import *
 
 ## Set paths ##
 DATADIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/'
-DIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/'
-MODELDIR = os.path.join(DIR,'model_files/')
+DIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/seyfert-stacking-git/crabtests'
 MAP = os.path.join(DATADIR,'maptree-fhit2pct-pass5f-mlp-chunk1-1510.root')
 DR = os.path.join(DATADIR, 'detRes-fhit2pct-pass5f-mlp-refit.root')
 
 ## Define energy bins ##
 midE = np.array([1.0,5.0,10.0])  # TeV
-lowerE = midE/np.power(10,0.25)
-upperE = np.power(10,np.log10(lowerE+0.5))
+lowerE = 0.5 * 1e9               # keV
+upperE = 100 * 1e9               # keV
 
 ## Set index ##
-ix = "27"      # index in model files = -ix
-index = -2.7
+ix = "2"      # index in model files = -ix
+index = -2.0
 
 ## Load CSV and initialize arrays ##
-df = pd.read_csv("data14-195.csv",sep='\\s+').to_numpy()
+df = pd.read_csv("crab.csv",sep='\\s+').to_numpy()
 
 sourceName = df[:,0]
 RA = df[:,1]
@@ -60,54 +59,55 @@ for j, pivot in enumerate(midE):
         a = A[i]
     
         # Load source model #
-        model_file = "%s/yml_ind%s_initial/E_%.1f_TeV/%s_modelFile.yml"%(MODELDIR,ix,pivot,c)
+        model_file = "%s/models/crab_model_ix%s_%.1fTeV.yml"%(DIR,ix,pivot)
         model = threeML.load_model(model_file)        
-        print("Loaded YML File: %s"%(c))
     
         # Calculate joint and log likelihoods #
-        print("Calculating likelihoods...")
         llh, jl = StackingAnalysis.calc_likelihoods(model,c,ra,dec,bins,MAP,DR)
         param_df, like_df = jl.fit(quiet=True)
-       
-        # Save results from fit 
-        saveResults(llh,jl,c,pivot,ix) 
-     
-        # Get likelihood profile around min norm
-        indminNorm = param_df['value'][0] # in kev-1 s-1 cm-2
     
-        norms,log_val,ts = StackingAnalysis.likelihood_profile(indminNorm,jl,param_df,like_df,c,valN=valN)
-        
-        # Build result DF for source
-        results_df[c] = {
-            "nullLLH": ts.iloc[0]['Null hyp.'],
-            "alt_hyp": ts.iloc[0]['Alt. hyp.'],
-            "TS":      ts.iloc[0]['TS'],
-            "norms":   norms,
-            "log_val": log_val,
-        }
-    
-    
-        # Plot individual log Profile #
-        IntC.append(IntervalContainer(lowerE[j],upperE[j],norms,log_val,101))
-        minlogN=np.log10(indminNorm) - 2
-        maxlogN=np.log10(indminNorm) + 8
-        
-        figname = os.path.join(DIR,"plots/%s_pllh.png"%(c))
-        
-        plot_logProfile_alt([IntC[-1]],param_df,like_df,c,minlogN=minlogN,\
-            maxlogN=maxlogN,show=False,save=figname)
-    
-        ## End Source loop ##
-        #####################
-    
-    # Save results dataframe to csv #
-    # creates one results csv for each index & pivot energy #
-    f = open("%s/results-%six-%.1fTeV-individual.csv"%(DIR,ix,pivot),"w",newline="")
-    writer = csv.writer(f)
-    writer.writerow(["sourceName","nullLLH","alt_hyp","TS"] + \
-        [f"norms_{i}" for i in range(valN)] + \
-        [f"log_val_{i}" for i in range(valN)])
-    for source, vals in results_df.items():
-        writer.writerow([source, vals["nullLLH"], vals["alt_hyp"], \
-            vals["TS"]] + list(vals["norms"]) + list(vals["log_val"]))
-    f.close()
+        print(param_df)
+        print(like_df)
+   
+#        # Save results from fit 
+#        saveResults(llh,jl,c,pivot,ix) 
+#     
+#        # Get likelihood profile around min norm
+#        indminNorm = param_df['value'][0] # in kev-1 s-1 cm-2
+#    
+#        norms,log_val,ts = StackingAnalysis.likelihood_profile(indminNorm,jl,param_df,like_df,c,valN=valN)
+#        
+#        # Build result DF for source
+#        results_df[c] = {
+#            "nullLLH": ts.iloc[0]['Null hyp.'],
+#            "alt_hyp": ts.iloc[0]['Alt. hyp.'],
+#            "TS":      ts.iloc[0]['TS'],
+#            "norms":   norms,
+#            "log_val": log_val,
+#        }
+#    
+#    
+#        # Plot individual log Profile #
+#        IntC.append(IntervalContainer(lowerE[j],upperE[j],norms,log_val,101))
+#        minlogN=np.log10(indminNorm) - 2
+#        maxlogN=np.log10(indminNorm) + 8
+#        
+#        figname = os.path.join(DIR,"crab_ix%s_%.1fTeV_pllh.png"%(ix,pivot))
+#        
+#        plot_logProfile_alt([IntC[-1]],param_df,like_df,c,minlogN=minlogN,\
+#            maxlogN=maxlogN,show=False,save=figname)
+#    
+#        ## End Source loop ##
+#        #####################
+#    
+#    # Save results dataframe to csv #
+#    # creates one results csv for each index & pivot energy #
+#    f = open("%s/results-%six-%.1fTeV-individual.csv"%(DIR,ix,pivot),"w",newline="")
+#    writer = csv.writer(f)
+#    writer.writerow(["sourceName","nullLLH","alt_hyp","TS"] + \
+#        [f"norms_{i}" for i in range(valN)] + \
+#        [f"log_val_{i}" for i in range(valN)])
+#    for source, vals in results_df.items():
+#        writer.writerow([source, vals["nullLLH"], vals["alt_hyp"], \
+#            vals["TS"]] + list(vals["norms"]) + list(vals["log_val"]))
+#    f.close()

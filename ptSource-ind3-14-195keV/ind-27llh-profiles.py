@@ -23,11 +23,11 @@ DR = os.path.join(DATADIR, 'detRes-fhit2pct-pass5f-mlp-refit.root')
 
 ## Define energy bins ##
 midE = np.array([1.0,5.0,10.0])  # TeV
-lowerE = midE/np.power(10,0.25)
-upperE = np.power(10,np.log10(lowerE+0.5))
+lowerE = 0.5 * 1e9               # keV
+upperE = 100 * 1e9               # keV
 
 ## Set index ##
-ix = "27"      # index in model files = -ix
+ix = "27"      
 index = -2.7
 
 ## Load CSV and initialize arrays ##
@@ -88,11 +88,11 @@ for j, pivot in enumerate(midE):
     
     
         # Plot individual log Profile #
-        IntC.append(IntervalContainer(lowerE[j],upperE[j],norms,log_val,101))
+        IntC.append(IntervalContainer(lowerE,upperE,norms,log_val,101))
         minlogN=np.log10(indminNorm) - 2
         maxlogN=np.log10(indminNorm) + 8
         
-        figname = os.path.join(DIR,"plots/%s_pllh.png"%(c))
+        figname = os.path.join(DIR,"plots/%s_%six_%.1fTeV_pllh.png"%(ix,pivot,c))
         
         plot_logProfile_alt([IntC[-1]],param_df,like_df,c,minlogN=minlogN,\
             maxlogN=maxlogN,show=False,save=figname)

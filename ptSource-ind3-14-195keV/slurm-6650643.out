@@ -1,11 +1,35 @@
-########################### start user prologue 5621 ###########################
+########################## start user prologue 10878 ###########################
 Created QTMPDIR
-QTMPDIR=/local/6617891
-###########################  end user prologue  5621 ###########################
+QTMPDIR=/local/6650643
+##########################  end user prologue  10878 ###########################
 /data/disk01/home/zylaphoe/.local/share/mamba/envs/new_hal/lib/python3.10/site-packages/astromodels/utils/file_utils.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
   import pkg_resources
 
-WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in log10
 
 
 WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
@@ -17,7 +41,31 @@ WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecat
 WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
 
 
-WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in log10
 
 
 WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
@@ -29,9 +77,38 @@ WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecat
 WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
 
 
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in scalar subtract
+
+
+WARNING RuntimeWarning: invalid value encountered in log10
+
+
 WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
 
-Traceback (most recent call last):
-  File "/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/adding_sources.py", line 148, in <module>
-    f = open("%s/stacked-ind%s-%s-results.csv"%(DIR,indnames[j],numsourcesstr),'w',newline='')
-IndexError: list index out of range
+
+WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+
+
+WARNING FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+
