@@ -16,8 +16,7 @@ from stacking_functions import *
 
 ## Set paths ##
 DATADIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/'
-DIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/ptSource-ind3-14-195keV/'
-MODELDIR = os.path.join(DIR,'model_files/')
+DIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/seyfert-stacking-git/crabtests'
 MAP = os.path.join(DATADIR,'maptree-fhit2pct-pass5f-mlp-chunk1-1510.root')
 DR = os.path.join(DATADIR, 'detRes-fhit2pct-pass5f-mlp-refit.root')
 
@@ -27,8 +26,8 @@ lowerE = 0.5 * 1e9               # keV
 upperE = 100 * 1e9               # keV
 
 ## Set index ##
-ix = "3"      
-index = -3.0
+ix = "3"      # index in model files = -ix
+index = -2.0
 
 ## Load CSV and initialize arrays ##
 df = pd.read_csv("data14-195.csv",sep='\\s+').to_numpy()
@@ -43,7 +42,7 @@ model_radius = 8.
 
 results_df = {}
 IntC = []
-valN = 200
+valN = 400
 log_val = np.zeros(valN)
 
 bins = ['B2C0','B2C1','B3C0','B3C1','B4C0','B4C1','B5C0','B5C1',
@@ -60,15 +59,16 @@ for j, pivot in enumerate(midE):
         a = A[i]
     
         # Load source model #
-        model_file = "%s/yml_ind%s_initial/E_%.1f_TeV/%s_modelFile.yml"%(MODELDIR,ix,pivot,c)
+        model_file = "%s/models/crab_model_ix%s_%.1fTeV.yml"%(DIR,ix,pivot)
         model = threeML.load_model(model_file)        
-        print("Loaded YML File: %s"%(c))
     
         # Calculate joint and log likelihoods #
-        print("Calculating likelihoods...")
         llh, jl = StackingAnalysis.calc_likelihoods(model,c,ra,dec,bins,MAP,DR)
         param_df, like_df = jl.fit(quiet=True)
-       
+    
+        print(param_df)
+        print(like_df)
+   
         # Save results from fit 
         saveResults(llh,jl,c,pivot,ix) 
      
@@ -88,11 +88,11 @@ for j, pivot in enumerate(midE):
     
     
         # Plot individual log Profile #
-        IntC.append(IntervalContainer(lowerE,upperE,norms,log_val,101))
+        IntC.append(IntervalContainer(lowerE[j],upperE[j],norms,log_val,101))
         minlogN=np.log10(indminNorm) - 2
         maxlogN=np.log10(indminNorm) + 8
         
-        figname = os.path.join(DIR,"plots/%s_%six_%.1fTeV_pllh.png"%(ix,pivot,c))
+        figname = os.path.join(DIR,"crab_ix%s_%.1fTeV_pllh.png"%(ix,pivot))
         
         plot_logProfile_alt([IntC[-1]],param_df,like_df,c,minlogN=minlogN,\
             maxlogN=maxlogN,show=False,save=figname)

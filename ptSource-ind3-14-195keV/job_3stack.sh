@@ -8,6 +8,6 @@ source /data/disk01/home/zylaphoe/micromamba/etc/profile.d/mamba.sh
 mamba activate new_hal
 
 #python make-model-hal.py > model_out.txt
-#python ind-3llh-profiles.py > out-3ind.txt 
-python adding_3ixsources.py > out-3add.txt
+python ind-3llh-profiles.py > out-3ind.txt 
+#python adding_3ixsources.py > out-3add.txt
 ##python stack-seyferts.py > sy_out.txt
