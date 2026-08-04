@@ -59,7 +59,7 @@ for j, pivot in enumerate(midE):
         a = A[i]
     
         # Load source model #
-        model_file = "%s/models/crab_model_ix%s_%.1fTeV.yml"%(DIR,ix,pivot)
+        model_file = "%s/model_files/yml_ind%s_intial/E_%.1f_TeV/%s_modelFile.yml"%(DIR,ix,pivot,c)
         model = threeML.load_model(model_file)        
     
         # Calculate joint and log likelihoods #
