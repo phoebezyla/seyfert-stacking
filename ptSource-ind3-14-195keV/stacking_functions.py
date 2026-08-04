@@ -135,9 +135,8 @@ class StackingAnalysis():
         
         return llh, jl
 
-    def likelihood_profile(indminNorm,lh,param_df,like_df,name,valN=200,
-                           computeTS=True, logMin = -35, logMax = -15):
-        norms = np.linspace(logMin,logMax,valN)
+    def likelihood_profile(indminNorm,lh,param_df,like_df,name,valN=200,computeTS=True):
+        norms = np.linspace(np.log10(indminNorm)-5,np.log10(indminNorm)+5,valN)
         log_val = np.zeros(valN)
         
         for j in range(valN):
