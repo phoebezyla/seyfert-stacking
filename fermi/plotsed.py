@@ -27,9 +27,9 @@ for i, s in enumerate(inputName):
     # Separate array for upper limits #
     uplim_mask = np.isnan(fluxerr_lo)
     print(uplim_mask)
-    for i,nu in enumerate(nuerr_lo):
-        if uplim_mask[i]:
-            nu = 0.3*nuFnu
+    for j in range(len(nuerr_lo)):
+        if uplim_mask[j]:
+            nuerr_lo[j] = 0.3 * nuFnu[j]
 
     plt.figure(layout='constrained')
     plt.errorbar(e_mids,nuFnu,
