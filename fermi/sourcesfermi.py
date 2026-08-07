@@ -9,7 +9,7 @@ import os
 
 CATALOG   = "gll_psc_v41.fit"
 SOURCES   = "data14-195.csv"
-match_rad = 1.0
+match_rad = 3.0
 SUMMARY   = "matched_sources.csv"
 SED_DIR   = "seds"
 
@@ -52,9 +52,11 @@ if missing:
     print(f"Note: These columns weren't found in this catalog: {missing}")
 
 # Band-resolved arrays for SEDs #
+print([c for c in cat.columns if 'nuFnu' in c.lower() or 'nu' in c])
+print(cat["Unc_Flux_Band"].shape)
 band_flux_col = "Flux_Band" if "Flux_Band" in cat.colnames else None
 band_flux_unc_col = 'Unc_Flux_Band' if "Unc_Flux_Band" in cat.colnames else None
-band_nufnu_col = "nuFnu_Band" if "nuFnu_band" in cat.colnames else None
+band_nufnu_col = "nuFnu_Band" if "nuFnu_Band" in cat.colnames else None
 
 # Energy band edges? #
 energy_bounds = None
@@ -73,7 +75,6 @@ for i, s in enumerate(sourceName):
         'input_name': s,
         'input_ra'  : RA[i],
         'input_dec' : Dec[i],
-        'matched'   : matched,
         'sep_deg'   : round(sep_deg, 5),
     }
 
@@ -89,13 +90,25 @@ for i, s in enumerate(sourceName):
             nufnu_band = np.array(cat_row[band_nufnu_col])
             flux_unc = (np.array(cat_row[band_flux_unc_col]) if band_flux_unc_col else None)
 
+            unc_flux_lower = cat_row["Unc_Flux_Band"][:, 0]
+            unc_flux_upper = cat_row["Unc_Flux_Band"][:, 1]
+            
+            with np.errstate(divide='ignore', invalid='ignore'):
+                unc_nufnu_lower = np.where(flux_band > 0,
+                                        nufnu_band * np.abs(unc_flux_lower) / flux_band,
+                                        np.nan)
+                unc_nufnu_upper = np.where(flux_band > 0,
+                                        nufnu_band * np.abs(unc_flux_upper) / flux_band,
+                                        np.nan)
+
             with open(sed_path,'w',newline='') as f:
                 writer = csv.writer(f)
-                header = ["band_index","flux_ph_cm2_s","nuFnu_erg_cm2_s"]
+                header = ["band_index","flux_ph_cm2_s",'fluxerr_lo','fluxerr_hi',
+                          "nuFnu_erg_cm2_s",'nuFnuerr_lo','nuFnuerr_hi']
                 if energy_bounds is not None:
-                    header = ["band_index","e_min_MeV",
-                              'e_max_MeV','flux_ph_cm2_s',
-                              'nuFnu_erg_cm2_s']
+                    header = ["band_index","e_min_MeV",'e_max_MeV',
+                              'flux_ph_cm2_s','fluxerr_lo','fluxerr_hi',
+                              'nuFnu_erg_cm2_s','nuFnuerr_lo','nuFnuerr_hi']
                 writer.writerow(header)
                 for b in range(len(flux_band)):
                     if energy_bounds is not None:
@@ -104,7 +117,11 @@ for i, s in enumerate(sourceName):
                             energy_bounds["LowerEnergy"][b],
                             energy_bounds['UpperEnergy'][b],
                             flux_band[b],
+                            unc_flux_lower[b],
+                            unc_flux_upper[b],
                             nufnu_band[b],
+                            unc_nufnu_lower[b],
+                            unc_nufnu_upper[b],
                         ])
                     else:
                         writer.writerow([b,flux_band[b],nufnu_band[b]])
@@ -115,7 +132,7 @@ for i, s in enumerate(sourceName):
     summary_rows.append(row)
 
 ## Write csv ##
-priority_cols = ["input_name", "input_ra", "input_dec", "matched", "sep_deg",
+priority_cols = ["input_name", "input_ra", "input_dec", "sep_deg",
                   "Source_Name", "ASSOC1", "RAJ2000", "DEJ2000"]
 
 all_fields = set()
