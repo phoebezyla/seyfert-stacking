@@ -14,23 +14,24 @@ for i, s in enumerate(inputName):
     sed = pd.read_csv(f"seds/{s}_sed.csv",sep=',').to_numpy()
     e_mins     = sed[:,1] # MeV
     e_maxs     = sed[:,2] # MeV
-    flux       = sed[:,3] # photon cm2 s
-    fluxerr_lo = sed[:,4]
-    fluxerr_hi = sed[:,5]
-    nuFnu      = sed[:,6] # erg cm2 s
-    nuerr_lo   = sed[:,7]
-    nuerr_hi   = sed[:,8]
+    e_mids     = sed[:,3]
+    flux       = sed[:,4] # photon cm2 s
+    fluxerr_lo = sed[:,5]
+    fluxerr_hi = sed[:,6]
+    nuFnu      = sed[:,7] # erg cm2 s
+    nuerr_lo   = sed[:,8]
+    nuerr_hi   = sed[:,9]
 
-    e_mids = (e_mins + e_maxs)/2
     e_err  = e_maxs - e_mids    
 
     # Separate array for upper limits #
     uplim_mask = np.isnan(fluxerr_lo)
+    print(uplim_mask)
 
     plt.figure(layout='constrained')
     plt.errorbar(e_mids,nuFnu,
             xerr=e_err,yerr=[nuerr_lo,nuerr_hi],
-            uplims=uplim_mask,fmt='o')
+            uplims=uplim_mask,fmt='o',color='r')
     plt.yscale('log')
     plt.xscale('log')
     plt.xlabel('Energy [MeV]')

@@ -59,12 +59,16 @@ band_flux_unc_col = 'Unc_Flux_Band' if "Unc_Flux_Band" in cat.colnames else None
 band_nufnu_col = "nuFnu_Band" if "nuFnu_Band" in cat.colnames else None
 
 # Energy band edges? #
-energy_bounds = None
-with fits.open(CATALOG) as hdul:
-    for h in hdul:
-        if h.name.lower() in ('energybounds','energy_bounds'):
-            energy_bounds = Table(h.data)
-            break
+#energy_bounds = None
+#with fits.open(CATALOG) as hdul:
+#    for h in hdul:
+#        if h.name.lower() in ('energybounds','energy_bounds'):
+#            energy_bounds = Table(h.data)
+#            break
+band_edges_MeV = np.array([50, 100, 300, 1000, 3000, 10000, 30000, 100000, 1000000])
+e_lo = band_edges_MeV[:-1]
+e_hi = band_edges_MeV[1:]
+e_mids = np.sqrt(e_lo * e_hi)  # geometric mean, standard for log-spaced bins
 
 # summary rows #
 summary_rows = []
@@ -90,6 +94,13 @@ for i, s in enumerate(sourceName):
             nufnu_band = np.array(cat_row[band_nufnu_col])
             flux_unc = (np.array(cat_row[band_flux_unc_col]) if band_flux_unc_col else None)
 
+#           if i == 0:
+#               print(f"bound lengths: energy {len(energy_bounds)}, flux {len(flux_band)}")
+#               print(energy_bounds["LowerEnergy"])
+#               print(energy_bounds["UpperEnergy"])
+#               energy_bounds.pprint(max_lines=-1, max_width=-1)
+#               print(np.unique(energy_bounds["ENumBins"]))
+
             unc_flux_lower = cat_row["Unc_Flux_Band"][:, 0]
             unc_flux_upper = cat_row["Unc_Flux_Band"][:, 1]
             
@@ -103,28 +114,23 @@ for i, s in enumerate(sourceName):
 
             with open(sed_path,'w',newline='') as f:
                 writer = csv.writer(f)
-                header = ["band_index","flux_ph_cm2_s",'fluxerr_lo','fluxerr_hi',
-                          "nuFnu_erg_cm2_s",'nuFnuerr_lo','nuFnuerr_hi']
-                if energy_bounds is not None:
-                    header = ["band_index","e_min_MeV",'e_max_MeV',
+                header = ["band_index","e_min_MeV",'e_max_MeV','e_mid_MeV',
                               'flux_ph_cm2_s','fluxerr_lo','fluxerr_hi',
                               'nuFnu_erg_cm2_s','nuFnuerr_lo','nuFnuerr_hi']
                 writer.writerow(header)
                 for b in range(len(flux_band)):
-                    if energy_bounds is not None:
-                        writer.writerow([
+                    writer.writerow([
                             b,
-                            energy_bounds["LowerEnergy"][b],
-                            energy_bounds['UpperEnergy'][b],
+                            e_lo[b],
+                            e_hi[b],
+                            e_mids[b],
                             flux_band[b],
                             unc_flux_lower[b],
                             unc_flux_upper[b],
                             nufnu_band[b],
                             unc_nufnu_lower[b],
                             unc_nufnu_upper[b],
-                        ])
-                    else:
-                        writer.writerow([b,flux_band[b],nufnu_band[b]])
+                    ])
     else:
         print(f"No match within {match_rad} for {s}")
         print(f"Closest source was {sep_deg:.3f} deg away")
