@@ -32,7 +32,7 @@ df = pd.read_csv("data14-195.csv",sep='\\s+').to_numpy()
 
 numsources = 51
 numsourcesstr = '51'
-ix = '2'
+ix = '3'
 
 sourceName = df[:,0]
 RA = df[:,1]
@@ -111,7 +111,7 @@ for j, e in enumerate(midE):
     cl.set_model(clm)
     data = DataList(cl)
     fjl = JointLikelihood(clm,data,verbose=False)
-    fjl.set_minimizer("ROOT")
+    #fjl.set_minimizer("ROOT")
 
     param_df, like_df = fjl.fit(quiet=True)
 

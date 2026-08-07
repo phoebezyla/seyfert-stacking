@@ -74,8 +74,8 @@ def plot_logProfile_alt(IntC,param_df,like_df,name,minlogN=-30.,maxlogN=-1.,show
 
 def saveResults(llh,jl,name,pivot,index):
     jointRes = jl.results
-    #jointRes.optimized_model.save("model_files/yml_ind%s_optimized/E_%.1f_TeV/%s_fit.yml"%(index,pivot,name),overwrite=True)
-    jointRes.optimized_model.save("models/fitted_ix%s_%.1fTeV.yml"%(index,pivot),overwrite=True)
+    jointRes.optimized_model.save("model_files/yml_ind%s_optimized/E_%.1f_TeV/%s_fit_mod.yml"%(index,pivot,name),overwrite=True)
+    #jointRes.optimized_model.save("models/fitted_ix%s_%.1fTeV.yml"%(index,pivot),overwrite=True)
 
 def plotResults(llh,jl,name):
     ## Model in counts spacve and residuals
@@ -136,7 +136,11 @@ class StackingAnalysis():
         return llh, jl
 
     def likelihood_profile(indminNorm,lh,param_df,like_df,name,valN=200,computeTS=True):
-        norms = np.linspace(np.log10(indminNorm)-5,np.log10(indminNorm)+5,valN)
+        #norms = np.linspace(np.log10(indminNorm)-5,np.log10(indminNorm)+5,valN)
+        
+        normMin = -35
+        normMax = -15
+        norms = np.linspace(normMin,normMax,valN)
         log_val = np.zeros(valN)
         
         for j in range(valN):

@@ -102,7 +102,7 @@ for j, pivot in enumerate(midE):
     
     # Save results dataframe to csv #
     # creates one results csv for each index & pivot energy #
-    f = open("%s/results-%six-%.1fTeV-individual.csv"%(DIR,ix,pivot),"w",newline="")
+    f = open("%s/results-%six-%.1fTeV-individual-mod.csv"%(DIR,ix,pivot),"w",newline="")
     writer = csv.writer(f)
     writer.writerow(["sourceName","nullLLH","alt_hyp","TS"] + \
         [f"norms_{i}" for i in range(valN)] + \
