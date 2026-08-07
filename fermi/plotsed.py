@@ -29,12 +29,14 @@ for i, s in enumerate(inputName):
     print(uplim_mask)
     for j in range(len(nuerr_lo)):
         if uplim_mask[j]:
-            nuerr_lo[j] = 0.3 * nuFnu[j]
+            nuerr_lo[j] = 0.4 * nuFnu[j]
 
     plt.figure(layout='constrained')
     plt.errorbar(e_mids,nuFnu,
             yerr=[nuerr_lo,nuerr_hi],
-            uplims=uplim_mask,fmt='o',color='r')
+            uplims=uplim_mask,fmt='o',color='r',
+            capsize=4,capthick=1.5,elinewidth=1.5)
+            
     plt.yscale('log')
     plt.xscale('log')
     plt.xlabel('Energy [MeV]')
