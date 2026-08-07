@@ -33,7 +33,7 @@ for i, s in enumerate(inputName):
 
     plt.figure(layout='constrained')
     plt.errorbar(e_mids,nuFnu,
-            yerr=[nuerr_lo,nuerr_hi],ms=6,
+            yerr=[nuerr_lo,nuerr_hi],ms=4,
             uplims=uplim_mask,color='r',fmt='none',
             capsize=10,capthick=1.5,elinewidth=1.5)
             
