@@ -35,7 +35,7 @@ for i, s in enumerate(inputName):
     plt.errorbar(e_mids,nuFnu,
             yerr=[nuerr_lo,nuerr_hi],
             uplims=uplim_mask,fmt='o',color='r',
-            capsize=4,capthick=1.5,elinewidth=1.5)
+            capsize=10,capthick=1.5,elinewidth=1.5)
             
     plt.yscale('log')
     plt.xscale('log')
