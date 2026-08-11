@@ -148,7 +148,7 @@ for i, s in enumerate(sourceName):
         if uplim_mask[j]:
             unc_nufnu_lower[i][j] = 0.4 * nufnu[i][j]
 
-    plt.figure(layout='constrained')
+    plt.figure(figsize=(10,5),layout='constrained')
 
     plt.errorbar(e_mids,nufnu[i],
             yerr=[unc_nufnu_lower[i],unc_nufnu_upper[i]],
