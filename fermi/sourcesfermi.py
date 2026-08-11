@@ -163,8 +163,8 @@ for i, s in enumerate(sourceName):
                 unc_nufnu_lower[i][j] = 0.4 * nufnu[i][j]
     
         plt.figure(figsize=(10,8),layout='constrained')
-        plt.ylim(nuFnu_LP[-1]-nuFnu_LP_err[-1],
-                np.max(nufnu[0]+unc_nufnu_upper[0]))    
+        #plt.ylim(nuFnu_LP[-1]-nuFnu_LP_err[-1],
+        #        np.max(nufnu[0]+unc_nufnu_upper[0]))    
 
         plt.errorbar(e_mids,nufnu[i],
                 yerr=[unc_nufnu_lower[i],unc_nufnu_upper[i]],
