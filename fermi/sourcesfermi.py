@@ -18,7 +18,7 @@ summary_rows = []
 # Load sources #
 df = pd.read_csv("data14-195.csv",sep='\\s+').to_numpy()
 
-sourceName = df[:,0]
+sourceName = df[:2,0]
 RA = df[:,1]
 Dec = df[:,2]
 
@@ -135,7 +135,7 @@ for i, s in enumerate(sourceName):
     print(f"Closest source was {sep_deg:.3f} deg away")
     summary_rows.append(cat[idx[i]])
     # Extrapolate to my energies #
-    dNdE_PL = flxden_PL[i] * (sy_en/pivot[i])**ix_PL[i]
+    dNdE_PL = flxden_PL[i] * (sy_en/pivot[i])**(-ix_PL[i])
     dNdE_LP = flxden_LP[i] * (sy_en/pivot[i])**(-(ix_LP[i] + beta_LP[i] * np.log(sy_en/pivot[i])))
 
     nuFnu_PL = sy_erg**2 * dNdE_PL/1.602e-6 # erg cm-2 s-1
@@ -156,19 +156,22 @@ for i, s in enumerate(sourceName):
             capsize=10,capthick=1.5,elinewidth=1.5,
             label="Fermi Data")
     for x, y in zip(e_mids, nufnu[i]):
-        plt.annotate(f"{x:.0f}", xy=(x, y), xytext=(0, 8),
+        plt.annotate(f"{x:.2f} MeV, {y:.2f} erg cm$^{-2}$ s$^{-1}$",
+                 xy=(x, y), xytext=(0, 8),
                  textcoords='offset points',
                  fontsize=8, ha='center')
 
     plt.scatter(sy_en,nuFnu_PL,label="powerlaw",color='green')
     for x, y in zip(sy_en, nuFnu_PL):
-        plt.annotate(f"{x:.0f}", xy=(x, y), xytext=(0, 8),
+        plt.annotate(f"{x:.2f} MeV, {y:.2f} erg cm$^{-2}$ s$^{-1}$",
+                 xy=(x, y), xytext=(0, 8),
                  textcoords='offset points',
                  fontsize=8, ha='center')
 
     plt.scatter(sy_en,nuFnu_LP,label="logParabola",color='blue')
     for x, y in zip(sy_en, nuFnu_LP):
-        plt.annotate(f"{x:.0f}", xy=(x, y), xytext=(0, 8),
+        plt.annotate(f"{x:.2f} MeV, {y:.2f} erg cm$^{-2}$ s$^{-1}$",
+                 xy=(x, y), xytext=(0, 8),
                  textcoords='offset points',
                  fontsize=8, ha='center')
 
