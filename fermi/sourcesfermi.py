@@ -18,7 +18,7 @@ summary_rows = []
 # Load sources #
 df = pd.read_csv("data14-195.csv",sep='\\s+').to_numpy()
 
-sourceName = df[:2,0]
+sourceName = df[:,0]
 RA = df[:,1]
 Dec = df[:,2]
 
@@ -153,6 +153,23 @@ for i, s in enumerate(sourceName):
              + (L**4)*beta_err_LP[i]**2)
     nuFnu_LP_err = nuFnu_LP * np.sqrt(LP_var)
 
+    # set plot axis to contain errorbar minima and maxima
+    all_y_upper = np.concatenate([
+      nufnu[i] + unc_nufnu_upper[i],
+      nuFnu_PL + nuFnu_PL_err,
+      nuFnu_LP + nuFnu_LP_err,
+      ])
+
+    all_y_lower = np.concatenate([
+      nufnu[i] - unc_nufnu_lower[i],
+      nuFnu_PL - nuFnu_PL_err,
+      nuFnu_LP - nuFnu_LP_err,
+      ])
+
+    valid_lower = all_y_lower[all_y_lower > 0]
+    ymin = valid_lower.min() * 0.5
+    ymax = all_y_upper.max() * 2.0
+
     # Separate array for upper limits #
     uplim_mask = np.isnan(unc_flux_lower[i])
 
@@ -161,6 +178,7 @@ for i, s in enumerate(sourceName):
             unc_nufnu_lower[i][j] = 0.4 * nufnu[i][j]
 
     plt.figure(figsize=(10,5),layout='constrained')
+    plt.ylim(ymin, ymax)
 
     plt.errorbar(e_mids,nufnu[i],
             yerr=[unc_nufnu_lower[i],unc_nufnu_upper[i]],
