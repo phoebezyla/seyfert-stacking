@@ -1,0 +1,615 @@
+INFO [ConfigDirDetectorService.cc, Initialize:40]: configDir not given; using environment variable CONFIG_HAWC.
+INFO [ConfigDirDispatch-inl.h, ConfigDirDispatch:73]: Reading revision 3 of Tank Survey
+INFO [ConfigDirDispatch-inl.h, ConfigDirDispatch:73]: Reading revision 3 of PMT Survey
+INFO [ConfigDirDispatch-inl.h, ConfigDirDispatch:73]: Reading revision 1 of Detector Location
+INFO [ConfigDirDispatch-inl.h, ConfigDirDispatch:73]: Reading revision 3 of PMT Channel Mapping
+INFO [ConfigDirDispatch-inl.h, ConfigDirDispatch:73]: Reading revision 3 of GTC Channel Mapping
+INFO [ConfigDirDispatch-inl.h, ConfigDirDispatch:73]: Reading revision 2 of Trigger Channel Mapping
+INFO [ConfigDirDispatch-inl.h, ConfigDirDispatch:73]: Reading revision 3 of Live PMTs
+INFO [ConfigDirDispatch-inl.h, ConfigDirDispatch:73]: Reading revision 5 of Bad PMTs
+INFO [ConfigDirDispatch-inl.h, ConfigDirDispatch:73]: Reading revision 5 of Issue PMTs
+INFO [HAWCNest.cc, Configure:45]: Configuring det
+INFO [HAWCNest.cc, Configure:66]: Configured with:
+  - addOR -> false (bool)
+  - configDir ->  (string)
+  - pmtMapFile ->  (string)
+
+INFO [HAWCNest.cc, Configure:45]: Configuring astro
+INFO [HAWCNest.cc, Configure:66]: Configured with:
+  - cachePrecession -> true (bool)
+
+INFO [ConfigDirDispatch-inl.h, Update:127]: Updating for time 1100000000 s(Tank Survey)
+INFO [ConfigDirReader.h, ReadFile:32]: reading Tank Survey from file /data/disk01/home/yunsoh/hawc_software/hawc_aerie/config-hawc/survey/tank-layout-03
+INFO [ConfigDirDispatch-inl.h, Update:127]: Updating for time 1100000000 s(PMT Survey)
+INFO [ConfigDirReader.h, ReadFile:32]: reading PMT Survey from file /data/disk01/home/yunsoh/hawc_software/hawc_aerie/config-hawc/survey/pmt-layout-03
+INFO [ConfigDirDispatch-inl.h, Update:127]: Updating for time 1100000000 s(Detector Location)
+INFO [ConfigDirReader.h, ReadFile:32]: reading Detector Location from file /data/disk01/home/yunsoh/hawc_software/hawc_aerie/config-hawc/survey/detector-location-01
+INFO [ConfigDirDispatch-inl.h, Update:127]: Updating for time 1100000000 s(PMT Channel Mapping)
+INFO [ConfigDirReader.h, ReadFile:32]: reading PMT Channel Mapping from file /data/disk01/home/yunsoh/hawc_software/hawc_aerie/config-hawc/channel-mapping/pmt-channel-mapping/HAWC_300_2
+INFO [ConfigDirDetectorService.cc, GetDetector:141]: need to update the detector for time 1100000000 s
+INFO [ConfigDirDetectorService.cc, GetDetector:280]: Initializing detector...
+INFO [ConfigDirDetectorService.cc, GetDetector:282]: Done initializing detector...
+INFO [Sensitivity.cc, main:244]: Will inject source at (12h 0m 0s, -24° 59' 60")
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B0C0Ed. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.026999)&&(rec.nHit<rec.nChAvail*0.046999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.249999)&&(rec.logNNEnergy<3.499999)&&(rec.LDFChi2<=3.165001)&&(log10(rec.CxPE40/rec.nHit)<=-0.432499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B0C0Ee. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.026999)&&(rec.nHit<rec.nChAvail*0.046999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.500001)&&(rec.logNNEnergy<3.749999)&&(rec.LDFChi2<=3.705001)&&(log10(rec.CxPE40/rec.nHit)<=-0.222499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B0C0Ef. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.026999)&&(rec.nHit<rec.nChAvail*0.046999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.749999)&&(rec.logNNEnergy<3.999999)&&(rec.LDFChi2<=3.945001)&&(log10(rec.CxPE40/rec.nHit)<=0.307501)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B0C0Eg. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.026999)&&(rec.nHit<rec.nChAvail*0.046999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.999999)&&(rec.logNNEnergy<4.249999)&&(rec.LDFChi2<=7.145001)&&(log10(rec.CxPE40/rec.nHit)<=-0.407499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B0C0Eh. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.026999)&&(rec.nHit<rec.nChAvail*0.046999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.249999)&&(rec.logNNEnergy<4.499999)&&(rec.LDFChi2<=3.145001)&&(log10(rec.CxPE40/rec.nHit)<=0.147501)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B1C0Ed. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.046999)&&(rec.nHit<rec.nChAvail*0.067999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.249999)&&(rec.logNNEnergy<3.499999)&&(rec.LDFChi2<=3.655001)&&(log10(rec.CxPE40/rec.nHit)<=-0.632499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B1C0Ee. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.046999)&&(rec.nHit<rec.nChAvail*0.067999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.499999)&&(rec.logNNEnergy<3.749999)&&(rec.LDFChi2<=4.045001)&&(log10(rec.CxPE40/rec.nHit)<=-0.452499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B1C0Ef. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.046999)&&(rec.nHit<rec.nChAvail*0.067999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.749999)&&(rec.logNNEnergy<3.999999)&&(rec.LDFChi2<=4.445001)&&(log10(rec.CxPE40/rec.nHit)<=-0.432499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B1C0Eg. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.046999)&&(rec.nHit<rec.nChAvail*0.067999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.999999)&&(rec.logNNEnergy<4.249999)&&(rec.LDFChi2<=2.735001)&&(log10(rec.CxPE40/rec.nHit)<=-0.552499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B1C0Eh. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.046999)&&(rec.nHit<rec.nChAvail*0.067999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.249999)&&(rec.logNNEnergy<4.499999)&&(rec.LDFChi2<=2.165001)&&(log10(rec.CxPE40/rec.nHit)<=-0.287499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B2C0Ed. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.0679991)&&(rec.nHit<rec.nChAvail*0.103999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.249999)&&(rec.logNNEnergy<3.499999)&&(rec.LDFChi2<=2.745001)&&(log10(rec.CxPE40/rec.nHit)<=-0.792499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B2C0Ee. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.067999)&&(rec.nHit<rec.nChAvail*0.103999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.499999)&&(rec.logNNEnergy<3.749999)&&(rec.LDFChi2<=3.265001)&&(log10(rec.CxPE40/rec.nHit)<=-0.762499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B2C0Ef. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.067999)&&(rec.nHit<rec.nChAvail*0.103999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.749999)&&(rec.logNNEnergy<3.999999)&&(rec.LDFChi2<=3.955001)&&(log10(rec.CxPE40/rec.nHit)<=-0.732499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B2C0Eg. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.067999)&&(rec.nHit<rec.nChAvail*0.103999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.999999)&&(rec.logNNEnergy<4.249999)&&(rec.LDFChi2<=2.735001)&&(log10(rec.CxPE40/rec.nHit)<=-0.782499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B2C0Eh. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.067999)&&(rec.nHit<rec.nChAvail*0.103999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.249999)&&(rec.logNNEnergy<4.499999)&&(rec.LDFChi2<=1.915001)&&(log10(rec.CxPE40/rec.nHit)<=-0.292499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B2C0Ei. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.067999)&&(rec.nHit<rec.nChAvail*0.103999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.499999)&&(rec.logNNEnergy<4.749999)&&(rec.LDFChi2<=1.925001)&&(log10(rec.CxPE40/rec.nHit)<=-0.147499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B3C0Ed. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.103999)&&(rec.nHit<rec.nChAvail*0.160999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.249999)&&(rec.logNNEnergy<3.499999)&&(rec.LDFChi2<=2.365001)&&(log10(rec.CxPE40/rec.nHit)<=-0.922499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B3C0Ee. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.103999)&&(rec.nHit<rec.nChAvail*0.160999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.499999)&&(rec.logNNEnergy<3.749999)&&(rec.LDFChi2<=2.375001)&&(log10(rec.CxPE40/rec.nHit)<=-0.922499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B3C0Ef. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.103999)&&(rec.nHit<rec.nChAvail*0.160999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.749999)&&(rec.logNNEnergy<3.999999)&&(rec.LDFChi2<=2.295001)&&(log10(rec.CxPE40/rec.nHit)<=-0.922499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B3C0Eg. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.103999)&&(rec.nHit<rec.nChAvail*0.160999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.999999)&&(rec.logNNEnergy<4.249999)&&(rec.LDFChi2<=2.335001)&&(log10(rec.CxPE40/rec.nHit)<=-0.892499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B3C0Eh. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.103999)&&(rec.nHit<rec.nChAvail*0.160999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.249999)&&(rec.logNNEnergy<4.499999)&&(rec.LDFChi2<=2.335001)&&(log10(rec.CxPE40/rec.nHit)<=-0.482499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B3C0Ei. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.103999)&&(rec.nHit<rec.nChAvail*0.160999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.499999)&&(rec.logNNEnergy<4.749999)&&(rec.LDFChi2<=1.885001)&&(log10(rec.CxPE40/rec.nHit)<=-0.687499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B4C0Ed. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.160999)&&(rec.nHit<rec.nChAvail*0.244999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.249999)&&(rec.logNNEnergy<3.499999)&&(rec.LDFChi2<=2.195001)&&(log10(rec.CxPE40/rec.nHit)<=-0.982499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B4C0Ee. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.160999)&&(rec.nHit<rec.nChAvail*0.244999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.499999)&&(rec.logNNEnergy<3.749999)&&(rec.LDFChi2<=2.095001)&&(log10(rec.CxPE40/rec.nHit)<=-0.927499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B4C0Ef. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.160999)&&(rec.nHit<rec.nChAvail*0.244999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.749999)&&(rec.logNNEnergy<3.999999)&&(rec.LDFChi2<=2.085001)&&(log10(rec.CxPE40/rec.nHit)<=-0.962499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B4C0Eg. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.160999)&&(rec.nHit<rec.nChAvail*0.244999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.999999)&&(rec.logNNEnergy<4.249999)&&(rec.LDFChi2<=1.975001)&&(log10(rec.CxPE40/rec.nHit)<=-0.852499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B4C0Eh. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.160999)&&(rec.nHit<rec.nChAvail*0.244999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.249999)&&(rec.logNNEnergy<4.499999)&&(rec.LDFChi2<=1.835001)&&(log10(rec.CxPE40/rec.nHit)<=-0.662499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B4C0Ei. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.160999)&&(rec.nHit<rec.nChAvail*0.244999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.499999)&&(rec.logNNEnergy<4.749999)&&(rec.LDFChi2<=1.955001)&&(log10(rec.CxPE40/rec.nHit)<=-0.632499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B5C0Ee. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.244999)&&(rec.nHit<rec.nChAvail*0.350999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.499999)&&(rec.logNNEnergy<3.749999)&&(rec.LDFChi2<=1.855001)&&(log10(rec.CxPE40/rec.nHit)<=-0.642499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B5C0Ef. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.244999)&&(rec.nHit<rec.nChAvail*0.350999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.749999)&&(rec.logNNEnergy<3.999999)&&(rec.LDFChi2<=1.835001)&&(log10(rec.CxPE40/rec.nHit)<=-0.692499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B5C0Eg. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.244999)&&(rec.nHit<rec.nChAvail*0.350999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.999999)&&(rec.logNNEnergy<4.249999)&&(rec.LDFChi2<=1.835001)&&(log10(rec.CxPE40/rec.nHit)<=0.077501)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B5C0Eh. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.244999)&&(rec.nHit<rec.nChAvail*0.350999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.249999)&&(rec.logNNEnergy<4.499999)&&(rec.LDFChi2<=1.885001)&&(log10(rec.CxPE40/rec.nHit)<=0.062501)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B5C0Ei. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.244999)&&(rec.nHit<rec.nChAvail*0.350999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.499999)&&(rec.logNNEnergy<4.749999)&&(rec.LDFChi2<=1.885001)&&(log10(rec.CxPE40/rec.nHit)<=-0.582499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B6C0Ef. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.350999)&&(rec.nHit<rec.nChAvail*0.471999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.749999)&&(rec.logNNEnergy<3.999999)&&(rec.LDFChi2<=1.705001)&&(log10(rec.CxPE40/rec.nHit)<=0.287501)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B6C0Eg. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.350999)&&(rec.nHit<rec.nChAvail*0.471999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.999999)&&(rec.logNNEnergy<4.249999)&&(rec.LDFChi2<=1.715001)&&(log10(rec.CxPE40/rec.nHit)<=-0.337499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B6C0Eh. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.350999)&&(rec.nHit<rec.nChAvail*0.471999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.249999)&&(rec.logNNEnergy<4.499999)&&(rec.LDFChi2<=1.775001)&&(log10(rec.CxPE40/rec.nHit)<=0.072501)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B6C0Ei. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.350999)&&(rec.nHit<rec.nChAvail*0.471999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.499999)&&(rec.logNNEnergy<4.749999)&&(rec.LDFChi2<=1.835001)&&(log10(rec.CxPE40/rec.nHit)<=0.002501)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B6C0Ej. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.350999)&&(rec.nHit<rec.nChAvail*0.471999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.749999)&&(rec.logNNEnergy<4.999999)&&(rec.LDFChi2<=1.895001)&&(log10(rec.CxPE40/rec.nHit)<=-0.647499)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B6C0Ek. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.350999)&&(rec.nHit<rec.nChAvail*0.471999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.999999)&&(rec.logNNEnergy<5.249999)&&(rec.LDFChi2<=1.905001)&&(log10(rec.CxPE40/rec.nHit)<=0.327501)&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B7C0Eg. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.471999)&&(rec.nHit<rec.nChAvail*0.598999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.999999)&&(rec.logNNEnergy<4.249999)&&(rec.LDFChi2<1.549999+0.157738*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B7C0Eh. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.471999)&&(rec.nHit<rec.nChAvail*0.598999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.249999)&&(rec.logNNEnergy<4.499999)&&(rec.LDFChi2<1.549999+0.157738*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B7C0Ei. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.471999)&&(rec.nHit<rec.nChAvail*0.598999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.499999)&&(rec.logNNEnergy<4.749999)&&(rec.LDFChi2<1.549999+0.157738*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B7C0Ej. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.471999)&&(rec.nHit<rec.nChAvail*0.598999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.749999)&&(rec.logNNEnergy<4.999999)&&(rec.LDFChi2<1.549999+0.157738*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B7C0Ek. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.471999)&&(rec.nHit<rec.nChAvail*0.598999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.999999)&&(rec.logNNEnergy<5.249999)&&(rec.LDFChi2<1.549999+0.157738*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B8C0Eg. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.598999)&&(rec.nHit<rec.nChAvail*0.721999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=3.999999)&&(rec.logNNEnergy<4.249999)&&(rec.LDFChi2<1.439999+0.234193*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B8C0Eh. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.598999)&&(rec.nHit<rec.nChAvail*0.721999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.249999)&&(rec.logNNEnergy<4.499999)&&(rec.LDFChi2<1.439999+0.234193*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B8C0Ei. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.598999)&&(rec.nHit<rec.nChAvail*0.721999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.499999)&&(rec.logNNEnergy<4.749999)&&(rec.LDFChi2<1.439999+0.234193*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B8C0Ej. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.598999)&&(rec.nHit<rec.nChAvail*0.721999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.749999)&&(rec.logNNEnergy<4.999999)&&(rec.LDFChi2<1.439999+0.234193*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B8C0Ek. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.598999)&&(rec.nHit<rec.nChAvail*0.721999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.999999)&&(rec.logNNEnergy<5.249999)&&(rec.LDFChi2<1.439999+0.234193*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B8C0El. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.598999)&&(rec.nHit<rec.nChAvail*0.721999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=5.249999)&&(rec.logNNEnergy<5.499999)&&(rec.LDFChi2<1.439999+0.234193*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B9C0Ei. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.721999)&&(rec.nHit<rec.nChAvail*0.827999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.499999)&&(rec.logNNEnergy<4.749999)&&(rec.LDFChi2<1.389999+0.319690*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B9C0Ej. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.721999)&&(rec.nHit<rec.nChAvail*0.827999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.749999)&&(rec.logNNEnergy<4.999999)&&(rec.LDFChi2<1.389999+0.319690*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B9C0Ek. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.721999)&&(rec.nHit<rec.nChAvail*0.827999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.999999)&&(rec.logNNEnergy<5.249999)&&(rec.LDFChi2<1.389999+0.319690*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B9C0El. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.721999)&&(rec.nHit<rec.nChAvail*0.827999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=5.249999)&&(rec.logNNEnergy<5.499999)&&(rec.LDFChi2<1.389999+0.319690*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.900001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B10C0Ei. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.827999)&&(rec.nHit<rec.nChAvail*1.009999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.499999)&&(rec.logNNEnergy<4.749999)&&(rec.LDFChi2<1.269999+0.413186*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.800001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B10C0Ej. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.827999)&&(rec.nHit<rec.nChAvail*1.009999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.749999)&&(rec.logNNEnergy<4.999999)&&(rec.LDFChi2<=1.135001+0.413186*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.800001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B10C0Ek. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.827999)&&(rec.nHit<rec.nChAvail*1.009999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=4.999999)&&(rec.logNNEnergy<5.249999)&&(rec.LDFChi2<=1.065001+0.413186*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.800001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [DetectorResponse.cc, DetectorResponse:512]: Loading detector response from /data/disk01/home/jasonfan/cut-optimization/NN_zebra_5f.root
+INFO [DetectorResponse.cc, DetectorResponse:547]: Spectral energy distribution: Simple power law [N(e/E₀)^(-𝛼) where N = 1e-17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63] for E∈(0,∞) TeV
+EBL: z = 0 ()
+INFO [DetectorResponse.cc, DetectorResponse:597]: Bin name: B10C0El. Cuts:
+ "(rec.nHit>=rec.nChAvail*0.827999)&&(rec.nHit<rec.nChAvail*1.009999)&&(rec.coreFiduScale<=100)&&(rec.logNNEnergy>=5.249999)&&(rec.logNNEnergy<5.499999)&&(rec.LDFChi2<=1.095001+0.413186*pow(rec.zenithAngle,4.))&&(rec.angleFitStatus==0)&&(rec.coreFitStatus==0)&&(rec.nChTot>=800)&&(rec.coreFiduScale<=150)&&(rec.nChAvail>0.800001*rec.nChTot)&&(rec.zenithAngle<1.046999)"
+INFO [DetectorResponse.cc, DetectorResponse:613]: Loading response matrices...
+INFO [DetectorResponse.cc, DetectorResponse:672]: Zenith bins: 0˚-9.09˚, 9.09˚-13.08˚, 13.08˚-16.66˚, 16.66˚-19.8˚, 19.8˚-22.96˚, 22.96˚-26.02˚, 26.02˚-29.53˚, 29.53˚-33.45˚, 33.45˚-38.95˚, 38.95˚-50˚
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [DetectorResponse.cc, Reweight:838]: Reweghting. New spectral energy distribution: Log parabola [N(E/Eₒ)^(-𝛼-βLn(E/Eₒ)) where N = 1e+17 TeV⁻¹ cm⁻² s⁻¹, E₀ = 1 TeV, 𝛼 = 2.63, β = 0] for E∈(100,177.828) TeV
+INFO [Sensitivity.cc, main:515]: Computing expected excess
+INFO [Sensitivity.cc, main:678]: Finding first guess using bisections
+INFO [Sensitivity.cc, main:717]: Solving using secant method
+INFO [Sensitivity.cc, main:773]: Sensitivity estimation. Differential flux at 1 TeV [TeV^-1 cm^-2 s^-1]:
