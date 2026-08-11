@@ -133,13 +133,25 @@ for i, s in enumerate(sourceName):
     sep_deg = sep2d[i].deg
 
     print(f"Closest source was {sep_deg:.3f} deg away")
-    summary_rows.append(cat[idx[i]])
+
     # Extrapolate to my energies #
     dNdE_PL = flxden_PL[i] * (sy_en/pivot[i])**(-ix_PL[i])
     dNdE_LP = flxden_LP[i] * (sy_en/pivot[i])**(-(ix_LP[i] + beta_LP[i] * np.log(sy_en/pivot[i])))
 
     nuFnu_PL = sy_erg**2 * dNdE_PL/1.602e-6 # erg cm-2 s-1
     nuFnu_LP = sy_erg**2 * dNdE_LP/1.602e-6
+
+    # error propagation #
+    L = np.log(sy_en/pivot[i])
+    
+    PL_var = ((flxden_err_PL[i]/flxden_PL[i])**2
+             + (L**2)*ix_err_PL[i]**2)
+    nuFnu_PL_err = nuFnu_PL * np.sqrt(PL_var)
+
+    LP_var = ((flxden_err_LP[i]/flxden_LP[i])**2
+             + (L**2)*ix_err_LP[i]**2
+             + (L**4)*beta_err_LP[i]**2)
+    nuFnu_LP_err = nuFnu_LP * np.sqrt(LP_var)
 
     # Separate array for upper limits #
     uplim_mask = np.isnan(unc_flux_lower[i])
@@ -157,23 +169,29 @@ for i, s in enumerate(sourceName):
             label="Fermi Data")
     for x, y in zip(e_mids, nufnu[i]):
         plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
-                 xy=(x, y), xytext=(0, 8),
-                 textcoords='offset points',
-                 fontsize=8, ha='center')
+            xy=(x, y), xytext=(0, 8),
+            textcoords='offset points',
+            fontsize=8, ha='center')
 
-    plt.scatter(sy_en,nuFnu_PL,label="powerlaw",color='green')
+    plt.errorbar(sy_en,nuFnu_PL,
+            yerr=nuFnu_PL_err, color='g',fmt='none',
+            capsize=10,capthick=1.5,elinewidth=1.5,
+            label="powerlaw")
     for x, y in zip(sy_en, nuFnu_PL):
         plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
-                 xy=(x, y), xytext=(0, 8),
-                 textcoords='offset points',
-                 fontsize=8, ha='center')
+            xy=(x, y), xytext=(0, 8),
+            textcoords='offset points',
+            fontsize=8, ha='center')
 
-    plt.scatter(sy_en,nuFnu_LP,label="logParabola",color='blue')
+    plt.errorbar(sy_en,nuFnu_LP,
+            yerr=nuFnu_LP_err,color='b',fmt='none',
+            capsize=10,capthick=1.5,elinewidth=1.5,
+            label="logParabola")
     for x, y in zip(sy_en, nuFnu_LP):
         plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
-                 xy=(x, y), xytext=(0, 8),
-                 textcoords='offset points',
-                 fontsize=8, ha='center')
+            xy=(x, y), xytext=(0, 8),
+            textcoords='offset points',
+            fontsize=8, ha='center')
 
     plt.yscale('log')
     plt.xscale('log')
