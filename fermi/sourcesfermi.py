@@ -156,21 +156,21 @@ for i, s in enumerate(sourceName):
             capsize=10,capthick=1.5,elinewidth=1.5,
             label="Fermi Data")
     for x, y in zip(e_mids, nufnu[i]):
-        plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{-2}$ s$^{-1}$",
+        plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
                  xy=(x, y), xytext=(0, 8),
                  textcoords='offset points',
                  fontsize=8, ha='center')
 
     plt.scatter(sy_en,nuFnu_PL,label="powerlaw",color='green')
     for x, y in zip(sy_en, nuFnu_PL):
-        plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{-2}$ s$^{-1}$",
+        plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
                  xy=(x, y), xytext=(0, 8),
                  textcoords='offset points',
                  fontsize=8, ha='center')
 
     plt.scatter(sy_en,nuFnu_LP,label="logParabola",color='blue')
     for x, y in zip(sy_en, nuFnu_LP):
-        plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{-2}$ s$^{-1}$",
+        plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
                  xy=(x, y), xytext=(0, 8),
                  textcoords='offset points',
                  fontsize=8, ha='center')
