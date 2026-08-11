@@ -162,8 +162,9 @@ for i, s in enumerate(sourceName):
             if uplim_mask[j]:
                 unc_nufnu_lower[i][j] = 0.4 * nufnu[i][j]
     
-        plt.figure(figsize=(10,5),layout='constrained')
-    
+        plt.figure(figsize=(10,8),layout='constrained')
+        plt.ylim(1e-23,1e-10)    
+
         plt.errorbar(e_mids,nufnu[i],
                 yerr=[unc_nufnu_lower[i],unc_nufnu_upper[i]],
                 uplims=uplim_mask,color='r',fmt='none',
@@ -200,9 +201,9 @@ for i, s in enumerate(sourceName):
         plt.xlabel('Energy [MeV]')
         plt.ylabel(r"$\nu F_{\nu}$ [erg cm$^{-2}$ s$^{-1}$]")
         plt.title(f"{s} SED\n{sep_deg:.3f} away from {fermiName[i]}")
+        plt.figtext(0.5,0.01,f"{fermiName[i]} of spectral type {spectype[i]}")
         plt.legend()
-        #plt.savefig(f"seds/{s}_sed.png")
-        plt.savefig(f"seds/good/{s}_sed.png")
+        plt.savefig(f"seds/{s}_sed.png")
     
         plt.close()
         print(f"{s} SED completed")
@@ -213,16 +214,16 @@ for i, s in enumerate(sourceName):
 ## Summary rows ##
 
 ## Write csv ##
-priority_cols = ["input_name", "input_ra", "input_dec", "sep_deg",
-                 "Source_Name", "ASSOC1", "RAJ2000", "DEJ2000",
-                 "SpectrumType", "Signif_Avg", "Pivot_Energy"
-                 ]
-
-with open(SUMMARY,'w',newline='') as f:
-    writer = csv.DictWriter(f,fieldnames=priority_cols)
-    writer.writeheader()
-    writer.writerows(summary_rows)
-
-print(f"\nDone. Summary written to {SUMMARY}")
+#priority_cols = ["input_name", "input_ra", "input_dec", "sep_deg",
+#                 "Source_Name", "ASSOC1", "RAJ2000", "DEJ2000",
+#                 "SpectrumType", "Signif_Avg", "Pivot_Energy"
+#                 ]
+#
+#with open(SUMMARY,'w',newline='') as f:
+#    writer = csv.DictWriter(f,fieldnames=priority_cols)
+#    writer.writeheader()
+#    writer.writerows(summary_rows)
+#
+#print(f"\nDone. Summary written to {SUMMARY}")
 
 
