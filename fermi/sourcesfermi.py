@@ -12,6 +12,7 @@ CATALOG   = "gll_psc_v41.fit"
 SOURCES   = "data14-195.csv"
 SUMMARY   = "matched_sources.csv"
 SED_DIR   = "seds"
+match_rad = 0.5
 
 summary_rows = []
 
@@ -131,96 +132,83 @@ for i, s in enumerate(sourceName):
     uplim_mask = []
 
     sep_deg = sep2d[i].deg
-
     print(f"Closest source was {sep_deg:.3f} deg away")
 
-    # Extrapolate to my energies #
-    dNdE_PL = flxden_PL[i] * (sy_en/pivot[i])**(-ix_PL[i])
-    dNdE_LP = flxden_LP[i] * (sy_en/pivot[i])**(-(ix_LP[i] + beta_LP[i] * np.log(sy_en/pivot[i])))
+    if sep_deg < match_rad:
 
-    nuFnu_PL = sy_erg**2 * dNdE_PL/1.602e-6 # erg cm-2 s-1
-    nuFnu_LP = sy_erg**2 * dNdE_LP/1.602e-6
-
-    # error propagation #
-    L = np.log(sy_en/pivot[i])
+        # Extrapolate to my energies #
+        dNdE_PL = flxden_PL[i] * (sy_en/pivot[i])**(-ix_PL[i])
+        dNdE_LP = flxden_LP[i] * (sy_en/pivot[i])**(-(ix_LP[i] + beta_LP[i] * np.log(sy_en/pivot[i])))
     
-    PL_var = ((flxden_err_PL[i]/flxden_PL[i])**2
-             + (L**2)*ix_err_PL[i]**2)
-    nuFnu_PL_err = nuFnu_PL * np.sqrt(PL_var)
+        nuFnu_PL = sy_erg**2 * dNdE_PL/1.602e-6 # erg cm-2 s-1
+        nuFnu_LP = sy_erg**2 * dNdE_LP/1.602e-6
+    
+        # error propagation #
+        L = np.log(sy_en/pivot[i])
+        
+        PL_var = ((flxden_err_PL[i]/flxden_PL[i])**2
+                 + (L**2)*ix_err_PL[i]**2)
+        nuFnu_PL_err = nuFnu_PL * np.sqrt(PL_var)
+    
+        LP_var = ((flxden_err_LP[i]/flxden_LP[i])**2
+                 + (L**2)*ix_err_LP[i]**2
+                 + (L**4)*beta_err_LP[i]**2)
+        nuFnu_LP_err = nuFnu_LP * np.sqrt(LP_var)
+    
+        # Separate array for upper limits #
+        uplim_mask = np.isnan(unc_flux_lower[i])
+    
+        for j in range(len(unc_nufnu_lower[i])):
+            if uplim_mask[j]:
+                unc_nufnu_lower[i][j] = 0.4 * nufnu[i][j]
+    
+        plt.figure(figsize=(10,5),layout='constrained')
+    
+        plt.errorbar(e_mids,nufnu[i],
+                yerr=[unc_nufnu_lower[i],unc_nufnu_upper[i]],
+                uplims=uplim_mask,color='r',fmt='none',
+                capsize=10,capthick=1.5,elinewidth=1.5,
+                label="Fermi Data")
+        for x, y in zip(e_mids, nufnu[i]):
+            plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
+                xy=(x, y), xytext=(0, 8),
+                textcoords='offset points',
+                fontsize=8, ha='center')
+    
+        plt.errorbar(sy_en,nuFnu_PL,
+                yerr=nuFnu_PL_err, color='g',fmt='none',
+                capsize=10,capthick=1.5,elinewidth=1.5,
+                label="powerlaw")
+        for x, y in zip(sy_en, nuFnu_PL):
+            plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
+                xy=(x, y), xytext=(0, 8),
+                textcoords='offset points',
+                fontsize=8, ha='center')
+    
+        plt.errorbar(sy_en,nuFnu_LP,
+                yerr=nuFnu_LP_err,color='b',fmt='none',
+                capsize=10,capthick=1.5,elinewidth=1.5,
+                label="logParabola")
+        for x, y in zip(sy_en, nuFnu_LP):
+            plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
+                xy=(x, y), xytext=(0, 8),
+                textcoords='offset points',
+                fontsize=8, ha='center')
+    
+        plt.yscale('log')
+        plt.xscale('log')
+        plt.xlabel('Energy [MeV]')
+        plt.ylabel(r"$\nu F_{\nu}$ [erg cm$^{-2}$ s$^{-1}$]")
+        plt.title(f"{s} SED\n{sep_deg:.3f} away from {fermiName[i]}")
+        plt.legend()
+        #plt.savefig(f"seds/{s}_sed.png")
+        plt.savefig(f"seds/good/{s}_sed.png")
+    
+        plt.close()
+        print(f"{s} SED completed")
 
-    LP_var = ((flxden_err_LP[i]/flxden_LP[i])**2
-             + (L**2)*ix_err_LP[i]**2
-             + (L**4)*beta_err_LP[i]**2)
-    nuFnu_LP_err = nuFnu_LP * np.sqrt(LP_var)
-
-    # set plot axis to contain errorbar minima and maxima
-    all_y_upper = np.concatenate([
-      nufnu[i] + unc_nufnu_upper[i],
-      nuFnu_PL + nuFnu_PL_err,
-      nuFnu_LP + nuFnu_LP_err,
-      ])
-
-    all_y_lower = np.concatenate([
-      nufnu[i] - unc_nufnu_lower[i],
-      nuFnu_PL - nuFnu_PL_err,
-      nuFnu_LP - nuFnu_LP_err,
-      ])
-
-    valid_lower = all_y_lower[all_y_lower > 0]
-    ymin = valid_lower.min() * 0.5
-    ymax = all_y_upper.max() * 2.0
-
-    # Separate array for upper limits #
-    uplim_mask = np.isnan(unc_flux_lower[i])
-
-    for j in range(len(unc_nufnu_lower[i])):
-        if uplim_mask[j]:
-            unc_nufnu_lower[i][j] = 0.4 * nufnu[i][j]
-
-    plt.figure(figsize=(10,5),layout='constrained')
-    plt.ylim(ymin, ymax)
-
-    plt.errorbar(e_mids,nufnu[i],
-            yerr=[unc_nufnu_lower[i],unc_nufnu_upper[i]],
-            uplims=uplim_mask,color='r',fmt='none',
-            capsize=10,capthick=1.5,elinewidth=1.5,
-            label="Fermi Data")
-    for x, y in zip(e_mids, nufnu[i]):
-        plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
-            xy=(x, y), xytext=(0, 8),
-            textcoords='offset points',
-            fontsize=8, ha='center')
-
-    plt.errorbar(sy_en,nuFnu_PL,
-            yerr=nuFnu_PL_err, color='g',fmt='none',
-            capsize=10,capthick=1.5,elinewidth=1.5,
-            label="powerlaw")
-    for x, y in zip(sy_en, nuFnu_PL):
-        plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
-            xy=(x, y), xytext=(0, 8),
-            textcoords='offset points',
-            fontsize=8, ha='center')
-
-    plt.errorbar(sy_en,nuFnu_LP,
-            yerr=nuFnu_LP_err,color='b',fmt='none',
-            capsize=10,capthick=1.5,elinewidth=1.5,
-            label="logParabola")
-    for x, y in zip(sy_en, nuFnu_LP):
-        plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
-            xy=(x, y), xytext=(0, 8),
-            textcoords='offset points',
-            fontsize=8, ha='center')
-
-    plt.yscale('log')
-    plt.xscale('log')
-    plt.xlabel('Energy [MeV]')
-    plt.ylabel(r"$\nu F_{\nu}$ [erg cm$^{-2}$ s$^{-1}$]")
-    plt.title(f"{s} SED\n{sep_deg:.3f} away from {fermiName[i]}")
-    plt.legend()
-    plt.savefig(f"seds/{s}_sed.png")
-    plt.close()
-    print(f"{s} SED completed")
-
+    else:
+        print(f"{s} too far away :(")
 
 ## Summary rows ##
 
