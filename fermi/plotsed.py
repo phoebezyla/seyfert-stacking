@@ -2,12 +2,25 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-# Load source CSV #
-df = pd.read_csv("matched_sources.csv",sep=',').to_numpy()
+sy_en  = [1.0 5.0 10.0] * 1e6 # TeV -> MeV
+sy_erg = sy_en * 1.602e-6     # MeV -> ergs
 
-inputName = df[:,0]
-fermiName = df[:,4]
-sep_deg   = df[:,3]
+# Load source CSV #
+df = pd.read_csv("matched_sources.csv",sep=',')
+
+inputName = df["input_name"]
+fermiName = df["Source_Name"]
+sep_deg   = df["sep_deg"]
+spec_type = df["SpectrumType"]
+pivot     = df["Pivot_Energy"]
+ix_PL     = df["PL_Index"]
+flxden_PL = df["PL_Flux_Density"]
+ix_LP     = df["LP_Index"]
+flxden_LP = df["LP_Flux_Density"]
+beta_LP   = df["LP_beta"]
+ix_EC     = df["PLEC_Exp_Index"]
+flxden_EC = df["PLEC_Flux_Density"]
+
 
 # begin loop over sources #
 for i, s in enumerate(inputName):
@@ -22,7 +35,14 @@ for i, s in enumerate(inputName):
     nuerr_lo   = sed[:,8]
     nuerr_hi   = sed[:,9]
 
-    e_err  = e_maxs - e_mids    
+    e_err  = e_maxs - e_mids   
+
+    # Extrapolate to my energies #
+    dNdE_PL = flxden_PL * (sy_en/pivot)**ix_PL 
+    dNdE_LP = flxden_LP * (sy_en/pivot)**(-(ix_LP + beta_LP * np.log(sy_en/pivot)))
+
+    nuFnu_PL = sy_erg**2 * dNdE_PL/1.602e-6 # erg cm-2 s-1
+    nuFnu_LP = sy_erg**2 * dNdE_LP/1.602e-6 
 
     # Separate array for upper limits #
     uplim_mask = np.isnan(fluxerr_lo)
