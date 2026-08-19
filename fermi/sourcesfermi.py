@@ -69,6 +69,7 @@ array_cols = [
   ]
 
 csv_cols = [
+  'input_name','input_ra','input_dec','sep_deg',
   'Source_Name','RAJ2000','DEJ2000','ASSOC_FGL','ASSOC1','ASSOC2',
   'ASSOC_FHL','ASSOC_GAM1','ASSOC_GAM2','ASSOC_GAM3','ASSOC_TEV',
   'ASSOC_PROB_BAY','ASSOC_PROB_LR',
@@ -98,9 +99,20 @@ cat_coords = SkyCoord(ra = cat["RAJ2000"], dec = cat["DEJ2000"], unit='deg')
 idx,sep2d,_ = coords.match_to_catalog_sky(cat_coords)
 
 fermiName = cat[idx]["Source_Name"]
-assoc     = cat[idx]["ASSOC1"]
 fermiRA   = cat[idx]["RAJ2000"]
 fermiDec  = cat[idx]["DEJ2000"]
+
+assoc         = cat[idx]["ASSOC1"]
+assoc_fgl     = cat[idx]["ASSOC_FGL"]
+assoc2        = cat[idx]["ASSOC2"]
+assoc_fhl     = cat[idx]["ASSOC_FHL"]
+assoc_gam1    = cat[idx]["ASSOC_GAM1"]
+assoc_gam2    = cat[idx]["ASSOC_GAM2"]
+assoc_gam3    = cat[idx]["ASSOC_GAM3"]
+assoc_tev     = cat[idx]["ASSOC_TEV"]
+assoc_prob_bay = cat[idx]["ASSOC_PROB_BAY"]
+assoc_prob_lr  = cat[idx]["ASSOC_PROB_LR"]
+
 
 spectype  = cat[idx]["SpectrumType"]
 pivot     = cat[idx]["Pivot_Energy"]
@@ -145,65 +157,65 @@ for i, s in enumerate(sourceName):
     if sep_deg < match_rad:
 
         # Extrapolate to my energies #
-        dNdE_PL = flxden_PL[i] * (sy_en/pivot[i])**(-ix_PL[i])
-        dNdE_LP = flxden_LP[i] * (sy_en/pivot[i])**(-(ix_LP[i] + beta_LP[i] * np.log(sy_en/pivot[i])))
-    
-        nuFnu_PL = sy_erg**2 * dNdE_PL/1.602e-6 # erg cm-2 s-1
-        nuFnu_LP = sy_erg**2 * dNdE_LP/1.602e-6
-    
-        # error propagation #
-        L = np.log(sy_en/pivot[i])
-        
-        PL_var = ((flxden_err_PL[i]/flxden_PL[i])**2
-                 + (L**2)*ix_err_PL[i]**2)
-        nuFnu_PL_err = nuFnu_PL * np.sqrt(PL_var)
-    
-        LP_var = ((flxden_err_LP[i]/flxden_LP[i])**2
-                 + (L**2)*ix_err_LP[i]**2
-                 + (L**4)*beta_err_LP[i]**2)
-        nuFnu_LP_err = nuFnu_LP * np.sqrt(LP_var)
-    
-        # Separate array for upper limits #
-        uplim_mask = np.isnan(unc_flux_lower[i])
-    
-        for j in range(len(unc_nufnu_lower[i])):
-            if uplim_mask[j]:
-                unc_nufnu_lower[i][j] = 0.4 * nufnu[i][j]
-    
-        plt.figure(figsize=(10,8),layout='constrained')
-        #plt.ylim(nuFnu_LP[-1]-nuFnu_LP_err[-1],
-        #        np.max(nufnu[0]+unc_nufnu_upper[0]))    
-
-        plt.errorbar(e_mids,nufnu[i],
-                yerr=[unc_nufnu_lower[i],unc_nufnu_upper[i]],
-                uplims=uplim_mask,color='r',fmt='none',
-                capsize=10,capthick=1.5,elinewidth=1.5,
-                label="Fermi Data")
-        for x, y in zip(e_mids, nufnu[i]):
-            plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
-                xy=(x, y), xytext=(0, 8),
-                textcoords='offset points',
-                fontsize=8, ha='center')
-    
-        plt.errorbar(sy_en,nuFnu_PL,
-                yerr=nuFnu_PL_err, color='g',fmt='none',
-                capsize=10,capthick=1.5,elinewidth=1.5,
-                label="powerlaw")
-        for x, y in zip(sy_en, nuFnu_PL):
-            plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
-                xy=(x, y), xytext=(0, 8),
-                textcoords='offset points',
-                fontsize=8, ha='center')
-    
-        plt.errorbar(sy_en,nuFnu_LP,
-                yerr=nuFnu_LP_err,color='b',fmt='none',
-                capsize=10,capthick=1.5,elinewidth=1.5,
-                label="logParabola")
-        for x, y in zip(sy_en, nuFnu_LP):
-            plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
-                xy=(x, y), xytext=(0, 8),
-                textcoords='offset points',
-                fontsize=8, ha='center')
+#        dNdE_PL = flxden_PL[i] * (sy_en/pivot[i])**(-ix_PL[i])
+#        dNdE_LP = flxden_LP[i] * (sy_en/pivot[i])**(-(ix_LP[i] + beta_LP[i] * np.log(sy_en/pivot[i])))
+#    
+#        nuFnu_PL = sy_erg**2 * dNdE_PL/1.602e-6 # erg cm-2 s-1
+#        nuFnu_LP = sy_erg**2 * dNdE_LP/1.602e-6
+#    
+#        # error propagation #
+#        L = np.log(sy_en/pivot[i])
+#        
+#        PL_var = ((flxden_err_PL[i]/flxden_PL[i])**2
+#                 + (L**2)*ix_err_PL[i]**2)
+#        nuFnu_PL_err = nuFnu_PL * np.sqrt(PL_var)
+#    
+#        LP_var = ((flxden_err_LP[i]/flxden_LP[i])**2
+#                 + (L**2)*ix_err_LP[i]**2
+#                 + (L**4)*beta_err_LP[i]**2)
+#        nuFnu_LP_err = nuFnu_LP * np.sqrt(LP_var)
+#    
+#        # Separate array for upper limits #
+#        uplim_mask = np.isnan(unc_flux_lower[i])
+#    
+#        for j in range(len(unc_nufnu_lower[i])):
+#            if uplim_mask[j]:
+#                unc_nufnu_lower[i][j] = 0.4 * nufnu[i][j]
+#    
+#        plt.figure(figsize=(10,8),layout='constrained')
+#        #plt.ylim(nuFnu_LP[-1]-nuFnu_LP_err[-1],
+#        #        np.max(nufnu[0]+unc_nufnu_upper[0]))    
+#
+#        plt.errorbar(e_mids,nufnu[i],
+#                yerr=[unc_nufnu_lower[i],unc_nufnu_upper[i]],
+#                uplims=uplim_mask,color='r',fmt='none',
+#                capsize=10,capthick=1.5,elinewidth=1.5,
+#                label="Fermi Data")
+#        for x, y in zip(e_mids, nufnu[i]):
+#            plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
+#                xy=(x, y), xytext=(0, 8),
+#                textcoords='offset points',
+#                fontsize=8, ha='center')
+#    
+#        plt.errorbar(sy_en,nuFnu_PL,
+#                yerr=nuFnu_PL_err, color='g',fmt='none',
+#                capsize=10,capthick=1.5,elinewidth=1.5,
+#                label="powerlaw")
+#        for x, y in zip(sy_en, nuFnu_PL):
+#            plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
+#                xy=(x, y), xytext=(0, 8),
+#                textcoords='offset points',
+#                fontsize=8, ha='center')
+#    
+#        plt.errorbar(sy_en,nuFnu_LP,
+#                yerr=nuFnu_LP_err,color='b',fmt='none',
+#                capsize=10,capthick=1.5,elinewidth=1.5,
+#                label="logParabola")
+#        for x, y in zip(sy_en, nuFnu_LP):
+#            plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
+#                xy=(x, y), xytext=(0, 8),
+#                textcoords='offset points',
+#                fontsize=8, ha='center')
     
         plt.yscale('log')
         plt.xscale('log')
@@ -217,22 +229,39 @@ for i, s in enumerate(sourceName):
         plt.close()
         print(f"{s} SED completed")
 
+        # Make csv #
+        summary_rows.append({
+            'input_name': s,
+            'input_ra': RA[i],
+            'input_dec': Dec[i],
+            'sep_deg': sep_deg,
+            'Source_Name': fermiName[i],
+            'RAJ2000': fermiRA[i],
+            'DEJ2000': fermiDec[i],
+            'ASSOC_FGL': assoc_fgl[i],
+            'ASSOC1': assoc[i],
+            'ASSOC2': assoc2[i],
+            'ASSOC_FHL': assoc_fhl[i],
+            'ASSOC_GAM1': assoc_gam1[i],
+            'ASSOC_GAM2': assoc_gam2[i],
+            'ASSOC_GAM3': assoc_gam3[i],
+            'ASSOC_TEV': assoc_tev[i],
+            'ASSOC_PROB_BAY': assoc_prob_bay[i],
+            'ASSOC_PROB_LR': assoc_prob_lr[i],
+        })  
+
     else:
         print(f"{s} too far away :(")
 
 ## Summary rows ##
 
 ## Write csv ##
-#priority_cols = ["input_name", "input_ra", "input_dec", "sep_deg",
-#                 "Source_Name", "ASSOC1", "RAJ2000", "DEJ2000",
-#                 "SpectrumType", "Signif_Avg", "Pivot_Energy"
-#                 ]
-#
-#with open(SUMMARY,'w',newline='') as f:
-#    writer = csv.DictWriter(f,fieldnames=priority_cols)
-#    writer.writeheader()
-#    writer.writerows(summary_rows)
-#
-#print(f"\nDone. Summary written to {SUMMARY}")
+
+with open(SUMMARY,'w',newline='') as f:
+    writer = csv.DictWriter(f,fieldnames=csv_cols)
+    writer.writeheader()
+    writer.writerows(summary_rows)
+
+print(f"\nDone. Summary written to {SUMMARY}")
 
 
