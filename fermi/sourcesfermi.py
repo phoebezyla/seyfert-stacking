@@ -58,12 +58,20 @@ available_cols = [
   'LP_Flux_Density', 'Unc_LP_Flux_Density', 'LP_Index', 'Unc_LP_Index',
   'LP_beta', 'Unc_LP_beta', 'LP_SigCurv', 'LP_EPeak', 'Unc_LP_EPeak',
   'Signif_Peak', 'Flux_Peak', 'Unc_Flux_Peak',
-  'ASSOC_FGL','ASSOC1','ASSOC2','RA_Counterpart','DEC_Counterpart',
+  'ASSOC_FGL','ASSOC1','ASSOC2','ASSOC_FHL','ASSOC_GAM1','ASSOC_GAM2',
+  'ASSOC_GAM3','ASSOC_TEV','ASSOC_PROB_BAY','ASSOC_PROB_LR',
+  'RA_Counterpart','DEC_Counterpart',
   'Unc_Counterpart', 'Flags', 
   ]
 
 array_cols = [
   'Flux_Band', 'Unc_Flux_Band', 'nuFnu_Band', 'Sqrt_TS_Band'
+  ]
+
+csv_cols = [
+  'Source_Name','RAJ2000','DEJ2000','ASSOC_FGL','ASSOC1','ASSOC2',
+  'ASSOC_FHL','ASSOC_GAM1','ASSOC_GAM2','ASSOC_GAM3','ASSOC_TEV',
+  'ASSOC_PROB_BAY','ASSOC_PROB_LR',
   ]
 
 ## Energy band edges? ##
