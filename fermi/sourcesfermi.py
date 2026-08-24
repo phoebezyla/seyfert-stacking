@@ -165,6 +165,7 @@ for i, s in enumerate(sourceName):
 
     sep_deg = sep2d[i].deg
     print(f"Closest source was {sep_deg:.3f} deg away")
+    print(repr(spectype[i]))
 
     if sep_deg < match_rad:
 
@@ -208,7 +209,8 @@ for i, s in enumerate(sourceName):
                 xy=(x, y), xytext=(0, 8),
                 textcoords='offset points',
                 fontsize=8, ha='center')
-        if spectype[i] == "PowerLaw": 
+
+        if spectype[i] == 'PowerLaw         ': 
             plt.errorbar(sy_en,nuFnu_PL,
                   yerr=nuFnu_PL_err, color='g',fmt='o',
                   capsize=10,capthick=1.5,elinewidth=1.5,
@@ -218,7 +220,8 @@ for i, s in enumerate(sourceName):
                   xy=(x, y), xytext=(0, 8),
                   textcoords='offset points',
                   fontsize=8, ha='center')
-        elif spectype[i] == "LogParabola":
+
+        elif spectype[i] == 'LogParabola      ':
             plt.errorbar(sy_en,nuFnu_LP,
                   yerr=nuFnu_LP_err,color='b',fmt='o',
                   capsize=10,capthick=1.5,elinewidth=1.5,
