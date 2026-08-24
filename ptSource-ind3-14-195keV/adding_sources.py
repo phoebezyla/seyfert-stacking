@@ -28,11 +28,11 @@ lowerE = 0.5 * 1e9              # keV
 upperE = 100 * 1e9              # keV
 
 ## Load CSV and initialize arrays ##
-df = pd.read_csv("data14-195.csv",sep='\\s+').to_numpy()
+df = pd.read_csv("dataUnc.csv",sep='\\s+').to_numpy()
 
-numsources = 51
-numsourcesstr = '51'
-ix = '3'
+numsources = 41
+numsourcesstr = '41'
+ix = '2'
 
 sourceName = df[:,0]
 RA = df[:,1]
@@ -116,7 +116,7 @@ for j, e in enumerate(midE):
     param_df, like_df = fjl.fit(quiet=True)
 
     fig = cl.plot()
-    fig.savefig("%s/plots/castrolike-%d.png"%(DIR,e))
+    fig.savefig("%s/plots/modcastrolike-%d.png"%(DIR,e))
     
     print("Parameter results: %s"%(param_df))
     print("Likelihood results: %s"%(like_df))
@@ -136,7 +136,7 @@ for j, e in enumerate(midE):
     IntC = IntervalContainer(lowerE,upperE,norms_Stack,log_val_Stack,101)
 
     # Plot stacked profile #    
-    figname = os.path.join(DIR,"plots/stacked_%.1fTeV_pllh.png"%(e))
+    figname = os.path.join(DIR,"plots/modstacked_%.1fTeV_pllh.png"%(e))
     plot_logProfile_alt([IntC],param_df,like_df,"Stacked",show=False,minlogN=minlogN,maxlogN=maxlogN,save=figname)
 
 
@@ -152,7 +152,7 @@ for j, e in enumerate(midE):
         }
 
 ## Save full results dictionary to one csv per index ##
-f = open("%s/results-stacked-ind%s.csv"%(DIR,ix),'w',newline='')
+f = open("%s/results-stacked-ind%s-mod.csv"%(DIR,ix),'w',newline='')
 writer = csv.writer(f)
 writer.writerow(['pivot','indminNorm','TS'] +\
 #,'loglike'] +\
