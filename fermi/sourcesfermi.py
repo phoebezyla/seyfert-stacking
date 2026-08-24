@@ -7,6 +7,7 @@ import astropy.units as u
 import csv
 import os
 import matplotlib.pyplot as plt
+from scipy.interpolate import interp1d
 
 CATALOG   = "gll_psc_v41.fit"
 SOURCES   = "data14-195.csv"
@@ -23,6 +24,16 @@ df =  pd.read_csv("fermi_sources.csv",sep='\\s+').to_numpy()
 sourceName = df[:,0]
 RA = df[:,1]
 Dec = df[:,2]
+
+senseE, senseS = np.loadtxt('Fermi-00.txt',unpack=True)
+# MeV,  erg cm^-2 s^-1
+logE = np.log10(senseE)
+logS = np.log10(senseS)
+
+interpfunc = interp1d(logE,logS,kind='linear')
+Esmooth = np.logspace(np.log10(senseE.min()), np.log10(senseE.max()))
+Ssmooth = 10**interpfunc(np.log10(Esmooth))
+
 
 coords = SkyCoord(
     ra  = RA * u.deg,
@@ -217,7 +228,9 @@ for i, s in enumerate(sourceName):
                 xy=(x, y), xytext=(0, 8),
                 textcoords='offset points',
                 fontsize=8, ha='center')
-    
+
+        plt.plot(Esmooth,Ssmooth,label='HAWC Sensitivity Curve at 0.0 deg')    
+
         plt.yscale('log')
         plt.xscale('log')
         plt.xlabel('Energy [MeV]')
