@@ -200,7 +200,7 @@ for i, s in enumerate(sourceName):
 
         plt.errorbar(e_mids,nufnu[i],
                 yerr=[unc_nufnu_lower[i],unc_nufnu_upper[i]],
-                uplims=uplim_mask,color='r',fmt='none',
+                uplims=uplim_mask,color='r',fmt='o',
                 capsize=10,capthick=1.5,elinewidth=1.5,
                 label="Fermi Data")
         for x, y in zip(e_mids, nufnu[i]):
@@ -208,26 +208,26 @@ for i, s in enumerate(sourceName):
                 xy=(x, y), xytext=(0, 8),
                 textcoords='offset points',
                 fontsize=8, ha='center')
-    
-        plt.errorbar(sy_en,nuFnu_PL,
-                yerr=nuFnu_PL_err, color='g',fmt='none',
-                capsize=10,capthick=1.5,elinewidth=1.5,
-                label="powerlaw")
-        for x, y in zip(sy_en, nuFnu_PL):
-            plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
-                xy=(x, y), xytext=(0, 8),
-                textcoords='offset points',
-                fontsize=8, ha='center')
-    
-        plt.errorbar(sy_en,nuFnu_LP,
-                yerr=nuFnu_LP_err,color='b',fmt='none',
-                capsize=10,capthick=1.5,elinewidth=1.5,
-                label="logParabola")
-        for x, y in zip(sy_en, nuFnu_LP):
-            plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
-                xy=(x, y), xytext=(0, 8),
-                textcoords='offset points',
-                fontsize=8, ha='center')
+        if spectype[i] == "PowerLaw": 
+            plt.errorbar(sy_en,nuFnu_PL,
+                  yerr=nuFnu_PL_err, color='g',fmt='o',
+                  capsize=10,capthick=1.5,elinewidth=1.5,
+                  label="powerlaw")
+            for x, y in zip(sy_en, nuFnu_PL):
+                plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
+                  xy=(x, y), xytext=(0, 8),
+                  textcoords='offset points',
+                  fontsize=8, ha='center')
+        elif spectype[i] == "LogParabola":
+            plt.errorbar(sy_en,nuFnu_LP,
+                  yerr=nuFnu_LP_err,color='b',fmt='o',
+                  capsize=10,capthick=1.5,elinewidth=1.5,
+                  label="logParabola")
+            for x, y in zip(sy_en, nuFnu_LP):
+                plt.annotate(f"{x:.2e} MeV,\n{y:.2e} erg cm$^{{-2}}$ s$^{{-1}}$",
+                  xy=(x, y), xytext=(0, 8),
+                  textcoords='offset points',
+                  fontsize=8, ha='center')
 
         plt.plot(Esmooth,Ssmooth,label='HAWC Sensitivity Curve at 0.0 deg')    
 
