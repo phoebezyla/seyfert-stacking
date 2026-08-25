@@ -30,9 +30,10 @@ upperE = 100 * 1e9              # keV
 ## Load CSV and initialize arrays ##
 df = pd.read_csv("dataUnc.csv",sep='\\s+').to_numpy()
 
-numsources = 41
-numsourcesstr = '41'
-ix = '2'
+#numsources = 41
+#numsourcesstr = '41'
+ix = '3'
+special = "ugc"
 
 sourceName = df[:,0]
 RA = df[:,1]
@@ -152,7 +153,7 @@ for j, e in enumerate(midE):
         }
 
 ## Save full results dictionary to one csv per index ##
-f = open("%s/results-stacked-ind%s-mod.csv"%(DIR,ix),'w',newline='')
+f = open("%s/results-stacked-ind%s-%s.csv"%(DIR,ix,special),'w',newline='')
 writer = csv.writer(f)
 writer.writerow(['pivot','indminNorm','TS'] +\
 #,'loglike'] +\
