@@ -15,7 +15,7 @@ df = {}
 begin_TS = np.array([-0.020819783210754395,-0.022848963737487793,-0.02813541889190674])
 
 pivot = np.array([1.0,5.0,10.0])  # TeV
-c = cm.tab10(range(len(sourceName)))
+c = cm.viridis(np.linspace(0, 1, len(sourceName)))
 
 
 for i, name in enumerate(sourceName):
@@ -26,7 +26,7 @@ for i, name in enumerate(sourceName):
             ts_values.append(float(row['TS']))
         df[sourceName[i]] = {"ts": ts_values-begin_TS}
 
-plt.figure(layout='constrained')
+plt.figure(layout='constrained',figsize=(8,10))
 
 for i, name in enumerate(sourceName):
     plt.scatter(pivot,df[name]['ts'],color=c[i],label=f"{name}")
