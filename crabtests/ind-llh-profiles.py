@@ -69,6 +69,10 @@ for j, pivot in enumerate(midE):
         print(param_df)
         print(like_df)
    
+        # plots
+        plotResults(llh,jl,'crab')
+
+
 #        # Save results from fit 
 #        saveResults(llh,jl,c,pivot,ix) 
 #     

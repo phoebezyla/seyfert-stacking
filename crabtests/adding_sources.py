@@ -120,6 +120,9 @@ for j, e in enumerate(midE):
 
     param_df, like_df = fjl.fit(quiet=True)
 
+    # plot model, spectrum, planes
+    plotResults(clm,fjl,'twocrab')
+
     fig = cl.plot()
     fig.savefig("castrolike-%d.png"%(e))
     

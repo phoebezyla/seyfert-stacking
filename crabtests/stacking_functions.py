@@ -80,18 +80,21 @@ def saveResults(llh,jl,name,pivot,index):
 def plotResults(llh,jl,name):
     ## Model in counts spacve and residuals
     fig1 = llh.display_spectrum()
-    fig1.savefig("plots/residuals/%s_res.png"%(name))
+    #fig1.savefig("plots/residuals/%s_res.png"%(name))
+    fig1.savefig("plots/%s_res.png"%(name))
 
     ## Spectrum fit
     fig2 = plot_spectra(jl.results)
     plt.xlabel("Energy [TeV]")
     plt.ylabel(r"$E^2\,dN/dE$ [TeV cm$^{-2}$ s$^{-1}$]")
     plt.title("Spectrum fit for %s"%(name))
-    fig2.savefig("plots/spectra/%s_fit_spectrum.png"%(name))
+    #fig2.savefig("plots/spectra/%s_fit_spectrum.png"%(name))
+    fig2.savefig("plots/%s_fit_spectrum.png"%(name))
 
     ## Energy planes (model, datqa, residuals)
     fig3 = llh.display_fit(smoothing_kernel_sigma=0.3,display_colorbar=True)
-    fig3.savefig("plots/energyplanes/%s_fit_planes.png"%(name))
+    #fig3.savefig("plots/energyplanes/%s_fit_planes.png"%(name))
+    fig3.savefig("plots/%s_fit_planes.png"%(name))
 
 
 def get_log_like_weighted(self):
