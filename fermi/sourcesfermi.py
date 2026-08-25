@@ -16,6 +16,7 @@ SED_DIR   = "seds"
 match_rad = 0.5
 
 summary_rows = []
+curves = {}
 
 # Load sources #
 #df = pd.read_csv("data14-195.csv",sep='\\s+').to_numpy()
@@ -25,15 +26,25 @@ sourceName = df[:,0]
 RA = df[:,1]
 Dec = df[:,2]
 
-senseE, senseS = np.loadtxt('Fermi-00.txt',unpack=True)
-# MeV,  erg cm^-2 s^-1
-logE = np.log10(senseE)
-logS = np.log10(senseS)
 
-interpfunc = interp1d(logE,logS,kind='linear')
-Esmooth = np.logspace(np.log10(senseE.min()), np.log10(senseE.max()))
-Ssmooth = 10**interpfunc(np.log10(Esmooth))
+filelist = ['Fermi-00','cta-north','cta-south','hess','lhaaso','magic','veritas']
 
+for name in filelist:
+    senseE, senseS = np.loadtxt(f"{name}.txt",unpack=True)
+    # TeV,  erg cm^-2 s^-1
+    logE = np.log10(senseE*1e6)  # TeV --> MeV
+    logS = np.log10(senseS)
+
+    interpfunc = interp1d(logE,logS,kind='linear')
+
+    Esmooth = np.logspace(logE.min(), logE.max())
+    Ssmooth = 10**interpfunc(np.log10(Esmooth))
+
+    curves[name] = {
+        'en': Esmooth,
+        'se': Ssmooth,
+    }
+    print(f"{name} done")
 
 coords = SkyCoord(
     ra  = RA * u.deg,
@@ -232,7 +243,9 @@ for i, s in enumerate(sourceName):
                   textcoords='offset points',
                   fontsize=8, ha='center')
 
-        plt.plot(Esmooth,Ssmooth,label='HAWC Sensitivity Curve at 0.0 deg')    
+        for name in filelist:
+            plt.plot(curves[name]['en'],curves[name]['se'],label=name)
+        #'HAWC Sensitivity Curve at 0.0 deg')    
 
         plt.yscale('log')
         plt.xscale('log')
