@@ -4,38 +4,32 @@ import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 import csv
 
-dfSources = pd.read_csv("dataSus.csv",sep='\\s+').to_numpy()
-
-sourceName = dfSources[1:,0]
-RA = dfSources[:,1]
-Dec = dfSources[:,2]
-A = dfSources[:,3]
-names = dfSources[1:,4]
-
 df = {}
 begin_TS = np.array([-0.020819783210754395,-0.022848963737487793,-0.02813541889190674])
 
 pivot = np.array([1.0,5.0,10.0])  # TeV
-c = cm.tab10(range(len(sourceName)))
 
+plt.figure(layout='constrained')
+ix = ['2','27','3']
+c = cm.tab10(range(len(ix)))
 
-for i, name in enumerate(names):
+for ind in ix:
     ts_values = []
-    with open("results-stacked-ind3-%s.csv"%(name),newline="") as f:
+    with open("results-stacked-ind%s-50sources.csv"%(ind),newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
             ts_values.append(float(row['TS']))
-        df[sourceName[i]] = {"ts": ts_values-begin_TS}
-
-plt.figure(layout='constrained')
-
-for i, name in enumerate(sourceName):
-    plt.scatter(pivot,df[name]['ts'],color=c[i],label=f"{name}")
+        df[ind] = {
+          "ts": ts_values-begin_TS,
+        }
+    
+for i, name in enumerate(ix):
+    plt.scatter(pivot,df[name]['ts'],color=c[i],label=f"Index = {name}")
 
 plt.xlabel("Energy [TeV]")
 plt.ylabel("TS")
 plt.legend()
 plt.grid()
-plt.title("Comparison of TS values for suspect sources")
-plt.savefig("ts_comp_suspect_nine_subtracted.png")
+plt.title("Comparison of stacked TS values for 50 sources")
+plt.savefig("ts_comp_no_ngc4151.png")
 plt.close()
