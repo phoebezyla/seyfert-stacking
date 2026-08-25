@@ -30,7 +30,7 @@ upperE = 100 * 1e9              # keV
 ## Load CSV and initialize arrays ##
 df = pd.read_csv("data50sources.csv",sep='\\s+').to_numpy()
 
-ix = '27'
+ix = '3'
 
 sourceName = df[:,0]
 RA = df[:,1]

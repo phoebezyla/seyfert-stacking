@@ -12,7 +12,7 @@ df = {}
 begin_TS = np.array([-0.020819783210754395,-0.022848963737487793,-0.02813541889190674])
 
 pivot = np.array([1.0,5.0,10.0])  # TeV
-ind = '2'
+ind = '27'
 
 plt.figure(layout='constrained',figsize=(8,20))
 #ix = ['2','27','3']
@@ -45,6 +45,6 @@ plt.ylabel("TS")
 plt.yscale('log')
 #plt.legend()
 plt.grid()
-plt.title("Comparison of stacked TS values for 50 sources, ind = 2 (excluding one source per)")
-plt.savefig("ts_comp_49_ix2.png")
+plt.title(f"Comparison of stacked TS values for 50 sources, ind = {ind} (excluding one source per)")
+plt.savefig(f"ts_comp_49_ix{ind}.png")
 plt.close()
