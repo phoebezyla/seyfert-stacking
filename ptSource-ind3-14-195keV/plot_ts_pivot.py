@@ -6,22 +6,18 @@ import csv
 
 dfSources = pd.read_csv("dataSus.csv",sep='\\s+').to_numpy()
 
-sourceName = dfSources[:,0]
+sourceName = dfSources[1:,0]
 RA = dfSources[:,1]
 Dec = dfSources[:,2]
 A = dfSources[:,3]
-names = dfSources[:,4]
+names = dfSources[1:,4]
 
 df = {}
-begin_TS = []
+begin_TS = np.array([-0.020819783210754395,-0.022848963737487793,-0.02813541889190674])
 
 pivot = np.array([1.0,5.0,10.0])  # TeV
 c = cm.tab10(range(len(sourceName)))
 
-with open("results-stacked-ind3-mod.csv",newline="") as f:
-    reader = csv.DictReader(f)
-    for row in reader:
-        begin_TS.append(float(row['TS']))
 
 for i, name in enumerate(names):
     ts_values = []
@@ -29,7 +25,7 @@ for i, name in enumerate(names):
         reader = csv.DictReader(f)
         for row in reader:
             ts_values.append(float(row['TS']))
-        df[sourceName[i]] = {"ts": ts_values}
+        df[sourceName[i]] = {"ts": ts_values-begin_TS}
 
 plt.figure(layout='constrained')
 
@@ -40,6 +36,6 @@ plt.xlabel("Energy [TeV]")
 plt.ylabel("TS")
 plt.legend()
 plt.grid()
-plt.title("Comparison of Flux values for suspect sources")
-plt.savefig("ts_comp_suspect_seven.png")
+plt.title("Comparison of TS values for suspect sources")
+plt.savefig("ts_comp_suspect_nine_subtracted.png")
 plt.close()
