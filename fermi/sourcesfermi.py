@@ -26,13 +26,17 @@ sourceName = df[:,0]
 RA = df[:,1]
 Dec = df[:,2]
 
-
-filelist = ['Fermi-00','cta-north','cta-south','hess','lhaaso','magic','veritas']
+X = np.arange(2.625,5.5,0.25)
+senseE = []
+for x in X:
+  senseE += [np.power(10,x-3)]
+#filelist = ['Fermi-00','cta-north','cta-south','hess','lhaaso','magic','veritas']
+filelist = ['D4']
 
 for name in filelist:
-    senseE, senseS = np.loadtxt(f"{name}.txt",unpack=True)
+    senseS = np.loadtxt(f"{name}.txt",unpack=True)
     # TeV,  erg cm^-2 s^-1
-    logE = np.log10(senseE*1e6)  # TeV --> MeV
+    logE = np.log10(np.array(senseE)*1e6)  # TeV --> MeV
     logS = np.log10(senseS)
 
     interpfunc = interp1d(logE,logS,kind='linear')
