@@ -30,10 +30,15 @@ plt.figure(layout='constrained')
 
 for i, name in enumerate(sourceName):
     plt.scatter(pivot,df[name]['ts'],color=c[i],label=f"{name}")
+    plt.annotate(name, 
+                 xy=(pivot[-1], df[name]['ts'][-1]),  # anchor at last point
+                 xytext=(5, 0), textcoords='offset points',
+                 fontsize=8, color=c[i], va='center')
 
 plt.xlabel("Energy [TeV]")
 plt.ylabel("TS")
-plt.legend()
+plt.yscale('log')
+#plt.legend()
 plt.grid()
 plt.title("Comparison of TS values for suspect sources")
 plt.savefig("ts_comp_suspect_nine_subtracted.png")
