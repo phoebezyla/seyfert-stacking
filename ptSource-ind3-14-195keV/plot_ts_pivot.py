@@ -12,7 +12,7 @@ df = {}
 begin_TS = np.array([-0.020819783210754395,-0.022848963737487793,-0.02813541889190674])
 
 pivot = np.array([1.0,5.0,10.0])  # TeV
-ind = '27'
+ind = '3'
 
 plt.figure(layout='constrained',figsize=(8,20))
 #ix = ['2','27','3']
