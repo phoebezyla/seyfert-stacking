@@ -15,7 +15,7 @@ c = cm.tab10(range(len(ix)))
 
 for ind in ix:
     ts_values = []
-    with open("results-stacked-ind%s-50sources.csv"%(ind),newline="") as f:
+    with open("results-stacked-ind%s.csv"%(ind),newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
             ts_values.append(float(row['TS']))
@@ -31,6 +31,6 @@ plt.ylabel("TS")
 plt.yscale('log')
 plt.legend()
 plt.grid()
-plt.title("Comparison of stacked TS values for 50 sources")
-plt.savefig("ts_comp_no_ngc4151_logy.png")
+plt.title("Comparison of stacked TS values for 51 sources (full sourcelist")
+plt.savefig("ts_comp.png")
 plt.close()
