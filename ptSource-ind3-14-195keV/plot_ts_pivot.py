@@ -28,8 +28,9 @@ for i, name in enumerate(ix):
 
 plt.xlabel("Energy [TeV]")
 plt.ylabel("TS")
+plt.yscale('log')
 plt.legend()
 plt.grid()
 plt.title("Comparison of stacked TS values for 50 sources")
-plt.savefig("ts_comp_no_ngc4151.png")
+plt.savefig("ts_comp_no_ngc4151_logy.png")
 plt.close()
