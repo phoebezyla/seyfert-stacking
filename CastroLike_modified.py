@@ -233,26 +233,35 @@ class CastroLike(PluginPrototype):
         """Return the value of the log-likelihood with the current values for
         the parameters.
         
-        Modified such that the model is evaluated at each container's pivot energy instead
-        of integrating over the band. Assumes that the parameter_vals are differential
-        flux normalizations instead of band-averaged fluxes. 
+        Modified such that the model is evaluated at each container's pivot energy. 
         
         Applies per-source weighing before determining that likelihood at a given flux value
         """
 
         log_l = 0.0
-
+        all_yy = np.split(
+            self._likelihood_model.get_total_flux(self._all_xx), self._splits
+        )
+        
         for i, interval_container in enumerate(self._active_containers):
             # Evals model at pivot energy with a powerlaw energy assumption
-            # dimensionally consistent w differential flux norms 
-            piv = np.array([interval_container.pivot])
-            expected_flux = self._likelihood_model.get_total_flux(piv)[0]
+        
+            xx = self._all_xx_split[i]
+            yy = all_yy[i]
+
+            length = interval_container.stop - interval_container.start
+
+            expected_flux = old_div(scipy.integrate.simps(yy, xx), length)
+
+        #    piv = np.array([interval_container.pivot])
+        #    expected_flux = self._likelihood_model.get_total_flux(piv)[0]
 
             # Weight the likelihood of each IntC
             this_log_l = interval_container.weight * interval_container(expected_flux)
             log_l += this_log_l
 
-        # flip sign to match 3ML's conventions -- I probably removed this somewhere else in the script :,(
+        # flip sign to match 3ML's conventions
+        #print(f"Log likelihood: -{log_l}")
         return -log_l
 
 

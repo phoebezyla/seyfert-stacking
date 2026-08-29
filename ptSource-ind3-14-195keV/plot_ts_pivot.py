@@ -22,12 +22,12 @@ for name in sourceName:
     ts_values = []
     pivots    = []
 
-    with open("results-stacked-ind%s-49sources-exclusion.csv"%(ind),newline="") as f:
+    with open("mod-nopiv-results-stacked-ind%s-50sources.csv"%(ind),newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            if row['excludedSource'] == name:
-                pivots.append(float(row['pivot']))
-                ts_values.append(float(row['TS']))
+#            if row['excludedSource'] == name:
+            pivots.append(float(row['pivot']))
+            ts_values.append(float(row['TS']))
     ts_values = np.array(ts_values)
     df[name] = {
           'pivot': pivots,
@@ -46,5 +46,5 @@ plt.yscale('log')
 #plt.legend()
 plt.grid()
 plt.title(f"Comparison of stacked TS values for 50 sources, ind = {ind} (excluding one source per)")
-plt.savefig(f"ts_comp_49_ix{ind}.png")
+plt.savefig(f"mod_nopiv_ts_comp_50_ix{ind}.png")
 plt.close()

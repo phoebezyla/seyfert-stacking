@@ -32,7 +32,7 @@ df = pd.read_csv("data50sources.csv",sep='\\s+').to_numpy()
 
 #numsources = 41
 #numsourcesstr = '41'
-ix = '27'
+ix = '3'
 
 sourceName = df[:,0]
 RA = df[:,1]
@@ -152,7 +152,7 @@ for j, e in enumerate(midE):
         }
 
 ## Save full results dictionary to one csv per index ##
-f = open("%s/results-stacked-ind%s-50sources.csv"%(DIR,ix),'w',newline='')
+f = open("%s/mod-nopiv-results-stacked-ind%s-50sources.csv"%(DIR,ix),'w',newline='')
 writer = csv.writer(f)
 writer.writerow(['pivot','indminNorm','TS'] +\
 #,'loglike'] +\

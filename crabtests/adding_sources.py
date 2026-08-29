@@ -121,10 +121,10 @@ for j, e in enumerate(midE):
     param_df, like_df = fjl.fit(quiet=True)
 
     # plot model, spectrum, planes
-    plotResults(clm,fjl,'twocrab')
+    #plotResults(clm,fjl,'twocrab')
 
-    fig = cl.plot()
-    fig.savefig("castrolike-%d.png"%(e))
+    #fig = cl.plot()
+    #fig.savefig("castrolike-%d.png"%(e))
     
     print("Parameter results: %s"%(param_df))
     print("Likelihood results: %s"%(like_df))
@@ -160,7 +160,7 @@ for j, e in enumerate(midE):
         }
 
 ## Save full results dictionary to one csv per index ##
-f = open("%s/mod-stacked-ind%s-%s-results.csv"%(DIR,ix,'twocrab'),'w',newline='')
+f = open("%s/mod-nopiv-stacked-ind%s-%s-results.csv"%(DIR,ix,'twocrab'),'w',newline='')
 writer = csv.writer(f)
 writer.writerow(['pivot','indminNorm','TS'] +\
 #,'loglike'] +\
