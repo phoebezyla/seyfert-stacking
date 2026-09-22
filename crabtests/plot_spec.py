@@ -25,6 +25,7 @@ for j,ix in enumerate(IX):
             plt.plot(xarr,y,color=c[i,j],label='_nolegend_')
 
 
+plt.yscale('log')
 plt.xlabel("Pivot energy [TeV]")
 plt.ylabel("Normalization")
 plt.title("Crab calculated spectrum")
