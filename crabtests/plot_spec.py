@@ -22,7 +22,7 @@ for j,ix in enumerate(IX):
    
         for k,pv in enumerate(pivot):
             y = indminNorm[k] * (xarr/pv) ** -(inds[j]) 
-            plt.plot(xarr,y,color=c[i,j])
+            plt.plot(xarr,y,color=c[i,j],label=None)
 
 
 plt.xlabel("Pivot energy [TeV]")
