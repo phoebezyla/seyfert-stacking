@@ -22,13 +22,13 @@ for j,ix in enumerate(IX):
    
         for k,pv in enumerate(pivot):
             y = indminNorm[k] * (xarr/pv) ** -(inds[j]) 
-            plt.plot(xarr,y,color=c[i,j],label=None)
+            plt.plot(xarr,y,color=c[i,j],label='_nolegend_')
 
 
 plt.xlabel("Pivot energy [TeV]")
 plt.ylabel("Normalization")
 plt.title("Crab calculated spectrum")
 plt.legend()
-plt.savefig("crab_spec_calc.png")
+plt.savefig("crab_spec.png")
 plt.close()
 
