@@ -10,7 +10,7 @@ c = plt.cm.tab10(np.linspace(0, 1, len(NUM)*len(IX))).reshape(len(NUM), len(IX),
 xarr = np.linspace(0.5,15,10000)  # in TeV
 
 
-plt.figure(layout='constrained')
+plt.figure(figsize=[10,8],layout='constrained')
 
 for j,ix in enumerate(IX):
     for i,num in enumerate(NUM):
