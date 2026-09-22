@@ -28,7 +28,8 @@ lowerE = 0.5 * 1e9              # keV
 upperE = 100 * 1e9              # keV
 
 ## Load CSV and initialize arrays ##
-df = pd.read_csv("data50sources.csv",sep='\\s+').to_numpy()
+#df = pd.read_csv("data_normalized.csv",sep='\\s+').to_numpy()
+df = pd.read_csv("data_normalized.csv",sep=',').to_numpy()
 
 #numsources = 41
 #numsourcesstr = '41'
@@ -38,6 +39,7 @@ sourceName = df[:,0]
 RA = df[:,1]
 Dec = df[:,2]
 A = df[:,3]
+Anorm = df[:,4]
 
 Atotal = 0
 for c in range(len(sourceName)):
@@ -90,7 +92,8 @@ for j, e in enumerate(midE):
                                weight=A[i],pivot=e*1e9)
         IntC_arr.append(ic)
 
-        nullLLH_arr.append(A[i] * nullLLH)  # need to weight for TS calculations
+#        nullLLH_arr.append(A[i] * nullLLH)  # need to weight for TS calculations
+        nullLLH_arr.append(nullLLH)   # no weighing? 
         TS_arr.append(TSind)
 
         ## End Source loop ##
@@ -136,8 +139,8 @@ for j, e in enumerate(midE):
     IntC = IntervalContainer(lowerE,upperE,norms_Stack,log_val_Stack,101)
 
     # Plot stacked profile #    
-    figname = os.path.join(DIR,"plots/modstacked_%.1fTeV_pllh.png"%(e))
-    plot_logProfile_alt([IntC],param_df,like_df,"Stacked",show=False,minlogN=minlogN,maxlogN=maxlogN,save=figname)
+#    figname = os.path.join(DIR,"plots/modstacked_%.1fTeV_pllh.png"%(e))
+#    plot_logProfile_alt([IntC],param_df,like_df,"Stacked",show=False,minlogN=minlogN,maxlogN=maxlogN,save=figname)
 
 
     ## Build results dataframe ##
@@ -152,7 +155,7 @@ for j, e in enumerate(midE):
         }
 
 ## Save full results dictionary to one csv per index ##
-f = open("%s/mod-nopiv-results-stacked-ind%s-50sources.csv"%(DIR,ix),'w',newline='')
+f = open("%s/normed-nopiv-nonullweight-results-stacked-ind%s.csv"%(DIR,ix),'w',newline='')
 writer = csv.writer(f)
 writer.writerow(['pivot','indminNorm','TS'] +\
 #,'loglike'] +\
