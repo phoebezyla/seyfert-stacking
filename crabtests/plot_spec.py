@@ -22,7 +22,7 @@ for j,ix in enumerate(IX):
    
         for k,pv in enumerate(pivot):
             y = indminNorm[k] * (xarr/pv) ** -(inds[j]) 
-            plt.plot(xarr,y,color=c[i,j],label=f"Powerlaw Spectrum Line")
+            plt.plot(xarr,y,color=c[i,j])
 
 
 plt.xlabel("Pivot energy [TeV]")
