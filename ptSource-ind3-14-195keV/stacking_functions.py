@@ -8,6 +8,8 @@ from astromodels import clone_model
 import threeML
 
 import warnings
+warnings.simplefilter(action='ignore', 
+    category=(FutureWarning,RuntimeWarning))
 
 with warnings.catch_warnings():
     warnings.simplefilter("ignore")
@@ -21,27 +23,27 @@ NUMEXPR_NUM_THREADS = 1
 
 def saveResults(llh,jl,name,pivot,index):
     jointRes = jl.results
-    #jointRes.optimized_model.save("model_files/yml_ind%s_optimized/E_%.1f_TeV/%s_fit.yml"%(index,pivot,name),overwrite=True)
-    jointRes.optimized_model.save("models/fitted_ix%s_%.1fTeV.yml"%(index,pivot),overwrite=True)
+    jointRes.optimized_model.save("model_files/yml_ind%s_optimized/E_%.1f_TeV/%s_fit.yml"%(index,pivot,name),overwrite=True)
+    #jointRes.optimized_model.save("models/fitted_ix%s_%.1fTeV.yml"%(index,pivot),overwrite=True)
 
 def plotResults(llh,jl,name):
     ## Model in counts spacve and residuals
     fig1 = llh.display_spectrum()
-    #fig1.savefig("plots/residuals/%s_res.png"%(name))
-    fig1.savefig("plots/%s_res.png"%(name))
+    fig1.savefig("plots/residuals/%s_res.png"%(name))
+    #fig1.savefig("plots/%s_res.png"%(name))
 
     ## Spectrum fit
     fig2 = plot_spectra(jl.results)
     plt.xlabel("Energy [TeV]")
     plt.ylabel(r"$E^2\,dN/dE$ [TeV cm$^{-2}$ s$^{-1}$]")
     plt.title("Spectrum fit for %s"%(name))
-    #fig2.savefig("plots/spectra/%s_fit_spectrum.png"%(name))
-    fig2.savefig("plots/%s_fit_spectrum.png"%(name))
+    fig2.savefig("plots/spectra/%s_fit_spectrum.png"%(name))
+    #fig2.savefig("plots/%s_fit_spectrum.png"%(name))
 
     ## Energy planes (model, datqa, residuals)
     fig3 = llh.display_fit(smoothing_kernel_sigma=0.3,display_colorbar=True)
-    #fig3.savefig("plots/energyplanes/%s_fit_planes.png"%(name))
-    fig3.savefig("plots/%s_fit_planes.png"%(name))
+    fig3.savefig("plots/energyplanes/%s_fit_planes.png"%(name))
+    #fig3.savefig("plots/%s_fit_planes.png"%(name))
 
 
 def get_log_like_weighted(self):
@@ -226,10 +228,47 @@ class PhoebePlotting():
         fig.savefig(f"{figname}_combined.png")
         plt.close(fig)
  
-    def PlotsSimple(norms, logs):
-        
+    def PlotsSimple(name, indminNorm, norms, logs, piv, ind, 
+                    xlims=None, ylims=None, E_low=0.5e9, E_high=100e9):
 
+        # Within ind-llh-profiles, build spectrum and likelihood for one source
+        xarr = np.logspace(np.log10(E_low),np.log10(E_high), 1000)
+        yarr = PhoebePlotting.PowerLaw(xarr,indminNorm,piv,ind)
 
+        # Spectrum Plot #
+        plt.figure(layout='constrained')
+        plt.plot(xarr,yarr,color='r')
+        if ylims is not None:
+            plt.ylim(ylims)
+        plt.xscale('log')
+        plt.yscale('log')
+        plt.xlabel("Energy [keV]")
+        plt.ylabel(r"Flux [keV$^{-1}$ s$^{-1}$ cm$^{-2}$]")
+        plt.title(f"{name} Spectrum for Index = {ind}, Pivot = {piv}")
+        plt.legend()
+        plt.grid(True, which='both', alpha=0.3)
+        plt.savefig(f"plots/ind_spec/{name}_ind{ind}_piv{piv}.png")
+        plt.close()
+ 
+        # Likelihood Profile #
+        logs_shifted = logs-logs.min() 
+
+        fig, ax = plt.subplots(figsize=[10,8],layout='constrained')
+
+        ax.plot(norms, logs_shifted, color='b',label='Likelihood Profile')
+        ax.axvline(indminNorm,color='b', ls = ":", alpha = 0.6, label="Best-fit normalization")
+        ax.axhline(0.5, color='r', ls = '--', alpha = 0.7, label=r"$\Delta$logL = 0.5")
+    
+        if xlims is not None:
+            ax.set_xlim(xlims)
+        ax.set_xscale('log')
+        ax.set_xlabel(r"Normalization [keV$^{-1}$ s$^{-1}$ cm$^{-2}$]")
+        ax.set_ylabel("-logL - min('logL)")
+        ax.set_title(f"Likelihood Profile for {name}, Index = {ind}, Pivot = {piv}")
+        ax.legend()
+
+        fig.savefig(f"plots/ind_lh/{name}_ind{ind}_piv{piv}.png")
+        plt.close(fig)
 
 
 class StackingAnalysis():

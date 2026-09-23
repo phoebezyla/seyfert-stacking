@@ -8,6 +8,8 @@ import pickle
 from astromodels import clone_model
 import math
 import warnings
+warnings.simplefilter(action='ignore', 
+    category=(FutureWarning,RuntimeWarning))  
 import yaml
 import numpy as np
 import pandas as pd

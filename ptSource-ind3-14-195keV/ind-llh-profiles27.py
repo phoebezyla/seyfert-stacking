@@ -28,8 +28,8 @@ lowerE = 0.5 * 1e9               # keV
 upperE = 100 * 1e9               # keV
 
 ## Set index ##
-ix = "2"      # index in model files = -ix
-index = -2.0
+ix = "27"      # index in model files = -ix
+index = -2.7
 
 ## Load CSV and initialize arrays ##
 df = pd.read_csv("data_normalized.csv",sep=',').to_numpy()
