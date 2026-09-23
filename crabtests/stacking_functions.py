@@ -113,6 +113,20 @@ def get_log_like_weighted(self):
     return -log_l   # convert -logL back to logL for threeML's convention
 
 
+class PhoebePlotting():
+    def PowerLaw(x,A,pivot,gamma): 
+        return A * (x/pivot) ** (-gamma)
+
+    def SpectrumPlots(df,E_low=0.5e9,E_high=100e9,PIV=[1e9,5e9,10e9],IX=[2.0,2.7,3.0]):
+        """
+        Builds four plots: One for each spectrum (with the different pivot
+        assumptions), and one with all nine curves.
+        """
+
+        c = plt.cm.tab10(np.linspace(0, 1, len(IX))).reshape(len(IX), 4) 
+        
+ 
+
 
 class StackingAnalysis():
     def __init__(self,intervalContainers):
