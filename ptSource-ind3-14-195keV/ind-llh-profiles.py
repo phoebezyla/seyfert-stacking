@@ -16,7 +16,7 @@ from stacking_functions import *
 
 ## Set paths ##
 DATADIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/'
-DIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/seyfert-stacking-git/crabtests'
+DIR = '/lustre/hawcz01/scratch/userspace/zylaphoe/seyfert/seyfert-stacking-git/ptSource-ind3-14-195keV/'
 MAP = os.path.join(DATADIR,'maptree-fhit2pct-pass5f-mlp-chunk1-1510.root')
 DR = os.path.join(DATADIR, 'detRes-fhit2pct-pass5f-mlp-refit.root')
 
@@ -30,7 +30,7 @@ ix = "2"      # index in model files = -ix
 index = -2.0
 
 ## Load CSV and initialize arrays ##
-df = pd.read_csv("data14-195.csv",sep='\\s+').to_numpy()
+df = pd.read_csv("data_normalized.csv",sep=',').to_numpy()
 
 sourceName = df[:,0]
 RA = df[:,1]
@@ -56,10 +56,10 @@ for j, pivot in enumerate(midE):
     for i,c in enumerate(sourceName):
         ra = RA[i]
         dec = Dec[i]
-        a = A[i]
+        #a = A[i]
     
         # Load source model #
-        model_file = "%s/model_files/yml_ind%s_intial/E_%.1f_TeV/%s_modelFile.yml"%(DIR,ix,pivot,c)
+        model_file = "%s/model_files/yml_ind%s_initial/E_%.1f_TeV/%s_modelFile.yml"%(DIR,ix,pivot,c)
         model = threeML.load_model(model_file)        
     
         # Calculate joint and log likelihoods #
@@ -88,21 +88,17 @@ for j, pivot in enumerate(midE):
     
     
         # Plot individual log Profile #
-        IntC.append(IntervalContainer(lowerE[j],upperE[j],norms,log_val,101))
-        minlogN=np.log10(indminNorm) - 2
-        maxlogN=np.log10(indminNorm) + 8
-        
-        figname = os.path.join(DIR,"crab_ix%s_%.1fTeV_pllh.png"%(ix,pivot))
-        
-        plot_logProfile_alt([IntC[-1]],param_df,like_df,c,minlogN=minlogN,\
-            maxlogN=maxlogN,show=False,save=figname)
+        fig_lh   = os.path.join(DIR,"plots/ind_lh/%s_ix%s_%.1fTeV_pllh.png"%(c,ix,pivot))
+        fig_spec = os.path.join(DIR,"plots/ind_spec/%s_ix%s_%.1fTeV_spec.png"%(c,ix,pivot))
+        PhoebePlotting.LikelihoodPlots({c: results_df[c]},fig_lh)
+        PhoebePlotting.SpectrumPlots({c: results_df[c]},fig_spec)
     
         ## End Source loop ##
         #####################
     
     # Save results dataframe to csv #
     # creates one results csv for each index & pivot energy #
-    f = open("%s/results-%six-%.1fTeV-individual-mod.csv"%(DIR,ix,pivot),"w",newline="")
+    f = open("%s/results_csvs/results-%six-%.1fTeV-individual-mod.csv"%(DIR,ix,pivot),"w",newline="")
     writer = csv.writer(f)
     writer.writerow(["sourceName","nullLLH","alt_hyp","TS"] + \
         [f"norms_{i}" for i in range(valN)] + \

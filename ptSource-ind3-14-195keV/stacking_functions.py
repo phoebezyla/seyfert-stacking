@@ -19,79 +19,29 @@ OMP_NUM_THREADS = 1
 MKL_NUM_THREADS = 1
 NUMEXPR_NUM_THREADS = 1
 
-def plot_logProfile(IntC,xbest,minllh,show=False,save=None):
-    x = np.logspace(-30,-8,200)
-    totalllh = np.zeros(200)
-
-    for i,fn in enumerate(x):
-        for j,cont in enumerate(IntC):
-            totalllh[i] += cont(fn)
-
-    plt.plot(x,-totalllh,'b+')
-    plt.hlines(minllh+2.71/2,x[0],x[-1],color='red',ls='--')
-    plt.xscale('log')
-    plt.ylim(minllh-1,minllh+10)
-    plt.xlim(x[0],x[-1])
-    fun_bin = interp1d(-totalllh[x>np.power(10,xbest)],x[x>np.power(10,xbest)]) #only intersted in UL for now
-    
-    if show:
-        plt.show()
-    if save is not None:
-        fig.savefig("{}".format(save))
-    fig.clear()
-    plt.close(fig)
-    
-def plot_logProfile_alt(IntC,param_df,like_df,name,minlogN=-30.,maxlogN=-1.,show=False,save=None):
-    finalnorm = np.linspace(minlogN,maxlogN,200)
-    finalnorm = np.power(10,finalnorm)
-    totalllh = np.zeros(200)
-    
-    for i,fn in enumerate(finalnorm):
-        for j,cont in enumerate(IntC):
-            totalllh[i] += cont(fn)
-    
-    llhinterp = InterpolatedUnivariateSpline(np.log10(finalnorm),totalllh,k=1,ext=0)
-    minNorm = param_df['value'][0]#np.power(10,res.x)
-    minLLH = like_df.iloc[1]['-log(likelihood)']
-    fig,sbu = plt.subplots()
-    plt.plot(finalnorm,-totalllh-minLLH,'b',markersize=2) #totallh needs a min, to make it positive
-    #plt.plot(finalnorm,-totalllh,'b',markersize=2)
-    #plt.ylabel('-totalllh')
-    plt.vlines(minNorm,0.,3.0,linestyles='--')
-    plt.xscale('log')
-    plt.title("Likelihood profile for %s"%(name))
-    #plt.ylim(0,2.71)
-    #plt.xlim(np.power(10,minlogN),np.power(10,maxlogN))
-    plt.xlabel("Normalization [kev-1 s-1 cm-2]")
-    plt.ylabel("LLH-LLHmin")
-    plt.grid()
-    
-    if show:
-        plt.show()
-    if save is not None:
-        fig.savefig("{}".format(save))
-    fig.clear()
-
 def saveResults(llh,jl,name,pivot,index):
     jointRes = jl.results
-    jointRes.optimized_model.save("model_files/yml_ind%s_optimized/E_%.1f_TeV/%s_fit_mod.yml"%(index,pivot,name),overwrite=True)
-    #jointRes.optimized_model.save("models/fitted_ix%s_%.1fTeV.yml"%(index,pivot),overwrite=True)
+    #jointRes.optimized_model.save("model_files/yml_ind%s_optimized/E_%.1f_TeV/%s_fit.yml"%(index,pivot,name),overwrite=True)
+    jointRes.optimized_model.save("models/fitted_ix%s_%.1fTeV.yml"%(index,pivot),overwrite=True)
 
 def plotResults(llh,jl,name):
     ## Model in counts spacve and residuals
     fig1 = llh.display_spectrum()
-    fig1.savefig("plots/residuals/%s_res.png"%(name))
+    #fig1.savefig("plots/residuals/%s_res.png"%(name))
+    fig1.savefig("plots/%s_res.png"%(name))
 
     ## Spectrum fit
     fig2 = plot_spectra(jl.results)
     plt.xlabel("Energy [TeV]")
     plt.ylabel(r"$E^2\,dN/dE$ [TeV cm$^{-2}$ s$^{-1}$]")
     plt.title("Spectrum fit for %s"%(name))
-    fig2.savefig("plots/spectra/%s_fit_spectrum.png"%(name))
+    #fig2.savefig("plots/spectra/%s_fit_spectrum.png"%(name))
+    fig2.savefig("plots/%s_fit_spectrum.png"%(name))
 
     ## Energy planes (model, datqa, residuals)
     fig3 = llh.display_fit(smoothing_kernel_sigma=0.3,display_colorbar=True)
-    fig3.savefig("plots/energyplanes/%s_fit_planes.png"%(name))
+    #fig3.savefig("plots/energyplanes/%s_fit_planes.png"%(name))
+    fig3.savefig("plots/%s_fit_planes.png"%(name))
 
 
 def get_log_like_weighted(self):
@@ -108,6 +58,177 @@ def get_log_like_weighted(self):
         this_log_l = interval_container(weight * expected_flux)
         log_l += this_log_l
     return -log_l   # convert -logL back to logL for threeML's convention
+
+
+class PhoebePlotting():
+    def PowerLaw(x,A,pivot,gamma): 
+        return A * (x/pivot) ** (-gamma)
+
+    def SpectrumPlots(dfs,figname,keys=None,ylims=None,E_low=0.5e9,E_high=100e9,
+                      PIV=[1e9,5e9,10e9],IX=[2.0,2.7,3.0]):
+        """
+        Builds four plots: One for each index (with the three different pivot
+        assumption curves), and one with all nine curves. Included on the plots
+        is a dot at the best-fit normalization for each pivot energy.
+ 
+        Dataframe input is a dict built from the outputs from a pd.read_csv of a stacked result csv
+        The dict needs to have keys {key: dataframe} of the same length as IX
+        """
+
+        if keys is None:
+            keys = list(dfs.keys())
+        assert len(keys) == len(IX), "keys and inds must be the same length"
+
+        xarr = np.logspace(np.log10(E_low),np.log10(E_high), 1000)
+
+        c = plt.cm.tab10(np.linspace(0, 1, len(PIV))).reshape(len(PIV), 4) #One per pivot 
+        ls = ['-', '--', ':']  # One per index
+ 
+        # Individual per-index plots #
+        for j, key in enumerate(keys):
+            df = dfs[key]
+            ix = IX[j]
+
+            plt.figure(figsize=[10,8],layout='constrained')
+
+            for i, E0 in enumerate(PIV):
+                A_best = df.loc[i, 'indminNorm']
+                yarr = PhoebePlotting.PowerLaw(xarr, A_best, E0, ix)
+                plt.plot(xarr,yarr,color=c[i],
+                    label=f"E0 = {E0:.1E} keV, A = {A_best:.2E}")
+        
+                plt.plot(E0, A_best, 'o', color=c[i],label="_nolabel_")
+        
+            if ylims is not None: 
+                plt.ylim(ylims)
+            plt.xscale('log')
+            plt.yscale('log')
+            plt.xlabel("Energy [keV]")
+            plt.ylabel(r"Flux [keV$^{-1}$ s$^{-1}$ cm$^{-2}$]")
+            plt.title(f"Spectrum across pivot assumptions, Index = {ix}")
+            plt.legend()
+            plt.grid(True, which='both', alpha=0.3)
+            plt.savefig(f"{figname}_ind{key}.png")
+            plt.close()
+
+        # Combined Plot #
+        handles = {}
+        fig, ax = plt.subplots(figsize=[10, 8], layout='constrained')
+        
+        for j, key in enumerate(keys):
+            df = dfs[key]
+            ix = IX[j]
+
+            for i, E0 in enumerate(PIV):
+                A_best = df.loc[i, 'indminNorm']
+        
+                yarr = PhoebePlotting.PowerLaw(xarr, A_best, E0, ix)
+                line, = ax.plot(
+                    xarr, yarr, color=c[i], ls=ls[j],
+                    label=f"E0 = {E0:.1E} keV, Index = {ix}"
+                )
+                handles[(i,j)] = line
+                ax.plot(E0, A_best, 'o', color=c[i])
+        
+        ordered_handles = [handles[(i,j)] for i in range(len(PIV)) for j in range(len(IX))]
+        ordered_labels = [h.get_label() for h in ordered_handles]
+        
+        if ylims is not None:
+            ax.set_ylim(1e-27,5e-17)
+        ax.set_xscale('log')
+        ax.set_yscale('log')
+        ax.set_xlabel("Energy [keV]")
+        ax.set_ylabel(r"Flux [keV$^{-1}$ s$^{-1}$ cm$^{-2}$]")
+        ax.set_title("Spectrum curves: all indices and pivot assumptions")
+        ax.legend(ordered_handles, ordered_labels, fontsize=8)
+        ax.grid(True, which='both', alpha=0.3)
+        
+        fig.savefig(f"{figname}_combined.png")
+        plt.close(fig)
+
+    def LikelihoodPlots(dfs,figname,keys=None,xlims=None,PIV=[1e9,5e9,10e9],IX=[2.0,2.7,3.0]):
+        """
+        Builds four plots: One for each index (with the three pivot value curves),
+        and one combined (nine curves). On the per-index plots, there is a vertical line
+        indicating the best-fit normalization point. Same inputs as SpectrumPlot
+        """
+
+        if keys is None:
+            keys = list(dfs.keys())
+        assert len(keys) == len(IX), "keys and inds must be the same length"
+
+
+        c = plt.cm.tab10(np.linspace(0, 1, len(PIV))).reshape(len(PIV), 4) #One per pivot 
+        ls = ['-', '--', ':']  # One per index
+
+        norms_cols = [f"norms_{k}"   for k in range(200)]
+        log_cols   = [f"log_val_{k}" for k in range(200)]
+
+        ## Per-index plots ##
+        for j, key in enumerate(keys):
+            df = dfs[key]
+            ix = IX[j]
+
+            fig, ax = plt.subplots(figsize=[10,8],layout='constrained')
+            
+            for i, row in df.iterrows():
+                norms = row[norms_cols].values.astype(float)
+                logs  = row[log_cols].values.astype(float)
+         
+                logs_shifted = logs - logs.min()  # minimum is at 0, because we're comparing curves
+        
+                ax.plot(norms, logs_shifted, color=c[i], label=f"E = {PIV[i]:.1E} keV")
+                ax.axvline(row['indminNorm'],color=c[i], ls = ":", alpha = 0.6, label="Best-fit normalization")
+            ax.axhline(0.5, color='r', ls = '--', alpha = 0.7, label=r"$\Delta$logL = 0.5")
+        
+            if xlims is not None:
+                ax.set_xlim(xlims)
+            ax.set_xscale('log')
+            ax.set_xlabel(r"Normalization [keV$^{-1}$ s$^{-1}$ cm$^{-2}$]")
+            ax.set_ylabel("-logL - min('logL)")
+            ax.set_title(f"Likelihood Profiles, Index = {ix}")
+            ax.legend()
+    
+            fig.savefig(f"{figname}_index{key}.png")
+            plt.close(fig)
+        
+        ## Combined Likelihood Plot ##
+        fig, ax = plt.subplots(figsize=[10,8],layout='constrained')
+        handles = {}
+        
+        for j, key in enumerate(keys):
+            df = dfs[key]
+            ix = IX[j]
+
+            for i, row in df.iterrows():
+                norms = row[norms_cols].values.astype(float)
+                logs  = row[log_cols].values.astype(float)
+                logs_shifted = logs - logs.min()  # minimum is at 0, because we're comparing curves
+            
+                line, = ax.plot(norms, logs_shifted, color=c[i], 
+                    label=f"Pivot = {PIV[i]:.1E} keV, Index = {ix}",
+                    ls=ls[j])
+                handles[(i,j)] = line
+                ax.axvline(row['indminNorm'],color=c[i], ls = ":", alpha = 0.6, label="_nolabel_")
+            
+        ordered_handles = [handles[(i,j)] for i in range(len(PIV)) for j in range(len(IX))]
+        ordered_labels = [h.get_label() for h in ordered_handles]
+   
+        ax.axhline(0.5, color='r', ls = '--', alpha = 0.7, label=r"$\Delta$logL = 0.5") 
+        if xlims is not None:    
+            ax.set_xlim(xlims)
+        ax.set_xscale('log')
+        ax.set_xlabel(r"Normalization [keV$^{-1}$ s$^{-1}$ cm$^{-2}$]")
+        ax.set_ylabel("-logL - min('logL)")
+        ax.set_title(f"Likelihood Profiles")
+        ax.legend(ordered_handles, ordered_labels, fontsize=8)
+            
+        fig.savefig(f"{figname}_combined.png")
+        plt.close(fig)
+ 
+    def PlotsSimple(norms, logs):
+        
+
 
 
 
@@ -137,9 +258,9 @@ class StackingAnalysis():
 
     def likelihood_profile(indminNorm,lh,param_df,like_df,name,valN=200,computeTS=True):
         #norms = np.linspace(np.log10(indminNorm)-5,np.log10(indminNorm)+5,valN)
-        
+
         normMin = -35
-        normMax = -15
+        normMax = -10
         norms = np.linspace(normMin,normMax,valN)
         log_val = np.zeros(valN)
         
